@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC30C20E2AD17AAC00836139 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1E82AD17AAC00836139 /* ViewController.swift */; };
+		AC30C20F2AD17AAC00836139 /* LetterU.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1E92AD17AAC00836139 /* LetterU.swift */; };
+		AC30C2102AD17AAC00836139 /* LetterK.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1EA2AD17AAC00836139 /* LetterK.swift */; };
+		AC30C2112AD17AAC00836139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1EB2AD17AAC00836139 /* Assets.xcassets */; };
+		AC30C2122AD17AAC00836139 /* TracingLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1EC2AD17AAC00836139 /* TracingLetter.swift */; };
+		AC30C2132AD17AAC00836139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1ED2AD17AAC00836139 /* LaunchScreen.storyboard */; };
+		AC30C2142AD17AAC00836139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1EF2AD17AAC00836139 /* Main.storyboard */; };
+		AC30C2152AD17AAC00836139 /* CGPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1F12AD17AAC00836139 /* CGPath+Extension.swift */; };
+		AC30C2162AD17AAC00836139 /* ActivityCurveTracingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1F22AD17AAC00836139 /* ActivityCurveTracingView.swift */; };
+		AC30C2172AD17AAC00836139 /* LetterB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1F32AD17AAC00836139 /* LetterB.swift */; };
+		AC30C2182AD17AAC00836139 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C1F42AD17AAC00836139 /* AppDelegate.swift */; };
+		AC30C2192AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1F62AD17AAC00836139 /* Quicksand-Bold.ttf */; };
+		AC30C21A2AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1F72AD17AAC00836139 /* Quicksand-Medium.ttf */; };
+		AC30C21B2AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1F82AD17AAC00836139 /* Quicksand-Regular.ttf */; };
+		AC30C21C2AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1F92AD17AAC00836139 /* Quicksand-SemiBold.ttf */; };
+		AC30C21D2AD17AAC00836139 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1FA2AD17AAC00836139 /* Quicksand-Light.ttf */; };
+		AC30C21E2AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1FC2AD17AAC00836139 /* Quicksand-Bold.ttf */; };
+		AC30C21F2AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1FD2AD17AAC00836139 /* Quicksand-Medium.ttf */; };
+		AC30C2202AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1FE2AD17AAC00836139 /* Quicksand-Regular.ttf */; };
+		AC30C2212AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C1FF2AD17AAC00836139 /* Quicksand-SemiBold.ttf */; };
+		AC30C2222AD17AAC00836139 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2002AD17AAC00836139 /* Quicksand-Light.ttf */; };
+		AC30C2242AD17AAC00836139 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2022AD17AAC00836139 /* Info.plist */; };
+		AC30C2252AD17AAC00836139 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2032AD17AAC00836139 /* SceneDelegate.swift */; };
+		AC30C2262AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2062AD17AAC00836139 /* Quicksand-Bold.ttf */; };
+		AC30C2272AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2072AD17AAC00836139 /* Quicksand-Medium.ttf */; };
+		AC30C2282AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2082AD17AAC00836139 /* Quicksand-Regular.ttf */; };
+		AC30C2292AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C2092AD17AAC00836139 /* Quicksand-SemiBold.ttf */; };
+		AC30C22A2AD17AAC00836139 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C20A2AD17AAC00836139 /* Quicksand-Light.ttf */; };
+		AC30C22B2AD17AAC00836139 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC30C20B2AD17AAC00836139 /* OFL.txt */; };
+		AC30C22C2AD17AAC00836139 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC30C20C2AD17AAC00836139 /* Quicksand-VariableFont_wght.ttf */; };
+		AC30C22D2AD17AAC00836139 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC30C20D2AD17AAC00836139 /* README.txt */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -14,6 +45,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC30C1E82AD17AAC00836139 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC30C1E92AD17AAC00836139 /* LetterU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterU.swift; sourceTree = "<group>"; };
+		AC30C1EA2AD17AAC00836139 /* LetterK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterK.swift; sourceTree = "<group>"; };
+		AC30C1EB2AD17AAC00836139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC30C1EC2AD17AAC00836139 /* TracingLetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracingLetter.swift; sourceTree = "<group>"; };
+		AC30C1EE2AD17AAC00836139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC30C1F02AD17AAC00836139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC30C1F12AD17AAC00836139 /* CGPath+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPath+Extension.swift"; sourceTree = "<group>"; };
+		AC30C1F22AD17AAC00836139 /* ActivityCurveTracingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCurveTracingView.swift; sourceTree = "<group>"; };
+		AC30C1F32AD17AAC00836139 /* LetterB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterB.swift; sourceTree = "<group>"; };
+		AC30C1F42AD17AAC00836139 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC30C1F62AD17AAC00836139 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		AC30C1F72AD17AAC00836139 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		AC30C1F82AD17AAC00836139 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		AC30C1F92AD17AAC00836139 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		AC30C1FA2AD17AAC00836139 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		AC30C1FC2AD17AAC00836139 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		AC30C1FD2AD17AAC00836139 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		AC30C1FE2AD17AAC00836139 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		AC30C1FF2AD17AAC00836139 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		AC30C2002AD17AAC00836139 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		AC30C2022AD17AAC00836139 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC30C2032AD17AAC00836139 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AC30C2062AD17AAC00836139 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		AC30C2072AD17AAC00836139 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		AC30C2082AD17AAC00836139 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		AC30C2092AD17AAC00836139 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		AC30C20A2AD17AAC00836139 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		AC30C20B2AD17AAC00836139 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		AC30C20C2AD17AAC00836139 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		AC30C20D2AD17AAC00836139 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +94,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC30C1E72AD17AAC00836139 /* TestTracing */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C22E2AD17AB400836139 /* Letters */,
+				AC30C1E82AD17AAC00836139 /* ViewController.swift */,
+				AC30C1EB2AD17AAC00836139 /* Assets.xcassets */,
+				AC30C1EC2AD17AAC00836139 /* TracingLetter.swift */,
+				AC30C1ED2AD17AAC00836139 /* LaunchScreen.storyboard */,
+				AC30C1EF2AD17AAC00836139 /* Main.storyboard */,
+				AC30C1F12AD17AAC00836139 /* CGPath+Extension.swift */,
+				AC30C1F22AD17AAC00836139 /* ActivityCurveTracingView.swift */,
+				AC30C1F42AD17AAC00836139 /* AppDelegate.swift */,
+				AC30C1F52AD17AAC00836139 /* Font */,
+				AC30C1FB2AD17AAC00836139 /* Fonts */,
+				AC30C2022AD17AAC00836139 /* Info.plist */,
+				AC30C2032AD17AAC00836139 /* SceneDelegate.swift */,
+				AC30C2042AD17AAC00836139 /* Quicksand-2 */,
+			);
+			path = TestTracing;
+			sourceTree = "<group>";
+		};
+		AC30C1F52AD17AAC00836139 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C1F62AD17AAC00836139 /* Quicksand-Bold.ttf */,
+				AC30C1F72AD17AAC00836139 /* Quicksand-Medium.ttf */,
+				AC30C1F82AD17AAC00836139 /* Quicksand-Regular.ttf */,
+				AC30C1F92AD17AAC00836139 /* Quicksand-SemiBold.ttf */,
+				AC30C1FA2AD17AAC00836139 /* Quicksand-Light.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		AC30C1FB2AD17AAC00836139 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C1FC2AD17AAC00836139 /* Quicksand-Bold.ttf */,
+				AC30C1FD2AD17AAC00836139 /* Quicksand-Medium.ttf */,
+				AC30C1FE2AD17AAC00836139 /* Quicksand-Regular.ttf */,
+				AC30C1FF2AD17AAC00836139 /* Quicksand-SemiBold.ttf */,
+				AC30C2002AD17AAC00836139 /* Quicksand-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AC30C2042AD17AAC00836139 /* Quicksand-2 */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C2052AD17AAC00836139 /* static */,
+				AC30C20B2AD17AAC00836139 /* OFL.txt */,
+				AC30C20C2AD17AAC00836139 /* Quicksand-VariableFont_wght.ttf */,
+				AC30C20D2AD17AAC00836139 /* README.txt */,
+			);
+			path = "Quicksand-2";
+			sourceTree = "<group>";
+		};
+		AC30C2052AD17AAC00836139 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C2062AD17AAC00836139 /* Quicksand-Bold.ttf */,
+				AC30C2072AD17AAC00836139 /* Quicksand-Medium.ttf */,
+				AC30C2082AD17AAC00836139 /* Quicksand-Regular.ttf */,
+				AC30C2092AD17AAC00836139 /* Quicksand-SemiBold.ttf */,
+				AC30C20A2AD17AAC00836139 /* Quicksand-Light.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		AC30C22E2AD17AB400836139 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C1E92AD17AAC00836139 /* LetterU.swift */,
+				AC30C1EA2AD17AAC00836139 /* LetterK.swift */,
+				AC30C1F32AD17AAC00836139 /* LetterB.swift */,
+			);
+			path = Letters;
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +191,7 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AC30C1E72AD17AAC00836139 /* TestTracing */,
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
 				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
@@ -125,8 +266,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC30C2242AD17AAC00836139 /* Info.plist in Resources */,
+				AC30C2292AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */,
+				AC30C21C2AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */,
+				AC30C22A2AD17AAC00836139 /* Quicksand-Light.ttf in Resources */,
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
+				AC30C2192AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */,
+				AC30C21A2AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */,
+				AC30C21B2AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */,
+				AC30C2212AD17AAC00836139 /* Quicksand-SemiBold.ttf in Resources */,
+				AC30C21F2AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */,
+				AC30C21E2AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */,
+				AC30C2202AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */,
+				AC30C22B2AD17AAC00836139 /* OFL.txt in Resources */,
+				AC30C2282AD17AAC00836139 /* Quicksand-Regular.ttf in Resources */,
+				AC30C2222AD17AAC00836139 /* Quicksand-Light.ttf in Resources */,
+				AC30C2272AD17AAC00836139 /* Quicksand-Medium.ttf in Resources */,
+				AC30C2262AD17AAC00836139 /* Quicksand-Bold.ttf in Resources */,
+				AC30C2142AD17AAC00836139 /* Main.storyboard in Resources */,
+				AC30C22C2AD17AAC00836139 /* Quicksand-VariableFont_wght.ttf in Resources */,
+				AC30C2132AD17AAC00836139 /* LaunchScreen.storyboard in Resources */,
+				AC30C2112AD17AAC00836139 /* Assets.xcassets in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
+				AC30C22D2AD17AAC00836139 /* README.txt in Resources */,
+				AC30C21D2AD17AAC00836139 /* Quicksand-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +300,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC30C2172AD17AAC00836139 /* LetterB.swift in Sources */,
+				AC30C2122AD17AAC00836139 /* TracingLetter.swift in Sources */,
+				AC30C20E2AD17AAC00836139 /* ViewController.swift in Sources */,
+				AC30C2102AD17AAC00836139 /* LetterK.swift in Sources */,
+				AC30C20F2AD17AAC00836139 /* LetterU.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
+				AC30C2152AD17AAC00836139 /* CGPath+Extension.swift in Sources */,
+				AC30C2162AD17AAC00836139 /* ActivityCurveTracingView.swift in Sources */,
+				AC30C2182AD17AAC00836139 /* AppDelegate.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
+				AC30C2252AD17AAC00836139 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC30C1ED2AD17AAC00836139 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC30C1EE2AD17AAC00836139 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AC30C1EF2AD17AAC00836139 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC30C1F02AD17AAC00836139 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC50DC342ACE5CE100B9FE1B /* Debug */ = {
