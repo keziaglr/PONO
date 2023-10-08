@@ -11,6 +11,15 @@
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
+		F999BBBA2AD2B055008D558E /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB42AD2B055008D558E /* Quicksand-Bold.ttf */; };
+		F999BBBB2AD2B055008D558E /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB52AD2B055008D558E /* Quicksand-Regular.ttf */; };
+		F999BBBC2AD2B055008D558E /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB62AD2B055008D558E /* Quicksand-VariableFont_wght.ttf */; };
+		F999BBBD2AD2B055008D558E /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB72AD2B055008D558E /* Quicksand-Light.ttf */; };
+		F999BBBE2AD2B055008D558E /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB82AD2B055008D558E /* Quicksand-SemiBold.ttf */; };
+		F999BBBF2AD2B055008D558E /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB92AD2B055008D558E /* Quicksand-Medium.ttf */; };
+		F999BBC32AD2B121008D558E /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC22AD2B121008D558E /* SpeechModel.swift */; };
+		F999BBC52AD2B13A008D558E /* SpeechText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC42AD2B13A008D558E /* SpeechText.swift */; };
+		F999BBC82AD2B1F4008D558E /* BelajarKata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC72AD2B1F4008D558E /* BelajarKata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,16 @@
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F999BBB42AD2B055008D558E /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		F999BBB52AD2B055008D558E /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		F999BBB62AD2B055008D558E /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		F999BBB72AD2B055008D558E /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		F999BBB82AD2B055008D558E /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		F999BBB92AD2B055008D558E /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		F999BBC02AD2B061008D558E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F999BBC22AD2B121008D558E /* SpeechModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
+		F999BBC42AD2B13A008D558E /* SpeechText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechText.swift; sourceTree = "<group>"; };
+		F999BBC72AD2B1F4008D558E /* BelajarKata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelajarKata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +70,12 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				F999BBC02AD2B061008D558E /* Info.plist */,
+				F999BBC62AD2B15B008D558E /* Fonts */,
+				F999BBC12AD2B10C008D558E /* Speech Model */,
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
+				F999BBC72AD2B1F4008D558E /* BelajarKata.swift */,
 				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
 				AC50DC312ACE5CE100B9FE1B /* Preview Content */,
 			);
@@ -65,6 +88,28 @@
 				AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F999BBC12AD2B10C008D558E /* Speech Model */ = {
+			isa = PBXGroup;
+			children = (
+				F999BBC22AD2B121008D558E /* SpeechModel.swift */,
+				F999BBC42AD2B13A008D558E /* SpeechText.swift */,
+			);
+			path = "Speech Model";
+			sourceTree = "<group>";
+		};
+		F999BBC62AD2B15B008D558E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F999BBB42AD2B055008D558E /* Quicksand-Bold.ttf */,
+				F999BBB72AD2B055008D558E /* Quicksand-Light.ttf */,
+				F999BBB92AD2B055008D558E /* Quicksand-Medium.ttf */,
+				F999BBB52AD2B055008D558E /* Quicksand-Regular.ttf */,
+				F999BBB82AD2B055008D558E /* Quicksand-SemiBold.ttf */,
+				F999BBB62AD2B055008D558E /* Quicksand-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
+				F999BBBF2AD2B055008D558E /* Quicksand-Medium.ttf in Resources */,
+				F999BBBA2AD2B055008D558E /* Quicksand-Bold.ttf in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
+				F999BBBD2AD2B055008D558E /* Quicksand-Light.ttf in Resources */,
+				F999BBBC2AD2B055008D558E /* Quicksand-VariableFont_wght.ttf in Resources */,
+				F999BBBE2AD2B055008D558E /* Quicksand-SemiBold.ttf in Resources */,
+				F999BBBB2AD2B055008D558E /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F999BBC82AD2B1F4008D558E /* BelajarKata.swift in Sources */,
+				F999BBC52AD2B13A008D558E /* SpeechText.swift in Sources */,
+				F999BBC32AD2B121008D558E /* SpeechModel.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 			);
@@ -270,6 +324,9 @@
 				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macro-challenge/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +356,9 @@
 				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macro-challenge/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
