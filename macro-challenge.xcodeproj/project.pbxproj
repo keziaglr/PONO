@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC30C2332AD2FD3400836139 /* TracingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2322AD2FD3400836139 /* TracingView.swift */; };
+		AC30C2352AD2FD9A00836139 /* TracingLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2342AD2FD9A00836139 /* TracingLetter.swift */; };
+		AC30C23A2AD2FDC200836139 /* LetterU.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2362AD2FDC200836139 /* LetterU.swift */; };
+		AC30C23B2AD2FDC200836139 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2372AD2FDC200836139 /* Letter.swift */; };
+		AC30C23C2AD2FDC200836139 /* LetterK.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2382AD2FDC200836139 /* LetterK.swift */; };
+		AC30C23D2AD2FDC200836139 /* LetterB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2392AD2FDC200836139 /* LetterB.swift */; };
+		AC30C2402AD2FDDE00836139 /* ActivityCurveTracingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C23E2AD2FDDE00836139 /* ActivityCurveTracingView.swift */; };
+		AC30C2412AD2FDDE00836139 /* CGPath+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C23F2AD2FDDE00836139 /* CGPath+Extension.swift */; };
+		AC30C2442AD30F0D00836139 /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC30C2432AD30F0D00836139 /* MusicController.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -19,10 +28,20 @@
 		F999BBBF2AD2B055008D558E /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F999BBB92AD2B055008D558E /* Quicksand-Medium.ttf */; };
 		F999BBC32AD2B121008D558E /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC22AD2B121008D558E /* SpeechModel.swift */; };
 		F999BBC52AD2B13A008D558E /* SpeechText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC42AD2B13A008D558E /* SpeechText.swift */; };
-		F999BBC82AD2B1F4008D558E /* BelajarKata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC72AD2B1F4008D558E /* BelajarKata.swift */; };
+		F999BBC82AD2B1F4008D558E /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999BBC72AD2B1F4008D558E /* SpeechView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC30C2322AD2FD3400836139 /* TracingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracingView.swift; sourceTree = "<group>"; };
+		AC30C2342AD2FD9A00836139 /* TracingLetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracingLetter.swift; sourceTree = "<group>"; };
+		AC30C2362AD2FDC200836139 /* LetterU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterU.swift; sourceTree = "<group>"; };
+		AC30C2372AD2FDC200836139 /* Letter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		AC30C2382AD2FDC200836139 /* LetterK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterK.swift; sourceTree = "<group>"; };
+		AC30C2392AD2FDC200836139 /* LetterB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterB.swift; sourceTree = "<group>"; };
+		AC30C23E2AD2FDDE00836139 /* ActivityCurveTracingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCurveTracingView.swift; sourceTree = "<group>"; };
+		AC30C23F2AD2FDDE00836139 /* CGPath+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPath+Extension.swift"; sourceTree = "<group>"; };
+		AC30C2432AD30F0D00836139 /* MusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicController.swift; sourceTree = "<group>"; };
+		AC30C2452AD30FA600836139 /* BUKU.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = BUKU.m4a; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,7 +56,7 @@
 		F999BBC02AD2B061008D558E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F999BBC22AD2B121008D558E /* SpeechModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
 		F999BBC42AD2B13A008D558E /* SpeechText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechText.swift; sourceTree = "<group>"; };
-		F999BBC72AD2B1F4008D558E /* BelajarKata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelajarKata.swift; sourceTree = "<group>"; };
+		F999BBC72AD2B1F4008D558E /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC30C2312AD2FD1A00836139 /* Tracing */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C2322AD2FD3400836139 /* TracingView.swift */,
+				AC30C23E2AD2FDDE00836139 /* ActivityCurveTracingView.swift */,
+				AC30C23F2AD2FDDE00836139 /* CGPath+Extension.swift */,
+				AC30C2342AD2FD9A00836139 /* TracingLetter.swift */,
+				AC30C2372AD2FDC200836139 /* Letter.swift */,
+				AC30C2392AD2FDC200836139 /* LetterB.swift */,
+				AC30C2382AD2FDC200836139 /* LetterK.swift */,
+				AC30C2362AD2FDC200836139 /* LetterU.swift */,
+			);
+			path = Tracing;
+			sourceTree = "<group>";
+		};
+		AC30C2422AD30F0100836139 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				AC30C2432AD30F0D00836139 /* MusicController.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -70,13 +112,15 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AC30C2422AD30F0100836139 /* Music */,
+				AC30C2312AD2FD1A00836139 /* Tracing */,
 				F999BBC02AD2B061008D558E /* Info.plist */,
 				F999BBC62AD2B15B008D558E /* Fonts */,
 				F999BBC12AD2B10C008D558E /* Speech Model */,
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
-				F999BBC72AD2B1F4008D558E /* BelajarKata.swift */,
 				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
+				AC30C2452AD30FA600836139 /* BUKU.m4a */,
 				AC50DC312ACE5CE100B9FE1B /* Preview Content */,
 			);
 			path = "macro-challenge";
@@ -93,6 +137,7 @@
 		F999BBC12AD2B10C008D558E /* Speech Model */ = {
 			isa = PBXGroup;
 			children = (
+				F999BBC72AD2B1F4008D558E /* SpeechView.swift */,
 				F999BBC22AD2B121008D558E /* SpeechModel.swift */,
 				F999BBC42AD2B13A008D558E /* SpeechText.swift */,
 			);
@@ -188,9 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F999BBC82AD2B1F4008D558E /* BelajarKata.swift in Sources */,
+				F999BBC82AD2B1F4008D558E /* SpeechView.swift in Sources */,
+				AC30C23C2AD2FDC200836139 /* LetterK.swift in Sources */,
 				F999BBC52AD2B13A008D558E /* SpeechText.swift in Sources */,
+				AC30C23D2AD2FDC200836139 /* LetterB.swift in Sources */,
+				AC30C2412AD2FDDE00836139 /* CGPath+Extension.swift in Sources */,
 				F999BBC32AD2B121008D558E /* SpeechModel.swift in Sources */,
+				AC30C23B2AD2FDC200836139 /* Letter.swift in Sources */,
+				AC30C2402AD2FDDE00836139 /* ActivityCurveTracingView.swift in Sources */,
+				AC30C2352AD2FD9A00836139 /* TracingLetter.swift in Sources */,
+				AC30C2332AD2FD3400836139 /* TracingView.swift in Sources */,
+				AC30C23A2AD2FDC200836139 /* LetterU.swift in Sources */,
+				AC30C2442AD30F0D00836139 /* MusicController.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 			);
