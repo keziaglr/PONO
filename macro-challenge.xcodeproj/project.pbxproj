@@ -11,6 +11,11 @@
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
+		ACEEDE8A2AE22170008F93E8 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */; };
+		ACEEDE8B2AE22170008F93E8 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */; };
+		ACEEDE8C2AE22170008F93E8 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */; };
+		ACEEDE8D2AE22170008F93E8 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */; };
+		ACEEDE8E2AE22170008F93E8 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		ACEEDE8F2AE22210008F93E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +62,10 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				ACEEDE8F2AE22210008F93E8 /* Info.plist */,
+				ACEEDE822AE22140008F93E8 /* Resources */,
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
-				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
 				AC50DC312ACE5CE100B9FE1B /* Preview Content */,
 			);
 			path = "macro-challenge";
@@ -65,6 +77,35 @@
 				AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACEEDE822AE22140008F93E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACEEDE832AE22154008F93E8 /* Font */,
+				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ACEEDE832AE22154008F93E8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				ACEEDE842AE22167008F93E8 /* Quicksand */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		ACEEDE842AE22167008F93E8 /* Quicksand */ = {
+			isa = PBXGroup;
+			children = (
+				ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */,
+				ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */,
+				ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */,
+				ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */,
+				ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */,
+			);
+			path = Quicksand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +166,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEEDE8E2AE22170008F93E8 /* Quicksand-Bold.ttf in Resources */,
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
+				ACEEDE8C2AE22170008F93E8 /* Quicksand-SemiBold.ttf in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
+				ACEEDE8D2AE22170008F93E8 /* Quicksand-Light.ttf in Resources */,
+				ACEEDE8A2AE22170008F93E8 /* Quicksand-Medium.ttf in Resources */,
+				ACEEDE8B2AE22170008F93E8 /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +316,7 @@
 				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +346,7 @@
 				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
