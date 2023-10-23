@@ -7,29 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1FC1C72AE6199F0078015B /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */; };
+		AC1FC1C82AE6199F0078015B /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */; };
+		AC1FC1C92AE6199F0078015B /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */; };
+		AC1FC1CA2AE6199F0078015B /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */; };
+		AC1FC1CB2AE6199F0078015B /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
-		ACEEDE8A2AE22170008F93E8 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */; };
-		ACEEDE8B2AE22170008F93E8 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */; };
-		ACEEDE8C2AE22170008F93E8 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */; };
-		ACEEDE8D2AE22170008F93E8 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */; };
-		ACEEDE8E2AE22170008F93E8 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.ttf"; path = "Quicksand/Quicksand-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "Quicksand/Quicksand-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "Quicksand/Quicksand-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "Quicksand/Quicksand-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "Quicksand/Quicksand-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
-		ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
-		ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
-		ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Light.ttf"; sourceTree = "<group>"; };
-		ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "../../../../../../../../../Downloads/Quicksand/static/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
-		ACEEDE8F2AE22210008F93E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +61,6 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				ACEEDE8F2AE22210008F93E8 /* Info.plist */,
 				ACEEDE822AE22140008F93E8 /* Resources */,
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
@@ -99,11 +97,11 @@
 		ACEEDE842AE22167008F93E8 /* Quicksand */ = {
 			isa = PBXGroup;
 			children = (
-				ACEEDE892AE22170008F93E8 /* Quicksand-Bold.ttf */,
-				ACEEDE882AE22170008F93E8 /* Quicksand-Light.ttf */,
-				ACEEDE852AE22170008F93E8 /* Quicksand-Medium.ttf */,
-				ACEEDE862AE22170008F93E8 /* Quicksand-Regular.ttf */,
-				ACEEDE872AE22170008F93E8 /* Quicksand-SemiBold.ttf */,
+				AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */,
+				AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */,
+				AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */,
+				AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */,
+				AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */,
 			);
 			path = Quicksand;
 			sourceTree = "<group>";
@@ -166,13 +164,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEEDE8E2AE22170008F93E8 /* Quicksand-Bold.ttf in Resources */,
+				AC1FC1C72AE6199F0078015B /* Quicksand-Light.ttf in Resources */,
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
-				ACEEDE8C2AE22170008F93E8 /* Quicksand-SemiBold.ttf in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
-				ACEEDE8D2AE22170008F93E8 /* Quicksand-Light.ttf in Resources */,
-				ACEEDE8A2AE22170008F93E8 /* Quicksand-Medium.ttf in Resources */,
-				ACEEDE8B2AE22170008F93E8 /* Quicksand-Regular.ttf in Resources */,
+				AC1FC1C82AE6199F0078015B /* Quicksand-Bold.ttf in Resources */,
+				AC1FC1C92AE6199F0078015B /* Quicksand-Regular.ttf in Resources */,
+				AC1FC1CB2AE6199F0078015B /* Quicksand-SemiBold.ttf in Resources */,
+				AC1FC1CA2AE6199F0078015B /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
