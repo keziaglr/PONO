@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC1FC1C72AE6199F0078015B /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */; };
-		AC1FC1C82AE6199F0078015B /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */; };
-		AC1FC1C92AE6199F0078015B /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */; };
-		AC1FC1CA2AE6199F0078015B /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */; };
-		AC1FC1CB2AE6199F0078015B /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */; };
+		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
+		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
+		3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */; };
+		3868C15C2AE61C8E00E832B0 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1572AE61C8E00E832B0 /* Quicksand-SemiBold.ttf */; };
+		3868C15D2AE61C8E00E832B0 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1582AE61C8E00E832B0 /* Quicksand-Light.ttf */; };
+		3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C15E2AE61ED100E832B0 /* ColorString.swift */; };
+		3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1602AE61FEF00E832B0 /* Color+Colors.swift */; };
+		3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */; };
+		3868C1662AE622B800E832B0 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1652AE622B800E832B0 /* Typography.swift */; };
+		3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1672AE6256900E832B0 /* View+Typography.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -19,11 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.ttf"; path = "Quicksand/Quicksand-Light.ttf"; sourceTree = SOURCE_ROOT; };
-		AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.ttf"; path = "Quicksand/Quicksand-Bold.ttf"; sourceTree = SOURCE_ROOT; };
-		AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.ttf"; path = "Quicksand/Quicksand-Regular.ttf"; sourceTree = SOURCE_ROOT; };
-		AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Medium.ttf"; path = "Quicksand/Quicksand-Medium.ttf"; sourceTree = SOURCE_ROOT; };
-		AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-SemiBold.ttf"; path = "Quicksand/Quicksand-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		3868C1572AE61C8E00E832B0 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		3868C1582AE61C8E00E832B0 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		3868C15E2AE61ED100E832B0 /* ColorString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorString.swift; sourceTree = "<group>"; };
+		3868C1602AE61FEF00E832B0 /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
+		3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacings.swift"; sourceTree = "<group>"; };
+		3868C1652AE622B800E832B0 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		3868C1672AE6256900E832B0 /* View+Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Typography.swift"; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +52,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3868C1522AE61C7100E832B0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1532AE61C8E00E832B0 /* Quicksand */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		3868C1532AE61C8E00E832B0 /* Quicksand */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */,
+				3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */,
+				3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */,
+				3868C1572AE61C8E00E832B0 /* Quicksand-SemiBold.ttf */,
+				3868C1582AE61C8E00E832B0 /* Quicksand-Light.ttf */,
+			);
+			path = Quicksand;
+			sourceTree = "<group>";
+		};
+		3868C1622AE6216800E832B0 /* Design System */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1672AE6256900E832B0 /* View+Typography.swift */,
+				3868C1602AE61FEF00E832B0 /* Color+Colors.swift */,
+				3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */,
+				3868C1652AE622B800E832B0 /* Typography.swift */,
+			);
+			path = "Design System";
+			sourceTree = "<group>";
+		};
+		3868C1692AE625B600E832B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
+				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +111,9 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				3868C1692AE625B600E832B0 /* Main */,
+				3868C1622AE6216800E832B0 /* Design System */,
 				ACEEDE822AE22140008F93E8 /* Resources */,
-				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
-				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
 				AC50DC312ACE5CE100B9FE1B /* Preview Content */,
 			);
 			path = "macro-challenge";
@@ -80,30 +130,11 @@
 		ACEEDE822AE22140008F93E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ACEEDE832AE22154008F93E8 /* Font */,
+				3868C15E2AE61ED100E832B0 /* ColorString.swift */,
+				3868C1522AE61C7100E832B0 /* Font */,
 				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		ACEEDE832AE22154008F93E8 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				ACEEDE842AE22167008F93E8 /* Quicksand */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		ACEEDE842AE22167008F93E8 /* Quicksand */ = {
-			isa = PBXGroup;
-			children = (
-				AC1FC1C32AE6199E0078015B /* Quicksand-Bold.ttf */,
-				AC1FC1C22AE6199E0078015B /* Quicksand-Light.ttf */,
-				AC1FC1C52AE6199F0078015B /* Quicksand-Medium.ttf */,
-				AC1FC1C42AE6199E0078015B /* Quicksand-Regular.ttf */,
-				AC1FC1C62AE6199F0078015B /* Quicksand-SemiBold.ttf */,
-			);
-			path = Quicksand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,13 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1FC1C72AE6199F0078015B /* Quicksand-Light.ttf in Resources */,
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
+				3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */,
+				3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */,
+				3868C15D2AE61C8E00E832B0 /* Quicksand-Light.ttf in Resources */,
+				3868C15C2AE61C8E00E832B0 /* Quicksand-SemiBold.ttf in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
-				AC1FC1C82AE6199F0078015B /* Quicksand-Bold.ttf in Resources */,
-				AC1FC1C92AE6199F0078015B /* Quicksand-Regular.ttf in Resources */,
-				AC1FC1CB2AE6199F0078015B /* Quicksand-SemiBold.ttf in Resources */,
-				AC1FC1CA2AE6199F0078015B /* Quicksand-Medium.ttf in Resources */,
+				3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
+				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
+				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
+				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
+				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
