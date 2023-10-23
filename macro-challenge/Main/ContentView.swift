@@ -16,6 +16,9 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+//        .onAppear {
+//            let data = DataFeedManager().createDataSyllables()
+//        }
     }
 }
 
