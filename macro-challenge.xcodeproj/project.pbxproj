@@ -18,6 +18,12 @@
 		3868C1662AE622B800E832B0 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1652AE622B800E832B0 /* Typography.swift */; };
 		3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1672AE6256900E832B0 /* View+Typography.swift */; };
 		AC1FC1D22AE64C300078015B /* syllables.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1D12AE64C300078015B /* syllables.json */; };
+		AC1FC1D82AE667C20078015B /* DataFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* DataFeedManager.swift */; };
+		AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DB2AE668570078015B /* Syllable.swift */; };
+		AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */; };
+		AC1FC1E22AE672290078015B /* FlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E12AE672290078015B /* FlowViewModel.swift */; };
+		AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E32AE675590078015B /* BreakWordActivity.swift */; };
+		AC1FC1E62AE67A810078015B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E52AE67A810078015B /* Word.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -36,6 +42,12 @@
 		3868C1652AE622B800E832B0 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		3868C1672AE6256900E832B0 /* View+Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Typography.swift"; sourceTree = "<group>"; };
 		AC1FC1D12AE64C300078015B /* syllables.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = syllables.json; sourceTree = "<group>"; };
+		AC1FC1D72AE667C20078015B /* DataFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFeedManager.swift; sourceTree = "<group>"; };
+		AC1FC1DB2AE668570078015B /* Syllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllable.swift; sourceTree = "<group>"; };
+		AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableLabel.swift; sourceTree = "<group>"; };
+		AC1FC1E12AE672290078015B /* FlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewModel.swift; sourceTree = "<group>"; };
+		AC1FC1E32AE675590078015B /* BreakWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakWordActivity.swift; sourceTree = "<group>"; };
+		AC1FC1E52AE67A810078015B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +114,58 @@
 			path = Words;
 			sourceTree = "<group>";
 		};
+		AC1FC1D52AE667A70078015B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1D62AE667AB0078015B /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AC1FC1D62AE667AB0078015B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1D72AE667C20078015B /* DataFeedManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AC1FC1D92AE668400078015B /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1DE2AE66D250078015B /* View */,
+				AC1FC1DD2AE66D1F0078015B /* ViewModel */,
+				AC1FC1DA2AE668480078015B /* Models */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		AC1FC1DA2AE668480078015B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1DB2AE668570078015B /* Syllable.swift */,
+				AC1FC1E52AE67A810078015B /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC1FC1DD2AE66D1F0078015B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1E12AE672290078015B /* FlowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC1FC1DE2AE66D250078015B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
+				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +185,8 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AC1FC1D92AE668400078015B /* Feature */,
+				AC1FC1D52AE667A70078015B /* Core */,
 				3868C1692AE625B600E832B0 /* Main */,
 				3868C1622AE6216800E832B0 /* Design System */,
 				ACEEDE822AE22140008F93E8 /* Resources */,
@@ -224,10 +290,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
+				AC1FC1D82AE667C20078015B /* DataFeedManager.swift in Sources */,
+				AC1FC1E22AE672290078015B /* FlowViewModel.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
+				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
+				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
+				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
