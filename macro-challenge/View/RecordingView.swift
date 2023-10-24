@@ -27,8 +27,9 @@ struct RecordingView: View {
                     
                     Spacer()
                     
-                    Rectangle()
+                    RoundedRectangle(cornerRadius: 10)
                         .frame(width: 830, height: 20)
+
                     
                     Spacer()
                     
@@ -46,10 +47,18 @@ struct RecordingView: View {
                         recordingListView()
                     })
                 }
+                Spacer()
+
+                               
+                
+                RoundedRectangle(cornerRadius: 23.0)
+                    .strokeBorder(style: StrokeStyle(lineWidth: 5, dash: [55, 15])) // dash: [lineLength, lineSpacing]
+                    .frame(width: 266, height: 399)
+                    .foregroundColor(.black)
+                
                 
                 Spacer()
                 
-                Spacer()
                 
                 if vm.isRecording {
                     VStack(alignment : .leading , spacing : -5){
@@ -63,13 +72,14 @@ struct RecordingView: View {
                             .font(.system(size:60))
                             .foregroundColor(.black)
                     }
-                } else {
-                    VStack{
-                        Text("Apakah kamu puas dengan hasil suaramu?")
-                            .foregroundColor(.black)
-                    }.frame(width: 300, height: 100, alignment: .center)
-                }
-                    Image(systemName: vm.isRecording ? "stop.circle.fill" : "mic.circle.fill")
+                } 
+//                else {
+//                    VStack{
+//                        Text("Apakah kamu puas dengan hasil suaramu?")
+//                            .foregroundColor(.black)
+//                    }.frame(width: 300, height: 100, alignment: .center)
+//                }
+                    Image(systemName: vm.isRecording ? "stop.circle.fill" : "mic.circle")
                         .foregroundColor(.black)
                         .font(.system(size: 45))
                         .onTapGesture {
@@ -84,11 +94,14 @@ struct RecordingView: View {
                 
                 Spacer()
                 
+                
+                
             }
             .padding(.leading,25)
             .padding(.trailing,25)
             .padding(.top , 70)
         }.navigationTitle("Voice Record")
+        
     }
 }
 
