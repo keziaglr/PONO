@@ -12,7 +12,7 @@ struct SyllableLabel: View {
     @State var syllable : String
     @State var height: CGFloat
     @Binding var show: Bool
-    @State var vm = FlowViewModel()
+    @State var vm = FlowScreenViewModel()
     @State private var dragOffset = 0.0
     
     var body: some View {

@@ -13,7 +13,7 @@ struct BreakWordActivity: View {
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State var crack : Bool = false
-    @State var vm = FlowViewModel()
+    @State var vm = FlowScreenViewModel()
     
     @State var lineWidth: CGFloat = 3.0
     
