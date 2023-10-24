@@ -10,4 +10,8 @@ import Foundation
 struct Syllable: Decodable {
     let id: UUID
     let content: String
+    
+    var letters: [String] {
+        content.map { String($0) }
+    }
 }

@@ -17,11 +17,16 @@
 		3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */; };
 		3868C1662AE622B800E832B0 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1652AE622B800E832B0 /* Typography.swift */; };
 		3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1672AE6256900E832B0 /* View+Typography.swift */; };
+		3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */; };
+		3868C1722AE777D900E832B0 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1712AE777D900E832B0 /* StringResources.swift */; };
+		3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1762AE77AF700E832B0 /* OnboardingScreenView.swift */; };
+		3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */; };
+		3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */; };
 		AC1FC1D22AE64C300078015B /* syllables.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1D12AE64C300078015B /* syllables.json */; };
-		AC1FC1D82AE667C20078015B /* DataFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* DataFeedManager.swift */; };
+		AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* ContentManager.swift */; };
 		AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DB2AE668570078015B /* Syllable.swift */; };
 		AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */; };
-		AC1FC1E22AE672290078015B /* FlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E12AE672290078015B /* FlowViewModel.swift */; };
+		AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E12AE672290078015B /* FlowScreenViewModel.swift */; };
 		AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E32AE675590078015B /* BreakWordActivity.swift */; };
 		AC1FC1E62AE67A810078015B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E52AE67A810078015B /* Word.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
@@ -41,11 +46,16 @@
 		3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacings.swift"; sourceTree = "<group>"; };
 		3868C1652AE622B800E832B0 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		3868C1672AE6256900E832B0 /* View+Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Typography.swift"; sourceTree = "<group>"; };
+		3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		3868C1712AE777D900E832B0 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
+		3868C1762AE77AF700E832B0 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScreenView.swift; sourceTree = "<group>"; };
 		AC1FC1D12AE64C300078015B /* syllables.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = syllables.json; sourceTree = "<group>"; };
-		AC1FC1D72AE667C20078015B /* DataFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFeedManager.swift; sourceTree = "<group>"; };
+		AC1FC1D72AE667C20078015B /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		AC1FC1DB2AE668570078015B /* Syllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllable.swift; sourceTree = "<group>"; };
 		AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableLabel.swift; sourceTree = "<group>"; };
-		AC1FC1E12AE672290078015B /* FlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewModel.swift; sourceTree = "<group>"; };
+		AC1FC1E12AE672290078015B /* FlowScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScreenViewModel.swift; sourceTree = "<group>"; };
 		AC1FC1E32AE675590078015B /* BreakWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakWordActivity.swift; sourceTree = "<group>"; };
 		AC1FC1E52AE67A810078015B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +99,7 @@
 		3868C1622AE6216800E832B0 /* Design System */ = {
 			isa = PBXGroup;
 			children = (
+				3868C15E2AE61ED100E832B0 /* ColorString.swift */,
 				3868C1672AE6256900E832B0 /* View+Typography.swift */,
 				3868C1602AE61FEF00E832B0 /* Color+Colors.swift */,
 				3868C1632AE621C900E832B0 /* CGFloat+Spacings.swift */,
@@ -106,17 +117,112 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		AC1FC1D02AE64C0B0078015B /* Words */ = {
+		3868C16A2AE6C59A00E832B0 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1D02AE64C0B0078015B /* Data Resources */,
+				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		3868C1702AE7779E00E832B0 /* UI Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1522AE61C7100E832B0 /* Font */,
+				3868C1712AE777D900E832B0 /* StringResources.swift */,
+				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
+			);
+			path = "UI Resources";
+			sourceTree = "<group>";
+		};
+		3868C1732AE77ACB00E832B0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3868C17F2AE77BC700E832B0 /* Card Activity */,
+				3868C1802AE77BD200E832B0 /* Break Word Activity */,
+				3868C1812AE77BDF00E832B0 /* Read Activity */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3868C1742AE77AD700E832B0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1DE2AE66D250078015B /* Shared */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3868C1752AE77ADC00E832B0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1782AE77AFC00E832B0 /* Onboarding */,
+				3868C1792AE77B0400E832B0 /* Home */,
+				3868C17A2AE77B0800E832B0 /* Flow */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		3868C1782AE77AFC00E832B0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3868C1762AE77AF700E832B0 /* OnboardingScreenView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3868C1792AE77B0400E832B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3868C17A2AE77B0800E832B0 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */,
+				AC1FC1E12AE672290078015B /* FlowScreenViewModel.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		3868C17F2AE77BC700E832B0 /* Card Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Card Activity";
+			sourceTree = "<group>";
+		};
+		3868C1802AE77BD200E832B0 /* Break Word Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
+			);
+			path = "Break Word Activity";
+			sourceTree = "<group>";
+		};
+		3868C1812AE77BDF00E832B0 /* Read Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Read Activity";
+			sourceTree = "<group>";
+		};
+		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
 			isa = PBXGroup;
 			children = (
 				AC1FC1D12AE64C300078015B /* syllables.json */,
 			);
-			path = Words;
+			path = "Data Resources";
 			sourceTree = "<group>";
 		};
 		AC1FC1D52AE667A70078015B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3868C1622AE6216800E832B0 /* Design System */,
 				AC1FC1D62AE667AB0078015B /* Utilities */,
 			);
 			path = Core;
@@ -125,19 +231,20 @@
 		AC1FC1D62AE667AB0078015B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				AC1FC1D72AE667C20078015B /* DataFeedManager.swift */,
+				3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		AC1FC1D92AE668400078015B /* Feature */ = {
+		AC1FC1D92AE668400078015B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				AC1FC1DE2AE66D250078015B /* View */,
-				AC1FC1DD2AE66D1F0078015B /* ViewModel */,
-				AC1FC1DA2AE668480078015B /* Models */,
+				3868C1702AE7779E00E832B0 /* UI Resources */,
+				3868C1742AE77AD700E832B0 /* Components */,
+				3868C1732AE77ACB00E832B0 /* Modules */,
+				3868C1752AE77ADC00E832B0 /* Screens */,
 			);
-			path = Feature;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		AC1FC1DA2AE668480078015B /* Models */ = {
@@ -149,21 +256,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AC1FC1DD2AE66D1F0078015B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AC1FC1E12AE672290078015B /* FlowViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		AC1FC1DE2AE66D250078015B /* View */ = {
+		AC1FC1DE2AE66D250078015B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
-				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
 			);
-			path = View;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
@@ -185,11 +283,11 @@
 		AC50DC2A2ACE5CDF00B9FE1B /* macro-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				AC1FC1D92AE668400078015B /* Feature */,
-				AC1FC1D52AE667A70078015B /* Core */,
 				3868C1692AE625B600E832B0 /* Main */,
-				3868C1622AE6216800E832B0 /* Design System */,
-				ACEEDE822AE22140008F93E8 /* Resources */,
+				AC1FC1D52AE667A70078015B /* Core */,
+				3868C16A2AE6C59A00E832B0 /* Data Manager */,
+				AC1FC1DA2AE668480078015B /* Models */,
+				AC1FC1D92AE668400078015B /* Presentation */,
 				AC50DC312ACE5CE100B9FE1B /* Preview Content */,
 			);
 			path = "macro-challenge";
@@ -201,17 +299,6 @@
 				AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		ACEEDE822AE22140008F93E8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AC1FC1D02AE64C0B0078015B /* Words */,
-				3868C15E2AE61ED100E832B0 /* ColorString.swift */,
-				3868C1522AE61C7100E832B0 /* Font */,
-				AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +329,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					AC50DC272ACE5CDF00B9FE1B = {
 						CreatedOnToolsVersion = 14.3;
@@ -290,10 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
+				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
-				AC1FC1D82AE667C20078015B /* DataFeedManager.swift in Sources */,
-				AC1FC1E22AE672290078015B /* FlowViewModel.swift in Sources */,
+				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
+				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
+				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
+				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
+				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
@@ -345,6 +437,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -405,6 +498,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -431,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = T84FHM7BL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
@@ -461,7 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = T84FHM7BL8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";

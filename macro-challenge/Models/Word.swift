@@ -13,4 +13,8 @@ struct Word {
     func formatted() -> String {
         syllables.reduce("") { $0 + $1.content }
     }
+    
+    func syllable(at index: Int) -> String {
+        return syllables[safe: index]?.content ?? ""
+    }
 }

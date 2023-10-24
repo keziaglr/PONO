@@ -5,10 +5,10 @@
 //  Created by Kezia Gloria on 23/10/23.
 //
 
-import Foundation
 import SwiftUI
 
-class FlowViewModel{
+class FlowScreenViewModel: ObservableObject {
+    
     private var syllables: [Syllable] = []
     
     private(set) var word: Word? = nil
@@ -19,7 +19,7 @@ class FlowViewModel{
     }
     
     func getSyllables() {
-        syllables = DataFeedManager().createDataSyllables()
+        syllables = ContentManager.shared.syllables
     }
     
     func getWord() {
