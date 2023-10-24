@@ -10,4 +10,5 @@ import Foundation
 struct Syllable: Decodable {
     let id: UUID
     let content: String
+    let letters: [String]
 }
