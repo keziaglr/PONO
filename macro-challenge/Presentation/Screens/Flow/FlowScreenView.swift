@@ -13,6 +13,3 @@ struct FlowScreenView: View {
     }
 }
 
-#Preview {
-    FlowScreenView()
-}
