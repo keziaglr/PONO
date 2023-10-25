@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+//    @ObservedObject var audioManager = ContentViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+            
         }
         .padding()
 //        .onAppear {
 //            let data = DataFeedManager().createDataSyllables()
 //        }
+//        .onAppear{
+//            audioManager.startTest()
+//        }
+        
     }
 }
 

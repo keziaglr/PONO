@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
+		2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* AudioRecord.swift */; };
+		2FF694A52AE8C6320085393F /* ConvertSec+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A42AE8C6320085393F /* ConvertSec+Extension.swift */; };
+		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
+		2FF694A92AE8DDAB0085393F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A82AE8DDAB0085393F /* ContentViewModel.swift */; };
 		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
 		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
 		3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */; };
@@ -36,6 +41,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
+		2FF694A22AE8B8790085393F /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
+		2FF694A42AE8C6320085393F /* ConvertSec+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConvertSec+Extension.swift"; sourceTree = "<group>"; };
+		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2FF694A82AE8DDAB0085393F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 			children = (
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
+				2FF694A82AE8DDAB0085393F /* ContentViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			children = (
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
+				2FF694A02AE8B4740085393F /* RecordingManager.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -232,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */,
+				2FF694A42AE8C6320085393F /* ConvertSec+Extension.swift */,
+				2FF694A62AE8C65D0085393F /* Date+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 			children = (
 				AC1FC1DB2AE668570078015B /* Syllable.swift */,
 				AC1FC1E52AE67A810078015B /* Word.swift */,
+				2FF694A22AE8B8790085393F /* AudioRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
+				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
+				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
@@ -387,6 +404,7 @@
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
+				2FF694A92AE8DDAB0085393F /* ContentViewModel.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
@@ -395,6 +413,8 @@
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
+				2FF694A52AE8C6320085393F /* ConvertSec+Extension.swift in Sources */,
+				2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
