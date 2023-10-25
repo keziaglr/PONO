@@ -14,8 +14,7 @@ struct BreakWordActivity: View {
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State var crack : Bool = false
     @State var vm = FlowScreenViewModel()
-    
-    @State var lineWidth: CGFloat = 3.0
+    @State private var dragOffset : [CGFloat] = [0.0, 0.0]
     
     var body: some View {
         GeometryReader { geometry in
@@ -29,20 +28,36 @@ struct BreakWordActivity: View {
                 
                 HStack(spacing: -15) {
                     SyllableLabel(position: "left", syllable: (vm.word?.syllables[0].content)!, height: height, show: $crack)
+                        .offset(x: dragOffset[0])
+                        .animation(.easeOut(duration: 1), value: dragOffset)
+                        .onChange(of: crack) { newValue in
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                                dragOffset[0] = dragOffset[0] - 100.0
+                            }
+                        }
                     SyllableLabel(position: "right", syllable: (vm.word?.syllables[1].content)!, height: height, show: $crack)
+                        .offset(x: dragOffset[1])
+                        .animation(.easeOut(duration: 1), value: dragOffset)
+                        .onChange(of: crack) { newValue in
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                                dragOffset[1] = dragOffset[1] + 100.0
+                            }
+                        }
                 }
                 .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                 
                 if !crack {
-                    Path { path in
-                        insertDottedPath(start: CGPoint(x: screenWidth/2, y: screenHeight/2-height/2), end : CGPoint(x: screenWidth/2, y: screenHeight/2+height/2), path: &path)
-                    }.stroke(.black, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round, dash: [10]))
-                        .gesture(
-                            DragGesture(minimumDistance: height)
-                                .onChanged({ (value) in
-                                    crack = true
-                                })
+                    ZStack {
+                        Path { path in
+                            insertDottedPath(start: CGPoint(x: screenWidth/2, y: screenHeight/2-height/2), end : CGPoint(x: screenWidth/2, y: screenHeight/2+height/2), path: &path)
+                        }.stroke(.black, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round, dash: [10]))
+                            .gesture(
+                                DragGesture(minimumDistance: height)
+                                    .onChanged({ (value) in
+                                        crack = true
+                                    })
                         )
+                    }
                     
                 }
                 

@@ -65,6 +65,7 @@
 		AC1FC2C52AE8E4BB0078015B /* nu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2A12AE8E4BA0078015B /* nu.m4a */; };
 		AC1FC2C62AE8E4BB0078015B /* bu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2A22AE8E4BA0078015B /* bu.m4a */; };
 		AC1FC2C72AE8E4BB0078015B /* na.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2A32AE8E4BA0078015B /* na.m4a */; };
+		AC1FC2CD2AE8F63E0078015B /* BlendWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC2CC2AE8F63E0078015B /* BlendWordActivity.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -130,6 +131,7 @@
 		AC1FC2A12AE8E4BA0078015B /* nu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nu.m4a; sourceTree = "<group>"; };
 		AC1FC2A22AE8E4BA0078015B /* bu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bu.m4a; sourceTree = "<group>"; };
 		AC1FC2A32AE8E4BA0078015B /* na.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = na.m4a; sourceTree = "<group>"; };
+		AC1FC2CC2AE8F63E0078015B /* BlendWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendWordActivity.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC1FC2CB2AE8F62C0078015B /* Blend Word Activity */,
 				3868C17F2AE77BC700E832B0 /* Card Activity */,
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
 				3868C1812AE77BDF00E832B0 /* Read Activity */,
@@ -397,6 +400,14 @@
 			path = Syllables;
 			sourceTree = "<group>";
 		};
+		AC1FC2CB2AE8F62C0078015B /* Blend Word Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC2CC2AE8F63E0078015B /* BlendWordActivity.swift */,
+			);
+			path = "Blend Word Activity";
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +567,7 @@
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
+				AC1FC2CD2AE8F63E0078015B /* BlendWordActivity.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
