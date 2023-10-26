@@ -23,9 +23,7 @@ class RecordingManager: NSObject, RecordingManagerInterface {
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
     private var isRecording: Bool = false
-    //    private var record: Recording?
     private var timer: Timer?
-    //    private var playingURL: URL?
     
     override init() {
         super.init()
@@ -33,7 +31,6 @@ class RecordingManager: NSObject, RecordingManagerInterface {
     }
     
     deinit {
-        // TODO: -
         // Invalidate timer
         timer?.invalidate()
         
