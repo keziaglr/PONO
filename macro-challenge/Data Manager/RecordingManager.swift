@@ -23,9 +23,9 @@ class RecordingManager: NSObject, RecordingManagerInterface {
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
     private var isRecording: Bool = false
-//    private var record: Recording?
+    //    private var record: Recording?
     private var timer: Timer?
-//    private var playingURL: URL?
+    //    private var playingURL: URL?
     
     override init() {
         super.init()
@@ -35,6 +35,7 @@ class RecordingManager: NSObject, RecordingManagerInterface {
     deinit {
         // TODO: -
         // Invalidate timer
+        timer?.invalidate()
         
         // Remove recording file
         deleteRecords()
@@ -52,7 +53,7 @@ class RecordingManager: NSObject, RecordingManagerInterface {
         }
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let fileName = path.appendingPathComponent("\(UUID()).m4a")
+        let fileName = path.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY 'at' HH:mm:ss")).m4a")
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -117,16 +118,18 @@ class RecordingManager: NSObject, RecordingManagerInterface {
     }
     
     func deleteRecords() {
-        let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        
-        
-        do {
-            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsUrl,
-                                                                       includingPropertiesForKeys: nil,
-                                                                       options: .skipsHiddenFiles)
-            for fileURL in fileURLs where fileURL.pathExtension == "m4a" {
-                try FileManager.default.removeItem(at: fileURL)
+        for record in records {
+            do {
+                try FileManager.default.removeItem(at: record.url)
+            } catch {
+                print("Can't delete")
             }
+        }
+    }
+    
+    func deleteRecord(_ record: AudioRecord) {
+        do {
+            try FileManager.default.removeItem(at: record.url)
         } catch {
             print("Can't delete")
         }

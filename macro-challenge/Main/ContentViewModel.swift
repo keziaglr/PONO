@@ -11,13 +11,22 @@ import Foundation
 class ContentViewModel : ObservableObject{
     var audioManager = RecordingManager.shared
     
-    func startTest() {
+    var tempRec: AudioRecord?
+    
+    func startRecord() {
         audioManager.startRecord { [weak self] record in
-            guard self != nil else { return }
+            guard let self else { return }
+            self.tempRec = record
         }
     }
     
-    func stopTest() {
+    func stopRecord() {
         audioManager.stopRecord()
+    }
+    
+    func startPlaying() {
+        guard let tempRec else { return }
+        
+        audioManager.playRecording(tempRec)
     }
 }
