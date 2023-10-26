@@ -53,7 +53,3 @@ class QrScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     }
 
 }
-
-protocol QrScannerDelegate : AnyObject {
-    func getQrScannedDataDelegate(scannedData: String)
-}
