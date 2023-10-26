@@ -58,6 +58,19 @@
 		74FB08CF2AE9A1B8003CBE43 /* ne.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB08B62AE9A1B8003CBE43 /* ne.m4a */; };
 		74FB08D02AE9A1B8003CBE43 /* do.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB08B72AE9A1B8003CBE43 /* do.m4a */; };
 		74FB08D12AE9A1B8003CBE43 /* bo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB08B82AE9A1B8003CBE43 /* bo.m4a */; };
+		74FB08D32AE9A377003CBE43 /* QrScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08D22AE9A377003CBE43 /* QrScannerManager.swift */; };
+		74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08D52AE9A9C6003CBE43 /* PermissionEnum.swift */; };
+		74FB08D82AE9AA50003CBE43 /* QrCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08D72AE9AA50003CBE43 /* QrCameraView.swift */; };
+		74FB08DA2AE9AB04003CBE43 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08D92AE9AB04003CBE43 /* ScannerView.swift */; };
+		74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08DB2AE9AB8F003CBE43 /* ScannerViewModel.swift */; };
+		74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08DE2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift */; };
+		74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E02AE9D351003CBE43 /* FrontCardView.swift */; };
+		74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */; };
+		74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */; };
+		74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E62AE9E26B003CBE43 /* ImageConst.swift */; };
+		74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E82AE9E94E003CBE43 /* BackCardView.swift */; };
+		74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EA2AE9EC33003CBE43 /* FontConst.swift */; };
+		74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */; };
 		AC1FC1D22AE64C300078015B /* syllables.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1D12AE64C300078015B /* syllables.json */; };
 		AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* ContentManager.swift */; };
 		AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DB2AE668570078015B /* Syllable.swift */; };
@@ -123,6 +136,19 @@
 		74FB08B62AE9A1B8003CBE43 /* ne.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne.m4a; sourceTree = "<group>"; };
 		74FB08B72AE9A1B8003CBE43 /* do.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = do.m4a; sourceTree = "<group>"; };
 		74FB08B82AE9A1B8003CBE43 /* bo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bo.m4a; sourceTree = "<group>"; };
+		74FB08D22AE9A377003CBE43 /* QrScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerManager.swift; sourceTree = "<group>"; };
+		74FB08D52AE9A9C6003CBE43 /* PermissionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionEnum.swift; sourceTree = "<group>"; };
+		74FB08D72AE9AA50003CBE43 /* QrCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCameraView.swift; sourceTree = "<group>"; };
+		74FB08D92AE9AB04003CBE43 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		74FB08DB2AE9AB8F003CBE43 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		74FB08DE2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVowelStyleEnum.swift; sourceTree = "<group>"; };
+		74FB08E02AE9D351003CBE43 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
+		74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConst.swift; sourceTree = "<group>"; };
+		74FB08E62AE9E26B003CBE43 /* ImageConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConst.swift; sourceTree = "<group>"; };
+		74FB08E82AE9E94E003CBE43 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		74FB08EA2AE9EC33003CBE43 /* FontConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConst.swift; sourceTree = "<group>"; };
+		74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDelegate.swift; sourceTree = "<group>"; };
 		AC1FC1D12AE64C300078015B /* syllables.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = syllables.json; sourceTree = "<group>"; };
 		AC1FC1D72AE667C20078015B /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		AC1FC1DB2AE668570078015B /* Syllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllable.swift; sourceTree = "<group>"; };
@@ -194,6 +220,7 @@
 			children = (
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
+				74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -219,6 +246,7 @@
 		3868C1742AE77AD700E832B0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				74FB08DD2AE9D25D003CBE43 /* Card */,
 				AC1FC1DE2AE66D250078015B /* Shared */,
 			);
 			path = Components;
@@ -326,11 +354,35 @@
 			path = Syllables;
 			sourceTree = "<group>";
 		};
+		74FB08D42AE9A9B9003CBE43 /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				74FB08D52AE9A9C6003CBE43 /* PermissionEnum.swift */,
+				74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */,
+				74FB08E62AE9E26B003CBE43 /* ImageConst.swift */,
+				74FB08EA2AE9EC33003CBE43 /* FontConst.swift */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		74FB08DD2AE9D25D003CBE43 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				74FB08D92AE9AB04003CBE43 /* ScannerView.swift */,
+				74FB08DB2AE9AB8F003CBE43 /* ScannerViewModel.swift */,
+				74FB08DE2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift */,
+				74FB08E02AE9D351003CBE43 /* FrontCardView.swift */,
+				74FB08E82AE9E94E003CBE43 /* BackCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
 			isa = PBXGroup;
 			children = (
 				74FB08872AE9A13D003CBE43 /* Voice */,
 				AC1FC1D12AE64C300078015B /* syllables.json */,
+				74FB08D22AE9A377003CBE43 /* QrScannerManager.swift */,
 			);
 			path = "Data Resources";
 			sourceTree = "<group>";
@@ -347,7 +399,9 @@
 		AC1FC1D62AE667AB0078015B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				74FB08D42AE9A9B9003CBE43 /* enum */,
 				3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */,
+				74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -376,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
+				74FB08D72AE9AA50003CBE43 /* QrCameraView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -534,17 +589,30 @@
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
+				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
+				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
+				74FB08DA2AE9AB04003CBE43 /* ScannerView.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
+				74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
+				74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */,
+				74FB08D82AE9AA50003CBE43 /* QrCameraView.swift in Sources */,
+				74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
+				74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
+				74FB08D32AE9A377003CBE43 /* QrScannerManager.swift in Sources */,
+				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
+				74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
+				74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */,
+				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
 			);
@@ -677,10 +745,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = T84FHM7BL8;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -707,10 +776,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = T84FHM7BL8;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

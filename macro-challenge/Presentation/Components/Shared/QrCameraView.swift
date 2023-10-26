@@ -1,0 +1,30 @@
+//
+//  QrCameraView.swift
+//  macro-challenge
+//
+//  Created by Ferrian Redhia Pratama on 26/10/23.
+//
+
+import SwiftUI
+import AVKit
+
+struct QrCameraView: UIViewRepresentable {
+    var cameraSession: AVCaptureSession
+    var frameSize: CGSize
+    
+    func makeUIView(context: Context) -> UIView {
+        let view = UIViewType(frame: CGRect(origin: .zero, size: frameSize))
+        view.backgroundColor = .clear
+        
+        let cameraLayer = AVCaptureVideoPreviewLayer(session: cameraSession)
+        cameraLayer.frame = .init(origin: .zero, size: frameSize)
+        cameraLayer.videoGravity = .resizeAspectFill
+        cameraLayer.masksToBounds = true
+        view.layer.addSublayer(cameraLayer)
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
