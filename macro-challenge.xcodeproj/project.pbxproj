@@ -130,7 +130,6 @@
 		AC1FC1E12AE672290078015B /* FlowScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScreenViewModel.swift; sourceTree = "<group>"; };
 		AC1FC1E32AE675590078015B /* BreakWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakWordActivity.swift; sourceTree = "<group>"; };
 		AC1FC1E52AE67A810078015B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -212,10 +211,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				AC1FC2CB2AE8F62C0078015B /* Blend Word Activity */,
-				3868C17F2AE77BC700E832B0 /* Card Activity */,
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
-				3868C1812AE77BDF00E832B0 /* Read Activity */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -263,26 +259,12 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
-		3868C17F2AE77BC700E832B0 /* Card Activity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Card Activity";
-			sourceTree = "<group>";
-		};
 		3868C1802AE77BD200E832B0 /* Break Word Activity */ = {
 			isa = PBXGroup;
 			children = (
 				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
 			);
 			path = "Break Word Activity";
-			sourceTree = "<group>";
-		};
-		3868C1812AE77BDF00E832B0 /* Read Activity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Read Activity";
 			sourceTree = "<group>";
 		};
 		74FB08872AE9A13D003CBE43 /* Voice */ = {
@@ -557,7 +539,6 @@
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
-				AC1FC2CD2AE8F63E0078015B /* BlendWordActivity.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
