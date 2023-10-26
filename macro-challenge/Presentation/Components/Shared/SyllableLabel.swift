@@ -12,8 +12,6 @@ struct SyllableLabel: View {
     @State var syllable : String
     @State var height: CGFloat
     @Binding var show: Bool
-    @State var vm = FlowScreenViewModel()
-    @State private var dragOffset = 0.0
     
     var body: some View {
         ZStack {
@@ -26,16 +24,6 @@ struct SyllableLabel: View {
 //                .textStyle(style: .heading1)
                 .font(.custom("Quicksand-Bold", size: 140))
                 .kerning(25)
-        }.offset(x: dragOffset)
-        .animation(.easeOut(duration: 1), value: dragOffset)
-        .onChange(of: show) { newValue in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                if position == "left"{
-                    dragOffset = dragOffset - 100.0
-                }else{
-                    dragOffset = dragOffset + 100.0
-                }
-            }
         }
     }
 }

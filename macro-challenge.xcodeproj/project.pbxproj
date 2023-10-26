@@ -211,9 +211,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				3868C17F2AE77BC700E832B0 /* Card Activity */,
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
-				3868C1812AE77BDF00E832B0 /* Read Activity */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -261,26 +259,12 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
-		3868C17F2AE77BC700E832B0 /* Card Activity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Card Activity";
-			sourceTree = "<group>";
-		};
 		3868C1802AE77BD200E832B0 /* Break Word Activity */ = {
 			isa = PBXGroup;
 			children = (
 				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
 			);
 			path = "Break Word Activity";
-			sourceTree = "<group>";
-		};
-		3868C1812AE77BDF00E832B0 /* Read Activity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Read Activity";
 			sourceTree = "<group>";
 		};
 		74FB08872AE9A13D003CBE43 /* Voice */ = {
