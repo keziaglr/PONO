@@ -13,6 +13,3 @@ struct OnboardingScreenView: View {
     }
 }
 
-#Preview {
-    OnboardingScreenView()
-}
