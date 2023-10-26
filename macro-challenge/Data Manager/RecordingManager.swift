@@ -8,13 +8,7 @@
 import Foundation
 import AVFoundation
 
-protocol RecordingManagerInterface {
-    var records: [AudioRecord] { get }
-    func startRecord(for seconds: TimeInterval, completion: @escaping (AudioRecord) -> Void)
-    func playRecording(_ record: AudioRecord)
-}
-
-class RecordingManager: NSObject, RecordingManagerInterface {
+class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
@@ -135,6 +129,6 @@ class RecordingManager: NSObject, RecordingManagerInterface {
 
 extension RecordingManager: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
+
     }
 }
