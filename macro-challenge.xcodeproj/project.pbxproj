@@ -95,6 +95,7 @@
 		AC1FC2E82AEA6F160078015B /* after_card(2-wrong).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DA2AEA6F160078015B /* after_card(2-wrong).m4a */; };
 		AC1FC2E92AEA6F160078015B /* before_spelling.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DB2AEA6F160078015B /* before_spelling.m4a */; };
 		AC1FC2EA2AEA6F160078015B /* before_card(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */; };
+		AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D732AEB70060012E00C /* BlendWordActivity.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -190,6 +191,7 @@
 		AC1FC2DA2AEA6F160078015B /* after_card(2-wrong).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_card(2-wrong).m4a"; sourceTree = "<group>"; };
 		AC1FC2DB2AEA6F160078015B /* before_spelling.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_spelling.m4a; sourceTree = "<group>"; };
 		AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_card(1).m4a"; sourceTree = "<group>"; };
+		AC427D732AEB70060012E00C /* BlendWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendWordActivity.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC427D722AEB6FC80012E00C /* Blend Word Activity */,
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
 			);
 			path = Modules;
@@ -526,6 +529,14 @@
 			path = Spelling;
 			sourceTree = "<group>";
 		};
+		AC427D722AEB6FC80012E00C /* Blend Word Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC427D732AEB70060012E00C /* BlendWordActivity.swift */,
+			);
+			path = "Blend Word Activity";
+			sourceTree = "<group>";
+		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +707,7 @@
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
+				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
