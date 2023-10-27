@@ -14,14 +14,14 @@ struct ProgressBarView: View {
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
-                .fill(Color.Grey5)
+                .fill(Color.Grey3)
                 .frame(width: width, height: height)
             if percent != 0 {
                 ZStack {
                     Capsule()
-                        .fill(Color.Teal2)
+                        .fill(Color.Yellow2)
                     Capsule()
-                        .fill(Color.Teal3)
+                        .fill(Color.Yellow2)
                         .frame(height: height/3)
                         .padding(.horizontal)
                         .padding(.bottom, height/5)

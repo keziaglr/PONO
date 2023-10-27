@@ -8,28 +8,30 @@
 import SwiftUI
 
 struct SyllableLabel: View {
-    @State var position : String
     @State var syllable : String
     @State var height: CGFloat
+    @State var width: CGFloat
     @Binding var show: Bool
     
     var body: some View {
         ZStack {
-            Image(position)
-                .resizable()
-                .scaledToFit()
-                .frame(height: height)
-                .opacity(show ? 1 : 0)
             Text(syllable)
 //                .textStyle(style: .heading1)
-                .font(.custom("Quicksand-Bold", size: 140))
+                .font(.custom("Quicksand-Bold", size: 100))
+                .foregroundColor(Color.Blue1)
                 .kerning(25)
-        }
+                .padding(.horizontal, 50)
+        }.background(
+            RoundedRectangle(cornerRadius: 25)
+                .fill(Color.Blue3)
+                .frame(width: width, height: height)
+                .opacity(show ? 1 : 0)
+        )
     }
 }
 
 struct SyllableLabel_Previews: PreviewProvider {
     static var previews: some View {
-        SyllableLabel(position: "left", syllable: "bu", height: 200, show: .constant(true))
+        SyllableLabel(syllable: "bu", height: 200, width: 300, show: .constant(true))
     }
 }

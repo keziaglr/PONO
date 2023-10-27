@@ -12,12 +12,16 @@ extension Color {
         Color(ColorString.White1)
     }
     
-    static var black1: Color {
-        Color(ColorString.black1)
+    static var White2: Color {
+        Color(ColorString.White2)
     }
     
-    static var black2: Color {
-        Color(ColorString.black2)
+    static var Black1: Color {
+        Color(ColorString.Black1)
+    }
+    
+    static var Black2: Color {
+        Color(ColorString.Black2)
     }
     
     static var Primary: Color {
@@ -28,8 +32,32 @@ extension Color {
         Color(ColorString.Secondary)
     }
     
+    static var Blue1: Color {
+        Color(ColorString.Blue1)
+    }
+    
+    static var Blue2: Color {
+        Color(ColorString.Blue2)
+    }
+    
+    static var Blue3: Color {
+        Color(ColorString.Blue3)
+    }
+    
     static var Orange1: Color {
         Color(ColorString.Orange1)
+    }
+    
+    static var Orange2: Color {
+        Color(ColorString.Orange2)
+    }
+    
+    static var Green1: Color {
+        Color(ColorString.Green1)
+    }
+    
+    static var Green2: Color {
+        Color(ColorString.Green2)
     }
     
     static var Grey1: Color {
@@ -44,31 +72,35 @@ extension Color {
         Color(ColorString.Grey3)
     }
     
-    static var Grey4: Color {
-        Color(ColorString.Grey4)
+    static var Pink1: Color {
+        Color(ColorString.Pink1)
     }
     
-    static var Grey5: Color {
-        Color(ColorString.Grey5)
+    static var Pink2: Color {
+        Color(ColorString.Pink2)
     }
     
-    static var Teal1: Color {
-        Color(ColorString.Teal1)
+    static var Purple1: Color {
+        Color(ColorString.Purple1)
     }
     
-    static var Teal2: Color {
-        Color(ColorString.Teal2)
+    static var Purple2: Color {
+        Color(ColorString.Purple2)
     }
     
-    static var Teal3: Color {
-        Color(ColorString.Teal3)
+    static var Red1: Color {
+        Color(ColorString.Red1)
     }
     
-    static var Teal4: Color {
-        Color(ColorString.Teal4)
+    static var Red2: Color {
+        Color(ColorString.Red2)
     }
     
-    static var Teal5: Color {
-        Color(ColorString.Teal5)
+    static var Yellow1: Color {
+        Color(ColorString.Yellow1)
+    }
+    
+    static var Yellow2: Color {
+        Color(ColorString.Yellow2)
     }
 }
