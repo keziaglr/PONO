@@ -97,6 +97,8 @@
 		AC1FC2EA2AEA6F160078015B /* before_card(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */; };
 		AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D732AEB70060012E00C /* BlendWordActivity.swift */; };
 		AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D752AEB70D00012E00C /* ProgressBarView.swift */; };
+		AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D772AEBC4AE0012E00C /* InstructionView.swift */; };
+		AC427D7C2AEBCF4E0012E00C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -194,6 +196,8 @@
 		AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_card(1).m4a"; sourceTree = "<group>"; };
 		AC427D732AEB70060012E00C /* BlendWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendWordActivity.swift; sourceTree = "<group>"; };
 		AC427D752AEB70D00012E00C /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		AC427D772AEBC4AE0012E00C /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
 				74FB08D72AE9AA50003CBE43 /* QrCameraView.swift */,
 				AC427D752AEB70D00012E00C /* ProgressBarView.swift */,
+				AC427D772AEBC4AE0012E00C /* InstructionView.swift */,
+				AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
+				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
@@ -718,6 +725,7 @@
 				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
 				74FB08DA2AE9AB04003CBE43 /* ScannerView.swift in Sources */,
+				AC427D7C2AEBCF4E0012E00C /* ButtonView.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
