@@ -3,26 +3,9 @@ import AVFoundation
 class AudioManager: NSObject {
     var queuePlayer: AVQueuePlayer?
     var playerItems: [AVPlayerItem] = []
-//    var audioFileNames: [String] = ["after_spelling", "before_spelling"]
     var currentAudioIndex = 0
-//    guard let path = Bundle.main.path(forResource: assetName, ofType: "m4a") else {return}
-//    let url = URL(fileURLWithPath: path)
     override init() {
-        // Create player items from audio file names
-//        for audioFileName in audioFileNames {
-//            if let path = Bundle.main.path(forResource: audioFileName, ofType: "m4a") {
-//                let url = URL(fileURLWithPath: path)
-//                let playerItem = AVPlayerItem(url: url)
-//                playerItems.append(playerItem)
-//                print("WOIWOI-> ITEM \(url.absoluteString)")
-//            }
-//        }
-        
-        // Initialize AVQueuePlayer with the player items
-//        queuePlayer = AVQueuePlayer(items: playerItems)
         super.init()
-        // Observe player item changes (optional)
-//        queuePlayer?.self.addObserver(self, forKeyPath: "currentItem", options: [.new, .initial], context: nil)
         
     }
     

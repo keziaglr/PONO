@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var viewModel: ContentViewModel = ContentViewModel()
-    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,9 +19,6 @@ struct ContentView: View {
 //        .onAppear {
 //            let data = DataFeedManager().createDataSyllables()
 //        }
-        .onAppear{
-            viewModel.playAudio()
-        }
     }
 }
 

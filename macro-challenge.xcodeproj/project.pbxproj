@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F8295D42AEB5CC700220402 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8295D32AEB5CC600220402 /* ContentViewModel.swift */; };
 		2F8295D62AEC1C5500220402 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8295D52AEC1C5500220402 /* AudioManager.swift */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
 		2FF694A32AE8B8790085393F /* VoiceAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* VoiceAudio.swift */; };
@@ -104,7 +103,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F8295D32AEB5CC600220402 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2F8295D52AEC1C5500220402 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
 		2FF694A22AE8B8790085393F /* VoiceAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAudio.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			children = (
 				AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */,
 				AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */,
-				2F8295D32AEB5CC600220402 /* ContentViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -720,7 +717,6 @@
 				74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
 				74FB08D32AE9A377003CBE43 /* QrScannerManager.swift in Sources */,
-				2F8295D42AEB5CC700220402 /* ContentViewModel.swift in Sources */,
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
