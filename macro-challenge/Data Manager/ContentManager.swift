@@ -58,7 +58,6 @@ import AVFoundation
 //}
 
 class ContentManager {
-    
     static let shared = ContentManager()
     
     var audioPlayer: AVAudioPlayer!
@@ -102,4 +101,17 @@ class ContentManager {
     func stopAudio(){
         audioPlayer?.stop()
     }
+}
+
+enum Activity {
+    case beforeBreakWord([Syllable])
+    case afterBreakWord([Syllable])
+    case beforeCard(Syllable)
+    case afterCard
+    case wrongCard
+    case correctCard
+    case beforeRead([Syllable])
+    case afterRead
+    case beforeBlendWord
+    case afterBlendWord
 }

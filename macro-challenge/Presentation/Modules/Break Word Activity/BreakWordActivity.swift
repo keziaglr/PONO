@@ -60,6 +60,10 @@ struct BreakWordActivity: View {
                     
                 }
                 
+            }.onAppear{
+                vm.playInstruction(.beforeBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
+            }.onChange(of: crack) { newValue in
+                vm.playInstruction(.afterBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
             }
         }
     }

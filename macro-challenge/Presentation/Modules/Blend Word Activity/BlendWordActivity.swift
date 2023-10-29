@@ -68,6 +68,10 @@ struct BlendWordActivity: View {
                 .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                 
                 
+            }.onAppear{
+                vm.playInstruction(.beforeBlendWord)
+            }.onChange(of: show) { newValue in
+                vm.playInstruction(.afterBlendWord)
             }
         }
     }
