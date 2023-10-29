@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */; };
+		2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061E2AEE687A005AB1CC /* AudioManager.swift */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
-		2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* AudioRecord.swift */; };
 		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
 		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
 		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
@@ -106,8 +107,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
+		2F99061E2AEE687A005AB1CC /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
-		2FF694A22AE8B8790085393F /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
+				2F99061E2AEE687A005AB1CC /* AudioManager.swift */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
 				2FF694A02AE8B4740085393F /* RecordingManager.swift */,
 				74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */,
@@ -468,7 +471,7 @@
 			children = (
 				AC1FC1DB2AE668570078015B /* Syllable.swift */,
 				AC1FC1E52AE67A810078015B /* Word.swift */,
-				2FF694A22AE8B8790085393F /* AudioRecord.swift */,
+				2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -720,6 +723,8 @@
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
+				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
+				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
 				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
@@ -746,7 +751,6 @@
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
-				2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
