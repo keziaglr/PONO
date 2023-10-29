@@ -10,7 +10,7 @@ import SwiftUI
 struct ProgressBarView: View {
     @State var width : CGFloat
     @State var height : CGFloat
-    @State var percent : CGFloat
+    @Binding var percent : CGFloat
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
@@ -26,7 +26,7 @@ struct ProgressBarView: View {
                         .padding(.horizontal)
                         .padding(.bottom, height/5)
                 }.animation(.easeInOut, value: percent)
-                    .frame(width: width * percent, height: height)
+                    .frame(width: min(width * percent, width), height: height)
             }
         }
     }
@@ -34,7 +34,7 @@ struct ProgressBarView: View {
 
 struct ProgressBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBarView(width: 600, height: 25, percent: 0.5)
+        ProgressBarView(width: 600, height: 25, percent: .constant(1.5))
             
     }
 }

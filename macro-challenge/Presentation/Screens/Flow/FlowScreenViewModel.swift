@@ -11,6 +11,14 @@ class FlowScreenViewModel: ObservableObject {
     
     var am = AudioManager()
     
+    @Published var activity : Activity? = nil {
+        didSet {
+            getInstruction()
+        }
+    }
+    @Published var instruction : String = ""
+    @Published var percent : CGFloat = 0.0
+    
     private var syllables: [Syllable] = []
     
     private(set) var word: Word? = nil
@@ -18,6 +26,112 @@ class FlowScreenViewModel: ObservableObject {
     init() {
         getSyllables()
         getWord()
+        activity = .beforeBreakWord
+        getInstruction()
+    }
+    
+    func setActivity(act: Activity){
+        activity = act
+    }
+    
+    func nextStep(){
+        switch activity {
+        case .beforeBreakWord:
+            setActivity(act: .afterBreakWord)
+            break
+        case .afterBreakWord:
+            setActivity(act: .beforeCard1)
+            break
+        case .beforeCard1:
+            setActivity(act: .afterCard)
+            break
+        case .beforeCard2:
+            setActivity(act: .afterCard)
+            break
+        case .afterCard:
+            break
+        case .wrongCard:
+            break
+        case .correctCard:
+            break
+        case .beforeReadSyllable1:
+            setActivity(act: .afterReadSyllable)
+            break
+        case .beforeReadSyllable2:
+            setActivity(act: .afterReadSyllable)
+            break
+        case .beforeReadWord:
+            setActivity(act: .afterReadWord)
+            break
+        case .afterReadSyllable:
+            break
+        case .afterReadWord:
+            break
+        case .beforeBlendWord:
+            setActivity(act: .afterBlendWord)
+            break
+        case .afterBlendWord:
+            setActivity(act: .beforeReadWord)
+            break
+        case .none:
+            instruction = ""
+            break
+        }
+    }
+    
+    func getInstruction(){
+        switch activity {
+        case .beforeBreakWord:
+            instruction = "Pecahkan kata ini"
+            break
+        case .afterBreakWord:
+            instruction = "Selamat"
+            percent += 0.17
+            break
+        case .beforeCard1:
+            instruction = "Cari kartu yang sesuai dan tunjukkan ke kamera"
+            break
+        case .beforeCard2:
+            instruction = "Cari kartu yang sesuai dan tunjukkan ke kamera"
+            break
+        case .afterCard:
+            instruction = "Lihat hasil kartu"
+            break
+        case .wrongCard:
+            instruction = "Coba lagi"
+            break
+        case .correctCard:
+            instruction = "Selamat"
+            percent += 0.17
+            break
+        case .beforeReadSyllable1:
+            instruction = ""
+            break
+        case .beforeReadSyllable2:
+            instruction = ""
+            break
+        case .beforeReadWord:
+            instruction = ""
+            break
+        case .afterReadSyllable:
+            instruction = "Coba lagi"
+            percent += 0.17
+            break
+        case .afterReadWord:
+            instruction = "Coba lagi"
+            percent += 0.17
+            break
+        case .beforeBlendWord:
+            instruction = "Gabungkan kedua suku kata"
+            break
+        case .afterBlendWord:
+            instruction = "Selamat"
+            percent += 0.17
+            break
+        case .none:
+            instruction = ""
+            break
+        }
     }
     
     func getSyllables() {
@@ -46,18 +160,21 @@ class FlowScreenViewModel: ObservableObject {
         return Word(syllables: [syllable1, syllable2])
     }
 
-    func playInstruction(_ activity: Activity) {
+    func playInstruction() {
+        let syllable1 = (word?.syllable(at: 0))!
+        let syllable2 = (word?.syllable(at: 1))!
         switch activity {
-        case .beforeBreakWord(let array):
-            let syllables = array.compactMap { $0.content }
-            am.playQueue(["before_break-word(1)", syllables[0], syllables[1], "before_break-word(2)"])
+        case .beforeBreakWord:
+            am.playQueue(["before_break-word(1)", syllable1, syllable2, "before_break-word(2)"])
             break
-        case .afterBreakWord(let array):
-            let syllables = array.compactMap { $0.content }
-            am.playQueue(["after_break-word(1)", syllables[0], syllables[1], "after_break-word(2)", syllables[0],"after_break-word(3)", syllables[1]])
+        case .afterBreakWord:
+            am.playQueue(["after_break-word(1)", syllable1, syllable2, "after_break-word(2)", syllable1, "after_break-word(3)", syllable2])
             break
-        case .beforeCard(let syllable):
-            am.playQueue(["before_card(1)", syllable.content,"before_card(2)"])
+        case .beforeCard1:
+            am.playQueue(["before_card(1)", syllable1,"before_card(2)"])
+            break
+        case .beforeCard2:
+            am.playQueue(["before_card(1)", syllable2,"before_card(2)"])
             break
         case .afterCard:
             am.playQueue(["after_card(1)"])
@@ -68,13 +185,19 @@ class FlowScreenViewModel: ObservableObject {
         case .correctCard:
             am.playQueue(["after_card(2-correct)"])
             break
-        case .beforeRead(let array):
-            var inst = ["before_spelling"]
-            let syllable = array.compactMap { $0.content }
-            inst.append(contentsOf: syllable)
-            am.playQueue(inst)
+        case .beforeReadSyllable1:
+            am.playQueue(["before_spelling", syllable1])
             break
-        case .afterRead:
+        case .beforeReadSyllable2:
+            am.playQueue(["before_spelling", syllable2])
+            break
+        case .beforeReadWord:
+            am.playQueue(["before_spelling", syllable1, syllable2])
+            break
+        case .afterReadSyllable:
+            am.playQueue(["after_spelling"])
+            break
+        case .afterReadWord:
             am.playQueue(["after_spelling"])
             break
         case .beforeBlendWord:
@@ -82,6 +205,8 @@ class FlowScreenViewModel: ObservableObject {
             break
         case .afterBlendWord:
             am.playQueue(["after_blend-word"])
+            break
+        case .none:
             break
         }
     }

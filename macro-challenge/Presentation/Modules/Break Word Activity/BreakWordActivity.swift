@@ -13,7 +13,7 @@ struct BreakWordActivity: View {
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State var crack : Bool = false
-    @State var vm = FlowScreenViewModel()
+    @ObservedObject var vm : FlowScreenViewModel
     @State private var dragOffset : [CGFloat] = [0.0, 0.0]
     
     var body: some View {
@@ -54,6 +54,7 @@ struct BreakWordActivity: View {
                                 DragGesture(minimumDistance: height)
                                     .onChanged({ (value) in
                                         crack = true
+                                        vm.nextStep()
                                     })
                         )
                     }
@@ -61,9 +62,9 @@ struct BreakWordActivity: View {
                 }
                 
             }.onAppear{
-                vm.playInstruction(.beforeBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
+                vm.playInstruction()
             }.onChange(of: crack) { newValue in
-                vm.playInstruction(.afterBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
+                vm.playInstruction()
             }
         }
     }
@@ -88,6 +89,6 @@ struct BreakWordActivity: View {
 
 struct BreakWord_Previews: PreviewProvider {
     static var previews: some View {
-        BreakWordActivity()
+        BreakWordActivity(vm: FlowScreenViewModel())
     }
 }
