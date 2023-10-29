@@ -10,6 +10,8 @@ import Foundation
 struct Syllable: Decodable {
     let id: UUID
     let content: String
+    let audioURL: URL?
+    let imageURL: URL?
     
     var letters: [String] {
         content.map { String($0) }

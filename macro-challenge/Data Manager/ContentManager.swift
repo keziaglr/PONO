@@ -61,6 +61,8 @@ class ContentManager {
     
     static let shared = ContentManager()
     
+    var audioPlayer: AVAudioPlayer!
+    
     private init() {}
     
     private var _syllables: [Syllable] = []
@@ -82,5 +84,22 @@ class ContentManager {
             }
         }
         return []
+    }
+    
+    func playAudio(_ assetName: String) {
+        
+        guard let path = Bundle.main.path(forResource: assetName, ofType: "m4a") else {return}
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    func stopAudio(){
+        audioPlayer?.stop()
     }
 }
