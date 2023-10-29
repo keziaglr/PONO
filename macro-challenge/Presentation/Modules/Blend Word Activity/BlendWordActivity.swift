@@ -13,7 +13,7 @@ struct BlendWordActivity: View {
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State var show : Bool = true
-    @State var vm = FlowScreenViewModel()
+    @ObservedObject var vm : FlowScreenViewModel
     @State private var dragOffset : [CGFloat] = [0.0, 0.0]
     @GestureState private var translation: CGSize = .zero
     @GestureState private var translation2: CGSize = .zero
@@ -31,6 +31,7 @@ struct BlendWordActivity: View {
                         if dragOffset[1] < -width/4.5 && dragOffset[0] > width/4.5{
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                 show = false
+                                vm.nextStep()
                             }
                         }
                     }
@@ -69,9 +70,9 @@ struct BlendWordActivity: View {
                 
                 
             }.onAppear{
-                vm.playInstruction(.beforeBlendWord)
+                vm.playInstruction()
             }.onChange(of: show) { newValue in
-                vm.playInstruction(.afterBlendWord)
+                vm.playInstruction()
             }
         }
     }
@@ -79,6 +80,6 @@ struct BlendWordActivity: View {
 
 struct BlendWordActivity_Previews: PreviewProvider {
     static var previews: some View {
-        BlendWordActivity()
+        BlendWordActivity(vm : FlowScreenViewModel())
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InstructionView: View {
     @State var height : CGFloat
-    @State var message : String
+    @Binding var message : String
     var body: some View {
         HStack {
             Image(systemName: "speaker.wave.2.fill")
@@ -30,6 +30,6 @@ struct InstructionView: View {
 
 struct InstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        InstructionView(height: 67, message: "Selamat")
+        InstructionView(height: 67, message: .constant("Selamat"))
     }
 }

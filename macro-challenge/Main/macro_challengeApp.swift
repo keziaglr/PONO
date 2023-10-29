@@ -11,7 +11,7 @@ import SwiftUI
 struct macro_challengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FlowScreenView()
         }
     }
 }
