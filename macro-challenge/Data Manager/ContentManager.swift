@@ -7,7 +7,6 @@
 
 import Foundation
 import AVFoundation
-import SwiftUI
 
 //protocol ContentManagerProtocol {
 //    func playInstruction(_ instruction: Instruction)
@@ -32,23 +31,23 @@ import SwiftUI
 //            playQueueAudio(inst)
 //        }
 //    }
-//    
+//
 //    private func playQueueAudio(_ audioURLs: [URL]) {
 ////                let playerItems = audioURLs.map { AVPlayerItem(url: $0) }
 //        // Buat dispatch group untuk memantau pemutaran audio
 //        let dispatchGroup = DispatchGroup()
-//        
+//
 //        // Buat dispatch queue untuk menjalankan pemutaran audio secara asynchronous
 //        let queue = DispatchQueue.global(qos: .userInteractive)
-//        
+//
 //        // Loop melalui setiap URL audio dan mainkan secara parallel
 //        for audioURL in audioURLs {
 //            dispatchGroup.enter() // Masukkan dispatch group sebelum memulai pemutaran audio
-//            
+//
 //            // Jalankan pemutaran audio secara asynchronous
 //            queue.async {
 //                ContentManager.playAudio(audioURLs[1])
-//                
+//
 //                // Tandai keluar dari dispatch group setelah audio selesai diputar
 //                player.addBoundaryTimeObserver(forTimes: [NSValue(time: CMTimeAdd(playerItem.duration, CMTimeMake(value: 1, timescale: 1)))], queue: DispatchQueue.main) {
 //                    dispatchGroup.leave()
