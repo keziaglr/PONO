@@ -105,6 +105,9 @@
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
+		F91AFEAA2AED7872004AD336 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */; };
+		F91AFEAC2AED7967004AD336 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEAB2AED7967004AD336 /* PlayRecord.swift */; };
+		F91AFEAE2AED79EF004AD336 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEAD2AED79EF004AD336 /* NextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +210,9 @@
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
+		F91AFEAB2AED7967004AD336 /* PlayRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
+		F91AFEAD2AED79EF004AD336 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +292,10 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+
+				F93953202AEAADB900406F60 /* Reading Activity */,
 				AC427D722AEB6FC80012E00C /* Blend Word Activity */,
+
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
 			);
 			path = Modules;
@@ -589,6 +598,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F93953202AEAADB900406F60 /* Reading Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */,
+				F91AFEAB2AED7967004AD336 /* PlayRecord.swift */,
+				F91AFEAD2AED79EF004AD336 /* NextButton.swift */,
+			);
+			path = "Reading Activity";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -715,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91AFEAE2AED79EF004AD336 /* NextButton.swift in Sources */,
 				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
@@ -736,10 +756,12 @@
 				AC427D7C2AEBCF4E0012E00C /* ButtonView.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */,
+				F91AFEAC2AED7967004AD336 /* PlayRecord.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
 				74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */,
 				74FB08D82AE9AA50003CBE43 /* QrCameraView.swift in Sources */,
 				74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */,
+				F91AFEAA2AED7872004AD336 /* PronounceInstruction.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */,
