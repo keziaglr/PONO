@@ -8,16 +8,11 @@
 import Foundation
 import AVFoundation
 
-protocol RecordManagerProtocol {
-    func recordVoiceAudio(completion: @escaping (VoiceAudio) -> Void)
-    func playVoiceAudio(_ file: VoiceAudio)
-}
-
 class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
-    var records: [VoiceAudio] = []
+    var records: [AudioRecord] = []
     
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
@@ -37,7 +32,7 @@ class RecordingManager: NSObject {
         deleteRecords()
     }
     
-    func startRecord(for seconds: TimeInterval = 5, completion: @escaping (VoiceAudio) -> Void) {
+    func startRecord(for seconds: TimeInterval = 5, completion: @escaping (AudioRecord) -> Void) {
         let recordingSession = AVAudioSession.sharedInstance()
         var timerSeconds = seconds
         
@@ -71,7 +66,7 @@ class RecordingManager: NSObject {
                     self?.timer?.invalidate()
                     
                     if let url = self?.audioRecorder?.url {
-                        let recording = VoiceAudio(url: url, createdAt: .now)
+                        let recording = AudioRecord(url: url, createdAt: .now)
                         self?.records.append(recording)
                         completion(recording)
                     }
@@ -88,7 +83,7 @@ class RecordingManager: NSObject {
         isRecording = false
     }
     
-    func playRecording(_ record: VoiceAudio) {
+    func playRecording(_ record: AudioRecord) {
         let url = record.url
         
         let playSession = AVAudioSession.sharedInstance()
@@ -123,7 +118,7 @@ class RecordingManager: NSObject {
         }
     }
     
-    func deleteRecord(_ record: VoiceAudio) {
+    func deleteRecord(_ record: AudioRecord) {
         do {
             try FileManager.default.removeItem(at: record.url)
         } catch {
@@ -134,5 +129,6 @@ class RecordingManager: NSObject {
 
 extension RecordingManager: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+
     }
 }
