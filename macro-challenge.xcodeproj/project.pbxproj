@@ -102,8 +102,6 @@
 		F91AFEAA2AED7872004AD336 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */; };
 		F91AFEAC2AED7967004AD336 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEAB2AED7967004AD336 /* PlayRecord.swift */; };
 		F91AFEAE2AED79EF004AD336 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AFEAD2AED79EF004AD336 /* NextButton.swift */; };
-		F93953222AEAAE4C00406F60 /* ReadingSyllables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93953212AEAAE4C00406F60 /* ReadingSyllables.swift */; };
-		F93953242AEAB9C400406F60 /* ReadingWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93953232AEAB9C400406F60 /* ReadingWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,8 +201,6 @@
 		F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		F91AFEAB2AED7967004AD336 /* PlayRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
 		F91AFEAD2AED79EF004AD336 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
-		F93953212AEAAE4C00406F60 /* ReadingSyllables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingSyllables.swift; sourceTree = "<group>"; };
-		F93953232AEAB9C400406F60 /* ReadingWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,8 +573,6 @@
 		F93953202AEAADB900406F60 /* Reading Activity */ = {
 			isa = PBXGroup;
 			children = (
-				F93953212AEAAE4C00406F60 /* ReadingSyllables.swift */,
-				F93953232AEAB9C400406F60 /* ReadingWord.swift */,
 				F91AFEA92AED7872004AD336 /* PronounceInstruction.swift */,
 				F91AFEAB2AED7967004AD336 /* PlayRecord.swift */,
 				F91AFEAD2AED79EF004AD336 /* NextButton.swift */,
@@ -721,7 +715,6 @@
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
-				F93953222AEAAE4C00406F60 /* ReadingSyllables.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
 				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
@@ -741,7 +734,6 @@
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
 				74FB08D32AE9A377003CBE43 /* QrScannerManager.swift in Sources */,
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
-				F93953242AEAB9C400406F60 /* ReadingWord.swift in Sources */,
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
 				74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */,
