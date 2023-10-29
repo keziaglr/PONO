@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F8295D62AEC1C5500220402 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8295D52AEC1C5500220402 /* AudioManager.swift */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
-		2FF694A32AE8B8790085393F /* VoiceAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* VoiceAudio.swift */; };
+		2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* AudioRecord.swift */; };
 		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
 		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
 		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
@@ -107,9 +106,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F8295D52AEC1C5500220402 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
-		2FF694A22AE8B8790085393F /* VoiceAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAudio.swift; sourceTree = "<group>"; };
+		2FF694A22AE8B8790085393F /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
 				2FF694A02AE8B4740085393F /* RecordingManager.swift */,
 				74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */,
-				2F8295D52AEC1C5500220402 /* AudioManager.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -471,7 +468,7 @@
 			children = (
 				AC1FC1DB2AE668570078015B /* Syllable.swift */,
 				AC1FC1E52AE67A810078015B /* Word.swift */,
-				2FF694A22AE8B8790085393F /* VoiceAudio.swift */,
+				2FF694A22AE8B8790085393F /* AudioRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -720,7 +717,6 @@
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
-				2F8295D62AEC1C5500220402 /* AudioManager.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
@@ -750,7 +746,7 @@
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
-				2FF694A32AE8B8790085393F /* VoiceAudio.swift in Sources */,
+				2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
