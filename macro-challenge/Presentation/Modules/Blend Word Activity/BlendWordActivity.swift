@@ -21,10 +21,9 @@ struct BlendWordActivity: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("box")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: width)
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.Blue3)
+                    .frame(width: width, height: height)
                     .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                     .opacity(show ? 0 : 1)
                     .animation(.easeInOut, value: show)
@@ -37,7 +36,7 @@ struct BlendWordActivity: View {
                     }
                 
                 HStack(spacing: height) {
-                    SyllableLabel(position: "left", syllable: (vm.word?.syllables[0].content)!, height: height, show: $show)
+                    SyllableLabel(syllable: (vm.word?.syllables[0].content)!, height: height, width: width/2, show: $show)
                         .offset(x: min(max(dragOffset[0] + translation.width, 0), width / 4.5))
                         .animation(.easeInOut, value: translation)
                         .gesture(
@@ -51,7 +50,7 @@ struct BlendWordActivity: View {
                                     }
                                 }
                         )
-                    SyllableLabel(position: "right", syllable: (vm.word?.syllables[1].content)!, height: height, show: $show)
+                    SyllableLabel(syllable: (vm.word?.syllables[1].content)!, height: height, width: width/2, show: $show)
                         .offset(x: min(max(dragOffset[1] + translation2.width, -width/4.5), 0))
                         .animation(.easeInOut, value: translation2)
                         .gesture(
@@ -69,6 +68,10 @@ struct BlendWordActivity: View {
                 .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                 
                 
+            }.onAppear{
+                vm.playInstruction(.beforeBlendWord)
+            }.onChange(of: show) { newValue in
+                vm.playInstruction(.afterBlendWord)
             }
         }
     }

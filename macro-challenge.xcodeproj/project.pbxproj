@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */; };
+		2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061E2AEE687A005AB1CC /* AudioManager.swift */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
-		2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A22AE8B8790085393F /* AudioRecord.swift */; };
 		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
 		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
 		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
@@ -95,6 +96,10 @@
 		AC1FC2E82AEA6F160078015B /* after_card(2-wrong).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DA2AEA6F160078015B /* after_card(2-wrong).m4a */; };
 		AC1FC2E92AEA6F160078015B /* before_spelling.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DB2AEA6F160078015B /* before_spelling.m4a */; };
 		AC1FC2EA2AEA6F160078015B /* before_card(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */; };
+		AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D732AEB70060012E00C /* BlendWordActivity.swift */; };
+		AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D752AEB70D00012E00C /* ProgressBarView.swift */; };
+		AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D772AEBC4AE0012E00C /* InstructionView.swift */; };
+		AC427D7C2AEBCF4E0012E00C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */; };
 		AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */; };
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
@@ -105,8 +110,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
+		2F99061E2AEE687A005AB1CC /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
-		2FF694A22AE8B8790085393F /* AudioRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecord.swift; sourceTree = "<group>"; };
 		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
@@ -193,6 +199,10 @@
 		AC1FC2DA2AEA6F160078015B /* after_card(2-wrong).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_card(2-wrong).m4a"; sourceTree = "<group>"; };
 		AC1FC2DB2AEA6F160078015B /* before_spelling.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_spelling.m4a; sourceTree = "<group>"; };
 		AC1FC2DC2AEA6F160078015B /* before_card(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_card(1).m4a"; sourceTree = "<group>"; };
+		AC427D732AEB70060012E00C /* BlendWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendWordActivity.swift; sourceTree = "<group>"; };
+		AC427D752AEB70D00012E00C /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		AC427D772AEBC4AE0012E00C /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		AC50DC282ACE5CDF00B9FE1B /* macro-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macro-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50DC2B2ACE5CDF00B9FE1B /* macro_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macro_challengeApp.swift; sourceTree = "<group>"; };
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
+				2F99061E2AEE687A005AB1CC /* AudioManager.swift */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
 				2FF694A02AE8B4740085393F /* RecordingManager.swift */,
 				74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */,
@@ -279,7 +290,10 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+
 				F93953202AEAADB900406F60 /* Reading Activity */,
+				AC427D722AEB6FC80012E00C /* Blend Word Activity */,
+
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
 			);
 			path = Modules;
@@ -466,7 +480,7 @@
 			children = (
 				AC1FC1DB2AE668570078015B /* Syllable.swift */,
 				AC1FC1E52AE67A810078015B /* Word.swift */,
-				2FF694A22AE8B8790085393F /* AudioRecord.swift */,
+				2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -476,6 +490,9 @@
 			children = (
 				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
 				74FB08D72AE9AA50003CBE43 /* QrCameraView.swift */,
+				AC427D752AEB70D00012E00C /* ProgressBarView.swift */,
+				AC427D772AEBC4AE0012E00C /* InstructionView.swift */,
+				AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -531,6 +548,14 @@
 				AC1FC2DB2AEA6F160078015B /* before_spelling.m4a */,
 			);
 			path = Spelling;
+			sourceTree = "<group>";
+		};
+		AC427D722AEB6FC80012E00C /* Blend Word Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC427D732AEB70060012E00C /* BlendWordActivity.swift */,
+			);
+			path = "Blend Word Activity";
 			sourceTree = "<group>";
 		};
 		AC50DC1F2ACE5CDF00B9FE1B = {
@@ -708,18 +733,24 @@
 			files = (
 				F91AFEAE2AED79EF004AD336 /* NextButton.swift in Sources */,
 				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
+				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
+				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
+				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
+				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
+				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
 				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
 				AC1FC1E22AE672290078015B /* FlowScreenViewModel.swift in Sources */,
 				74FB08DA2AE9AB04003CBE43 /* ScannerView.swift in Sources */,
+				AC427D7C2AEBCF4E0012E00C /* ButtonView.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
 				74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */,
 				F91AFEAC2AED7967004AD336 /* PlayRecord.swift in Sources */,
@@ -742,7 +773,6 @@
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
-				2FF694A32AE8B8790085393F /* AudioRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

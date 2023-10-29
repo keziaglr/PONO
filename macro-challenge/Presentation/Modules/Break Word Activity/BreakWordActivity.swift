@@ -19,15 +19,14 @@ struct BreakWordActivity: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                Image("box")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: width)
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.Blue3)
+                    .frame(width: width, height: height)
                     .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                     .opacity(crack ? 0 : 1)
                 
-                HStack(spacing: -15) {
-                    SyllableLabel(position: "left", syllable: (vm.word?.syllables[0].content)!, height: height, show: $crack)
+                HStack() {
+                    SyllableLabel(syllable: (vm.word?.syllables[0].content)!, height: height, width: width/2, show: $crack)
                         .offset(x: dragOffset[0])
                         .animation(.easeOut(duration: 1), value: dragOffset)
                         .onChange(of: crack) { newValue in
@@ -35,7 +34,7 @@ struct BreakWordActivity: View {
                                 dragOffset[0] = dragOffset[0] - 100.0
                             }
                         }
-                    SyllableLabel(position: "right", syllable: (vm.word?.syllables[1].content)!, height: height, show: $crack)
+                    SyllableLabel(syllable: (vm.word?.syllables[1].content)!, height: height, width: width/2, show: $crack)
                         .offset(x: dragOffset[1])
                         .animation(.easeOut(duration: 1), value: dragOffset)
                         .onChange(of: crack) { newValue in
@@ -61,6 +60,10 @@ struct BreakWordActivity: View {
                     
                 }
                 
+            }.onAppear{
+                vm.playInstruction(.beforeBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
+            }.onChange(of: crack) { newValue in
+                vm.playInstruction(.afterBreakWord([(vm.word?.syllables[0])!, (vm.word?.syllables[1])!]))
             }
         }
     }
