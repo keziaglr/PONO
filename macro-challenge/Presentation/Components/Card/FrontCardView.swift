@@ -48,7 +48,11 @@ struct FrontCardView: View {
             }
             
             if showFrameBordered {
-                Image("bg_card_frame_bordered")
+//                Image("bg_card_frame_bordered")
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.Grey1,
+                        style: StrokeStyle(lineWidth: 3, dash: [20]))
+                    .frame(width: 185, height: 270)
             }
             Text(syllable)
                 .font(

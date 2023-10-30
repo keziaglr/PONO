@@ -26,7 +26,6 @@ struct FlowScreenView: View {
                 if vm.activity == .wrongCard || vm.activity == .afterReadSyllable || vm.activity == .afterReadWord{
                     HStack {
                         ButtonView(height: screenHeight/18, image: "\(ImageConst.IC_RELOAD_WHITE)")
-                            .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 ? 0 : 1)
                             .onTapGesture {
                                 vm.tryAgain()
                             }
@@ -39,7 +38,7 @@ struct FlowScreenView: View {
                     
                 } else {
                     ButtonView(height: screenHeight/18, image: "\(ImageConst.IC_ARROW_NEXT_WHITE)")
-                        .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 || vm.activity == .beforeReadSyllable2 || vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadWord ? 0 : 1)
+                        .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 || vm.activity == .beforeCard2 || vm.activity == .beforeReadSyllable2 || vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadWord ? 0 : 1)
                         .onTapGesture {
                             print("ACTIVITY \(vm.activity)")
                             if vm.activity == .afterCard {
@@ -56,7 +55,7 @@ struct FlowScreenView: View {
                 BreakWordActivity(vm: vm)
             } else if vm.activity == .beforeBlendWord || vm.activity == .afterBlendWord{
                 BlendWordActivity(vm : vm)
-            } else if vm.activity == .beforeCard1 {
+            } else if vm.activity == .beforeCard1 || vm.activity == .beforeCard2 {
                 ScanWordActivity(viewModel: vm)
             } else if vm.activity == .afterCard {
                 PreviewCardActivity(viewModel: vm, isCardChecked: false, syllable: vm.scannedCard?.content ?? "A",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)

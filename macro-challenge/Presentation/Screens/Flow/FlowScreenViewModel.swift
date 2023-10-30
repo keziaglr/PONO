@@ -23,7 +23,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     @Published var scannedCard : Syllable?
     @Published var isCardFlipped = false
     
-    private var stage = 0.14
+    private var stage = 0.12
     
     private var syllables: [Syllable] = []
     
@@ -51,13 +51,12 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     }
     
     func nextStep(){
-        print("aaaaaa \(activity)")
         switch activity {
         case .beforeBreakWord:
             setActivity(act: .afterBreakWord)
             break
         case .afterBreakWord:
-            setActivity(act: .beforeReadSyllable1)
+            setActivity(act: .beforeCard1)
             break
         case .beforeCard1:
             setActivity(act: .afterCard)
@@ -69,8 +68,18 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             isScannedCardCorrect()
             break
         case .wrongCard:
+            if type == .syllable1{
+                setActivity(act: .beforeReadSyllable1)
+            }else {
+                setActivity(act: .beforeReadSyllable2)
+            }
             break
         case .correctCard:
+            if type == .syllable1{
+                setActivity(act: .beforeReadSyllable1)
+            }else {
+                setActivity(act: .beforeReadSyllable2)
+            }
             break
         case .beforeReadSyllable1:
             setActivity(act: .afterReadSyllable)
@@ -87,7 +96,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
                 setActivity(act: .beforeBlendWord)
             }else {
                 type = .syllable2
-                setActivity(act: .beforeReadSyllable2)
+                setActivity(act: .beforeCard2)
             }
             break
         case .afterReadWord:
@@ -125,6 +134,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             break
         case .wrongCard:
             instruction = "Coba lagi"
+            percent += stage
             break
         case .correctCard:
             instruction = "Selamat"

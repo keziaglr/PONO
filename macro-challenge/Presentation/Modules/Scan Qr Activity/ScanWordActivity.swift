@@ -22,11 +22,15 @@ struct ScanWordActivity: View {
     
     var body: some View {
         VStack {
-            SyllableLabel(syllable: (viewModel.word?.syllables[0].content)!, height: height, width: width/2, show: $crack)
+            if viewModel.type == .syllable1{
+                SyllableLabel(syllable: (viewModel.word?.syllables[0].content)!, height: height, width: width/2, show: $crack)
+            }else{
+                SyllableLabel(syllable: (viewModel.word?.syllables[1].content)!, height: height, width: width/2, show: $crack)
+            }
             
             HStack {
                 Spacer()
-                QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession , frameSize: CGSize(width: 600, height: 250))
+                QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession , frameSize: CGSize(width: 600, height:250))
                 Spacer()
             }
         }.position(CGPoint(x: screenWidth/2, y: screenHeight/2))

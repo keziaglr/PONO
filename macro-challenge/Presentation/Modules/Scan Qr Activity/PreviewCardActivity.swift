@@ -18,9 +18,18 @@ struct PreviewCardActivity: View {
             FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
             ZStack {
                 if isFlipped {
-                    BackCardView(cardVowelStyle: (viewModel.word?.syllables.first!.content)!.getCardVowelStyle())
+                    if viewModel.type == .syllable1 {
+                        BackCardView(cardVowelStyle: (viewModel.word?.syllables.first!.content)!.getCardVowelStyle())
+                    } else {
+                        BackCardView(cardVowelStyle: (viewModel.word?.syllables[1].content)!.getCardVowelStyle())
+                    }
                 } else {
-                    FrontCardView(syllable: viewModel.word?.syllables.first?.content ?? "A", cardVowelStyle: viewModel.word?.syllables.first?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
+                    if viewModel.type == .syllable1 {
+                        FrontCardView(syllable: viewModel.word?.syllables.first?.content ?? "A", cardVowelStyle: viewModel.word?.syllables.first?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
+                    } else {
+                        FrontCardView(syllable: viewModel.word?.syllables[1].content ?? "A", cardVowelStyle: viewModel.word?.syllables[1].content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
+                    }
+                    
                 }
             }.onReceive(viewModel.$isCardFlipped) { newValue in
                 print("NEWWWW \(newValue)")
