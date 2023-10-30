@@ -9,11 +9,12 @@ import SwiftUI
 
 struct PlayRecordActivity: View {
     @ObservedObject var vm : FlowScreenViewModel
+    @State var drawingHeight = true
     var body: some View {
         HStack{
-            PlayRecord()
-                .padding()
+            PlayRecord(drawingHeight: $drawingHeight)
                 .onTapGesture {
+                    drawingHeight.toggle()
                     RecordingManager.shared.playRecording(RecordingManager.shared.record!)
                 }
             PronounceInstruction(vm: vm)

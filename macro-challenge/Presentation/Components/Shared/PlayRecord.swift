@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayRecord: View {
     
     // Play Record
-    @State private var drawingHeight = true
+    @Binding var drawingHeight: Bool
     
     // Animation
     var animation: Animation {
@@ -32,9 +32,6 @@ struct PlayRecord: View {
             bar(low: 0.2, high: 0.3)
                 .animation(animation.speed(1.4), value: drawingHeight)
         }.frame(width: 80)
-            .onTapGesture {
-                drawingHeight.toggle()
-            }
             .padding(.horizontal, 20)
             .frame(width: 100, height: 96)
             .background(Color.Red2, in: RoundedRectangle(cornerRadius: 25))
@@ -51,6 +48,6 @@ struct PlayRecord: View {
 
 struct PlayRecord_Previews: PreviewProvider {
     static var previews: some View {
-        PlayRecord()
+        PlayRecord(drawingHeight: .constant(false))
     }
 }
