@@ -40,7 +40,6 @@ struct FlowScreenView: View {
                     ButtonView(height: screenHeight/18, image: "\(ImageConst.IC_ARROW_NEXT_WHITE)")
                         .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 || vm.activity == .beforeCard2 || vm.activity == .beforeReadSyllable2 || vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadWord ? 0 : 1)
                         .onTapGesture {
-                            print("ACTIVITY \(vm.activity)")
                             if vm.activity == .afterCard {
                                 vm.nextStep()
                                 vm.isCardFlipped.toggle()
@@ -56,7 +55,7 @@ struct FlowScreenView: View {
             } else if vm.activity == .beforeBlendWord || vm.activity == .afterBlendWord{
                 BlendWordActivity(vm : vm)
             } else if vm.activity == .beforeCard1 || vm.activity == .beforeCard2 {
-                ScanWordActivity(viewModel: vm)
+                ScanWordActivity(viewModel: vm).padding(.top,200)
             } else if vm.activity == .afterCard {
                 PreviewCardActivity(viewModel: vm, isCardChecked: false, syllable: vm.scannedCard?.content ?? "A",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
             } else if vm.activity == .correctCard {
