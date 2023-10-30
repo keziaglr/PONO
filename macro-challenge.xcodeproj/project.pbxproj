@@ -26,6 +26,10 @@
 		3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C1762AE77AF700E832B0 /* OnboardingScreenView.swift */; };
 		3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */; };
 		3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */; };
+		7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7632AEEED7100BF7F93 /* String+Extension.swift */; };
+		7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7652AEF33BE00BF7F93 /* CustomShape.swift */; };
+		74EBBBCE2AEED9EA00E8FED3 /* ScanWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBBBCD2AEED9EA00E8FED3 /* ScanWordActivity.swift */; };
+		74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBBBD02AEEEA5A00E8FED3 /* PreviewCardActivity.swift */; };
 		74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088A2AE9A1A3003CBE43 /* p.m4a */; };
 		74FB08962AE9A1A3003CBE43 /* e.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088B2AE9A1A3003CBE43 /* e.m4a */; };
 		74FB08972AE9A1A3003CBE43 /* a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088C2AE9A1A3003CBE43 /* a.m4a */; };
@@ -127,6 +131,10 @@
 		3868C1762AE77AF700E832B0 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScreenView.swift; sourceTree = "<group>"; };
+		7429B7632AEEED7100BF7F93 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7429B7652AEF33BE00BF7F93 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		74EBBBCD2AEED9EA00E8FED3 /* ScanWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanWordActivity.swift; sourceTree = "<group>"; };
+		74EBBBD02AEEEA5A00E8FED3 /* PreviewCardActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCardActivity.swift; sourceTree = "<group>"; };
 		74FB088A2AE9A1A3003CBE43 /* p.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.m4a; sourceTree = "<group>"; };
 		74FB088B2AE9A1A3003CBE43 /* e.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = e.m4a; sourceTree = "<group>"; };
 		74FB088C2AE9A1A3003CBE43 /* a.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.m4a; sourceTree = "<group>"; };
@@ -286,6 +294,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				74EBBBCF2AEED9F000E8FED3 /* Scan Qr Activity */,
 				AC427D722AEB6FC80012E00C /* Blend Word Activity */,
 				3868C1802AE77BD200E832B0 /* Break Word Activity */,
 			);
@@ -342,6 +351,15 @@
 				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
 			);
 			path = "Break Word Activity";
+			sourceTree = "<group>";
+		};
+		74EBBBCF2AEED9F000E8FED3 /* Scan Qr Activity */ = {
+			isa = PBXGroup;
+			children = (
+				74EBBBCD2AEED9EA00E8FED3 /* ScanWordActivity.swift */,
+				74EBBBD02AEEEA5A00E8FED3 /* PreviewCardActivity.swift */,
+			);
+			path = "Scan Qr Activity";
 			sourceTree = "<group>";
 		};
 		74FB08872AE9A13D003CBE43 /* Voice */ = {
@@ -453,6 +471,7 @@
 				3868C16B2AE6C5F900E832B0 /* Collection+Extension.swift */,
 				2FF694A62AE8C65D0085393F /* Date+Extension.swift */,
 				74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */,
+				7429B7632AEEED7100BF7F93 /* String+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -487,6 +506,7 @@
 				AC427D752AEB70D00012E00C /* ProgressBarView.swift */,
 				AC427D772AEBC4AE0012E00C /* InstructionView.swift */,
 				AC427D7B2AEBCF4E0012E00C /* ButtonView.swift */,
+				7429B7652AEF33BE00BF7F93 /* CustomShape.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -727,6 +747,7 @@
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
 				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
+				74EBBBCE2AEED9EA00E8FED3 /* ScanWordActivity.swift in Sources */,
 				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
@@ -746,15 +767,18 @@
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
 				74FB08D32AE9A377003CBE43 /* QrScannerManager.swift in Sources */,
 				AC1B58702AEEB63300661474 /* Activity.swift in Sources */,
+				7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */,
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
 				74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
+				74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */,
 				74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */,
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
+				7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,7 +836,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -867,7 +891,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

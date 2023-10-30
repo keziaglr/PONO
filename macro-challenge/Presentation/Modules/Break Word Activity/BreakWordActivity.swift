@@ -87,8 +87,8 @@ struct BreakWordActivity: View {
     }
 }
 
-struct BreakWord_Previews: PreviewProvider {
-    static var previews: some View {
-        BreakWordActivity(vm: FlowScreenViewModel())
-    }
-}
+//struct BreakWord_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BreakWordActivity(vm: FlowScreenViewModel())
+//    }
+//}

@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-class FlowScreenViewModel: ObservableObject {
+class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     
     var am = AudioManager()
+    var qrScannerManager: QrScannerManager = QrScannerManager()
     
     @Published var activity : Activity? = nil {
         didSet {
@@ -18,23 +19,32 @@ class FlowScreenViewModel: ObservableObject {
     }
     @Published var instruction : String = ""
     @Published var percent : CGFloat = 0.0
+    @Published var scannedCard : Syllable?
+    @Published var isCardFlipped = false
     
     private var syllables: [Syllable] = []
     
     private(set) var word: Word? = nil
     
     init() {
-        getSyllables()
-        getWord()
-        activity = .beforeBreakWord
-        getInstruction()
+        qrScannerManager.delegate = self
+        self.getSyllables()
+        self.getWord()
+        self.activity = .beforeBreakWord
+        self.getInstruction()
+        
+    }
+    
+    func setupQrScannerManager() {
     }
     
     func setActivity(act: Activity){
+        print("settt \(act)")
         activity = act
     }
     
     func nextStep(){
+        print("aaaaaa \(activity)")
         switch activity {
         case .beforeBreakWord:
             setActivity(act: .afterBreakWord)
@@ -49,6 +59,7 @@ class FlowScreenViewModel: ObservableObject {
             setActivity(act: .afterCard)
             break
         case .afterCard:
+            isScannedCardCorrect()
             break
         case .wrongCard:
             break
@@ -208,6 +219,43 @@ class FlowScreenViewModel: ObservableObject {
             break
         case .none:
             break
+        }
+    }
+}
+
+extension FlowScreenViewModel {
+    func getQrScannedDataDelegate(scannedData: String) {
+        if let foundSyllable = syllables.first(where: { $0.id == UUID(uuidString: scannedData) }) {
+            self.scannedCard = foundSyllable
+            stopScanning()
+            nextStep()
+        } else {
+            print("Card not exist")
+        }
+    }
+    
+    func startScanning() {
+        self.qrScannerManager.setupCameraSession()
+        if !(self.qrScannerManager.captureSession.isRunning) {
+            DispatchQueue.global(qos: .background).async {
+                self.qrScannerManager.captureSession.startRunning()
+            }
+        }
+    }
+
+    func stopScanning() {
+        if self.qrScannerManager.captureSession.isRunning {
+            self.qrScannerManager.captureSession.stopRunning()
+        }
+    }
+    
+    func isScannedCardCorrect() {
+        if scannedCard?.id == word?.syllables[0].id {
+            print("Correct")
+            setActivity(act: .correctCard)
+        } else {
+            print("INCORRECT")
+            setActivity(act: .wrongCard)
         }
     }
 }

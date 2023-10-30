@@ -10,6 +10,7 @@ import SwiftUI
 struct FrontCardView: View {
     var syllable: String
     var cardVowelStyle: CardVowelStyleEnum
+    var showFrameBordered = true
     
     private var textColor = ""
     private var backgroundColor = ""
@@ -18,26 +19,42 @@ struct FrontCardView: View {
     
     init(
         syllable: String,
-        cardVowelStyle: CardVowelStyleEnum
+        cardVowelStyle: CardVowelStyleEnum,
+        showFrameBordered: Bool = true
     ) {
         self.syllable = syllable
         self.cardVowelStyle = cardVowelStyle
+        self.showFrameBordered = showFrameBordered
         setupValue()
     }
     
     var body: some View {
-        VStack {
-            Image(cover_top_img)
-            Spacer()
+        ZStack {
+            RoundedRectangle(cornerRadius: 24)
+                            .fill(Color.white)
+                            .frame(width: 170, height: 255)
+                            .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0, y: 10)
+                        
+            ZStack(alignment: .topLeading) {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(hex: backgroundColor))
+                    .frame(width: 146, height: 231)
+                RoundedRectangle(cornerRadius: 0)
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.white)
+                            .clipShape(CustomShape(cornerRadius: 20, corners: [.bottomRight]))
+                Image(cover_top_img)
+                    .frame(width: 32, height: 32)
+            }
+            
+            if showFrameBordered {
+                Image("bg_card_frame_bordered")
+            }
             Text(syllable)
                 .font(
                     .custom(FontConst.QUICKSAND_BOLD, size: 75)
-                ).foregroundColor(Color(hex: textColor))
-            Spacer()
-            Image(cover_bottom_img)
-        }.frame(width: 170, height: 255)
-            .background(Color(hex: backgroundColor))
-            .cornerRadius(20)
+                ).foregroundColor(Color.white)
+        }
     }
     
     mutating func setupValue() {
@@ -73,6 +90,6 @@ struct FrontCardView: View {
 
 struct FrontCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FrontCardView(syllable: "mu", cardVowelStyle: CardVowelStyleEnum.O_VOWEL)
+        FrontCardView(syllable: "mu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
     }
 }

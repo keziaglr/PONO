@@ -13,17 +13,17 @@ struct ButtonView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                .fill(Color.Blue2)
-                .frame(height: height)
-            Image(systemName: image)
-                .foregroundColor(Color.White1)
-                .font(.largeTitle)
-        }.padding()
+                            .fill(Color.blue) // Background color
+                            .frame(height: 72)
+                            .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 5)
+            Image("\(image)")
+            
+        }
     }
 }
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(height: 72, image: "arrow.right")
+        ButtonView(height: 72, image: "ic_reload_white")
     }
 }
