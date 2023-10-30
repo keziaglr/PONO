@@ -35,10 +35,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         self.getWord()
         self.activity = .beforeBreakWord
         self.getInstruction()
-        
-    }
-    
-    func setupQrScannerManager() {
+        self.qrScannerManager.setupCameraSession()
     }
     
     func setActivity(act: Activity){
@@ -281,7 +278,6 @@ extension FlowScreenViewModel {
     }
     
     func startScanning() {
-        self.qrScannerManager.setupCameraSession()
         if !(self.qrScannerManager.captureSession.isRunning) {
             DispatchQueue.global(qos: .background).async {
                 self.qrScannerManager.captureSession.startRunning()
@@ -296,7 +292,8 @@ extension FlowScreenViewModel {
     }
     
     func isScannedCardCorrect() {
-        if scannedCard?.id == word?.syllables[0].id {
+        let wordSyllable = type == .syllable1 ? word?.syllables[0].id : word?.syllables[1].id
+        if scannedCard?.id == wordSyllable {
             print("Correct")
             setActivity(act: .correctCard)
         } else {
