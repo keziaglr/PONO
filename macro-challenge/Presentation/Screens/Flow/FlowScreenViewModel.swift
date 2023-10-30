@@ -17,10 +17,13 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             getInstruction()
         }
     }
+    @Published var type : TypeReading = .syllable1
     @Published var instruction : String = ""
     @Published var percent : CGFloat = 0.0
     @Published var scannedCard : Syllable?
     @Published var isCardFlipped = false
+    
+    private var stage = 0.14
     
     private var syllables: [Syllable] = []
     
@@ -43,6 +46,10 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         activity = act
     }
     
+    func getAudioIndex() -> Int{
+        return am.currentAudioIndex
+    }
+    
     func nextStep(){
         print("aaaaaa \(activity)")
         switch activity {
@@ -50,7 +57,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             setActivity(act: .afterBreakWord)
             break
         case .afterBreakWord:
-            setActivity(act: .beforeCard1)
+            setActivity(act: .beforeReadSyllable1)
             break
         case .beforeCard1:
             setActivity(act: .afterCard)
@@ -75,8 +82,16 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             setActivity(act: .afterReadWord)
             break
         case .afterReadSyllable:
+            if type == .syllable2{
+                type = .word
+                setActivity(act: .beforeBlendWord)
+            }else {
+                type = .syllable2
+                setActivity(act: .beforeReadSyllable2)
+            }
             break
         case .afterReadWord:
+            setActivity(act: .beforeBreakWord)
             break
         case .beforeBlendWord:
             setActivity(act: .afterBlendWord)
@@ -97,7 +112,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             break
         case .afterBreakWord:
             instruction = "Selamat"
-            percent += 0.17
+            percent += stage
             break
         case .beforeCard1:
             instruction = "Cari kartu yang sesuai dan tunjukkan ke kamera"
@@ -113,7 +128,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             break
         case .correctCard:
             instruction = "Selamat"
-            percent += 0.17
+            percent += stage
             break
         case .beforeReadSyllable1:
             instruction = ""
@@ -126,18 +141,18 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             break
         case .afterReadSyllable:
             instruction = "Coba lagi"
-            percent += 0.17
+            percent += stage
             break
         case .afterReadWord:
             instruction = "Coba lagi"
-            percent += 0.17
+            percent += stage
             break
         case .beforeBlendWord:
             instruction = "Gabungkan kedua suku kata"
             break
         case .afterBlendWord:
             instruction = "Selamat"
-            percent += 0.17
+            percent += stage
             break
         case .none:
             instruction = ""
@@ -169,6 +184,27 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         let syllable2 = syllables[randomIndex2]
         
         return Word(syllables: [syllable1, syllable2])
+    }
+    
+    func soundSyllable(sound: [String]){
+        am.playQueue(sound)
+    }
+    
+    func tryAgain(){
+        if activity == .wrongCard{
+            setActivity(act: .beforeCard1)
+            percent -= stage
+        }else if activity == .afterReadSyllable {
+            if type == .syllable1 {
+                setActivity(act: .beforeReadSyllable1)
+            }else{
+                setActivity(act: .beforeReadSyllable2)
+            }
+            percent -= stage
+        }else if activity == .afterReadWord{
+            setActivity(act: .beforeReadWord)
+            percent -= stage
+        }
     }
 
     func playInstruction() {

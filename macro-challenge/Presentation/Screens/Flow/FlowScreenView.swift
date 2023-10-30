@@ -18,25 +18,28 @@ struct FlowScreenView: View {
                     .padding()
                 InstructionView(height: screenHeight/12, message: $vm.instruction)
                     .padding()
+                    .opacity(vm.instruction.isEmpty ? 0 : 1)
                     .onTapGesture {
                         vm.playInstruction()
                     }
                 Spacer()
-                if vm.activity == .wrongCard {
+                if vm.activity == .wrongCard || vm.activity == .afterReadSyllable || vm.activity == .afterReadWord{
                     HStack {
                         ButtonView(height: screenHeight/18, image: "\(ImageConst.IC_RELOAD_WHITE)")
                             .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 ? 0 : 1)
                             .onTapGesture {
-                                vm.setActivity(act: .beforeCard1)
+                                vm.tryAgain()
                             }
-                        Image("ic_arrow_next_blue").onTapGesture {
-                            vm.nextStep()
-                        }
+                            .padding()
+                        NextButton()
+                            .onTapGesture {
+                                vm.nextStep()
+                            }
                     }.padding(.horizontal, 20)
                     
                 } else {
                     ButtonView(height: screenHeight/18, image: "\(ImageConst.IC_ARROW_NEXT_WHITE)")
-                        .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 ? 0 : 1)
+                        .opacity(vm.activity == .beforeBreakWord || vm.activity == .beforeBlendWord || vm.activity == .beforeCard1 || vm.activity == .beforeReadSyllable2 || vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadWord ? 0 : 1)
                         .onTapGesture {
                             print("ACTIVITY \(vm.activity)")
                             if vm.activity == .afterCard {
@@ -61,6 +64,10 @@ struct FlowScreenView: View {
                 PreviewCardActivity(viewModel: vm, isCardChecked: true, syllable: vm.scannedCard?.content ?? "A",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
             } else if vm.activity == .wrongCard {
                 PreviewCardActivity(viewModel: vm, isCardChecked: true, syllable: vm.scannedCard?.content ?? "A",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
+            } else if vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadSyllable2 || vm.activity == .beforeReadWord{
+                RecordActivity(vm: vm)
+            } else if vm.activity == .afterReadSyllable || vm.activity == .afterReadWord{
+                PlayRecordActivity(vm: vm)
             }
         }
     }

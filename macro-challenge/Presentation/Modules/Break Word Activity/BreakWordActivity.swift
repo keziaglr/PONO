@@ -21,7 +21,7 @@ struct BreakWordActivity: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Color.Blue3)
-                    .frame(width: width, height: height)
+                    .frame(width: width + width/10, height: height)
                     .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                     .opacity(crack ? 0 : 1)
                 
@@ -54,7 +54,9 @@ struct BreakWordActivity: View {
                                 DragGesture(minimumDistance: height)
                                     .onChanged({ (value) in
                                         crack = true
-                                        vm.nextStep()
+                                        if vm.activity == .beforeBreakWord{
+                                            vm.nextStep()
+                                        }
                                     })
                         )
                     }

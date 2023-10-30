@@ -17,7 +17,7 @@ class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
-    var records: [AudioRecord] = []
+    var record: AudioRecord? = nil
     
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
@@ -34,7 +34,7 @@ class RecordingManager: NSObject {
         timer?.invalidate()
         
         // Remove recording file
-        deleteRecords()
+        deleteRecord()
     }
     
     func startRecord(for seconds: TimeInterval = 5, completion: @escaping (AudioRecord) -> Void) {
@@ -72,7 +72,7 @@ class RecordingManager: NSObject {
                     
                     if let url = self?.audioRecorder?.url {
                         let recording = AudioRecord(url: url, createdAt: .now)
-                        self?.records.append(recording)
+                        self?.record = recording
                         completion(recording)
                     }
                 }
@@ -113,19 +113,19 @@ class RecordingManager: NSObject {
         audioPlayer?.stop()
     }
     
-    func deleteRecords() {
-        for record in records {
-            do {
-                try FileManager.default.removeItem(at: record.url)
-            } catch {
-                print("Can't delete")
-            }
-        }
-    }
+//    func deleteRecords() {
+//        for record in records {
+//            do {
+//                try FileManager.default.removeItem(at: record.url)
+//            } catch {
+//                print("Can't delete")
+//            }
+//        }
+//    }
     
-    func deleteRecord(_ record: AudioRecord) {
+    func deleteRecord() {
         do {
-            try FileManager.default.removeItem(at: record.url)
+            try FileManager.default.removeItem(at: record!.url)
         } catch {
             print("Can't delete")
         }

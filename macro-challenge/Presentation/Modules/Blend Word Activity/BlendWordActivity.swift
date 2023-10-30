@@ -23,7 +23,7 @@ struct BlendWordActivity: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Color.Blue3)
-                    .frame(width: width, height: height)
+                    .frame(width: width + width/10, height: height)
                     .position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                     .opacity(show ? 0 : 1)
                     .animation(.easeInOut, value: show)

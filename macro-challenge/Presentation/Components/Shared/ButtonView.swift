@@ -13,7 +13,7 @@ struct ButtonView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.blue) // Background color
+                            .fill(Color.Blue1) // Background color
                             .frame(height: 72)
                             .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 5)
             Image("\(image)")
