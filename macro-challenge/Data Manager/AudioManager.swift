@@ -11,12 +11,11 @@ class AudioManager: NSObject {
     var queuePlayer: AVQueuePlayer?
     var playerItems: [AVPlayerItem] = []
     var currentAudioIndex = 0
-    override init() {
-        super.init()
-        
-    }
     
-    func playQueue(_ audios: [String]) {
+    var queueDidChange: ((_ index: Int) -> Void)?
+    
+    func playQueue(_ audios: [String], changeHandler: ((_ index: Int) -> Void)? = nil) {
+        queueDidChange = changeHandler
         setupAudioFiles(audios)
         queuePlayer?.play()
     }
@@ -45,6 +44,7 @@ class AudioManager: NSObject {
         if keyPath == "currentItem", let player = queuePlayer {
             if let currentItem = player.currentItem, let index = playerItems.firstIndex(of: currentItem) {
                 currentAudioIndex = index
+                queueDidChange?(index)
             }
         }
     }
