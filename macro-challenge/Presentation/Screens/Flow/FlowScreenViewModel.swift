@@ -47,69 +47,69 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         return am.currentAudioIndex
     }
     
-//    func nextStep(){
-//        switch activity {
-//        case .beforeBreakWord:
-//            setActivity(act: .afterBreakWord)
-//            break
-//        case .afterBreakWord:
-//            setActivity(act: .beforeCard1)
-//            break
-//        case .beforeCard1:
-//            setActivity(act: .afterCard)
-//            break
-//        case .beforeCard2:
-//            setActivity(act: .afterCard)
-//            break
-//        case .afterCard:
-//            isScannedCardCorrect()
-//            break
-//        case .wrongCard:
-//            if type == .syllable1{
-//                setActivity(act: .beforeReadSyllable1)
-//            }else {
-//                setActivity(act: .beforeReadSyllable2)
-//            }
-//            break
-//        case .correctCard:
-//            if type == .syllable1{
-//                setActivity(act: .beforeReadSyllable1)
-//            }else {
-//                setActivity(act: .beforeReadSyllable2)
-//            }
-//            break
-//        case .beforeReadSyllable1:
-//            setActivity(act: .afterReadSyllable)
-//            break
-//        case .beforeReadSyllable2:
-//            setActivity(act: .afterReadSyllable)
-//            break
-//        case .beforeReadWord:
-//            setActivity(act: .afterReadWord)
-//            break
-//        case .afterReadSyllable:
-//            if type == .syllable2{
-//                type = .word
-//                setActivity(act: .beforeBlendWord)
-//            }else {
-//                type = .syllable2
-//                setActivity(act: .beforeCard2)
-//            }
-//            break
-//        case .afterReadWord:
-//            setActivity(act: .beforeBreakWord)
-//            break
-//        case .beforeBlendWord:
-//            setActivity(act: .afterBlendWord)
-//            break
-//        case .afterBlendWord:
-//            setActivity(act: .beforeReadWord)
-//            break
-//        case .none:
-//            instruction = ""
-//            break
-//        }
-//    }
+    func nextStep(){
+        switch activity {
+        case .beforeBreakWord:
+            setActivity(act: .afterBreakWord)
+            break
+        case .afterBreakWord:
+            setActivity(act: .beforeCard1)
+            break
+        case .beforeCard1:
+            setActivity(act: .afterCard)
+            break
+        case .beforeCard2:
+            setActivity(act: .afterCard)
+            break
+        case .afterCard:
+            isScannedCardCorrect()
+            break
+        case .wrongCard:
+            if type == .syllable1{
+                setActivity(act: .beforeReadSyllable1)
+            }else {
+                setActivity(act: .beforeReadSyllable2)
+            }
+            break
+        case .correctCard:
+            if type == .syllable1{
+                setActivity(act: .beforeReadSyllable1)
+            }else {
+                setActivity(act: .beforeReadSyllable2)
+            }
+            break
+        case .beforeReadSyllable1:
+            setActivity(act: .afterReadSyllable)
+            break
+        case .beforeReadSyllable2:
+            setActivity(act: .afterReadSyllable)
+            break
+        case .beforeReadWord:
+            setActivity(act: .afterReadWord)
+            break
+        case .afterReadSyllable:
+            if type == .syllable2{
+                type = .word
+                setActivity(act: .beforeBlendWord)
+            }else {
+                type = .syllable2
+                setActivity(act: .beforeCard2)
+            }
+            break
+        case .afterReadWord:
+            setActivity(act: .beforeBreakWord)
+            break
+        case .beforeBlendWord:
+            setActivity(act: .afterBlendWord)
+            break
+        case .afterBlendWord:
+            setActivity(act: .beforeReadWord)
+            break
+        case .none:
+            instruction = ""
+            break
+        }
+    }
     
     func getInstruction(){
         switch activity {
@@ -244,19 +244,19 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             am.playQueue(["after_card(2-correct)"])
             break
         case .beforeReadSyllable1:
-            am.playQueue(["before_spelling", syllable1])
+            am.playQueue(["before_pronunciation", syllable1])
             break
         case .beforeReadSyllable2:
-            am.playQueue(["before_spelling", syllable2])
+            am.playQueue(["before_pronunciation", syllable2])
             break
         case .beforeReadWord:
-            am.playQueue(["before_spelling", syllable1, syllable2])
+            am.playQueue(["before_pronunciation", syllable1, syllable2])
             break
         case .afterReadSyllable:
-            am.playQueue(["after_spelling"])
+            am.playQueue(["after_pronunciation(1)"])
             break
         case .afterReadWord:
-            am.playQueue(["after_spelling"])
+            am.playQueue(["after_pronunciation(1)"])
             break
         case .beforeBlendWord:
             am.playQueue(["before_blend-word"])

@@ -33,7 +33,7 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return Color.White1
             case .tertiary:
-                return .clear
+                return Color.Blue1
             }
         }
         

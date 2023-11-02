@@ -36,7 +36,7 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                                 .zIndex(1)
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
-                    .padding(.horizontal, 20)
+                    .padding(20)
                     } 
                     
                 }
@@ -51,7 +51,6 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                             if dragOffset[1] < -width/4.5 && dragOffset[0] > width/4.5{
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     show = false
-//                                    vm.nextStep()
                                     next()
                                 }
                             }

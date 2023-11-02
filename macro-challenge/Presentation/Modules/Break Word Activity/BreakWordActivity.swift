@@ -37,7 +37,7 @@ struct BreakWordActivity: View, ActivityViewProtocol{
                                 .zIndex(1)
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
-                        .padding(.horizontal, 20)
+                        .padding(20)
                     }
                     
                 }
@@ -74,7 +74,7 @@ struct BreakWordActivity: View, ActivityViewProtocol{
                                         .onChanged({ (value) in
                                             crack = true
                                             if vm.activity == .beforeBreakWord{
-                                                vm.setActivity(act: .afterBreakWord)
+                                                vm.nextStep()
                                             }
                                         })
                                 )

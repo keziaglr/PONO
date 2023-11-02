@@ -25,12 +25,12 @@ struct ScanWordActivity: View {
             if viewModel.type == .syllable1{
                 SyllableLabel(left: true, scale: .constant(false), syllable: (viewModel.word?.syllables[0].content)!, height: 200, width: 280, show: $crack)
                     .onTapGesture {
-                        viewModel.setActivity(act: .afterCard)
+                        viewModel.nextStep()
                     }
             }else{
                 SyllableLabel(left: false, scale: .constant(false), syllable: (viewModel.word?.syllables[1].content)!, height: 200, width: 280, show: $crack)
                     .onTapGesture {
-                        viewModel.setActivity(act: .afterCard)
+                        viewModel.nextStep()
                     }
             }
         

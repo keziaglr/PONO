@@ -41,7 +41,7 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                             }.buttonStyle(PonoButtonStyle(variant: .secondary))
                         }
                         
-                    }.padding(.horizontal, 20)
+                    }.padding(20)
             }
             HStack {
                 FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
