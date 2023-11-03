@@ -17,10 +17,14 @@ struct QrCameraView: UIViewRepresentable {
         view.backgroundColor = .clear
         
         let cameraLayer = AVCaptureVideoPreviewLayer(session: cameraSession)
-        cameraLayer.frame = .init(origin: .zero, size: frameSize)
-        cameraLayer.videoGravity = .resizeAspectFill
+        cameraLayer.frame = CGRect(origin: .zero, size: frameSize)
+        if let connection = cameraLayer.connection {
+            connection.videoOrientation = .landscapeRight
+        }
+        cameraLayer.videoGravity = .resizeAspect
         cameraLayer.masksToBounds = true
         view.layer.addSublayer(cameraLayer)
+        view.contentMode = .scaleAspectFit
         return view
     }
     

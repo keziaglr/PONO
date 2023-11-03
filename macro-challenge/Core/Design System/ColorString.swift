@@ -20,6 +20,8 @@ struct ColorString {
     static let Blue1 = "Colors/Blue/1"
     static let Blue2 = "Colors/Blue/2"
     static let Blue3 = "Colors/Blue/3"
+    static let Blue4 = "Colors/Blue/4"
+    static let Blue5 = "Colors/Blue/5"
     
     static let Orange1 = "Colors/Orange/1"
     static let Orange2 = "Colors/Orange/2"

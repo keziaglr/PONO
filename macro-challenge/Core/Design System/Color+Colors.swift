@@ -44,6 +44,14 @@ extension Color {
         Color(ColorString.Blue3)
     }
     
+    static var Blue4: Color {
+        Color(ColorString.Blue4)
+    }
+    
+    static var Blue5: Color {
+        Color(ColorString.Blue5)
+    }
+    
     static var Orange1: Color {
         Color(ColorString.Orange1)
     }

@@ -23,3 +23,13 @@ enum Activity {
     case beforeBlendWord
     case afterBlendWord
 }
+
+enum TypeReading {
+    case syllable1
+    case syllable2
+    case word
+}
+
+protocol ActivityViewProtocol{
+    var next: () -> Void { get }
+}
