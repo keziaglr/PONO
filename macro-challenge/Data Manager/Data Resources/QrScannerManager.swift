@@ -39,7 +39,7 @@ class QrScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
                 print("Error input output")
                 return
             }
-            
+            self.captureSession.sessionPreset = .high
             self.captureSession.beginConfiguration()
             self.captureSession.addInput(input)
             self.captureSession.addOutput(self.qrOutput)

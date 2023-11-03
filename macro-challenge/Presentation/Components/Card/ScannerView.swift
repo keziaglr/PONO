@@ -42,7 +42,7 @@ struct ScannerView: View {
             
             Spacer(minLength: 0)
             
-            QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 200, height: 200))
+            QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 600, height: 250))
             Button {
                 checkCameraPermission()
             } label: {
@@ -58,6 +58,9 @@ struct ScannerView: View {
             Spacer(minLength: 15)
             
             
+        }
+        .onAppear {
+            checkCameraPermission()
         }
         .padding(15)
         
@@ -97,11 +100,11 @@ struct ScannerView: View {
     }
 }
 
-struct ScannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        var viewModel: ScannerViewModel = ScannerViewModel()
-        var cameraSession: AVCaptureSession
-        ScannerView()
-    }
-}
+//struct ScannerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//        var viewModel: ScannerViewModel = ScannerViewModel()
+//        var cameraSession: AVCaptureSession
+//        ScannerView()
+//    }
+//}

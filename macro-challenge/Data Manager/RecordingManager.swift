@@ -17,7 +17,7 @@ class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
-    var records: [AudioRecord] = []
+    var record: AudioRecord? = nil
     
     private var audioRecorder: AVAudioRecorder?
     private var audioPlayer: AVAudioPlayer?
@@ -34,7 +34,7 @@ class RecordingManager: NSObject {
         timer?.invalidate()
         
         // Remove recording file
-        deleteRecords()
+        deleteRecord()
     }
     
     func startRecord(for seconds: TimeInterval = 5, completion: @escaping (AudioRecord) -> Void) {
@@ -52,8 +52,9 @@ class RecordingManager: NSObject {
         let fileName = path.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY 'at' HH:mm:ss")).m4a")
         
         let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
+//            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVFormatIDKey: Int(1819304813),
+            AVSampleRateKey: 44100,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
@@ -72,7 +73,7 @@ class RecordingManager: NSObject {
                     
                     if let url = self?.audioRecorder?.url {
                         let recording = AudioRecord(url: url, createdAt: .now)
-                        self?.records.append(recording)
+                        self?.record = recording
                         completion(recording)
                     }
                 }
@@ -103,6 +104,7 @@ class RecordingManager: NSObject {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
             audioPlayer?.prepareToPlay()
+            audioPlayer?.volume = 5.0
             audioPlayer?.play()
         } catch {
             print("Playing Failed")
@@ -113,19 +115,19 @@ class RecordingManager: NSObject {
         audioPlayer?.stop()
     }
     
-    func deleteRecords() {
-        for record in records {
-            do {
-                try FileManager.default.removeItem(at: record.url)
-            } catch {
-                print("Can't delete")
-            }
-        }
-    }
+//    func deleteRecords() {
+//        for record in records {
+//            do {
+//                try FileManager.default.removeItem(at: record.url)
+//            } catch {
+//                print("Can't delete")
+//            }
+//        }
+//    }
     
-    func deleteRecord(_ record: AudioRecord) {
+    func deleteRecord() {
         do {
-            try FileManager.default.removeItem(at: record.url)
+            try FileManager.default.removeItem(at: record!.url)
         } catch {
             print("Can't delete")
         }

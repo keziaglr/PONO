@@ -16,7 +16,7 @@ struct InstructionView: View {
                 .font(.title)
                 .foregroundColor(Color.Blue2)
             Text(message)
-                .font(.system(.title, design: .rounded))
+                .textStyle(style: .heading5)
         }.padding(20)
         .background(
             Capsule()
