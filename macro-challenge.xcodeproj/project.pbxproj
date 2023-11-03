@@ -69,6 +69,35 @@
 		AC0BAD122AF3E66D009256A2 /* before_pronunciation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD0F2AF3E66D009256A2 /* before_pronunciation.m4a */; };
 		AC0BAD152AF3E685009256A2 /* after_blend-word.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD132AF3E684009256A2 /* after_blend-word.m4a */; };
 		AC0BAD162AF3E685009256A2 /* before_blend-word.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD142AF3E684009256A2 /* before_blend-word.m4a */; };
+		AC0BAE652AF53E31009256A2 /* after_pronunciation(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */; };
+		AC0BAE662AF53E31009256A2 /* before_pronunciation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */; };
+		AC0BAE692AF53E31009256A2 /* after_pronunciation(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */; };
+		AC0BAE702AF53EB3009256A2 /* before_break-word(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE6B2AF53EB3009256A2 /* before_break-word(1).m4a */; };
+		AC0BAE712AF53EB3009256A2 /* before_break-word(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE6C2AF53EB3009256A2 /* before_break-word(2).m4a */; };
+		AC0BAE722AF53EB3009256A2 /* after_break-word(3).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE6D2AF53EB3009256A2 /* after_break-word(3).m4a */; };
+		AC0BAE732AF53EB3009256A2 /* after_break-word(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE6E2AF53EB3009256A2 /* after_break-word(2).m4a */; };
+		AC0BAE742AF53EB3009256A2 /* after_break-word(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE6F2AF53EB3009256A2 /* after_break-word(1).m4a */; };
+		AC0BAE7C2AF53EDE009256A2 /* after_card(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE772AF53EDE009256A2 /* after_card(1).m4a */; };
+		AC0BAE7D2AF53EDE009256A2 /* before_card(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE782AF53EDE009256A2 /* before_card(1).m4a */; };
+		AC0BAE7E2AF53EDE009256A2 /* before_card(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE792AF53EDE009256A2 /* before_card(2).m4a */; };
+		AC0BAE7F2AF53EDE009256A2 /* after_card(2-correct).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE7A2AF53EDE009256A2 /* after_card(2-correct).m4a */; };
+		AC0BAE802AF53EDE009256A2 /* after_card(2-wrong).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE7B2AF53EDE009256A2 /* after_card(2-wrong).m4a */; };
+		AC0BAE832AF53EE9009256A2 /* after_blend-word.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE812AF53EE9009256A2 /* after_blend-word.m4a */; };
+		AC0BAE842AF53EE9009256A2 /* before_blend-word.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE822AF53EE9009256A2 /* before_blend-word.m4a */; };
+		AC0BAE932AF53F16009256A2 /* ne.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE862AF53F15009256A2 /* ne.m4a */; };
+		AC0BAE942AF53F16009256A2 /* mi.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE872AF53F15009256A2 /* mi.m4a */; };
+		AC0BAE952AF53F16009256A2 /* ni.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE882AF53F15009256A2 /* ni.m4a */; };
+		AC0BAE962AF53F16009256A2 /* mo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE892AF53F15009256A2 /* mo.m4a */; };
+		AC0BAE972AF53F16009256A2 /* pa.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8A2AF53F15009256A2 /* pa.m4a */; };
+		AC0BAE982AF53F16009256A2 /* no.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8B2AF53F15009256A2 /* no.m4a */; };
+		AC0BAE992AF53F16009256A2 /* pu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8C2AF53F15009256A2 /* pu.m4a */; };
+		AC0BAE9A2AF53F16009256A2 /* pi.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8D2AF53F15009256A2 /* pi.m4a */; };
+		AC0BAE9B2AF53F16009256A2 /* na.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8E2AF53F16009256A2 /* na.m4a */; };
+		AC0BAE9C2AF53F16009256A2 /* pe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE8F2AF53F16009256A2 /* pe.m4a */; };
+		AC0BAE9D2AF53F16009256A2 /* po.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE902AF53F16009256A2 /* po.m4a */; };
+		AC0BAE9E2AF53F16009256A2 /* mu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE912AF53F16009256A2 /* mu.m4a */; };
+		AC0BAE9F2AF53F16009256A2 /* nu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE922AF53F16009256A2 /* nu.m4a */; };
+		AC0BAEA12AF53F40009256A2 /* BreakWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0BAEA02AF53F40009256A2 /* BreakWordViewModel.swift */; };
 		AC1B58702AEEB63300661474 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B586F2AEEB63300661474 /* Activity.swift */; };
 		AC1FC1D22AE64C300078015B /* syllables.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1D12AE64C300078015B /* syllables.json */; };
 		AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* ContentManager.swift */; };
@@ -156,6 +185,35 @@
 		AC0BAD0F2AF3E66D009256A2 /* before_pronunciation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_pronunciation.m4a; sourceTree = "<group>"; };
 		AC0BAD132AF3E684009256A2 /* after_blend-word.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "after_blend-word.m4a"; path = "/Downloads/new/after_blend-word.m4a"; sourceTree = "<absolute>"; };
 		AC0BAD142AF3E684009256A2 /* before_blend-word.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "before_blend-word.m4a"; path = "/Downloads/new/before_blend-word.m4a"; sourceTree = "<absolute>"; };
+		AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(2).m4a"; sourceTree = "<group>"; };
+		AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_pronunciation.m4a; sourceTree = "<group>"; };
+		AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(1).m4a"; sourceTree = "<group>"; };
+		AC0BAE6B2AF53EB3009256A2 /* before_break-word(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_break-word(1).m4a"; sourceTree = "<group>"; };
+		AC0BAE6C2AF53EB3009256A2 /* before_break-word(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_break-word(2).m4a"; sourceTree = "<group>"; };
+		AC0BAE6D2AF53EB3009256A2 /* after_break-word(3).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_break-word(3).m4a"; sourceTree = "<group>"; };
+		AC0BAE6E2AF53EB3009256A2 /* after_break-word(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_break-word(2).m4a"; sourceTree = "<group>"; };
+		AC0BAE6F2AF53EB3009256A2 /* after_break-word(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_break-word(1).m4a"; sourceTree = "<group>"; };
+		AC0BAE772AF53EDE009256A2 /* after_card(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_card(1).m4a"; sourceTree = "<group>"; };
+		AC0BAE782AF53EDE009256A2 /* before_card(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_card(1).m4a"; sourceTree = "<group>"; };
+		AC0BAE792AF53EDE009256A2 /* before_card(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_card(2).m4a"; sourceTree = "<group>"; };
+		AC0BAE7A2AF53EDE009256A2 /* after_card(2-correct).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_card(2-correct).m4a"; sourceTree = "<group>"; };
+		AC0BAE7B2AF53EDE009256A2 /* after_card(2-wrong).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_card(2-wrong).m4a"; sourceTree = "<group>"; };
+		AC0BAE812AF53EE9009256A2 /* after_blend-word.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_blend-word.m4a"; sourceTree = "<group>"; };
+		AC0BAE822AF53EE9009256A2 /* before_blend-word.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "before_blend-word.m4a"; sourceTree = "<group>"; };
+		AC0BAE862AF53F15009256A2 /* ne.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ne.m4a; sourceTree = "<group>"; };
+		AC0BAE872AF53F15009256A2 /* mi.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mi.m4a; sourceTree = "<group>"; };
+		AC0BAE882AF53F15009256A2 /* ni.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ni.m4a; sourceTree = "<group>"; };
+		AC0BAE892AF53F15009256A2 /* mo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mo.m4a; sourceTree = "<group>"; };
+		AC0BAE8A2AF53F15009256A2 /* pa.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pa.m4a; sourceTree = "<group>"; };
+		AC0BAE8B2AF53F15009256A2 /* no.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = no.m4a; sourceTree = "<group>"; };
+		AC0BAE8C2AF53F15009256A2 /* pu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pu.m4a; sourceTree = "<group>"; };
+		AC0BAE8D2AF53F15009256A2 /* pi.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pi.m4a; sourceTree = "<group>"; };
+		AC0BAE8E2AF53F16009256A2 /* na.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = na.m4a; sourceTree = "<group>"; };
+		AC0BAE8F2AF53F16009256A2 /* pe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pe.m4a; sourceTree = "<group>"; };
+		AC0BAE902AF53F16009256A2 /* po.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = po.m4a; sourceTree = "<group>"; };
+		AC0BAE912AF53F16009256A2 /* mu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mu.m4a; sourceTree = "<group>"; };
+		AC0BAE922AF53F16009256A2 /* nu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nu.m4a; sourceTree = "<group>"; };
+		AC0BAEA02AF53F40009256A2 /* BreakWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakWordViewModel.swift; sourceTree = "<group>"; };
 		AC1B586F2AEEB63300661474 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		AC1FC1D12AE64C300078015B /* syllables.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = syllables.json; sourceTree = "<group>"; };
 		AC1FC1D72AE667C20078015B /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
@@ -314,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
+				AC0BAEA02AF53F40009256A2 /* BreakWordViewModel.swift */,
 			);
 			path = "Break Word Activity";
 			sourceTree = "<group>";
@@ -330,8 +389,8 @@
 		74FB08872AE9A13D003CBE43 /* Voice */ = {
 			isa = PBXGroup;
 			children = (
-				AC1FC2CE2AEA6F160078015B /* Activities */,
-				74FB08892AE9A189003CBE43 /* Syllables */,
+				AC0BAE852AF53F02009256A2 /* Syllable */,
+				AC0BAE5E2AF53DD2009256A2 /* Activity */,
 				74FB08882AE9A17A003CBE43 /* Letter */,
 			);
 			path = Voice;
@@ -353,13 +412,6 @@
 				74FB088E2AE9A1A3003CBE43 /* u.m4a */,
 			);
 			path = Letter;
-			sourceTree = "<group>";
-		};
-		74FB08892AE9A189003CBE43 /* Syllables */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Syllables;
 			sourceTree = "<group>";
 		};
 		74FB08D42AE9A9B9003CBE43 /* enum */ = {
@@ -405,6 +457,80 @@
 				AC0BAD132AF3E684009256A2 /* after_blend-word.m4a */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		AC0BAE5E2AF53DD2009256A2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE762AF53EC2009256A2 /* Card */,
+				AC0BAE752AF53EB9009256A2 /* Blend Word */,
+				AC0BAE6A2AF53E99009256A2 /* Break Word */,
+				AC0BAE5F2AF53E31009256A2 /* Spelling */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		AC0BAE5F2AF53E31009256A2 /* Spelling */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */,
+				AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */,
+				AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */,
+			);
+			path = Spelling;
+			sourceTree = "<group>";
+		};
+		AC0BAE6A2AF53E99009256A2 /* Break Word */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE6F2AF53EB3009256A2 /* after_break-word(1).m4a */,
+				AC0BAE6E2AF53EB3009256A2 /* after_break-word(2).m4a */,
+				AC0BAE6D2AF53EB3009256A2 /* after_break-word(3).m4a */,
+				AC0BAE6B2AF53EB3009256A2 /* before_break-word(1).m4a */,
+				AC0BAE6C2AF53EB3009256A2 /* before_break-word(2).m4a */,
+			);
+			path = "Break Word";
+			sourceTree = "<group>";
+		};
+		AC0BAE752AF53EB9009256A2 /* Blend Word */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE812AF53EE9009256A2 /* after_blend-word.m4a */,
+				AC0BAE822AF53EE9009256A2 /* before_blend-word.m4a */,
+			);
+			path = "Blend Word";
+			sourceTree = "<group>";
+		};
+		AC0BAE762AF53EC2009256A2 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE772AF53EDE009256A2 /* after_card(1).m4a */,
+				AC0BAE7A2AF53EDE009256A2 /* after_card(2-correct).m4a */,
+				AC0BAE7B2AF53EDE009256A2 /* after_card(2-wrong).m4a */,
+				AC0BAE782AF53EDE009256A2 /* before_card(1).m4a */,
+				AC0BAE792AF53EDE009256A2 /* before_card(2).m4a */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		AC0BAE852AF53F02009256A2 /* Syllable */ = {
+			isa = PBXGroup;
+			children = (
+				AC0BAE872AF53F15009256A2 /* mi.m4a */,
+				AC0BAE892AF53F15009256A2 /* mo.m4a */,
+				AC0BAE912AF53F16009256A2 /* mu.m4a */,
+				AC0BAE8E2AF53F16009256A2 /* na.m4a */,
+				AC0BAE862AF53F15009256A2 /* ne.m4a */,
+				AC0BAE882AF53F15009256A2 /* ni.m4a */,
+				AC0BAE8B2AF53F15009256A2 /* no.m4a */,
+				AC0BAE922AF53F16009256A2 /* nu.m4a */,
+				AC0BAE8A2AF53F15009256A2 /* pa.m4a */,
+				AC0BAE8F2AF53F16009256A2 /* pe.m4a */,
+				AC0BAE8D2AF53F15009256A2 /* pi.m4a */,
+				AC0BAE902AF53F16009256A2 /* po.m4a */,
+				AC0BAE8C2AF53F15009256A2 /* pu.m4a */,
+			);
+			path = Syllable;
 			sourceTree = "<group>";
 		};
 		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
@@ -475,13 +601,6 @@
 				ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		AC1FC2CE2AEA6F160078015B /* Activities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Activities;
 			sourceTree = "<group>";
 		};
 		AC427D722AEB6FC80012E00C /* Blend Word Activity */ = {
@@ -597,19 +716,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0BAE652AF53E31009256A2 /* after_pronunciation(2).m4a in Resources */,
 				74FB089B2AE9A1A3003CBE43 /* i.m4a in Resources */,
 				74FB08972AE9A1A3003CBE43 /* a.m4a in Resources */,
+				AC0BAE832AF53EE9009256A2 /* after_blend-word.m4a in Resources */,
 				AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */,
 				AC0BAD0C2AF3E649009256A2 /* before_card(1).m4a in Resources */,
 				AC0BAD102AF3E66D009256A2 /* after_pronunciation(2).m4a in Resources */,
+				AC0BAE802AF53EDE009256A2 /* after_card(2-wrong).m4a in Resources */,
 				AC0BAD0B2AF3E649009256A2 /* after_card(1).m4a in Resources */,
+				AC0BAE712AF53EB3009256A2 /* before_break-word(2).m4a in Resources */,
 				74FB089E2AE9A1A3003CBE43 /* n.m4a in Resources */,
+				AC0BAE992AF53F16009256A2 /* pu.m4a in Resources */,
+				AC0BAE702AF53EB3009256A2 /* before_break-word(1).m4a in Resources */,
+				AC0BAE9F2AF53F16009256A2 /* nu.m4a in Resources */,
+				AC0BAE722AF53EB3009256A2 /* after_break-word(3).m4a in Resources */,
+				AC0BAE952AF53F16009256A2 /* ni.m4a in Resources */,
 				AC0BAD082AF3E649009256A2 /* after_card(2-correct).m4a in Resources */,
+				AC0BAE842AF53EE9009256A2 /* before_blend-word.m4a in Resources */,
+				AC0BAE932AF53F16009256A2 /* ne.m4a in Resources */,
 				74FB089C2AE9A1A3003CBE43 /* eh.m4a in Resources */,
 				AC0BACF82AF38725009256A2 /* after_break-word(1).m4a in Resources */,
 				74FB08992AE9A1A3003CBE43 /* u.m4a in Resources */,
+				AC0BAE942AF53F16009256A2 /* mi.m4a in Resources */,
 				AC1FC1D22AE64C300078015B /* syllables.json in Resources */,
 				AC0BAD092AF3E649009256A2 /* before_card(2).m4a in Resources */,
+				AC0BAE7E2AF53EDE009256A2 /* before_card(2).m4a in Resources */,
+				AC0BAE9D2AF53F16009256A2 /* po.m4a in Resources */,
+				AC0BAE7F2AF53EDE009256A2 /* after_card(2-correct).m4a in Resources */,
 				3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */,
 				AC0BACFB2AF38725009256A2 /* before_break-word(2).m4a in Resources */,
 				AC0BACFA2AF38725009256A2 /* after_break-word(3).m4a in Resources */,
@@ -620,17 +754,30 @@
 				3868C15D2AE61C8E00E832B0 /* Quicksand-Light.ttf in Resources */,
 				3868C15C2AE61C8E00E832B0 /* Quicksand-SemiBold.ttf in Resources */,
 				AC0BAD122AF3E66D009256A2 /* before_pronunciation.m4a in Resources */,
+				AC0BAE7C2AF53EDE009256A2 /* after_card(1).m4a in Resources */,
+				AC0BAE732AF53EB3009256A2 /* after_break-word(2).m4a in Resources */,
 				74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */,
+				AC0BAE962AF53F16009256A2 /* mo.m4a in Resources */,
+				AC0BAE9E2AF53F16009256A2 /* mu.m4a in Resources */,
 				74FB089F2AE9A1A3003CBE43 /* o.m4a in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
 				AC0BACF92AF38725009256A2 /* after_break-word(2).m4a in Resources */,
 				74FB08982AE9A1A3003CBE43 /* d.m4a in Resources */,
 				AC0BAD112AF3E66D009256A2 /* after_pronunciation(1).m4a in Resources */,
+				AC0BAE742AF53EB3009256A2 /* after_break-word(1).m4a in Resources */,
+				AC0BAE9A2AF53F16009256A2 /* pi.m4a in Resources */,
 				74FB08962AE9A1A3003CBE43 /* e.m4a in Resources */,
+				AC0BAE692AF53E31009256A2 /* after_pronunciation(1).m4a in Resources */,
+				AC0BAE9C2AF53F16009256A2 /* pe.m4a in Resources */,
 				3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */,
 				AC0BACF32AF3870F009256A2 /* before_break-word(1).m4a in Resources */,
+				AC0BAE7D2AF53EDE009256A2 /* before_card(1).m4a in Resources */,
+				AC0BAE982AF53F16009256A2 /* no.m4a in Resources */,
 				74FB089A2AE9A1A3003CBE43 /* b.m4a in Resources */,
+				AC0BAE972AF53F16009256A2 /* pa.m4a in Resources */,
+				AC0BAE9B2AF53F16009256A2 /* na.m4a in Resources */,
 				AC0BAD152AF3E685009256A2 /* after_blend-word.m4a in Resources */,
+				AC0BAE662AF53E31009256A2 /* before_pronunciation.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +797,7 @@
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
+				AC0BAEA12AF53F40009256A2 /* BreakWordViewModel.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
