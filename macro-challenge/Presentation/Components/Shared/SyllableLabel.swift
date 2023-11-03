@@ -18,13 +18,20 @@ struct SyllableLabel: View {
     
     var body: some View {
         ZStack {
+            Image(left ? "left" : "right")
+                .resizable()
+                .scaledToFit()
+                .frame(width: width, height: height)
+                .shadow(color: Color.Blue1.opacity(0.15),radius: 20, y: 8)
             Text(syllable)
-                .font(.custom("Quicksand-Bold", size: 100))
+                .font(.custom("Quicksand-Bold", size: 90))
                 .foregroundColor(textColor)
                 .kerning(25)
                 .padding(.horizontal, 50)
                 .animation(.easeInOut(duration: 2), value: scale)
                 .scaleEffect(scale ? 1.2 : 1)
+                .lineLimit(1)
+                .frame(width: width, height: height)
                 .onAppear{
                     if show {
                         textColor = syllable.getCardColor()
@@ -33,18 +40,12 @@ struct SyllableLabel: View {
                 .onChange(of: show) { newValue in
                     textColor = syllable.getCardColor()
                 }
-        }.background(
-            Image(left ? "left" : "right")
-                .resizable()
-                .scaledToFit()
-                .frame(width: width, height: height)
-                .shadow(color: Color.Blue1.opacity(0.15),radius: 20, y: 8)
-        )
+        }
     }
 }
 
 struct SyllableLabel_Previews: PreviewProvider {
     static var previews: some View {
-        SyllableLabel(left: false, scale: .constant(false), syllable: "bu", height: 200, width: 300, show: .constant(true))
+        SyllableLabel(left: false, scale: .constant(false), syllable: "mu", height: 200, width: 300, show: .constant(true))
     }
 }

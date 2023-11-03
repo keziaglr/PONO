@@ -8,54 +8,60 @@
 import SwiftUI
 
 struct PronounceInstruction: View {
-//    @State var type : TypeReading
     @ObservedObject var vm : FlowScreenViewModel
+    @State var isPressed = false
     var body: some View {
         
         HStack {
-            Image(systemName: "speaker.wave.2.fill")
-                .resizable()
-                .frame(width: 29, height: 22)
-                .foregroundStyle(Color.Blue2)
-                .padding()
-                .onTapGesture {
-                    switch vm.type {
-                    case .syllable1:
-                        vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!])
-                    case .syllable2:
-                        vm.soundSyllable(sound: [(vm.word?.syllable(at: 1))!])
-                    case .word:
-                        vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!, (vm.word?.syllable(at: 1))!])
-                    }
+//            Image(systemName: "speaker.wave.2.fill")
+//                .resizable()
+//                .frame(width: 29, height: 22)
+//                .foregroundStyle(Color.Blue2)
+//                .padding()
+                
+            Button {
+                switch vm.type {
+                case .syllable1:
+                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!])
+                case .syllable2:
+                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 1))!])
+                case .word:
+                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!, (vm.word?.syllable(at: 1))!])
                 }
-            
-            if vm.type == .word {
-                Text("\((vm.word?.syllable(at: 0))!) - \((vm.word?.syllable(at: 1))!)")
-                    .foregroundColor(Color.Grey1)
-                    .font(
-                        .custom(FontConst.QUICKSAND_BOLD, size: 40)
-                    ).padding()
-            } else if vm.type == .syllable1{
-                Text("\((vm.word?.syllable(at: 0))!)")
-                    .foregroundColor(Color.Grey1)
-                    .font(
-                        .custom(FontConst.QUICKSAND_BOLD, size: 40)
-                    ).padding()
-            } else if vm.type == .syllable2{
-                Text("\((vm.word?.syllable(at: 1))!)")
-                    .foregroundColor(Color.Grey1)
-                    .font(
-                        .custom(FontConst.QUICKSAND_BOLD, size: 40)
-                    ).padding()
-            }
+            } label: {
+                if vm.type == .word {
+                    Text("\((vm.word?.syllable(at: 0))!) - \((vm.word?.syllable(at: 1))!)")
+                        .foregroundColor(Color.Grey1)
+                        .font(
+                            .custom(FontConst.QUICKSAND_BOLD, size: 50)
+                        ).padding()
+                } else if vm.type == .syllable1{
+                    Text("\((vm.word?.syllable(at: 0))!)")
+                        .foregroundColor(Color.Grey1)
+                        .font(
+                            .custom(FontConst.QUICKSAND_BOLD, size: 50)
+                        ).padding()
+                } else if vm.type == .syllable2{
+                    Text("\((vm.word?.syllable(at: 1))!)")
+                        .foregroundColor(Color.Grey1)
+                        .font(
+                            .custom(FontConst.QUICKSAND_BOLD, size: 50)
+                        ).padding()
+                }
+            }.buttonStyle(PonoButtonStyle(variant: .secondary))
         }
-        .padding(.horizontal, 20)
-        .frame(height: 100)
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white)
-                .shadow(color: Color.Grey2, radius: 2, y: 2)
-        )
+//        .onTapGesture {
+//            isPressed = true
+//
+//        }
+//        .padding(.horizontal, 20)
+//        .frame(width: 200, height: 200)
+//        .background(
+//            RoundedRectangle(cornerRadius: 16)
+//                .fill(Color.white)
+//                .shadow(color: isPressed ? .clear : Color.Grey2, radius: 0, x: 0, y: 8)
+//        )
+//        .offset(y: isPressed ? 0 : 8)
     }
 }
 

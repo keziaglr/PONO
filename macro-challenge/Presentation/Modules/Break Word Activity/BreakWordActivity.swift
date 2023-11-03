@@ -10,8 +10,8 @@ import SwiftUI
 struct BreakWordActivity: View, ActivityViewProtocol{
     var next: () -> Void
     
-    @State var width : CGFloat = 500
-    @State var height : CGFloat = 200
+    @State var width : CGFloat = 600
+    @State var height : CGFloat = 300
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State var crack : Bool = false
@@ -31,10 +31,6 @@ struct BreakWordActivity: View, ActivityViewProtocol{
                             next()
                         } label: {
                             Image(systemName: "arrow.right")
-                                .font(Font.system(size: 50, weight: .bold))
-                                .foregroundStyle(Color.White1)
-                                .padding()
-                                .zIndex(1)
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                         .padding(20)
@@ -43,41 +39,32 @@ struct BreakWordActivity: View, ActivityViewProtocol{
                 }
                 
                 ZStack {
-                    SyllableLabel(left: true, scale: $scale[0], syllable: (vm.word?.syllables[0].content)!, height: height, width: width/2, show: $crack)
-                        .offset(x: dragOffset[0])
-                        .position(CGPoint(x: screenWidth/2.53, y: screenHeight/2))
-                        .animation(.easeOut(duration: 1), value: dragOffset)
-                        .onChange(of: crack) { newValue in
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                                dragOffset[0] = dragOffset[0] - 100.0
-                            }
+                    HStack(spacing: -10) {
+                        SyllableLabel(left: true, scale: $scale[0], syllable: (vm.word?.syllables[0].content)!, height: height, width: width/2, show: $crack)
+                            .offset(x: dragOffset[0])
+                            .animation(.easeOut(duration: 1), value: dragOffset)
+                            .onChange(of: crack) { newValue in
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                                    dragOffset[0] = dragOffset[0] - 100.0
+                                }
                         }
+                        SyllableLabel(left: false, scale: $scale[1], syllable: (vm.word?.syllables[1].content)!, height: height, width: width/2, show: $crack)
+                            .offset(x: dragOffset[1])
+                            .animation(.easeOut(duration: 1), value: dragOffset)
+                            .onChange(of: crack) { newValue in
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                                    dragOffset[1] = dragOffset[1] + 100.0
+                                }
+                            }
+                    }.position(CGPoint(x: screenWidth/2, y: screenHeight/2))
                     
-                    SyllableLabel(left: false, scale: $scale[1], syllable: (vm.word?.syllables[1].content)!, height: height, width: width/2, show: $crack)
-                        .offset(x: dragOffset[1])
-                        .animation(.easeOut(duration: 1), value: dragOffset)
-                        .position(CGPoint(x: screenWidth/1.66, y: screenHeight/2))
-                        .onChange(of: crack) { newValue in
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                                dragOffset[1] = dragOffset[1] + 100.0
-                            }
-                        }
                     
                     
                     if !crack {
                         ZStack {
                             Path { path in
-                                insertDottedPath(start: CGPoint(x: screenWidth/2, y: screenHeight/2-height/3.5), end : CGPoint(x: screenWidth/2, y: screenHeight/2+height/3), path: &path)
+                                insertDottedPath(start: CGPoint(x: screenWidth/2, y: screenHeight/2-height/4.5), end : CGPoint(x: screenWidth/2, y: screenHeight/2+height/4), path: &path)
                             }.stroke(Color.Blue1, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round, dash: [10]))
-                                .gesture(
-                                    DragGesture(minimumDistance: height/2)
-                                        .onChanged({ (value) in
-                                            crack = true
-                                            if vm.activity == .beforeBreakWord{
-                                                vm.nextStep()
-                                            }
-                                        })
-                                )
                             if !firstTap {
                                 ZStack {
                                     Image(systemName: "hand.point.up.left.fill")
@@ -108,6 +95,14 @@ struct BreakWordActivity: View, ActivityViewProtocol{
                         .onChanged { _ in
                             firstTap = true
                         }
+                ).simultaneousGesture(
+                    DragGesture(minimumDistance: height/2)
+                        .onChanged({ (value) in
+                            crack = true
+                            if vm.activity == .beforeBreakWord{
+                                vm.nextStep()
+                            }
+                        })
                 )
                 .onAppear{
                     vm.playInstruction()

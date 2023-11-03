@@ -19,7 +19,7 @@ struct RecordActivity: View, ActivityViewProtocol {
             Spacer()
             RecordingAudio(record: $record)
                 .onAppear {
-                    Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { _ in
+                    Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
                         self.record = true
                         RecordingManager.shared.startRecord(for: 4.0) { audioRecord in
                             self.record = false

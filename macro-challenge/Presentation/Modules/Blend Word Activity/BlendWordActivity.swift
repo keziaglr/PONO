@@ -30,10 +30,6 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                             next()
                         } label: {
                             Image(systemName: "arrow.right")
-                                .font(Font.system(size: 50, weight: .bold))
-                                .foregroundStyle(Color.White1)
-                                .padding()
-                                .zIndex(1)
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                     .padding(20)

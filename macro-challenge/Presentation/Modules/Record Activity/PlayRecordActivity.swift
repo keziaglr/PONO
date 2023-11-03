@@ -12,39 +12,35 @@ struct PlayRecordActivity: View, ActivityViewProtocol {
     
     @ObservedObject var vm : FlowScreenViewModel
     @State var drawingHeight = true
+    @State var showBtn = false
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
-                HStack {
-                    Button {
-                        next()
-                    } label: {
-                        Image(systemName: "arrow.right")
-                            .font(Font.system(size: 50, weight: .bold))
-                            .foregroundStyle(Color.White1)
-                            .padding()
-                    }
-                    .buttonStyle(PonoButtonStyle(variant: .primary))
-                    Button{
-                        vm.tryAgain()
-                    }label: {
-                        Image(systemName: "arrow.counterclockwise")
-                            .font(Font.system(size: 40, weight: .bold))
-                            .foregroundStyle(Color.Blue1)
-                            .padding()
-                    }.buttonStyle(PonoButtonStyle(variant: .secondary))
-                    
-                }.padding(20)
+                if showBtn{
+                    HStack {
+                        Button {
+                            next()
+                        } label: {
+                            Image(systemName: "arrow.right")
+                        }
+                        .buttonStyle(PonoButtonStyle(variant: .primary))
+                        Button{
+                            vm.tryAgain()
+                        }label: {
+                            Image(systemName: "arrow.counterclockwise")
+                        }.buttonStyle(PonoButtonStyle(variant: .secondary))
+                        
+                    }.padding(20)
+                }
             }
             HStack{
-                PlayRecord(drawingHeight: $drawingHeight)
-                    .onTapGesture {
-                        drawingHeight.toggle()
-                        RecordingManager.shared.playRecording(RecordingManager.shared.record!)
-                    }
                 PronounceInstruction(vm: vm)
-                    .padding()
+                PlayRecord(action: {
+                    drawingHeight.toggle()
+                    RecordingManager.shared.playRecording(RecordingManager.shared.record!)
+                    showBtn = true
+                }, drawingHeight: $drawingHeight)
             }.onAppear{
                 vm.playInstruction()
         }

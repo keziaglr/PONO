@@ -10,15 +10,28 @@ import SwiftUI
 struct PonoButtonStyle: ButtonStyle {
     let height : CGFloat = 80
     let variant: Variant
+    @State private var pressed = false
+    
+    init(variant: Variant, action: @escaping () -> Void = {}) {
+        self.variant = variant
+//        self.action = action
+        self.pressed = pressed
+    }
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .font(Font.system(size: variant.labelSize, weight: .bold))
+            .foregroundStyle(variant.labelColor)
             .frame(maxWidth: variant.size)
+            .animation(.easeInOut(duration: 0.5), value: configuration.isPressed)
+            .padding()
             .background() {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(variant.backgroundColor)
-                    .shadow(color: variant.shadow, radius: 0, x: 0, y: 8)
+                    .shadow(color: configuration.isPressed ? .clear : variant.shadow, radius: 0, x: 0, y: 8)
             }
+            .offset(y: configuration.isPressed ? 8 : 0)
+            
     }
     
     enum Variant {
@@ -33,7 +46,7 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return Color.White1
             case .tertiary:
-                return Color.Blue1
+                return .clear
             }
         }
         
@@ -54,6 +67,28 @@ struct PonoButtonStyle: ButtonStyle {
                 return .infinity
             case .secondary:
                 return 100
+            case .tertiary:
+                return .infinity
+            }
+        }
+        
+        var labelColor: Color {
+            switch self {
+            case .primary:
+                return Color.White1
+            case .secondary:
+                return Color.Blue1
+            case .tertiary:
+                return .clear
+            }
+        }
+        
+        var labelSize: CGFloat {
+            switch self {
+            case .primary:
+                return 50
+            case .secondary:
+                return 40
             case .tertiary:
                 return .infinity
             }

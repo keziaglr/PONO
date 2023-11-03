@@ -24,20 +24,14 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                             next()
                         } label: {
                             Image(systemName: "arrow.right")
-                                .font(Font.system(size: 50, weight: .bold))
-                                .foregroundStyle(Color.White1)
-                                .padding()
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                         
-                        if viewModel.activity == .correctCard || viewModel.activity == .wrongCard{
+                        if viewModel.activity == .wrongCard{
                             Button{
                                 viewModel.tryAgain()
                             }label: {
                                 Image(systemName: "arrow.counterclockwise")
-                                    .font(Font.system(size: 40, weight: .bold))
-                                    .foregroundStyle(Color.Blue1)
-                                    .padding()
                             }.buttonStyle(PonoButtonStyle(variant: .secondary))
                         }
                         
