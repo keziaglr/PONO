@@ -59,7 +59,6 @@
 		AC0BACF92AF38725009256A2 /* after_break-word(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BACF52AF38725009256A2 /* after_break-word(2).m4a */; };
 		AC0BACFA2AF38725009256A2 /* after_break-word(3).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BACF62AF38725009256A2 /* after_break-word(3).m4a */; };
 		AC0BACFB2AF38725009256A2 /* before_break-word(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BACF72AF38725009256A2 /* before_break-word(2).m4a */; };
-		AC0BACFD2AF394E1009256A2 /* BreakWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0BACFC2AF394E1009256A2 /* BreakWordViewModel.swift */; };
 		AC0BAD082AF3E649009256A2 /* after_card(2-correct).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD032AF3E649009256A2 /* after_card(2-correct).m4a */; };
 		AC0BAD092AF3E649009256A2 /* before_card(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD042AF3E649009256A2 /* before_card(2).m4a */; };
 		AC0BAD0A2AF3E649009256A2 /* after_card(2-wrong).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAD052AF3E649009256A2 /* after_card(2-wrong).m4a */; };
@@ -147,7 +146,6 @@
 		AC0BACF52AF38725009256A2 /* after_break-word(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "after_break-word(2).m4a"; path = "/Downloads/new/after_break-word(2).m4a"; sourceTree = "<absolute>"; };
 		AC0BACF62AF38725009256A2 /* after_break-word(3).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "after_break-word(3).m4a"; path = "/Downloads/new/after_break-word(3).m4a"; sourceTree = "<absolute>"; };
 		AC0BACF72AF38725009256A2 /* before_break-word(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "before_break-word(2).m4a"; path = "/Downloads/new/before_break-word(2).m4a"; sourceTree = "<absolute>"; };
-		AC0BACFC2AF394E1009256A2 /* BreakWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakWordViewModel.swift; sourceTree = "<group>"; };
 		AC0BAD032AF3E649009256A2 /* after_card(2-correct).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "after_card(2-correct).m4a"; path = "/Downloads/new/after_card(2-correct).m4a"; sourceTree = "<absolute>"; };
 		AC0BAD042AF3E649009256A2 /* before_card(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "before_card(2).m4a"; path = "/Downloads/new/before_card(2).m4a"; sourceTree = "<absolute>"; };
 		AC0BAD052AF3E649009256A2 /* after_card(2-wrong).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "after_card(2-wrong).m4a"; path = "/Downloads/new/after_card(2-wrong).m4a"; sourceTree = "<absolute>"; };
@@ -316,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				AC1FC1E32AE675590078015B /* BreakWordActivity.swift */,
-				AC0BACFC2AF394E1009256A2 /* BreakWordViewModel.swift */,
 			);
 			path = "Break Word Activity";
 			sourceTree = "<group>";
@@ -653,7 +650,6 @@
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
-				AC0BACFD2AF394E1009256A2 /* BreakWordViewModel.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
