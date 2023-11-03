@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension String {
     func getCardVowelStyle() -> CardVowelStyleEnum {
@@ -26,5 +27,25 @@ extension String {
             }
         }
         return CardVowelStyleEnum.A_VOWEL
+    }
+    
+    func getCardColor() -> Color {
+        if let lastChar = self.last {
+            switch lastChar {
+            case "a":
+                return Color.Red2
+            case "i":
+                return Color.Yellow2
+            case "u":
+                return Color.Green2
+            case "e":
+                return Color.Blue2
+            case "o":
+                return Color.Purple2
+            default:
+                print("Vowel Doesn't Exist")
+            }
+        }
+        return Color.Red2
     }
 }

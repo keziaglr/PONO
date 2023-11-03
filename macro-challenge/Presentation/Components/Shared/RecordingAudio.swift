@@ -17,7 +17,7 @@ struct RecordingAudio: View {
             
             Circle()
                 .frame(width: 300)
-                .foregroundColor(Color.Blue3)
+                .foregroundColor(Color.Blue1.opacity(0.2))
                 .scaleEffect(animateInner ? 1 : 0.9)
                 .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
                 .onAppear{
@@ -26,7 +26,7 @@ struct RecordingAudio: View {
                 .opacity(record ? 1 : 0)
             Circle()
                 .frame(width: 290)
-                .foregroundColor(Color.Blue2.opacity(0.5))
+                .foregroundColor(Color.Blue1.opacity(0.2))
                 .scaleEffect(record ? 1 : 1.2)
                 .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
                 .onAppear{
@@ -35,12 +35,12 @@ struct RecordingAudio: View {
                 .opacity(record ? 1 : 0)
             Circle()
                 .frame(width: 100)
-                .foregroundColor(Color.Blue3)
+                .foregroundColor(Color.Blue1)
                 .opacity(record ? 1 : 0)
             Image(systemName: record ? "mic.fill" : "mic.slash.fill")
                 .resizable()
                 .animation(Animation.easeInOut(duration: 0.5), value: record)
-                .foregroundColor(record ? Color.Blue1 : Color.Grey3)
+                .foregroundColor(record ? Color.White1 : Color.Grey3)
                 .scaledToFit()
             .frame(width: 60, height: 60)
             

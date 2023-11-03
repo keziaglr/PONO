@@ -23,19 +23,24 @@ struct ScanWordActivity: View {
     var body: some View {
         VStack {
             if viewModel.type == .syllable1{
-                SyllableLabel(syllable: (viewModel.word?.syllables[0].content)!, height: 200, width: 280, show: $crack)
+                SyllableLabel(left: true, scale: .constant(false), syllable: (viewModel.word?.syllables[0].content)!, height: 200, width: 280, show: $crack)
+                    .onTapGesture {
+                        viewModel.nextStep()
+                    }
             }else{
-                SyllableLabel(syllable: (viewModel.word?.syllables[1].content)!, height: 200, width: 280, show: $crack)
+                SyllableLabel(left: false, scale: .constant(false), syllable: (viewModel.word?.syllables[1].content)!, height: 200, width: 280, show: $crack)
+                    .onTapGesture {
+                        viewModel.nextStep()
+                    }
             }
+        
             QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession , frameSize: CGSize(width: 500, height:250))
                 .frame(width: 500, height: 250)
         }.onAppear {
+            viewModel.getInstruction()
             viewModel.playInstruction()
             checkCameraPermission()
-            }.onAppear() {
-                viewModel.getInstruction()
-                viewModel.playInstruction()
-            }
+        }
     }
     
     func checkCameraPermission() {

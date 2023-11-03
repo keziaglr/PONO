@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct RecordActivity: View {
+struct RecordActivity: View, ActivityViewProtocol {
+    var next: () -> Void
+    
     @State var record = false
     @ObservedObject var vm : FlowScreenViewModel
     var body: some View {
@@ -17,11 +19,11 @@ struct RecordActivity: View {
             Spacer()
             RecordingAudio(record: $record)
                 .onAppear {
-                    Timer.scheduledTimer(withTimeInterval: 7.0, repeats: false) { _ in
+                    Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
                         self.record = true
                         RecordingManager.shared.startRecord(for: 4.0) { audioRecord in
                             self.record = false
-                            vm.nextStep()
+                            next()
                         }
                     }
                 }
@@ -34,6 +36,6 @@ struct RecordActivity: View {
 
 struct RecordActivity_Previews: PreviewProvider {
     static var previews: some View {
-        RecordActivity(vm : FlowScreenViewModel())
+        RecordActivity(next: {}, vm : FlowScreenViewModel())
     }
 }
