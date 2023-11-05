@@ -12,12 +12,15 @@ struct RecordingAudio: View {
     @State var animateInner : Bool = false
     @State var animateOuter : Bool = false
     
+    @State var isRecording = true
+    @State var isTrue = false
+    
     var body: some View {
         ZStack {
             
             Circle()
                 .frame(width: 300)
-                .foregroundColor(Color.Blue1.opacity(0.2))
+                .foregroundColor(isRecording ?Color.Blue1.opacity(0.2) : .clear)
                 .scaleEffect(animateInner ? 1 : 0.9)
                 .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
                 .onAppear{
@@ -26,7 +29,7 @@ struct RecordingAudio: View {
                 .opacity(record ? 1 : 0)
             Circle()
                 .frame(width: 290)
-                .foregroundColor(Color.Blue1.opacity(0.2))
+                .foregroundColor(isRecording ?Color.Blue1.opacity(0.2) : .clear)
                 .scaleEffect(record ? 1 : 1.2)
                 .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
                 .onAppear{

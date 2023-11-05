@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PonoButtonStyle: ButtonStyle {
-    let height : CGFloat = 80
+//    let height : CGFloat = 80
     let variant: Variant
     @State private var pressed = false
     
@@ -22,9 +22,8 @@ struct PonoButtonStyle: ButtonStyle {
         configuration.label
             .font(Font.system(size: variant.labelSize, weight: .bold))
             .foregroundStyle(variant.labelColor)
-            .frame(maxWidth: variant.size)
+            .frame(maxWidth: variant.width, maxHeight: variant.height)
             .animation(.easeInOut(duration: 0.5), value: configuration.isPressed)
-            .padding()
             .background() {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(variant.backgroundColor)
@@ -38,6 +37,7 @@ struct PonoButtonStyle: ButtonStyle {
         case primary
         case secondary
         case tertiary
+        case quaternary
         
         var backgroundColor: Color {
             switch self {
@@ -46,6 +46,8 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return Color.White1
             case .tertiary:
+                return Color.White1
+            case .quaternary:
                 return .clear
             }
         }
@@ -57,17 +59,34 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return Color.Grey2
             case .tertiary:
+                return Color.Grey2
+            case .quaternary:
                 return .clear
             }
         }
         
-        var size: CGFloat {
+        var width: CGFloat {
             switch self {
             case .primary:
                 return .infinity
             case .secondary:
-                return 100
+                return 200
             case .tertiary:
+                return 108
+            case .quaternary:
+                return .infinity
+            }
+        }
+        
+        var height: CGFloat {
+            switch self {
+            case .primary:
+                return 80
+            case .secondary:
+                return 200
+            case .tertiary:
+                return 80
+            case .quaternary:
                 return .infinity
             }
         }
@@ -79,6 +98,8 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return Color.Blue1
             case .tertiary:
+                return Color.Blue1
+            case .quaternary:
                 return .clear
             }
         }
@@ -90,6 +111,8 @@ struct PonoButtonStyle: ButtonStyle {
             case .secondary:
                 return 40
             case .tertiary:
+                return 45
+            case .quaternary:
                 return .infinity
             }
         }

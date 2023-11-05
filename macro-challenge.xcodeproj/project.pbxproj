@@ -116,6 +116,7 @@
 		ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */; };
 		ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */; };
+		F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +230,7 @@
 		ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActivity.swift; sourceTree = "<group>"; };
 		ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordActivity.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudio.swift; sourceTree = "<group>"; };
+		F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +582,7 @@
 				AC427D7B2AEBCF4E0012E00C /* PonoButtonStyle.swift */,
 				7429B7652AEF33BE00BF7F93 /* CustomShape.swift */,
 				ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */,
+				F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */,
 				ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */,
 				74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */,
+				F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */,
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
