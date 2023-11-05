@@ -18,29 +18,20 @@ struct ScanWordActivity: View {
     @State private var cameraPermission: Permission = .idle
     @State private var showError: Bool = false
     @State private var errorMessage: String = ""
+    @State private var scale : [Bool] = [false, false]
     
     
     var body: some View {
-        VStack {
-            if viewModel.type == .syllable1{
-                SyllableLabel(left: true, scale: .constant(false), syllable: (viewModel.word?.syllables[0].content)!, height: 200, width: 280, show: $crack)
-                    .onTapGesture {
-                        viewModel.nextStep()
-                    }
-            }else{
-                SyllableLabel(left: false, scale: .constant(false), syllable: (viewModel.word?.syllables[1].content)!, height: 200, width: 280, show: $crack)
-                    .onTapGesture {
-                        viewModel.nextStep()
-                    }
-            }
-        
-            QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession , frameSize: CGSize(width: 500, height:250))
-                .frame(width: 500, height: 250)
-        }.onAppear {
+        ZStack(alignment:.topLeading) {
+            QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession , frameSize: CGSize(width: 900, height:450))
+            VStack {
+                MergedSyllable(syllables: viewModel.word?.syllables, syllableType: viewModel.type)
+            }.padding(.top, 20)
+        }.frame(width: 900, height: 450).onAppear {
             viewModel.getInstruction()
             viewModel.playInstruction()
             checkCameraPermission()
-        }
+        }.background(Color.red)
     }
     
     func checkCameraPermission() {
