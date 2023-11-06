@@ -24,7 +24,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     @Published var isCardFlipped = false
     @Published var index = 0
     private var stage = 0.12
-    
+    private var level : Level = .easy
     private var syllables: [Syllable] = []
     
     private(set) var word: Word? = nil
@@ -184,18 +184,22 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         if syllables.isEmpty {
             getSyllables()
         }
-
         let randomIndex1 = Int.random(in: 0..<syllables.count)
         var randomIndex2 = Int.random(in: 0..<syllables.count)
-
-        while randomIndex2 == randomIndex1 {
+        if level == .easy{
+            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex1]])
+        }else if level == .medium{
+            while syllables[randomIndex1].letters[1] != syllables[randomIndex2].letters[1] || randomIndex1 == randomIndex2{
+                randomIndex2 = Int.random(in: 0..<syllables.count)
+            }
+            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+        }
+        
+        while randomIndex1 == randomIndex2 || syllables[randomIndex1].letters[1] == syllables[randomIndex2].letters[1]{
             randomIndex2 = Int.random(in: 0..<syllables.count)
         }
-
-        let syllable1 = syllables[randomIndex1]
-        let syllable2 = syllables[randomIndex2]
         
-        return Word(syllables: [syllable1, syllable2])
+        return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
     }
     
     func soundSyllable(sound: [String]){
