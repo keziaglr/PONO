@@ -10,7 +10,7 @@ import SwiftUI
 struct BlendWordActivity: View, ActivityViewProtocol {
     var next: () -> Void
     
-    @State var width : CGFloat = 500
+    @State var width : CGFloat = 600
     @State var height : CGFloat = 200
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
@@ -44,7 +44,7 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                         .opacity(show ? 0 : 1)
                         .animation(.easeInOut, value: show)
                         .onChange(of: [translation, translation2]) { newValue in
-                            if dragOffset[1] < -width/4.5 && dragOffset[0] > width/4.5{
+                            if dragOffset[1] < -height/2 && dragOffset[0] > height/2{
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     show = false
                                     next()
@@ -54,7 +54,7 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                     
                     HStack(spacing: height) {
                         SyllableLabel(left: true, scale: .constant(false), syllable: (vm.word?.syllables[0].content)!, height: height, width: width/2, show: $show)
-                            .offset(x: min(max(dragOffset[0] + translation.width, 0), width / 4.5))
+                            .offset(x: min(max(dragOffset[0] + translation.width, 0), height/2))
                             .animation(.easeInOut, value: translation)
                             .gesture(
                                 DragGesture()
@@ -68,7 +68,7 @@ struct BlendWordActivity: View, ActivityViewProtocol {
                                     }
                             )
                         SyllableLabel(left: false, scale: .constant(false), syllable: (vm.word?.syllables[1].content)!, height: height, width: width/2, show: $show)
-                            .offset(x: min(max(dragOffset[1] + translation2.width, -width/4.5), 0))
+                            .offset(x: min(max(dragOffset[1] + translation2.width, -height/2), 0))
                             .animation(.easeInOut, value: translation2)
                             .gesture(
                                 DragGesture()

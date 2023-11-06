@@ -12,8 +12,7 @@ struct FrontCardView: View {
     var cardVowelStyle: CardVowelStyleEnum
     var showFrameBordered = true
     
-    private var textColor = ""
-    private var backgroundColor = ""
+    private var backgroundColor = Color.white
     private var cover_top_img = ""
     private var cover_bottom_img = ""
     
@@ -37,7 +36,7 @@ struct FrontCardView: View {
                         
             ZStack(alignment: .topLeading) {
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(hex: backgroundColor))
+                    .fill(backgroundColor)
                     .frame(width: 146, height: 231)
                 RoundedRectangle(cornerRadius: 0)
                             .frame(width: 50, height: 50)
@@ -48,9 +47,8 @@ struct FrontCardView: View {
             }
             
             if showFrameBordered {
-//                Image("bg_card_frame_bordered")
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.Grey1,
+                    .stroke(Color.white,
                         style: StrokeStyle(lineWidth: 3, dash: [20]))
                     .frame(width: 185, height: 270)
             }
@@ -64,28 +62,23 @@ struct FrontCardView: View {
     mutating func setupValue() {
         switch cardVowelStyle {
         case .A_VOWEL:
-            self.backgroundColor = ColorConst.BACKGROUND_CARD_RED
-            self.textColor = ColorConst.TEXT_CARD_RED
+            self.backgroundColor = Color.Red2
             self.cover_top_img = ImageConst.CARD_FRAME_TOP_RED
             self.cover_bottom_img = ImageConst.CARD_FRAME_BOTTOM_RED
         case .I_VOWEL:
-            self.backgroundColor = ColorConst.BACKGROUND_CARD_DEAD_YELLOW
-            self.textColor = ColorConst.TEXT_CARD_DEAD_YELLOW
+            self.backgroundColor = Color.Yellow2
             self.cover_top_img = ImageConst.CARD_FRAME_TOP_DEAD_YELLOW
             self.cover_bottom_img = ImageConst.CARD_FRAME_BOTTOM_DEAD_YELLOW
         case .U_VOWEL:
-            self.backgroundColor = ColorConst.BACKGROUND_CARD_GREEN
-            self.textColor = ColorConst.TEXT_CARD_GREEN
+            self.backgroundColor = Color.Green2
             self.cover_top_img = ImageConst.CARD_FRAME_TOP_GREEN
             self.cover_bottom_img = ImageConst.CARD_FRAME_BOTTOM_GREEN
         case .E_VOWEL:
-            self.backgroundColor = ColorConst.BACKGROUND_CARD_BLUE
-            self.textColor = ColorConst.TEXT_CARD_BLUE
+            self.backgroundColor = Color.Blue2
             self.cover_top_img = ImageConst.CARD_FRAME_TOP_BLUE
             self.cover_bottom_img = ImageConst.CARD_FRAME_BOTTOM_BLUE
         case .O_VOWEL:
-            self.backgroundColor = ColorConst.BACKGROUND_CARD_PURPLE
-            self.textColor = ColorConst.TEXT_CARD_PURPLE
+            self.backgroundColor = Color.Purple2
             self.cover_top_img = ImageConst.CARD_FRAME_TOP_PURPLE
             self.cover_bottom_img = ImageConst.CARD_FRAME_BOTTOM_PURPLE
         }
