@@ -14,11 +14,14 @@ struct PlayRecord: View {
     @Binding var drawingHeight: Bool
     @State var isRunning = false
     @State var repeatRecord = false
+    @Binding var isDone : Bool
     
     // Progress bar
-    @State private var progress : CGFloat = 0.0
+    @State var progress : CGFloat = 0.0
     let timer = Timer.publish(every: 0.1, on:.main, in: .common).autoconnect()
     @State private var tapCount = 0
+    @State private var isProgressCompleted = false
+
 
     // Animation
     var animation: Animation {
@@ -59,9 +62,11 @@ struct PlayRecord: View {
             .onReceive(timer) { _ in
                 if isRunning && progress < 1.0 {
                     progress += 0.025
+                    if progress >= 1.0 {
+                                isDone = false
+                            }
                 }
             }
-            
             
             
         }
@@ -80,6 +85,6 @@ struct PlayRecord: View {
 
 struct PlayRecord_Previews: PreviewProvider {
     static var previews: some View {
-        PlayRecord(action: {}, drawingHeight: .constant(false))
+        PlayRecord(action: {}, drawingHeight: .constant(false), isDone: .constant(false))
     }
 }

@@ -117,6 +117,7 @@
 		ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */; };
 		F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */; };
+		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,6 +232,7 @@
 		ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordActivity.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudio.swift; sourceTree = "<group>"; };
 		F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBar.swift; sourceTree = "<group>"; };
+		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,6 +584,7 @@
 				AC427D7B2AEBCF4E0012E00C /* PonoButtonStyle.swift */,
 				7429B7652AEF33BE00BF7F93 /* CustomShape.swift */,
 				ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */,
+				F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */,
 				F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */,
 			);
 			path = Shared;
@@ -784,6 +787,7 @@
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
+				F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */,
 				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
 				74EBBBCE2AEED9EA00E8FED3 /* ScanWordActivity.swift in Sources */,
 				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,

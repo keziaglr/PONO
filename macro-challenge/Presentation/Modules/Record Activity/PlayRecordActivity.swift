@@ -12,13 +12,14 @@ struct PlayRecordActivity: View, ActivityViewProtocol {
     
     @ObservedObject var vm : FlowScreenViewModel
     @State var drawingHeight = true
-    @State var showBtn = false
+//    @State var showBtn = false
     @State var isRecording = false
+    @State var isDone = true
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
-                if showBtn{
+                if !isDone {
                     HStack {
                         Button {
                             next()
@@ -42,10 +43,10 @@ struct PlayRecordActivity: View, ActivityViewProtocol {
                 PlayRecord(action: {
                     drawingHeight.toggle()
                     RecordingManager.shared.playRecording(RecordingManager.shared.record!)
-                    showBtn = true
-                }, drawingHeight: $drawingHeight)
+                }, drawingHeight: $drawingHeight, isDone: $isDone)
             }.onAppear{
                 vm.playInstruction()
+
         }
         }
     }

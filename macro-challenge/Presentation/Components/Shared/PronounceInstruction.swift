@@ -17,12 +17,6 @@ struct PronounceInstruction: View {
     var body: some View {
         
         HStack {
-//            Image(systemName: "speaker.wave.2.fill")
-//                .resizable()
-//                .frame(width: 29, height: 22)
-//                .foregroundStyle(Color.Blue2)
-//                .padding()
-
             Button {
                 switch vm.type {
                 case .syllable1:
