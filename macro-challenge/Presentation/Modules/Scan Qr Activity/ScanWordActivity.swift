@@ -31,7 +31,7 @@ struct ScanWordActivity: View {
             viewModel.getInstruction()
             viewModel.playInstruction()
             checkCameraPermission()
-        }.background(Color.red)
+        }
     }
     
     func checkCameraPermission() {
