@@ -9,8 +9,7 @@ import SwiftUI
 
 struct BackCardView: View {
     var cardVowelStyle: CardVowelStyleEnum
-    
-    private var backgroundCardColor = ""
+
     private var ponoColor = ""
     
     init(
@@ -53,19 +52,14 @@ struct BackCardView: View {
     mutating func setupValue() {
         switch cardVowelStyle {
         case .A_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_RED
             self.ponoColor = ImageConst.IV_PONO_CARD_RED
         case .I_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_DEAD_YELLOW
             self.ponoColor = ImageConst.IV_PONO_CARD_DEAD_YELLOW
         case .U_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_GREEN
             self.ponoColor = ImageConst.IV_PONO_CARD_GREEN
         case .E_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_BLUE
             self.ponoColor = ImageConst.IV_PONO_CARD_BLUE
         case .O_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_PURPLE
             self.ponoColor = ImageConst.IV_PONO_CARD_PURPLE
         }
     }

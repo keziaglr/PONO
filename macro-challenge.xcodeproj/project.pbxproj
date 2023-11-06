@@ -51,7 +51,6 @@
 		74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08DE2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift */; };
 		74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E02AE9D351003CBE43 /* FrontCardView.swift */; };
 		74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */; };
-		74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */; };
 		74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E62AE9E26B003CBE43 /* ImageConst.swift */; };
 		74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E82AE9E94E003CBE43 /* BackCardView.swift */; };
 		74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EA2AE9EC33003CBE43 /* FontConst.swift */; };
@@ -165,7 +164,6 @@
 		74FB08DE2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVowelStyleEnum.swift; sourceTree = "<group>"; };
 		74FB08E02AE9D351003CBE43 /* FrontCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardView.swift; sourceTree = "<group>"; };
 		74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConst.swift; sourceTree = "<group>"; };
 		74FB08E62AE9E26B003CBE43 /* ImageConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConst.swift; sourceTree = "<group>"; };
 		74FB08E82AE9E94E003CBE43 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		74FB08EA2AE9EC33003CBE43 /* FontConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConst.swift; sourceTree = "<group>"; };
@@ -414,7 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				74FB08D52AE9A9C6003CBE43 /* PermissionEnum.swift */,
-				74FB08E42AE9D9B4003CBE43 /* ColorConst.swift */,
 				74FB08E62AE9E26B003CBE43 /* ImageConst.swift */,
 				74FB08EA2AE9EC33003CBE43 /* FontConst.swift */,
 			);
@@ -813,7 +810,6 @@
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
-				74FB08E52AE9D9B4003CBE43 /* ColorConst.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
 				74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */,
 				ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */,
@@ -953,7 +949,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = A94C53K2J9;
+				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
@@ -962,8 +958,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -986,7 +981,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = A94C53K2J9;
+				DEVELOPMENT_TEAM = CL2T9LDG63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
@@ -995,8 +990,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

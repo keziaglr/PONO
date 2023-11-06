@@ -28,6 +28,7 @@ struct FlowScreenView: View {
                 Spacer()
                 
             }
+            
             if vm.activity == .beforeBreakWord || vm.activity == .afterBreakWord{
                 BreakWordActivity(next: {
                     vm.nextStep()

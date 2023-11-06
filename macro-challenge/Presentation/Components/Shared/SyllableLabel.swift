@@ -24,7 +24,7 @@ struct SyllableLabel: View {
                 .frame(width: width, height: height)
                 .shadow(color: Color.Blue1.opacity(0.15),radius: 20, y: 8)
             Text(syllable)
-                .font(.custom("Quicksand-Bold", size: 90))
+                .font(.custom("Quicksand-Bold", size: 80))
                 .foregroundColor(textColor)
                 .kerning(25)
                 .padding(.horizontal, 50)

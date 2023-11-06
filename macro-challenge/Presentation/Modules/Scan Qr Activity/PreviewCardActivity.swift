@@ -38,8 +38,6 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                     }.padding(20)
             }
             HStack {
-                FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
-                Spacer().frame(width: 100)
                 ZStack {
                     if isFlipped {
                         if viewModel.type == .syllable1 {
@@ -60,6 +58,8 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                         isFlipped.toggle()
                     }
                 }.padding(.leading, 20)
+                Spacer().frame(width: 100)
+                FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
             }.onAppear {
                 if isCardChecked {
                     isFlipped = false

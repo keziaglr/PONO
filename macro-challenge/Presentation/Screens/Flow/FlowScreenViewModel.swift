@@ -122,7 +122,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = "Pecahkan kata ini"
             break
         case .afterBreakWord:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .beforeCard1:
@@ -132,14 +132,14 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = "Cari kartu yang sesuai dan tunjukkan ke kamera"
             break
         case .afterCard:
-            instruction = "Lihat hasil kartu"
+            instruction = "Lihat hasil"
             break
         case .wrongCard:
-            instruction = "Coba lagi"
+            instruction = "Coba lagi yuk!"
             percent += stage
             break
         case .correctCard:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .beforeReadSyllable1:
@@ -152,18 +152,18 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = ""
             break
         case .afterReadSyllable:
-            instruction = "Coba lagi"
+            instruction = ""
             percent += stage
             break
         case .afterReadWord:
-            instruction = "Coba lagi"
+            instruction = ""
             percent += stage
             break
         case .beforeBlendWord:
             instruction = "Gabungkan kedua suku kata"
             break
         case .afterBlendWord:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .none:
@@ -303,10 +303,8 @@ extension FlowScreenViewModel {
     func isScannedCardCorrect() {
         let wordSyllable = type == .syllable1 ? word?.syllables[0].id : word?.syllables[1].id
         if scannedCard?.id == wordSyllable {
-            print("Correct")
             setActivity(act: .correctCard)
         } else {
-            print("INCORRECT")
             setActivity(act: .wrongCard)
         }
     }
