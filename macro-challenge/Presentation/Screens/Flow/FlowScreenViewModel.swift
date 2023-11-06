@@ -97,6 +97,11 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
                 }
                 break
             case .afterReadWord:
+                self.getSyllables()
+                self.getWord()
+                self.stage = 0.12
+                self.percent = self.stage
+                self.type = .syllable1
                 self.setActivity(act: .beforeBreakWord)
                 break
             case .beforeBlendWord:

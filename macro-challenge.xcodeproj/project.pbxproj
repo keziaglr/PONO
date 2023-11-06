@@ -28,6 +28,8 @@
 		3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */; };
 		7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7632AEEED7100BF7F93 /* String+Extension.swift */; };
 		7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7652AEF33BE00BF7F93 /* CustomShape.swift */; };
+		74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */; };
+		74695A7E2AF7EA5C00FFBB6F /* MergedSyllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */; };
 		74EBBBCE2AEED9EA00E8FED3 /* ScanWordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBBBCD2AEED9EA00E8FED3 /* ScanWordActivity.swift */; };
 		74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EBBBD02AEEEA5A00E8FED3 /* PreviewCardActivity.swift */; };
 		74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088A2AE9A1A3003CBE43 /* p.m4a */; };
@@ -140,6 +142,8 @@
 		3868C17D2AE77B5000E832B0 /* FlowScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowScreenView.swift; sourceTree = "<group>"; };
 		7429B7632AEEED7100BF7F93 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7429B7652AEF33BE00BF7F93 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSyllableView.swift; sourceTree = "<group>"; };
+		74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedSyllable.swift; sourceTree = "<group>"; };
 		74EBBBCD2AEED9EA00E8FED3 /* ScanWordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanWordActivity.swift; sourceTree = "<group>"; };
 		74EBBBD02AEEEA5A00E8FED3 /* PreviewCardActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCardActivity.swift; sourceTree = "<group>"; };
 		74FB088A2AE9A1A3003CBE43 /* p.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.m4a; sourceTree = "<group>"; };
@@ -580,6 +584,8 @@
 				AC427D7B2AEBCF4E0012E00C /* PonoButtonStyle.swift */,
 				7429B7652AEF33BE00BF7F93 /* CustomShape.swift */,
 				ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */,
+				74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */,
+				74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -767,6 +773,7 @@
 				3868C17E2AE77B5000E832B0 /* FlowScreenView.swift in Sources */,
 				ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
+				74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */,
 				ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
 				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
@@ -814,6 +821,7 @@
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
+				74695A7E2AF7EA5C00FFBB6F /* MergedSyllable.swift in Sources */,
 				7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -945,7 +953,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
@@ -978,7 +986,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
