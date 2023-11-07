@@ -24,7 +24,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     @Published var isCardFlipped = false
     @Published var index = 0
     private var stage = 0.12
-    
+    private var level : Level = .easy
     private var syllables: [Syllable] = []
     
     private(set) var word: Word? = nil
@@ -97,6 +97,11 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
                 }
                 break
             case .afterReadWord:
+                self.getSyllables()
+                self.getWord()
+                self.stage = 0.12
+                self.percent = self.stage
+                self.type = .syllable1
                 self.setActivity(act: .beforeBreakWord)
                 break
             case .beforeBlendWord:
@@ -117,7 +122,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = "Pecahkan kata ini"
             break
         case .afterBreakWord:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .beforeCard1:
@@ -127,14 +132,14 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = "Cari kartu yang sesuai dan tunjukkan ke kamera"
             break
         case .afterCard:
-            instruction = "Lihat hasil kartu"
+            instruction = "Lihat hasil"
             break
         case .wrongCard:
-            instruction = "Coba lagi"
+            instruction = "Coba lagi yuk!"
             percent += stage
             break
         case .correctCard:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .beforeReadSyllable1:
@@ -147,18 +152,18 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             instruction = ""
             break
         case .afterReadSyllable:
-            instruction = "Coba lagi"
+            instruction = ""
             percent += stage
             break
         case .afterReadWord:
-            instruction = "Coba lagi"
+            instruction = ""
             percent += stage
             break
         case .beforeBlendWord:
             instruction = "Gabungkan kedua suku kata"
             break
         case .afterBlendWord:
-            instruction = "Selamat"
+            instruction = "Selamat!"
             percent += stage
             break
         case .none:
@@ -179,18 +184,22 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         if syllables.isEmpty {
             getSyllables()
         }
-
         let randomIndex1 = Int.random(in: 0..<syllables.count)
         var randomIndex2 = Int.random(in: 0..<syllables.count)
-
-        while randomIndex2 == randomIndex1 {
+        if level == .easy{
+            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex1]])
+        }else if level == .medium{
+            while syllables[randomIndex1].letters[1] != syllables[randomIndex2].letters[1] || randomIndex1 == randomIndex2{
+                randomIndex2 = Int.random(in: 0..<syllables.count)
+            }
+            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+        }
+        
+        while randomIndex1 == randomIndex2 || syllables[randomIndex1].letters[1] == syllables[randomIndex2].letters[1]{
             randomIndex2 = Int.random(in: 0..<syllables.count)
         }
-
-        let syllable1 = syllables[randomIndex1]
-        let syllable2 = syllables[randomIndex2]
         
-        return Word(syllables: [syllable1, syllable2])
+        return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
     }
     
     func soundSyllable(sound: [String]){
@@ -298,10 +307,8 @@ extension FlowScreenViewModel {
     func isScannedCardCorrect() {
         let wordSyllable = type == .syllable1 ? word?.syllables[0].id : word?.syllables[1].id
         if scannedCard?.id == wordSyllable {
-            print("Correct")
             setActivity(act: .correctCard)
         } else {
-            print("INCORRECT")
             setActivity(act: .wrongCard)
         }
     }

@@ -24,6 +24,12 @@ enum ImageConst {
     static let CARD_BACK_FRAME_BOTTOM = "back_card_frame_bottom"
     static let QR_CODE_DUMMY = "qr_code_dummy"
     
+    static let IV_PONO_CARD_RED = "iv_back_card_pono_red"
+    static let IV_PONO_CARD_DEAD_YELLOW = "iv_back_card_pono_yellow"
+    static let IV_PONO_CARD_GREEN = "iv_back_card_pono_green"
+    static let IV_PONO_CARD_BLUE = "iv_back_card_pono_blue"
+    static let IV_PONO_CARD_PURPLE = "iv_back_card_pono_purple"
+    
     
     //General
     static let IC_ARROW_NEXT_WHITE = "ic_arrow_next_white"

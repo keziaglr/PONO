@@ -9,8 +9,8 @@ import SwiftUI
 
 struct BackCardView: View {
     var cardVowelStyle: CardVowelStyleEnum
-    
-    private var backgroundCardColor = ""
+
+    private var ponoColor = ""
     
     init(
         cardVowelStyle: CardVowelStyleEnum
@@ -20,7 +20,7 @@ struct BackCardView: View {
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             RoundedRectangle(cornerRadius: 24)
                             .fill(Color.white)
                             .frame(width: 170, height: 255)
@@ -37,42 +37,30 @@ struct BackCardView: View {
                 Image("barcode")
                     .resizable()
                     .frame(width: 35, height: 35)
-            }
+
+            }.padding(.bottom, 10)
+
+            
+        Image(ponoColor)
+            .resizable()
+            .frame(width: 48, height: 125)
+            .padding(.bottom, 26)
             
         }
-//        VStack {
-//            Image(ImageConst.CARD_BACK_FRAME_TOP)
-//                .padding(EdgeInsets(top: 7, leading: 0, bottom: 0, trailing: 0))
-//            Spacer()
-//            Text("App Name")
-//                .font(.custom(FontConst.QUICKSAND_SEMI_BOLD,size: 12))
-//                .foregroundColor(Color.white)
-//            Spacer()
-//            Image(ImageConst.QR_CODE_DUMMY)
-//            Spacer()
-//            Text("App Name")
-//                .font(.custom(FontConst.QUICKSAND_SEMI_BOLD,size: 12))
-//                .foregroundColor(Color.white)
-//            Spacer()
-//            Image(ImageConst.CARD_BACK_FRAME_BOTTOM)
-//                .padding(EdgeInsets(top: 0, leading: 0, bottom: 7, trailing: 0))
-//        }.frame(width: 170, height: 255)
-//            .background(Color(hex: backgroundCardColor))
-//            .cornerRadius(20)
     }
     
     mutating func setupValue() {
         switch cardVowelStyle {
         case .A_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_RED
+            self.ponoColor = ImageConst.IV_PONO_CARD_RED
         case .I_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_DEAD_YELLOW
+            self.ponoColor = ImageConst.IV_PONO_CARD_DEAD_YELLOW
         case .U_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_GREEN
+            self.ponoColor = ImageConst.IV_PONO_CARD_GREEN
         case .E_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_BLUE
+            self.ponoColor = ImageConst.IV_PONO_CARD_BLUE
         case .O_VOWEL:
-            self.backgroundCardColor = ColorConst.TEXT_CARD_PURPLE
+            self.ponoColor = ImageConst.IV_PONO_CARD_PURPLE
         }
     }
 }
