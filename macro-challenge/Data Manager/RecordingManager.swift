@@ -104,7 +104,7 @@ class RecordingManager: NSObject {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
             audioPlayer?.prepareToPlay()
-            audioPlayer?.volume = 5.0
+            audioPlayer?.volume = 10.0
             audioPlayer?.play()
         } catch {
             print("Playing Failed")

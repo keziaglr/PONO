@@ -12,50 +12,66 @@ struct PlayRecord: View {
     // Play Record
     @State var action : () -> Void
     @Binding var drawingHeight: Bool
-    @State var isPressed = false
+    @State var isRunning = false
+    @State var repeatRecord = false
+    @Binding var isDone : Bool
     
+    // Progress bar
+    @State var progress : CGFloat = 0.0
+    let timer = Timer.publish(every: 0.1, on:.main, in: .common).autoconnect()
+    @State private var tapCount = 0
+    @State private var isProgressCompleted = false
+
+
     // Animation
     var animation: Animation {
         return .linear(duration: 0.5).repeatForever()
     }
     
     var body: some View {
-//        HStack {
-//            bar(low: 0.2, high: 0.2)
-//                .animation(animation.speed(1.5), value: drawingHeight)
-//            bar(low: 0.3, high: 0.6)
-//                .animation(animation.speed(1.2), value: drawingHeight)
-//            bar(low: 0.5, high: 1)
-//                .animation(animation.speed(1.0), value: drawingHeight)
-//            bar(low: 0.3, high: 0.5)
-//                .animation(animation.speed(1.7), value: drawingHeight)
-//            bar(low: 0.5, high: 0.8)
-//                .animation(animation.speed(1.2), value: drawingHeight)
-//            bar(low: 0.2, high: 0.3)
-//                .animation(animation.speed(1.4), value: drawingHeight)
-//        }.frame(width: 80)
-//            .padding(.horizontal, 20)
-//            .frame(width: 100, height: 96)
-//            .background(Color.Red2, in: RoundedRectangle(cornerRadius: 25))
+        
         VStack{
             
             Button(action: {
+                
+                if tapCount == 0 {
+                    // Start animation -> first tap
+                    isRunning = true
+                } else {
+                    // Reset progress
+                    progress = 0
+                    isRunning = true
+                }
+                tapCount += 1
                 action()
+                self.progress = 0.0
+                repeatRecord = true
             }, label: {
-                Image(systemName: "play.fill")
-                    .foregroundColor(Color.Blue1)
-                    .font(Font.system(size: 50, weight: .bold))
+                // MARK: Progress Bar
+                VStack {
+                    Image(systemName: "play.fill")
+                        .foregroundColor(Color.Blue1)
+                        .font(Font.system(size: 50, weight: .bold))
+                        .padding()
+                    
+                    RecordProgressBar(progress: progress)
+                        .frame(height: 5)
+                        .padding(15)
+                }
             })
-                .buttonStyle(PonoButtonStyle(variant: .secondary))
+            .onReceive(timer) { _ in
+                if isRunning && progress < 1.0 {
+                    progress += 0.025
+                    if progress >= 1.0 {
+                                isDone = false
+                            }
+                }
+            }
+            
+            
         }
-//        .padding(.horizontal, 20)
-//        .frame(width: 200, height: 200)
-//        .background(
-//            RoundedRectangle(cornerRadius: 16)
-//                .fill(Color.white)
-//                .shadow(color: isPressed ? .clear : Color.Grey2, radius: 0, x: 0, y: 8)
-//        )
-//        .offset(y: isPressed ? 0 : 8)
+        .buttonStyle(PonoButtonStyle(variant: .secondary))
+        
     }
     // Animated Play Record
     func bar(low: CGFloat = 0.0, high: CGFloat = 1.0) -> some View {
@@ -69,6 +85,6 @@ struct PlayRecord: View {
 
 struct PlayRecord_Previews: PreviewProvider {
     static var previews: some View {
-        PlayRecord(action: {}, drawingHeight: .constant(false))
+        PlayRecord(action: {}, drawingHeight: .constant(false), isDone: .constant(false))
     }
 }

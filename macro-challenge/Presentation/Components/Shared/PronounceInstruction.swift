@@ -10,15 +10,13 @@ import SwiftUI
 struct PronounceInstruction: View {
     @ObservedObject var vm : FlowScreenViewModel
     @State var isPressed = false
+    
+    @Binding var isRecording : Bool
+    
+    
     var body: some View {
         
         HStack {
-//            Image(systemName: "speaker.wave.2.fill")
-//                .resizable()
-//                .frame(width: 29, height: 22)
-//                .foregroundStyle(Color.Blue2)
-//                .padding()
-                
             Button {
                 switch vm.type {
                 case .syllable1:
@@ -49,6 +47,8 @@ struct PronounceInstruction: View {
                         ).padding()
                 }
             }.buttonStyle(PonoButtonStyle(variant: .secondary))
+                .disabled(isRecording)
+            
         }
 //        .onTapGesture {
 //            isPressed = true
@@ -67,6 +67,6 @@ struct PronounceInstruction: View {
 
 struct PronounceInstruction_Previews: PreviewProvider {
     static var previews: some View {
-        PronounceInstruction(vm: FlowScreenViewModel())
+        PronounceInstruction(vm: FlowScreenViewModel(), isRecording: .constant(true))
     }
 }

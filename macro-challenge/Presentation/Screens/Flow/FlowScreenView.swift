@@ -55,11 +55,11 @@ struct FlowScreenView: View {
             } else if vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadSyllable2 {
                 RecordActivity(next: {
                     vm.nextStep()
-                }, vm: vm)
+                }, vm: vm, isRecording: false)
             } else if vm.activity == .beforeReadWord {
                 RecordActivity(next: {
                     vm.nextStep()
-                }, vm: vm)
+                }, vm: vm, isRecording: false)
             }else if vm.activity == .afterReadSyllable || vm.activity == .afterReadWord{
                 PlayRecordActivity(next: {
                     vm.nextStep()

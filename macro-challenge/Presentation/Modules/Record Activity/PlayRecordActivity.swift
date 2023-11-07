@@ -12,12 +12,14 @@ struct PlayRecordActivity: View, ActivityViewProtocol {
     
     @ObservedObject var vm : FlowScreenViewModel
     @State var drawingHeight = true
-    @State var showBtn = false
+//    @State var showBtn = false
+    @State var isRecording = false
+    @State var isDone = true
     var body: some View {
         ZStack {
             VStack {
                 Spacer()
-                if showBtn{
+                if !isDone {
                     HStack {
                         Button {
                             next()
@@ -27,22 +29,24 @@ struct PlayRecordActivity: View, ActivityViewProtocol {
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                         Button{
                             vm.tryAgain()
+                            RecordingManager.shared
+                                .stopPlaying()
                         }label: {
                             Image(systemName: "arrow.counterclockwise")
-                        }.buttonStyle(PonoButtonStyle(variant: .secondary))
+                        }.buttonStyle(PonoButtonStyle(variant: .tertiary))
                         
                     }.padding(20)
                 }
             }
             HStack{
-                PronounceInstruction(vm: vm)
+                PronounceInstruction(vm: vm, isRecording: $isRecording)
                 PlayRecord(action: {
                     drawingHeight.toggle()
                     RecordingManager.shared.playRecording(RecordingManager.shared.record!)
-                    showBtn = true
-                }, drawingHeight: $drawingHeight)
+                }, drawingHeight: $drawingHeight, isDone: $isDone)
             }.onAppear{
                 vm.playInstruction()
+
         }
         }
     }
