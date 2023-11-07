@@ -32,7 +32,7 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                                 viewModel.tryAgain()
                             }label: {
                                 Image(systemName: "arrow.counterclockwise")
-                            }.buttonStyle(PonoButtonStyle(variant: .secondary))
+                            }.buttonStyle(PonoButtonStyle(variant: .tertiary))
                         }
                         
                     }.padding(20)

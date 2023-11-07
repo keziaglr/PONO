@@ -24,12 +24,12 @@ struct RecordProgressBar: View {
                                    geometry.size.width),
                         height: 17
                     )
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color.Blue1)
                     .animation(.easeInOut, value: progress)
             }
         }    }
 }
 
-#Preview {
-    RecordProgressBar(progress: 0.5)
-}
+//#Preview {
+//    RecordProgressBar(progress: 0.5)
+//}

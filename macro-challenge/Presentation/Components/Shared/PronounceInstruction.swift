@@ -28,7 +28,7 @@ struct PronounceInstruction: View {
                 }
             } label: {
                 if vm.type == .word {
-                    Text("\((vm.word?.syllable(at: 0))!) - \((vm.word?.syllable(at: 1))!)")
+                    Text("\((vm.word?.syllable(at: 0))!)\((vm.word?.syllable(at: 1))!)")
                         .foregroundColor(Color.Grey1)
                         .font(
                             .custom(FontConst.QUICKSAND_BOLD, size: 50)

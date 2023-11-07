@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct PonoButtonStyle: ButtonStyle {
-//    let height : CGFloat = 80
     let variant: Variant
     @State private var pressed = false
     
     init(variant: Variant, action: @escaping () -> Void = {}) {
         self.variant = variant
-//        self.action = action
         self.pressed = pressed
     }
     
@@ -57,9 +55,9 @@ struct PonoButtonStyle: ButtonStyle {
             case .primary:
                 return Color.Blue5
             case .secondary:
-                return Color.Grey2
+                return Color.Grey3
             case .tertiary:
-                return Color.Grey2
+                return Color.Grey3
             case .quaternary:
                 return .clear
             }
