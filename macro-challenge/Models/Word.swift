@@ -7,12 +7,9 @@
 
 import Foundation
 
-struct Word {
+struct Word: Decodable {
+    let content: String
     let syllables: [Syllable]
-    
-    func formatted() -> String {
-        syllables.reduce("") { $0 + $1.content }
-    }
     
     func syllable(at index: Int) -> String {
         return syllables[safe: index]?.content ?? ""

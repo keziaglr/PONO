@@ -79,7 +79,6 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         "dini",
         "dobi",
         "doni",
-        "duai",
         "duda",
         "dudu",
         "dumi",
@@ -305,20 +304,20 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         let randomIndex1 = Int.random(in: 0..<syllables.count)
         var randomIndex2 = Int.random(in: 0..<syllables.count)
         if level == .easy{
-            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex1]])
+            return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex1]])
         }else if level == .medium{
             while syllables[randomIndex1].letters[1] != syllables[randomIndex2].letters[1] || randomIndex1 == randomIndex2{
                 randomIndex2 = Int.random(in: 0..<syllables.count)
             }
             
-            return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+            return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex2]])
         }
         
         while randomIndex1 == randomIndex2 || syllables[randomIndex1].letters[1] == syllables[randomIndex2].letters[1]{
             randomIndex2 = Int.random(in: 0..<syllables.count)
         }
         
-        return Word(syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+        return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex2]])
     }
     
     func soundSyllable(sound: [String]){

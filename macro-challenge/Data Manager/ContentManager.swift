@@ -64,20 +64,31 @@ class ContentManager {
     
     private init() {}
     
-    private var _syllables: [Syllable] = []
+    lazy var words: [Word] = {
+        getWordsData()
+    }()
     
-    var syllables: [Syllable] {
-        if _syllables.isEmpty {
-            _syllables = getSyllablesData()
-        }
-        return _syllables
-    }
+    lazy var syllables: [Syllable] = {
+        getSyllablesData()
+    }()
     
     private func getSyllablesData() -> [Syllable] {
         if let url = Bundle.main.url(forResource: "syllables", withExtension: "json") {
             do {
-                let data =  try Data(contentsOf: url)
+                let data = try Data(contentsOf: url)
                 return try JSONDecoder().decode([Syllable].self, from: data)
+            } catch {
+                return []
+            }
+        }
+        return []
+    }
+    
+    private func getWordsData() -> [Word] {
+        if let url = Bundle.main.url(forResource: "words", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                return try JSONDecoder().decode([Word].self, from: data)
             } catch {
                 return []
             }

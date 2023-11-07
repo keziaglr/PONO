@@ -17,9 +17,6 @@ struct ContentView: View {
             
         }
         .padding()
-//        .onAppear {
-//            let data = DataFeedManager().createDataSyllables()
-//        }
     }
 }
 
