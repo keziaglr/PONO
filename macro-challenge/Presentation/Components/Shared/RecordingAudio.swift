@@ -16,28 +16,18 @@ struct RecordingAudio: View {
     
     var body: some View {
         ZStack {
-                Circle()
-                    .frame(width: 300)
-                    .foregroundColor(recordingStatus.colorAnimation)
-                    .scaleEffect(animateInner ? 1 : 0.9)
-                    .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
-                    .onAppear {
-                        if recordingStatus == .recording {
-                                    animateInner = true
-                                }
-                    }
-                    .opacity(record ? 1 : 0)
-                Circle()
-                    .frame(width: 290)
-                    .foregroundColor(recordingStatus.colorAnimation)
-                    .scaleEffect(record ? 1 : 1.2)
-                    .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
-                    .onAppear {
-                        if recordingStatus == .recording {
-                                    animateInner = true
-                                }
-                    }
-                    .opacity(record ? 1 : 0)
+            Circle()
+                .frame(width: 300)
+                .foregroundColor(recordingStatus.colorAnimation)
+                .scaleEffect(animateInner ? 1 : 0.9)
+                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
+                .opacity(record ? 1 : 0)
+            Circle()
+                .frame(width: 290)
+                .foregroundColor(recordingStatus.colorAnimation)
+                .scaleEffect(record ? 1 : 1.2)
+                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
+                .opacity(record ? 1 : 0)
             
             Circle()
                 .frame(width: 120, height: 115)
@@ -48,15 +38,19 @@ struct RecordingAudio: View {
                 .animation(Animation.easeInOut(duration: 0.5), value: record)
                 .foregroundColor(recordingStatus == .idle ? Color.Grey3 : Color.White1)
                 .scaledToFit()
+        }.onChange(of: recordingStatus) { newValue in
+            if recordingStatus == .recording {
+                animateInner = true
+            }
         }
     }
 }
 
-struct RecordingAudio_Previews: PreviewProvider {
-    static var previews: some View {
-        RecordingAudio(record: .constant(true), recordingStatus: .constant(.recording))
-    }
-}
+//struct RecordingAudio_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecordingAudio(record: .constant(true), recordingStatus: .constant(.recording))
+//    }
+//}
 
 //struct RecordingAudio: View {
 //    @Binding var record : Bool
