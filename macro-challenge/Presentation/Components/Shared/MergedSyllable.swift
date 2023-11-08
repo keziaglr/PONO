@@ -22,6 +22,6 @@ struct MergedSyllable: View {
 
 struct MergedSyllable_Previews: PreviewProvider {
     static var previews: some View {
-        MergedSyllable(syllables: [Syllable(id: UUID(), content: "ma", audioURL: nil, imageURL: nil),Syllable(id: UUID(), content: "mu", audioURL: nil, imageURL: nil)], syllableType: .syllable1)
+        MergedSyllable(syllables: [Syllable(id: UUID(), content: "ma", audioURL: nil),Syllable(id: UUID(), content: "mu", audioURL: nil)], syllableType: .syllable1)
     }
 }

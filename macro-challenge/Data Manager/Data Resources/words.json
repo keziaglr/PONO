@@ -1,0 +1,779 @@
+[
+  {
+    "content": "baba",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"}
+    ]
+  },
+  {
+    "content": "babe",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"}
+    ]
+  },
+  {
+    "content": "babi",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"}
+    ]
+  },
+  {
+    "content": "babu",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"}
+    ]
+  },
+  {
+    "content": "bada",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "bade",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"}
+    ]
+  },
+  {
+    "content": "badi",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "bana",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "bani",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "banu",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "db98c69e-2b96-4bbd-8a91-257f0765a1b3", "content": "nu"}
+    ]
+  },
+  {
+    "content": "bapa",
+    "syllables": [
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "bebe",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"}
+    ]
+  },
+  {
+    "content": "bebi",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"}
+    ]
+  },
+  {
+    "content": "beda",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "bedo",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "ebd5a7be-1b6d-4813-8116-6e0f603ec1aa", "content": "do"}
+    ]
+  },
+  {
+    "content": "bemo",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "d1b949a5-7e5b-4ea3-9c01-38d8d3b2879b", "content": "mo"}
+    ]
+  },
+  {
+    "content": "bena",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "beni",
+    "syllables": [
+      {"id": "051d33b5-2879-4c4d-a826-62c9c6e4c34c", "content": "be"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "bibi",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"}
+    ]
+  },
+  {
+    "content": "bida",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "bido",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "ebd5a7be-1b6d-4813-8116-6e0f603ec1aa", "content": "do"}
+    ]
+  },
+  {
+    "content": "bima",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"}
+    ]
+  },
+  {
+    "content": "bina",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "bini",
+    "syllables": [
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "bobo",
+    "syllables": [
+      {"id": "1f156f4d-8266-4d4f-aef3-5d20f4d31c74", "content": "bo"},
+      {"id": "1f156f4d-8266-4d4f-aef3-5d20f4d31c74", "content": "bo"}
+    ]
+  },
+  {
+    "content": "bodi",
+    "syllables": [
+      {"id": "1f156f4d-8266-4d4f-aef3-5d20f4d31c74", "content": "bo"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "bubo",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "1f156f4d-8266-4d4f-aef3-5d20f4d31c74", "content": "bo"}
+    ]
+  },
+  {
+    "content": "bubu",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"}
+    ]
+  },
+  {
+    "content": "bude",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"}
+    ]
+  },
+  {
+    "content": "budi",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "budu",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "bumi",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "buna",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "buni",
+    "syllables": [
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "daba",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0", "content": "ba"}
+    ]
+  },
+  {
+    "content": "dada",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "dadi",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "dadu",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "dame",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"}
+    ]
+  },
+  {
+    "content": "dami",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "dana",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "dapa",
+    "syllables": [
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "debu",
+    "syllables": [
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"},
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"}
+    ]
+  },
+  {
+    "content": "demi",
+    "syllables": [
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "demo",
+    "syllables": [
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"},
+      {"id": "d1b949a5-7e5b-4ea3-9c01-38d8d3b2879b", "content": "mo"}
+    ]
+  },
+  {
+    "content": "dena",
+    "syllables": [
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "depa",
+    "syllables": [
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "dina",
+    "syllables": [
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "dini",
+    "syllables": [
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "dobi",
+    "syllables": [
+      {"id": "ebd5a7be-1b6d-4813-8116-6e0f603ec1aa", "content": "do"},
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"}
+    ]
+  },
+  {
+    "content": "doni",
+    "syllables": [
+      {"id": "ebd5a7be-1b6d-4813-8116-6e0f603ec1aa", "content": "do"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "duda",
+    "syllables": [
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "dudu",
+    "syllables": [
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "dumi",
+    "syllables": [
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "dupa",
+    "syllables": [
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "mada",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "madi",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "mado",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "ebd5a7be-1b6d-4813-8116-6e0f603ec1aa", "content": "do"}
+    ]
+  },
+  {
+    "content": "madu",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "mama",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"}
+    ]
+  },
+  {
+    "content": "mami",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "mana",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "mani",
+    "syllables": [
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "mede",
+    "syllables": [
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"},
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"}
+    ]
+  },
+  {
+    "content": "medu",
+    "syllables": [
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "memo",
+    "syllables": [
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"},
+      {"id": "d1b949a5-7e5b-4ea3-9c01-38d8d3b2879b", "content": "mo"}
+    ]
+  },
+  {
+    "content": "meni",
+    "syllables": [
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "menu",
+    "syllables": [
+      {"id": "ad5957b6-3c72-4e67-bf86-3a2500f8e259", "content": "me"},
+      {"id": "db98c69e-2b96-4bbd-8a91-257f0765a1b3", "content": "nu"}
+    ]
+  },
+  {
+    "content": "midi",
+    "syllables": [
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "mimi",
+    "syllables": [
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "mina",
+    "syllables": [
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "mini",
+    "syllables": [
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "mode",
+    "syllables": [
+      {"id": "d1b949a5-7e5b-4ea3-9c01-38d8d3b2879b", "content": "mo"},
+      {"id": "3075f1d4-46a3-41c3-935b-4e4a7d1d52f6", "content": "de"}
+    ]
+  },
+  {
+    "content": "mono",
+    "syllables": [
+      {"id": "d1b949a5-7e5b-4ea3-9c01-38d8d3b2879b", "content": "mo"},
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"}
+    ]
+  },
+  {
+    "content": "muda",
+    "syllables": [
+      {"id": "f55f69ed-2615-42b0-bd15-9e79a053c3d5", "content": "mu"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "mumi",
+    "syllables": [
+      {"id": "f55f69ed-2615-42b0-bd15-9e79a053c3d5", "content": "mu"},
+      {"id": "7eb4e2be-05a0-4a9b-b7d7-f9f601d1a6f2", "content": "mi"}
+    ]
+  },
+  {
+    "content": "muna",
+    "syllables": [
+      {"id": "f55f69ed-2615-42b0-bd15-9e79a053c3d5", "content": "mu"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "muno",
+    "syllables": [
+      {"id": "f55f69ed-2615-42b0-bd15-9e79a053c3d5", "content": "mu"},
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"}
+    ]
+  },
+  {
+    "content": "nabi",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "df808f2f-8843-41a4-88be-fd07c0a1c6b5", "content": "bi"}
+    ]
+  },
+  {
+    "content": "nabu",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "2ec73476-7f95-47a1-aa71-01b82a6cbf34", "content": "bu"}
+    ]
+  },
+  {
+    "content": "nada",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "nadi",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "nama",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"}
+    ]
+  },
+  {
+    "content": "napi",
+    "syllables": [
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"},
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"}
+    ]
+  },
+  {
+    "content": "nini",
+    "syllables": [
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "noda",
+    "syllables": [
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "nona",
+    "syllables": [
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "none",
+    "syllables": [
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"},
+      {"id": "a4059cb5-7d91-4b19-8a67-43773a49b940", "content": "ne"}
+    ]
+  },
+  {
+    "content": "noni",
+    "syllables": [
+      {"id": "bd67d84b-7a00-4eb1-87aa-2e2ed7d8e158", "content": "no"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "pada",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "padi",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "padu",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "pana",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "panu",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "db98c69e-2b96-4bbd-8a91-257f0765a1b3", "content": "nu"}
+    ]
+  },
+  {
+    "content": "papa",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "papi",
+    "syllables": [
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"},
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"}
+    ]
+  },
+  {
+    "content": "peda",
+    "syllables": [
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"},
+      {"id": "02a8ed4a-cdb5-40f4-83a3-07f2a055bb8e", "content": "da"}
+    ]
+  },
+  {
+    "content": "pedu",
+    "syllables": [
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"},
+      {"id": "22c9bb64-0c1e-4816-aa4c-ef9a93a6c9aa", "content": "du"}
+    ]
+  },
+  {
+    "content": "pena",
+    "syllables": [
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"},
+      {"id": "ca19e6a6-937e-42df-aeef-42f8487e3144", "content": "na"}
+    ]
+  },
+  {
+    "content": "peni",
+    "syllables": [
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "pepe",
+    "syllables": [
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"},
+      {"id": "c94300ac-cc2c-4c7a-8a23-2a8c59a446c0", "content": "pe"}
+    ]
+  },
+  {
+    "content": "pidi",
+    "syllables": [
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "pipa",
+    "syllables": [
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "pipi",
+    "syllables": [
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"},
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"}
+    ]
+  },
+  {
+    "content": "poma",
+    "syllables": [
+      {"id": "ea8957b7-84ea-41e2-99c5-cc086ea9d7db", "content": "po"},
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"}
+    ]
+  },
+  {
+    "content": "poni",
+    "syllables": [
+      {"id": "ea8957b7-84ea-41e2-99c5-cc086ea9d7db", "content": "po"},
+      {"id": "b990e9c3-5d7f-4e1b-b9f9-1d10c7c8820e", "content": "ni"}
+    ]
+  },
+  {
+    "content": "popi",
+    "syllables": [
+      {"id": "ea8957b7-84ea-41e2-99c5-cc086ea9d7db", "content": "po"},
+      {"id": "b8f6da77-71e0-431a-bad3-f7a6a7c7d5f5", "content": "pi"}
+    ]
+  },
+  {
+    "content": "pudi",
+    "syllables": [
+      {"id": "fe9a18d9-efb7-4da9-aa3b-4d8b40f70e6c", "content": "pu"},
+      {"id": "06e0b9b1-243c-4d8e-935f-9f2b36c75169", "content": "di"}
+    ]
+  },
+  {
+    "content": "puma",
+    "syllables": [
+      {"id": "fe9a18d9-efb7-4da9-aa3b-4d8b40f70e6c", "content": "pu"},
+      {"id": "7ab164b5-45d6-4e9b-8f1d-d2304e24e4c5", "content": "ma"}
+    ]
+  },
+  {
+    "content": "pupa",
+    "syllables": [
+      {"id": "fe9a18d9-efb7-4da9-aa3b-4d8b40f70e6c", "content": "pu"},
+      {"id": "bda5c0b9-0386-4d00-a0b3-7b7f70616d52", "content": "pa"}
+    ]
+  },
+  {
+    "content": "pupu",
+    "syllables": [
+      {"id": "fe9a18d9-efb7-4da9-aa3b-4d8b40f70e6c", "content": "pu"},
+      {"id": "fe9a18d9-efb7-4da9-aa3b-4d8b40f70e6c", "content": "pu"}
+    ]
+  }
+]

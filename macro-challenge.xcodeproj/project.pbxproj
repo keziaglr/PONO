@@ -11,6 +11,7 @@
 		2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061E2AEE687A005AB1CC /* AudioManager.swift */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
 		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
+		3808ED002AFAE41F008FE81A /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 3808ECFF2AFA1BED008FE81A /* words.json */; };
 		3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */; };
 		3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */; };
 		3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */; };
@@ -128,6 +129,7 @@
 		2F99061E2AEE687A005AB1CC /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
 		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		3808ECFF2AFA1BED008FE81A /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		3868C1542AE61C8E00E832B0 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		3868C1552AE61C8E00E832B0 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		3868C1562AE61C8E00E832B0 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 			children = (
 				74FB08872AE9A13D003CBE43 /* Voice */,
 				AC1FC1D12AE64C300078015B /* syllables.json */,
+				3808ECFF2AFA1BED008FE81A /* words.json */,
 				74FB08D22AE9A377003CBE43 /* QrScannerManager.swift */,
 				ACE704F52AF9FB07009385BB /* WordList.swift */,
 			);
@@ -743,6 +746,7 @@
 				3868C1592AE61C8E00E832B0 /* Quicksand-Bold.ttf in Resources */,
 				74FB089D2AE9A1A3003CBE43 /* m.m4a in Resources */,
 				AC0BAECD2AF5409C009256A2 /* bo.m4a in Resources */,
+				3808ED002AFAE41F008FE81A /* words.json in Resources */,
 				3868C15D2AE61C8E00E832B0 /* Quicksand-Light.ttf in Resources */,
 				3868C15C2AE61C8E00E832B0 /* Quicksand-SemiBold.ttf in Resources */,
 				AC0BAE7C2AF53EDE009256A2 /* after_card(1).m4a in Resources */,
