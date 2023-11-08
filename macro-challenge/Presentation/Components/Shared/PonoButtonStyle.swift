@@ -40,7 +40,7 @@ struct PonoButtonStyle: ButtonStyle {
         var backgroundColor: Color {
             switch self {
             case .primary:
-                return Color.Blue1
+                return Color.Yellow2
             case .secondary:
                 return Color.White1
             case .tertiary:
@@ -53,7 +53,7 @@ struct PonoButtonStyle: ButtonStyle {
         var shadow: Color {
             switch self {
             case .primary:
-                return Color.Blue5
+                return Color.Yellow1
             case .secondary:
                 return Color.Grey3
             case .tertiary:
@@ -94,9 +94,9 @@ struct PonoButtonStyle: ButtonStyle {
             case .primary:
                 return Color.White1
             case .secondary:
-                return Color.Blue1
+                return Color.Yellow2
             case .tertiary:
-                return Color.Blue1
+                return Color.Yellow2
             case .quaternary:
                 return .clear
             }

@@ -56,6 +56,7 @@
 		74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08E82AE9E94E003CBE43 /* BackCardView.swift */; };
 		74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EA2AE9EC33003CBE43 /* FontConst.swift */; };
 		74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */; };
+		AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC099C6E2AFB381D00BE2597 /* ActivityCharacter.swift */; };
 		AC0BAE652AF53E31009256A2 /* after_pronunciation(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */; };
 		AC0BAE662AF53E31009256A2 /* before_pronunciation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */; };
 		AC0BAE692AF53E31009256A2 /* after_pronunciation(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */; };
@@ -174,6 +175,7 @@
 		74FB08E82AE9E94E003CBE43 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		74FB08EA2AE9EC33003CBE43 /* FontConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConst.swift; sourceTree = "<group>"; };
 		74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDelegate.swift; sourceTree = "<group>"; };
+		AC099C6E2AFB381D00BE2597 /* ActivityCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCharacter.swift; sourceTree = "<group>"; };
 		AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(2).m4a"; sourceTree = "<group>"; };
 		AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_pronunciation.m4a; sourceTree = "<group>"; };
 		AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(1).m4a"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 		3868C1742AE77AD700E832B0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC099C6D2AFB37CF00BE2597 /* Activity */,
 				74FB08DD2AE9D25D003CBE43 /* Card */,
 				AC1FC1DE2AE66D250078015B /* Shared */,
 			);
@@ -439,6 +442,14 @@
 				74FB08E82AE9E94E003CBE43 /* BackCardView.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		AC099C6D2AFB37CF00BE2597 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AC099C6E2AFB381D00BE2597 /* ActivityCharacter.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 		AC0BAE5E2AF53DD2009256A2 /* Activity */ = {
@@ -797,6 +808,7 @@
 				AC0BAEA12AF53F40009256A2 /* BreakWordViewModel.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
+				AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */,
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,

@@ -19,7 +19,7 @@ struct ProgressBarView: View {
             if percent != 0 {
                 ZStack {
                     Capsule()
-                        .fill(Color.Yellow2)
+                        .fill(Color.Blue2)
                     Capsule()
                         .fill(Color.White1.opacity(0.25))
                         .frame(height: height/3)
