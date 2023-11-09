@@ -52,6 +52,10 @@ extension Color {
         Color(ColorString.Blue5)
     }
     
+    static var Blue6: Color {
+        Color(ColorString.Blue6)
+    }
+    
     static var Orange1: Color {
         Color(ColorString.Orange1)
     }
@@ -78,6 +82,14 @@ extension Color {
     
     static var Grey3: Color {
         Color(ColorString.Grey3)
+    }
+    
+    static var Grey4: Color {
+        Color(ColorString.Grey4)
+    }
+    
+    static var Grey5: Color {
+        Color(ColorString.Grey5)
     }
     
     static var Pink1: Color {
