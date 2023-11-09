@@ -40,7 +40,6 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     }
     
     func setActivity(act: Activity){
-        print("settt \(act)")
         activity = act
     }
     
@@ -202,7 +201,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
             getWords()
         }
         
-        var word = Word(content: "", level: 0, syllables: [])
+        let word = Word(content: "", level: 0, syllables: [])
         
         if level == .easy{
             return  words.filter { $0.level == 0 }.randomElement() ?? word
