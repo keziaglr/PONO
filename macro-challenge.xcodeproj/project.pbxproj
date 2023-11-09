@@ -57,6 +57,7 @@
 		74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EA2AE9EC33003CBE43 /* FontConst.swift */; };
 		74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */; };
 		AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC099C6E2AFB381D00BE2597 /* ActivityCharacter.swift */; };
+		AC099C712AFCB10000BE2597 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC099C702AFCB10000BE2597 /* HomeScreenViewModel.swift */; };
 		AC0BAE652AF53E31009256A2 /* after_pronunciation(2).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */; };
 		AC0BAE662AF53E31009256A2 /* before_pronunciation.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */; };
 		AC0BAE692AF53E31009256A2 /* after_pronunciation(1).m4a in Resources */ = {isa = PBXBuildFile; fileRef = AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */; };
@@ -176,6 +177,7 @@
 		74FB08EA2AE9EC33003CBE43 /* FontConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConst.swift; sourceTree = "<group>"; };
 		74FB08EC2AEA2D43003CBE43 /* QrScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScannerDelegate.swift; sourceTree = "<group>"; };
 		AC099C6E2AFB381D00BE2597 /* ActivityCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCharacter.swift; sourceTree = "<group>"; };
+		AC099C702AFCB10000BE2597 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		AC0BAE602AF53E31009256A2 /* after_pronunciation(2).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(2).m4a"; sourceTree = "<group>"; };
 		AC0BAE612AF53E31009256A2 /* before_pronunciation.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = before_pronunciation.m4a; sourceTree = "<group>"; };
 		AC0BAE642AF53E31009256A2 /* after_pronunciation(1).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "after_pronunciation(1).m4a"; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				3868C17B2AE77B2000E832B0 /* HomeScreenView.swift */,
+				AC099C702AFCB10000BE2597 /* HomeScreenViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */,
 				ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
+				AC099C712AFCB10000BE2597 /* HomeScreenViewModel.swift in Sources */,
 				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,

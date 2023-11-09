@@ -26,124 +26,8 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     private var stage = 0.12
     private var level : Level = .easy
     private var syllables: [Syllable] = []
-//    let wordsList = [Word(syllables: Syllable(id: )]
-    let wordsArray = [
-        "baba",
-        "babe",
-        "babi",
-        "babu",
-        "bada",
-        "bade",
-        "badi",
-        "bana",
-        "bani",
-        "banu",
-        "bapa",
-        "bebe",
-        "bebi",
-        "beda",
-        "bedo",
-        "bemo",
-        "bena",
-        "beni",
-        "bibi",
-        "bida",
-        "bido",
-        "bima",
-        "bina",
-        "bini",
-        "bobo",
-        "bodi",
-        "bubo",
-        "bubu",
-        "bude",
-        "budi",
-        "budu",
-        "bumi",
-        "buna",
-        "buni",
-        "daba",
-        "dada",
-        "dadi",
-        "dadu",
-        "dame",
-        "dami",
-        "dana",
-        "dapa",
-        "debu",
-        "demi",
-        "demo",
-        "dena",
-        "depa",
-        "dina",
-        "dini",
-        "dobi",
-        "doni",
-        "duda",
-        "dudu",
-        "dumi",
-        "dupa",
-        "mada",
-        "madi",
-        "mado",
-        "madu",
-        "mama",
-        "mami",
-        "mana",
-        "mani",
-        "mede",
-        "medu",
-        "memo",
-        "meni",
-        "menu",
-        "midi",
-        "mimi",
-        "mina",
-        "mini",
-        "mode",
-        "mono",
-        "muda",
-        "mumi",
-        "muna",
-        "muno",
-        "nabi",
-        "nabu",
-        "nada",
-        "nadi",
-        "nama",
-        "napi",
-        "nini",
-        "noda",
-        "nona",
-        "none",
-        "noni",
-        "pada",
-        "padi",
-        "padu",
-        "pana",
-        "panu",
-        "papa",
-        "papi",
-        "peda",
-        "pedu",
-        "pena",
-        "peni",
-        "pepe",
-        "pidi",
-        "pipa",
-        "pipi",
-        "poma",
-        "poni",
-        "popi",
-        "pudi",
-        "puma",
-        "pupa",
-        "pupu"
-    ]
+    private var words: [Word] = []
 
-    // Now you have an array called wordsArray containing the words you provided.
-
-    
     private(set) var word: Word? = nil
     
     init() {
@@ -156,7 +40,6 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     }
     
     func setActivity(act: Activity){
-        print("settt \(act)")
         activity = act
     }
     
@@ -214,6 +97,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
                 }
                 break
             case .afterReadWord:
+                nextLevel()
                 self.getSyllables()
                 self.getWord()
                 self.stage = 0.12
@@ -231,6 +115,16 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
                 self.instruction = ""
                 break
             }
+    }
+    
+    func nextLevel(){
+        if level == .easy{
+            level = .medium
+        }else if level == .medium{
+            level = .hard
+        }else {
+            level = .hard
+        }
     }
     
     func getInstruction(){
@@ -293,31 +187,31 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
         syllables = ContentManager.shared.syllables
     }
     
+    func getWords() {
+        words = ContentManager.shared.words
+    }
+    
     func getWord() {
         word = generateWord()
     }
     
     func generateWord() -> Word {
-        if syllables.isEmpty {
-            getSyllables()
+        
+        if words.isEmpty{
+            getWords()
         }
-        let randomIndex1 = Int.random(in: 0..<syllables.count)
-        var randomIndex2 = Int.random(in: 0..<syllables.count)
+        
+        let word = Word(content: "", level: 0, syllables: [])
+        
         if level == .easy{
-            return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex1]])
+            return  words.filter { $0.level == 0 }.randomElement() ?? word
         }else if level == .medium{
-            while syllables[randomIndex1].letters[1] != syllables[randomIndex2].letters[1] || randomIndex1 == randomIndex2{
-                randomIndex2 = Int.random(in: 0..<syllables.count)
-            }
-            
-            return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+            return  words.filter { $0.level == 1 }.randomElement() ?? word
+        }else if level == .hard{
+            return  words.filter { $0.level == 2 }.randomElement() ?? word
         }
         
-        while randomIndex1 == randomIndex2 || syllables[randomIndex1].letters[1] == syllables[randomIndex2].letters[1]{
-            randomIndex2 = Int.random(in: 0..<syllables.count)
-        }
-        
-        return Word(content: "", syllables: [syllables[randomIndex1], syllables[randomIndex2]])
+        return word
     }
     
     func soundSyllable(sound: [String]){

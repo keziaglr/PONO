@@ -13,7 +13,7 @@ struct FlowScreenView: View {
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     var body: some View {
         ZStack{
-            Image("cloud")
+            Image("Cloud")
                 .resizable()
                 .scaledToFit()
             VStack{

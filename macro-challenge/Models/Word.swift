@@ -9,6 +9,7 @@ import Foundation
 
 struct Word: Decodable {
     let content: String
+    let level: Int
     let syllables: [Syllable]
     
     func syllable(at index: Int) -> String {
