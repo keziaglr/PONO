@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FlowScreenView: View {
+    @Binding var show : Bool
     @ObservedObject var vm = FlowScreenViewModel()
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
@@ -17,8 +18,18 @@ struct FlowScreenView: View {
                 .resizable()
                 .scaledToFit()
             VStack{
-                ProgressBarView(width: screenWidth/1.1, height: screenHeight/25, percent: $vm.percent)
-                    .padding()
+                HStack {
+                    Image(systemName: "xmark")
+                        .font(Font.system(size: 34, weight: .bold))
+                        .foregroundColor(Color.Grey2)
+                        .scaledToFit()
+                        .padding(.trailing)
+                        .onTapGesture {
+                            show.toggle()
+                        }
+                    ProgressBarView(width: screenWidth/1.1, height: screenHeight/25, percent: $vm.percent)
+                        
+                }.padding()
                 InstructionView(height: screenHeight/12, message: $vm.instruction)
                     .padding()
                     .opacity(vm.instruction.isEmpty ? 0 : 1)
@@ -71,6 +82,6 @@ struct FlowScreenView: View {
 
 struct FlowScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        FlowScreenView()
+        FlowScreenView(show: .constant(true))
     }
 }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct HomeScreenView: View {
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
-    @State var page = 1
+    @State var show = false
     var body: some View {
         VStack {
-            if page == 1{
+            if !show{
                 ZStack{
                 VStack(spacing:0) {
                     Spacer()
@@ -33,7 +33,7 @@ struct HomeScreenView: View {
                     TabView{
                         ActivityCharacter(activity: 1)
                             .onTapGesture {
-                                page = 2
+                                show.toggle()
                             }
                         ActivityCharacter(activity: 2)
                         ActivityCharacter(activity: 3)
@@ -47,7 +47,7 @@ struct HomeScreenView: View {
             .ignoresSafeArea()
         .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
             } else {
-                FlowScreenView()
+                FlowScreenView(show: $show)
             }
         }
     }
