@@ -24,7 +24,7 @@ struct HomeScreenView: View {
                         .frame(height: screenHeight/5)
                 }
                 VStack {
-                    Image("Cloud")
+                    Image("cloud")
                         .resizable()
                     .scaledToFit()
                     Spacer()

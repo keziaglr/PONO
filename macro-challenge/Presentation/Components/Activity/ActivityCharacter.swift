@@ -27,7 +27,7 @@ struct ActivityCharacter: View {
                 }
             }
             VStack {
-                Text("Aktivitas \(activity)")
+                Text("Activity \(activity)")
                     .textStyle(style: .heading4)
                     .foregroundColor(Color.White1)
                 Text(getDesc(activity:activity))
