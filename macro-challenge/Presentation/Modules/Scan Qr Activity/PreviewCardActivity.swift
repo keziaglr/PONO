@@ -15,6 +15,12 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
     var isCardChecked = true
     var syllable: String = ""
     var cardVowelStyle: CardVowelStyleEnum = .A_VOWEL
+    
+    private let durationAndDelay : CGFloat = 0.2
+    
+    @State private var backDegree = 0.0
+    @State private var frontDegree = -90.0
+    
     var body: some View {
         ZStack {
             VStack{
@@ -39,27 +45,18 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
             }
             HStack {
                 ZStack {
-                    if isFlipped {
-                        if viewModel.type == .syllable1 {
-                            BackCardView(cardVowelStyle: (viewModel.word?.syllables.first!.content)!.getCardVowelStyle())
-                        } else {
-                            BackCardView(cardVowelStyle: (viewModel.word?.syllables[1].content)!.getCardVowelStyle())
-                        }
+                    if viewModel.type == .syllable1 {
+                        BackCardView(cardVowelStyle: (viewModel.word?.syllables.first!.content)!.getCardVowelStyle(), degree: $backDegree)
+                        FrontCardView(syllable: viewModel.word?.syllables.first?.content ?? "A", cardVowelStyle: viewModel.word?.syllables.first?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false, degree: $frontDegree)
                     } else {
-                        if viewModel.type == .syllable1 {
-                            FrontCardView(syllable: viewModel.word?.syllables.first?.content ?? "A", cardVowelStyle: viewModel.word?.syllables.first?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
-                        } else {
-                            FrontCardView(syllable: viewModel.word?.syllables[1].content ?? "A", cardVowelStyle: viewModel.word?.syllables[1].content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
-                        }
-                        
+                        BackCardView(cardVowelStyle: (viewModel.word?.syllables[1].content)!.getCardVowelStyle(), degree: $backDegree)
+                        FrontCardView(syllable: viewModel.word?.syllables[1].content ?? "A", cardVowelStyle: viewModel.word?.syllables[1].content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false, degree: $frontDegree)
                     }
                 }.onReceive(viewModel.$isCardFlipped) { newValue in
-                    withAnimation {
-                        isFlipped.toggle()
-                    }
+                    isFlipped.toggle()
                 }.padding(.leading, 20)
                 Spacer().frame(width: 100)
-                FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
+                FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle, degree: .constant(0))
             }.onAppear {
                 if isCardChecked {
                     isFlipped = false
@@ -68,7 +65,26 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
                 }
                 viewModel.getInstruction()
                 viewModel.playInstruction()
+            }
         }
+    }
+    
+    func flipCard() {
+        isFlipped.toggle()
+        if !isFlipped {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                backDegree = 90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                frontDegree = 0
+            }
+        } else {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                frontDegree = -90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                backDegree = 0
+            }
         }
     }
 }
