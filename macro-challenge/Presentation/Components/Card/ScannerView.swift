@@ -25,11 +25,11 @@ struct ScannerView: View {
                 .font(.callout)
                 .foregroundColor(.gray)
             VStack {
-                if isFlipped {
-                    BackCardView(cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
-                } else {
-                    FrontCardView(syllable: "bu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
-                }
+//                if isFlipped {
+////                    BackCardView(cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
+//                } else {
+//                    FrontCardView(syllable: "bu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
+//                }
             }
             .onTapGesture {
                 withAnimation {
