@@ -12,6 +12,7 @@ struct PreviewCardActivity: View, ActivityViewProtocol {
     
     @ObservedObject var viewModel : FlowScreenViewModel
     @State private var isFlipped = true
+    
     var isCardChecked = true
     var syllable: String = ""
     var cardVowelStyle: CardVowelStyleEnum = .A_VOWEL
