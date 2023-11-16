@@ -21,7 +21,7 @@ class FlowScreenViewModel: ObservableObject, QrScannerDelegate {
     @Published var instruction : String = ""
     @Published var percent : CGFloat = 0.0
     @Published var scannedCard : Syllable?
-    @Published var isCardFlipped = false
+    @Published var isCardFlipped = true
     @Published var index = 0
     private var stage = 0.12
     private var level : Level = .easy

@@ -57,10 +57,12 @@ struct FlowScreenView: View {
                 }, viewModel: vm, isCardChecked: false, syllable: vm.scannedCard?.content ?? "ba",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
             } else if vm.activity == .correctCard {
                 PreviewCardActivity(next: {
+                    vm.isCardFlipped = true
                     vm.nextStep()
                 }, viewModel: vm, isCardChecked: true, syllable: vm.scannedCard?.content ?? "ba",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
             } else if vm.activity == .wrongCard {
                 PreviewCardActivity(next: {
+                    vm.isCardFlipped = true
                     vm.nextStep()
                 }, viewModel: vm, isCardChecked: true, syllable: vm.scannedCard?.content ?? "ba",cardVowelStyle: vm.scannedCard?.content.getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL)
             } else if vm.activity == .beforeReadSyllable1 || vm.activity == .beforeReadSyllable2 {
