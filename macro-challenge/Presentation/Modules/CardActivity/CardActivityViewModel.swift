@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-class RefactoringCardActivityViewModel: ObservableObject {
+class CardActivityViewModel: ObservableObject {
     
     let learningWord: Word
     let syllableOrder: SyllableOrder
@@ -52,12 +52,16 @@ class RefactoringCardActivityViewModel: ObservableObject {
         }
     }
     
-    func playInstruction() {
+    func playInstruction(isReplay: Bool = false) {
         guard !instructions.isEmpty else {
             return
         }
         guard let currentInstruction else {
             currentInstruction = instructions.first
+            return
+        }
+        guard !isReplay else {
+            playInstruction(currentInstruction)
             return
         }
         guard let currentIndex = instructions.firstIndex(where: { $0 == currentInstruction }) else {
@@ -67,11 +71,15 @@ class RefactoringCardActivityViewModel: ObservableObject {
         guard let nextInstruction = instructions[safe: nextInstructionIndex] else {
             return
         }
-        let instructionVoices = nextInstruction.voices
+        playInstruction(nextInstruction)
+    }
+    
+    private func playInstruction(_ instruction: Instruction) {
+        let instructionVoices = instruction.voices
         audioManager.playQueue(instructionVoices, changeHandler: instructionVoiceChangeHandler)
     }
     
-    private func instructionVoiceChangeHandler(_ newIndex: Int) {
+    private func instructionVoiceChangeHandler(_ queueCount: Int, _ newIndex: Int) {
         currentInstructionVoiceIndex = newIndex
     }
     
@@ -95,7 +103,7 @@ class RefactoringCardActivityViewModel: ObservableObject {
     }
 }
 
-extension RefactoringCardActivityViewModel: QRScannerDelegate {
+extension CardActivityViewModel: QRScannerDelegate {
     
     func getQrScannedDataDelegate(scannedData: String) {
         if let foundSyllable = syllables.first(where: { $0.id == UUID(uuidString: scannedData) }) {

@@ -36,7 +36,6 @@ enum VoiceResources {
         var voices = ["before_break-word(1)"]
         voices.append(contentsOf: word.syllables.compactMap { $0.content })
         voices.append("before_break-word(2)")
-//        print("\(voices)")
         return Instruction(text: text, voices: voices)
     }
     
@@ -69,31 +68,28 @@ enum VoiceResources {
     }
     
     static func pronunciationActivityOpeningInstruction(_ syllable: Syllable) -> Instruction {
-        let text = ""
         let voices = ["before_pronunciation", syllable.content]
-        return Instruction(text: text, voices: voices)
+        return Instruction(text: nil, voices: voices)
     }
     
     static func pronunciationActivityOpeningInstruction(_ word: Word) -> Instruction {
-        let text = ""
         var voices = ["before_pronunciation"]
         voices.append(contentsOf: word.syllables.compactMap { $0.content })
-        return Instruction(text: text, voices: voices)
+        return Instruction(text: nil, voices: voices)
     }
     
     static func pronunciationActivityClosingInstruction() -> Instruction {
-        let text = ""
         let voices = ["after_pronunciation(1)"]
-        return Instruction(text: text, voices: voices)
+        return Instruction(text: nil, voices: voices)
     }
     
-    static func blendWordActivityOpeningInstruction() -> Instruction {
+    static func combineSyllablesActivityOpeningInstruction() -> Instruction {
         let text = "Gabungkan kedua suku kata"
         let voices = ["before_blend-word"]
         return Instruction(text: text, voices: voices)
     }
     
-    static func blendWordActivityClosingInstruction() -> Instruction {
+    static func combineSyllablesActivityClosingInstruction() -> Instruction {
         let text = "Selamat!"
         let voices = ["after_blend-word"]
         return Instruction(text: text, voices: voices)
@@ -101,6 +97,6 @@ enum VoiceResources {
 }
 
 struct Instruction: Equatable {
-    let text: String
+    let text: String?
     let voices: [String]
 }

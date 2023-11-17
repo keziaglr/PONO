@@ -22,29 +22,14 @@ struct PronunciationActivityView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                InstructionView(height: screenHeight / 12,
-                                message: viewModel.currentInstruction?.text ?? "")
-                    .padding()
-                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                    .onTapGesture {
-                        viewModel.playInstruction()
-                    }
-                
-                Spacer()
-            }
-
-            
-            if viewModel.pronunciationStatus == .correct ||
-                viewModel.pronunciationStatus == .wrong {
-                
+            if viewModel.isShowPlayRecording {
                 PlayPronunciationRecordView(labelText: viewModel.syllable?.content ?? viewModel.learningWord.content,
                                             isDisabled: viewModel.isAudioRecordingAndRecognizing,
                                             onPlaySampleSound: viewModel.playWordOrSyllableSound,
                                             onPlayRecord: viewModel.playVoiceRecord,
                                             onNext: onNext,
                                             onRetry: viewModel.retryVoiceRecognitionAndRecording)
-            }else{
+            } else {
                 VStack {
                     Spacer()
                     PronounceInstruction(viewModel.syllable?.content ?? viewModel.learningWord.content,
@@ -52,7 +37,7 @@ struct PronunciationActivityView: View {
                                          onClick: viewModel.playWordOrSyllableSound)
                     
                     Spacer()
-                    RecordingAudio(pronunciationStatus: $viewModel.pronunciationStatus)
+                    RecordingAudioView(pronunciationStatus: $viewModel.pronunciationStatus)
                 }
             }
         }

@@ -12,6 +12,8 @@
 		2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F99061E2AEE687A005AB1CC /* AudioManager.swift */; };
 		2FAFBA112B00DFAE00176336 /* SoundClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAFBA102B00DFAE00176336 /* SoundClassifier.swift */; };
 		2FD5B2082B05D9BE00F8373A /* PreviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD5B2072B05D9BE00F8373A /* PreviewCardView.swift */; };
+		2FE992332B0726530073B3BC /* sound_classification.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2FE992312B0726520073B3BC /* sound_classification.tflite */; };
+		2FE992342B0726530073B3BC /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2FE992322B0726520073B3BC /* labels.txt */; };
 		2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A02AE8B4740085393F /* RecordingManager.swift */; };
 		2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF694A62AE8C65D0085393F /* Date+Extension.swift */; };
 		3808ED002AFAE41F008FE81A /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 3808ECFF2AFA1BED008FE81A /* words.json */; };
@@ -47,7 +49,7 @@
 		7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7632AEEED7100BF7F93 /* String+Extension.swift */; };
 		7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7652AEF33BE00BF7F93 /* CustomShape.swift */; };
 		74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */; };
-		74695A7E2AF7EA5C00FFBB6F /* MergedSyllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */; };
+		74695A7E2AF7EA5C00FFBB6F /* MergedSyllableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */; };
 		74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088A2AE9A1A3003CBE43 /* p.m4a */; };
 		74FB08962AE9A1A3003CBE43 /* e.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088B2AE9A1A3003CBE43 /* e.m4a */; };
 		74FB08972AE9A1A3003CBE43 /* a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088C2AE9A1A3003CBE43 /* a.m4a */; };
@@ -116,7 +118,7 @@
 		AC1FC1D22AE64C300078015B /* syllables.json in Resources */ = {isa = PBXBuildFile; fileRef = AC1FC1D12AE64C300078015B /* syllables.json */; };
 		AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1D72AE667C20078015B /* ContentManager.swift */; };
 		AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DB2AE668570078015B /* Syllable.swift */; };
-		AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */; };
+		AC1FC1E02AE66D9C0078015B /* SyllableLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1DF2AE66D9C0078015B /* SyllableLabelView.swift */; };
 		AC1FC1E62AE67A810078015B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1FC1E52AE67A810078015B /* Word.swift */; };
 		AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D752AEB70D00012E00C /* ProgressBarView.swift */; };
 		AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC427D772AEBC4AE0012E00C /* InstructionView.swift */; };
@@ -125,12 +127,11 @@
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
-		ACE704F62AF9FB07009385BB /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE704F52AF9FB07009385BB /* WordList.swift */; };
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
 		ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1D2AEF583400E616D7 /* NextButton.swift */; };
-		ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */; };
-		F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */; };
+		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
+		F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */; };
 		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
 		FD74F016CAD575B3D1418DA4 /* Pods_macro_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C71128A5A3BCCCEED84C487 /* Pods_macro_challenge.framework */; };
 /* End PBXBuildFile section */
@@ -142,6 +143,8 @@
 		2F99061E2AEE687A005AB1CC /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		2FAFBA102B00DFAE00176336 /* SoundClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundClassifier.swift; sourceTree = "<group>"; };
 		2FD5B2072B05D9BE00F8373A /* PreviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCardView.swift; sourceTree = "<group>"; };
+		2FE992312B0726520073B3BC /* sound_classification.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound_classification.tflite; sourceTree = "<group>"; };
+		2FE992322B0726520073B3BC /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		2FF694A02AE8B4740085393F /* RecordingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingManager.swift; sourceTree = "<group>"; };
 		2FF694A62AE8C65D0085393F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3808ECFF2AFA1BED008FE81A /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
@@ -177,7 +180,7 @@
 		7429B7632AEEED7100BF7F93 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7429B7652AEF33BE00BF7F93 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSyllableView.swift; sourceTree = "<group>"; };
-		74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedSyllable.swift; sourceTree = "<group>"; };
+		74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedSyllableView.swift; sourceTree = "<group>"; };
 		74FB088A2AE9A1A3003CBE43 /* p.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.m4a; sourceTree = "<group>"; };
 		74FB088B2AE9A1A3003CBE43 /* e.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = e.m4a; sourceTree = "<group>"; };
 		74FB088C2AE9A1A3003CBE43 /* a.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.m4a; sourceTree = "<group>"; };
@@ -248,7 +251,7 @@
 		AC1FC1D12AE64C300078015B /* syllables.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = syllables.json; sourceTree = "<group>"; };
 		AC1FC1D72AE667C20078015B /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		AC1FC1DB2AE668570078015B /* Syllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syllable.swift; sourceTree = "<group>"; };
-		AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableLabel.swift; sourceTree = "<group>"; };
+		AC1FC1DF2AE66D9C0078015B /* SyllableLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableLabelView.swift; sourceTree = "<group>"; };
 		AC1FC1E52AE67A810078015B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AC427D752AEB70D00012E00C /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		AC427D772AEBC4AE0012E00C /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
@@ -258,12 +261,11 @@
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ACE704F52AF9FB07009385BB /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
 		ACECDC1D2AEF583400E616D7 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
-		ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudio.swift; sourceTree = "<group>"; };
-		F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBar.swift; sourceTree = "<group>"; };
+		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
+		F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBarView.swift; sourceTree = "<group>"; };
 		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +287,24 @@
 				2FD5B2072B05D9BE00F8373A /* PreviewCardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2FE992302B0726520073B3BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FE992312B0726520073B3BC /* sound_classification.tflite */,
+				2FE992322B0726520073B3BC /* labels.txt */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FE992352B0742C70073B3BC /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				AC1FC1D12AE64C300078015B /* syllables.json */,
+				3808ECFF2AFA1BED008FE81A /* words.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		381C33E32B0419B500BAFE69 /* PronunciationActivity */ = {
@@ -370,6 +390,7 @@
 		3868C16A2AE6C59A00E832B0 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2FE992302B0726520073B3BC /* Model */,
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
 				2F99061E2AEE687A005AB1CC /* AudioManager.swift */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
@@ -455,14 +476,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		74FB08872AE9A13D003CBE43 /* Voice */ = {
+		74FB08872AE9A13D003CBE43 /* M4A */ = {
 			isa = PBXGroup;
 			children = (
 				AC0BAE852AF53F02009256A2 /* Syllable */,
 				AC0BAE5E2AF53DD2009256A2 /* Activity */,
 				74FB08882AE9A17A003CBE43 /* Letter */,
 			);
-			path = Voice;
+			path = M4A;
 			sourceTree = "<group>";
 		};
 		74FB08882AE9A17A003CBE43 /* Letter */ = {
@@ -610,11 +631,9 @@
 		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2FE992352B0742C70073B3BC /* JSON */,
+				74FB08872AE9A13D003CBE43 /* M4A */,
 				381C33DD2B03E84D00BAFE69 /* VoiceResources.swift */,
-				74FB08872AE9A13D003CBE43 /* Voice */,
-				AC1FC1D12AE64C300078015B /* syllables.json */,
-				3808ECFF2AFA1BED008FE81A /* words.json */,
-				ACE704F52AF9FB07009385BB /* WordList.swift */,
 				2FAFBA102B00DFAE00176336 /* SoundClassifier.swift */,
 			);
 			path = "Data Resources";
@@ -670,17 +689,17 @@
 				ACECDC1D2AEF583400E616D7 /* NextButton.swift */,
 				ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */,
 				ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */,
-				AC1FC1DF2AE66D9C0078015B /* SyllableLabel.swift */,
+				AC1FC1DF2AE66D9C0078015B /* SyllableLabelView.swift */,
 				74FB08D72AE9AA50003CBE43 /* QRCameraView.swift */,
 				AC427D752AEB70D00012E00C /* ProgressBarView.swift */,
 				AC427D772AEBC4AE0012E00C /* InstructionView.swift */,
 				AC427D7B2AEBCF4E0012E00C /* PonoButtonStyle.swift */,
 				7429B7652AEF33BE00BF7F93 /* CustomShape.swift */,
-				ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */,
+				ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */,
 				F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */,
-				F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */,
+				F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */,
 				74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */,
-				74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */,
+				74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -814,6 +833,7 @@
 				AC0BAE842AF53EE9009256A2 /* before_blend-word.m4a in Resources */,
 				AC0BAE932AF53F16009256A2 /* ne.m4a in Resources */,
 				74FB089C2AE9A1A3003CBE43 /* eh.m4a in Resources */,
+				2FE992332B0726530073B3BC /* sound_classification.tflite in Resources */,
 				74FB08992AE9A1A3003CBE43 /* u.m4a in Resources */,
 				AC0BAE942AF53F16009256A2 /* mi.m4a in Resources */,
 				AC1FC1D22AE64C300078015B /* syllables.json in Resources */,
@@ -845,6 +865,7 @@
 				AC0BAE692AF53E31009256A2 /* after_pronunciation(1).m4a in Resources */,
 				AC0BAE9C2AF53F16009256A2 /* pe.m4a in Resources */,
 				3868C15B2AE61C8E00E832B0 /* Quicksand-Regular.ttf in Resources */,
+				2FE992342B0726530073B3BC /* labels.txt in Resources */,
 				AC0BAE7D2AF53EDE009256A2 /* before_card(1).m4a in Resources */,
 				AC0BAE982AF53F16009256A2 /* no.m4a in Resources */,
 				74FB089A2AE9A1A3003CBE43 /* b.m4a in Resources */,
@@ -887,7 +908,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACE704F62AF9FB07009385BB /* WordList.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
 				74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */,
 				381C33DE2B03E84D00BAFE69 /* VoiceResources.swift in Sources */,
@@ -906,7 +926,7 @@
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				381C33DC2B03D97000BAFE69 /* AppNavigation.swift in Sources */,
 				2F75E5692B01D8B4003982C5 /* Probability.swift in Sources */,
-				ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */,
+				ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */,
 				381C34012B045FA200BAFE69 /* PreviewDataResources.swift in Sources */,
 				381C33FD2B041AED00BAFE69 /* LearningFlowScreenView.swift in Sources */,
 				ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */,
@@ -942,16 +962,16 @@
 				389F02E02B049A7500422671 /* VoiceRecognitionManager.swift in Sources */,
 				7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */,
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
-				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
+				AC1FC1E02AE66D9C0078015B /* SyllableLabelView.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
 				ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */,
 				381C33F42B041A8200BAFE69 /* BreakWordActivityViewModel.swift in Sources */,
 				2FAFBA112B00DFAE00176336 /* SoundClassifier.swift in Sources */,
-				F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */,
+				F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */,
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
-				74695A7E2AF7EA5C00FFBB6F /* MergedSyllable.swift in Sources */,
+				74695A7E2AF7EA5C00FFBB6F /* MergedSyllableView.swift in Sources */,
 				7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

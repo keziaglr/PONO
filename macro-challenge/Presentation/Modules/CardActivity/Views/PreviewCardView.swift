@@ -31,7 +31,8 @@ struct PreviewCardView: View {
                         onRetry()
                     }label: {
                         Image(systemName: "arrow.counterclockwise")
-                    }.buttonStyle(PonoButtonStyle(variant: .tertiary))
+                    }
+                    .buttonStyle(PonoButtonStyle(variant: .tertiary))
                     
                 }
                 .padding(20)
