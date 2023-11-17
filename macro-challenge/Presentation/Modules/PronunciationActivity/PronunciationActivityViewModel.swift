@@ -50,6 +50,7 @@ class PronunciationActivityViewModel: ObservableObject {
     private var soundClassifier: SoundClassifier?
     private var voiceRecognitionManager: VoiceRecognitionManager?
     private var bufferSize: Int = 0
+    private var speechRecognizer = SpeechRecognizer()
     
     private var voiceRecord: AudioRecord?
     
@@ -68,6 +69,7 @@ class PronunciationActivityViewModel: ObservableObject {
         }
         guard let currentInstruction else {
             currentInstruction = instructions.first
+            playInstruction(currentInstruction!)
             return
         }
         guard !isReplay else {
@@ -81,6 +83,7 @@ class PronunciationActivityViewModel: ObservableObject {
         guard let nextInstruction = instructions[safe: nextInstructionIndex] else {
             return
         }
+        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     
@@ -97,21 +100,40 @@ class PronunciationActivityViewModel: ObservableObject {
         guard pronunciationStatus == .idle else { return }
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] _ in
             guard let self else { return }
+            self.speechRecognizer.resetTranscript()
+            self.speechRecognizer.startTranscribing()
             self.isAudioRecordingAndRecognizing = true
             self.pronunciationStatus = .recording
             
             self.recordingManager.startRecord(for: 4.0) { audioRecord in
                 self.voiceRecord = audioRecord
                 self.stopVoiceRecognitionAndRecording()
+                self.stopSpeech()
                 if self.pronunciationStatus != .correct {
                     self.pronunciationStatus = .wrong
                 }
             }
-            self.startAudioRecognition()
+            if syllableOrder != nil{
+                self.startAudioRecognition()
+            }
         }
     }
     
+    func stopSpeech(){
+        self.speechRecognizer.stopTranscribing()
+        let text = String(self.speechRecognizer.transcript).lowercased()
+        print(text)
+        if (text.contains(learningWord.content) || learningWord.content.contains(text)) && syllableOrder == nil{
+            self.pronunciationStatus = .correct
+        }else if (text.contains(syllable?.content ?? "") || ((syllable?.content.contains(text)) != nil)){
+            self.pronunciationStatus = .correct
+        }
+        
+    }
+    
     func retryVoiceRecognitionAndRecording() {
+        currentInstruction = instructions.first
+        isShowPlayRecording = false
         pronunciationStatus = .idle
         startVoiceRecognitionAndRecording()
     }

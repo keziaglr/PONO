@@ -16,7 +16,26 @@ struct HomeScreenView: View {
     var body: some View {
         VStack {
             ZStack{
+                VStack {
+                    Image("Cloud")
+                        .resizable()
+                        .scaledToFit()
+                    Spacer()
+                }
                 VStack(spacing:0) {
+                    HStack{
+                        Spacer()
+                        Button {
+                            switchableNavigate(.report)
+                        } label: {
+                            Image("Bar")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45)
+                        }
+                        .buttonStyle(PonoButtonStyle(variant: .tertiary))
+                        .padding()
+                    }
                     Spacer()
                     Rectangle()
                         .fill(Color.Grey5)
@@ -24,12 +43,6 @@ struct HomeScreenView: View {
                     Rectangle()
                         .fill(Color.Grey4)
                         .frame(height: screenHeight/5)
-                }
-                VStack {
-                    Image("Cloud")
-                        .resizable()
-                        .scaledToFit()
-                    Spacer()
                 }
                 VStack {
                     TabView{

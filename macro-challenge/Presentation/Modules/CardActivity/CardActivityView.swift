@@ -20,6 +20,7 @@ struct CardActivityView: View {
     @State var screenWidth = CGFloat(UIScreen.main.bounds.width)
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State private var scale : [Bool] = [false, false]
+    @State private var instructionText = ""
     
     init(learningWord: Word, syllableOrder: SyllableOrder, onNext: @escaping () -> Void) {
         self.viewModel = CardActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
@@ -29,14 +30,18 @@ struct CardActivityView: View {
     var body: some View {
         ZStack {
             VStack {
-                if let instructionText = viewModel.currentInstruction?.text {
-                    InstructionView(height: screenHeight / 12,
-                                    message: instructionText)
-                    .padding()
-                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                    .onTapGesture {
-                        viewModel.playInstruction()
-                    }
+                InstructionView(height: screenHeight / 12,
+                                message: $instructionText)
+                .onAppear{
+                    instructionText = viewModel.currentInstruction?.text ?? ""
+                }
+                .onChange(of: viewModel.currentInstruction, perform: { _ in
+                    instructionText = viewModel.currentInstruction?.text ?? ""
+                })
+                .padding()
+                .opacity(viewModel.currentInstruction == nil ? 0 : 1)
+                .onTapGesture {
+                    viewModel.playInstruction()
                 }
                 
                 Spacer()
@@ -57,6 +62,6 @@ struct CardActivityView: View {
 
 }
 
-#Preview {
-    CardActivityView(learningWord: PreviewDataResources.word, syllableOrder: .firstSyllable, onNext: { })
-}
+//#Preview {
+//    CardActivityView(learningWord: PreviewDataResources.word, syllableOrder: .firstSyllable, onNext: { })
+//}

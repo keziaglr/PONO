@@ -8,8 +8,10 @@
 import SwiftUI
 
 enum Route {
+    case onboarding
     case home
     case learningActivity
+    case report
 }
 
 struct SwitchableNavigationEnvironmentKey: EnvironmentKey {

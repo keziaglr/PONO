@@ -35,6 +35,7 @@ class CombineSyllableActivityViewModel: ObservableObject {
         }
         guard let currentInstruction else {
             currentInstruction = instructions.first
+            playInstruction(currentInstruction!)
             return
         }
         guard !isReplay else {
@@ -48,6 +49,7 @@ class CombineSyllableActivityViewModel: ObservableObject {
         guard let nextInstruction = instructions[safe: nextInstructionIndex] else {
             return
         }
+        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     

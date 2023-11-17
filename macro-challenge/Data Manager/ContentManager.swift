@@ -101,7 +101,7 @@ class ContentManager {
     }
     
     func playAudio(_ assetName: String) {
-        guard let path = Bundle.main.path(forResource: assetName, ofType: "m4a") else {return}
+        guard let path = Bundle.main.path(forResource: assetName, ofType: "mp3") else {return}
         let url = URL(fileURLWithPath: path)
         
         do {

@@ -127,6 +127,9 @@
 		AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */; };
 		AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */; };
 		AC50DC332ACE5CE100B9FE1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */; };
+		ACA0FB7A2B07A48B0011624C /* SpeechRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB792B07A48B0011624C /* SpeechRecognitionManager.swift */; };
+		ACA0FB7C2B07A4AD0011624C /* SpeechText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB7B2B07A4AD0011624C /* SpeechText.swift */; };
+		ACA0FB7F2B07CA8F0011624C /* Blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */; };
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
 		ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1D2AEF583400E616D7 /* NextButton.swift */; };
@@ -261,6 +264,9 @@
 		AC50DC2D2ACE5CDF00B9FE1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC50DC2F2ACE5CE100B9FE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC50DC322ACE5CE100B9FE1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACA0FB792B07A48B0011624C /* SpeechRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionManager.swift; sourceTree = "<group>"; };
+		ACA0FB7B2B07A4AD0011624C /* SpeechText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechText.swift; sourceTree = "<group>"; };
+		ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Blink.mp3; sourceTree = "<group>"; };
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
 		ACECDC1D2AEF583400E616D7 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
@@ -397,6 +403,7 @@
 				74FB08D22AE9A377003CBE43 /* QRScannerManager.swift */,
 				2FF694A02AE8B4740085393F /* RecordingManager.swift */,
 				389F02DF2B049A7500422671 /* VoiceRecognitionManager.swift */,
+				ACA0FB792B07A48B0011624C /* SpeechRecognitionManager.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -631,6 +638,7 @@
 		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACA0FB7D2B07CA7F0011624C /* MP3 */,
 				2FE992352B0742C70073B3BC /* JSON */,
 				74FB08872AE9A13D003CBE43 /* M4A */,
 				381C33DD2B03E84D00BAFE69 /* VoiceResources.swift */,
@@ -679,6 +687,7 @@
 				2F99061C2AEE5EDD005AB1CC /* AudioRecord.swift */,
 				AC1B586F2AEEB63300661474 /* LearningActivity.swift */,
 				2F75E5682B01D8B4003982C5 /* Probability.swift */,
+				ACA0FB7B2B07A4AD0011624C /* SpeechText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -742,6 +751,14 @@
 				381C34002B045FA200BAFE69 /* PreviewDataResources.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACA0FB7D2B07CA7F0011624C /* MP3 */ = {
+			isa = PBXGroup;
+			children = (
+				ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */,
+			);
+			path = MP3;
 			sourceTree = "<group>";
 		};
 		C27D934F4411AB3F99580584 /* Pods */ = {
@@ -833,6 +850,7 @@
 				AC0BAE842AF53EE9009256A2 /* before_blend-word.m4a in Resources */,
 				AC0BAE932AF53F16009256A2 /* ne.m4a in Resources */,
 				74FB089C2AE9A1A3003CBE43 /* eh.m4a in Resources */,
+				ACA0FB7F2B07CA8F0011624C /* Blink.mp3 in Resources */,
 				2FE992332B0726530073B3BC /* sound_classification.tflite in Resources */,
 				74FB08992AE9A1A3003CBE43 /* u.m4a in Resources */,
 				AC0BAE942AF53F16009256A2 /* mi.m4a in Resources */,
@@ -917,6 +935,7 @@
 				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				381C33F82B041A9900BAFE69 /* PronunciationActivityViewModel.swift in Sources */,
+				ACA0FB7A2B07A48B0011624C /* SpeechRecognitionManager.swift in Sources */,
 				381C33E82B041A1700BAFE69 /* CombineSyllableActivityView.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
@@ -969,6 +988,7 @@
 				2FAFBA112B00DFAE00176336 /* SoundClassifier.swift in Sources */,
 				F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */,
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
+				ACA0FB7C2B07A4AD0011624C /* SpeechText.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
 				74695A7E2AF7EA5C00FFBB6F /* MergedSyllableView.swift in Sources */,
@@ -1016,6 +1036,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1104,12 +1125,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = KJKL38Q9U5;
+				DEVELOPMENT_TEAM = CL2T9LDG63;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1137,12 +1160,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = KJKL38Q9U5;
+				DEVELOPMENT_TEAM = CL2T9LDG63;
+				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

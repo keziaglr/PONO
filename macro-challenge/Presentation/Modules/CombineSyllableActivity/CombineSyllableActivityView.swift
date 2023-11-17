@@ -23,6 +23,7 @@ struct CombineSyllableActivityView: View {
     @State private var dragOffset: [CGFloat] = [0.0, 0.0]
     @GestureState private var translation: CGSize = .zero
     @GestureState private var translation2: CGSize = .zero
+    @State private var instructionText = ""
     
     init(learningWord: Word, onNext: @escaping () -> Void) {
         self.viewModel = CombineSyllableActivityViewModel(learningWord: learningWord)
@@ -33,14 +34,18 @@ struct CombineSyllableActivityView: View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
-                    if let instructionText = viewModel.currentInstruction?.text {
-                        InstructionView(height: screenHeight / 12,
-                                        message: instructionText)
-                            .padding()
-                            .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                            .onTapGesture {
-                                viewModel.playInstruction(isReplay: true)
-                            }
+                    InstructionView(height: screenHeight / 12,
+                                    message: $instructionText)
+                    .onAppear{
+                        instructionText = viewModel.currentInstruction?.text ?? ""
+                    }
+                    .onChange(of: viewModel.currentInstruction, perform: { _ in
+                        instructionText = viewModel.currentInstruction?.text ?? ""
+                    })
+                    .padding()
+                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
+                    .onTapGesture {
+                        viewModel.playInstruction(isReplay: true)
                     }
                     
                     Spacer()
@@ -131,6 +136,6 @@ struct CombineSyllableActivityView: View {
     }
 }
 
-#Preview {
-    CombineSyllableActivityView(learningWord: PreviewDataResources.word, onNext: { })
-}
+//#Preview {
+//    CombineSyllableActivityView(learningWord: PreviewDataResources.word, onNext: { })
+//}

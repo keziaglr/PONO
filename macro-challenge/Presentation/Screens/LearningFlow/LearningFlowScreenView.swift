@@ -12,6 +12,7 @@ struct LearningFlowScreenView: View {
     @Environment(\.switchableNavigate) var switchableNavigate
     
     @ObservedObject var viewModel: LearningFlowScreenViewModel
+    @StateObject var speechRecognizer = SpeechRecognizer()
     
     init() {
         self.viewModel = LearningFlowScreenViewModel()
@@ -77,6 +78,6 @@ struct LearningFlowScreenView: View {
     }
 }
 
-#Preview {
-    LearningFlowScreenView()
-}
+//#Preview {
+//    LearningFlowScreenView()
+//}
