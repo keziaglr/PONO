@@ -42,7 +42,7 @@ struct ScannerView: View {
             
             Spacer(minLength: 0)
             
-            QrCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 600, height: 250))
+            QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 600, height: 250))
             Button {
                 checkCameraPermission()
             } label: {

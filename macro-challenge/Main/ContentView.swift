@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var activeRoute: Route = .home
+    
+    @Environment(\.switchableNavigate) var switchableNavigate
+    
+    init() {
+        print("called")
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            
+        ZStack {
+            switch activeRoute {
+            case .home:
+                HomeScreenView()
+            case .learningActivity:
+                LearningFlowScreenView()
+            }
         }
-        .padding()
+        .environment(\.switchableNavigate) { route in
+            activeRoute = route
+        }
+        .ignoresSafeArea()
     }
 }
 

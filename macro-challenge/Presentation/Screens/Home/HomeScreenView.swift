@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    
+    @Environment(\.switchableNavigate) var switchableNavigate
+    
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
-    @State var show = false
+    
     var body: some View {
         VStack {
-            if !show{
-                ZStack{
+            ZStack{
                 VStack(spacing:0) {
                     Spacer()
                     Rectangle()
@@ -26,14 +28,14 @@ struct HomeScreenView: View {
                 VStack {
                     Image("Cloud")
                         .resizable()
-                    .scaledToFit()
+                        .scaledToFit()
                     Spacer()
                 }
                 VStack {
                     TabView{
                         ActivityCharacter(activity: 1)
                             .onTapGesture {
-                                show.toggle()
+                                switchableNavigate(.learningActivity)
                             }
                         ActivityCharacter(activity: 2)
                         ActivityCharacter(activity: 3)
@@ -44,11 +46,8 @@ struct HomeScreenView: View {
                     .tabViewStyle(.page)
                 }
             }
+            .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
             .ignoresSafeArea()
-        .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
-            } else {
-                FlowScreenView(show: $show)
-            }
         }
     }
 }

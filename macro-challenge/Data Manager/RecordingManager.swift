@@ -5,7 +5,6 @@
 //  Created by Rio Johanes Sumolang on 25/10/23.
 //
 
-import Foundation
 import AVFoundation
 
 protocol RecordManagerProtocol {
@@ -24,16 +23,8 @@ class RecordingManager: NSObject {
     private var isRecording: Bool = false
     private var timer: Timer?
     
-    override init() {
-        super.init()
-        
-    }
-    
     deinit {
-        // Invalidate timer
         timer?.invalidate()
-        
-        // Remove recording file
         deleteRecord()
     }
     
@@ -52,7 +43,6 @@ class RecordingManager: NSObject {
         let fileName = path.appendingPathComponent("\(Date().toString(dateFormat: "dd-MM-YY 'at' HH:mm:ss")).m4a")
         
         let settings = [
-//            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVFormatIDKey: Int(1819304813),
             AVSampleRateKey: 44100,
             AVNumberOfChannelsKey: 1,
@@ -72,9 +62,9 @@ class RecordingManager: NSObject {
                     self?.timer?.invalidate()
                     
                     if let url = self?.audioRecorder?.url {
-                        let recording = AudioRecord(url: url, createdAt: .now)
-                        self?.record = recording
-                        completion(recording)
+                        let audioRecord = AudioRecord(url: url, createdAt: .now)
+                        self?.record = audioRecord
+                        completion(audioRecord)
                     }
                 }
             })

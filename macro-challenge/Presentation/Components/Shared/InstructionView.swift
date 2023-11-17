@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct InstructionView: View {
+    
     @State var height : CGFloat
-    @Binding var message : String
+    @State var message : String
+    
     var body: some View {
         HStack {
             Image(systemName: "speaker.wave.2.fill")
                 .font(.title)
                 .foregroundColor(Color.Blue2)
+            
             Text(message)
                 .textStyle(style: .heading5)
-        }.padding(20)
+        }
+        .padding(20)
         .background(
             Capsule()
                 .fill(Color.white)
@@ -30,6 +34,6 @@ struct InstructionView: View {
 
 struct InstructionView_Previews: PreviewProvider {
     static var previews: some View {
-        InstructionView(height: 67, message: .constant("Selamat"))
+        InstructionView(height: 67, message: "Selamat")
     }
 }

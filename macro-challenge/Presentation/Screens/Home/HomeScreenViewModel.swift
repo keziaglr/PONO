@@ -8,6 +8,4 @@
 import Foundation
 
 
-class HomeScreenViewModel: ObservableObject{
-    @Published var page = 1
-}
+class HomeScreenViewModel: ObservableObject {}

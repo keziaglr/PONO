@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct BaseSyllableView: View {
+    
     var syllable: String
     var width: CGFloat
     var height: CGFloat
     var isLeftSide: Bool
+    
     var body: some View {
         ZStack {
             Image(isLeftSide ? "left" : "right")

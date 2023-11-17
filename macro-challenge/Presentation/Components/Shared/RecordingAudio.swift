@@ -8,90 +8,46 @@
 import SwiftUI
 
 struct RecordingAudio: View {
-    @Binding var record: Bool
-    @State var animateInner: Bool = false
-    @State var animateOuter: Bool = false
     
-    @Binding var recordingStatus: RecordingStatus
+    @State private var animateInner: Bool = false
+    @State private var animateOuter: Bool = false
+    
+    @Binding var pronunciationStatus: RecordingStatus
     
     var body: some View {
         ZStack {
+            
             Circle()
                 .frame(width: 300)
-                .foregroundColor(recordingStatus.colorAnimation)
+                .foregroundColor(pronunciationStatus.colorAnimation)
                 .scaleEffect(animateInner ? 1 : 0.9)
-                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
-                .opacity(record ? 1 : 0)
+                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5),
+                           value: animateInner)
+                .opacity(pronunciationStatus == .recording ? 1 : 0)
+            
             Circle()
                 .frame(width: 290)
-                .foregroundColor(recordingStatus.colorAnimation)
-                .scaleEffect(record ? 1 : 1.2)
-                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
-                .opacity(record ? 1 : 0)
+                .foregroundColor(pronunciationStatus.colorAnimation)
+                .scaleEffect(pronunciationStatus == .recording ? 1 : 1.2)
+                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5),
+                           value: animateOuter)
+                .opacity(pronunciationStatus == .recording ? 1 : 0)
             
             Circle()
                 .frame(width: 120, height: 115)
-                .foregroundColor(recordingStatus.color)
+                .foregroundColor(pronunciationStatus.color)
             
-            Image(systemName: recordingStatus.images)
+            Image(systemName: pronunciationStatus.images)
                 .font(.system(size: 65, weight: .semibold))
-                .animation(Animation.easeInOut(duration: 0.5), value: record)
-                .foregroundColor(recordingStatus == .idle ? Color.Grey3 : Color.White1)
+                .animation(Animation.easeInOut(duration: 0.5), value: pronunciationStatus == .recording)
+                .foregroundColor(pronunciationStatus == .idle ? Color.Grey3 : Color.White1)
                 .scaledToFit()
-        }.onChange(of: recordingStatus) { newValue in
-            if recordingStatus == .recording {
+            
+        }
+        .onChange(of: pronunciationStatus) { newValue in
+            if pronunciationStatus == .recording {
                 animateInner = true
             }
         }
     }
 }
-
-//struct RecordingAudio_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RecordingAudio(record: .constant(true), recordingStatus: .constant(.recording))
-//    }
-//}
-
-//struct RecordingAudio: View {
-//    @Binding var record : Bool
-//    @State var animateInner : Bool = false
-//    @State var animateOuter : Bool = false
-//
-//    @State var isRecording = true
-//    @State var isTrue = false
-//
-//    var body: some View {
-//        ZStack {
-//
-//            Circle()
-//                .frame(width: 300)
-//                .foregroundColor(isRecording ?Color.Blue1.opacity(0.2) : .clear)
-//                .scaleEffect(animateInner ? 1 : 0.9)
-//                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateInner)
-//                .onAppear{
-//                    animateInner.toggle()
-//                }
-//                .opacity(record ? 1 : 0)
-//            Circle()
-//                .frame(width: 290)
-//                .foregroundColor(isRecording ?Color.Blue1.opacity(0.2) : .clear)
-//                .scaleEffect(record ? 1 : 1.2)
-//                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.5), value: animateOuter)
-//                .onAppear{
-//                    animateOuter.toggle()
-//                }
-//                .opacity(record ? 1 : 0)
-//            Circle()
-//                .frame(width: 100)
-//                .foregroundColor(Color.Blue1)
-//                .opacity(record ? 1 : 0)
-//            Image(systemName: record ? "mic.fill" : "mic.slash.fill")
-//                .resizable()
-//                .animation(Animation.easeInOut(duration: 0.5), value: record)
-//                .foregroundColor(record ? Color.White1 : Color.Grey3)
-//                .scaledToFit()
-//            .frame(width: 60, height: 60)
-//
-//        }
-//    }
-//}

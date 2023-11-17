@@ -96,8 +96,11 @@ class ContentManager {
         return []
     }
     
+    func playSyllableSound(_ syllable: Syllable) {
+        playAudio(syllable.content)
+    }
+    
     func playAudio(_ assetName: String) {
-        
         guard let path = Bundle.main.path(forResource: assetName, ofType: "m4a") else {return}
         let url = URL(fileURLWithPath: path)
         
@@ -113,3 +116,4 @@ class ContentManager {
         audioPlayer?.stop()
     }
 }
+

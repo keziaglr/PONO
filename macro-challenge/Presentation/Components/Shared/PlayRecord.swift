@@ -21,8 +21,8 @@ struct PlayRecord: View {
     let timer = Timer.publish(every: 0.1, on:.main, in: .common).autoconnect()
     @State private var tapCount = 0
     @State private var isProgressCompleted = false
-
-
+    
+    
     // Animation
     var animation: Animation {
         return .linear(duration: 0.5).repeatForever()
@@ -63,8 +63,8 @@ struct PlayRecord: View {
                 if isRunning && progress < 1.0 {
                     progress += 0.025
                     if progress >= 1.0 {
-                                isDone = false
-                            }
+                        isDone = true
+                    }
                 }
             }
             

@@ -1,5 +1,5 @@
 //
-//  QrScannerManager.swift
+//  QRScannerManager.swift
 //  macro-challenge
 //
 //  Created by Ferrian Redhia Pratama on 26/10/23.
@@ -8,10 +8,13 @@
 import AVKit
 import SwiftUI
 
-class QrScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+protocol QRScannerDelegate : AnyObject {
+    func getQrScannedDataDelegate(scannedData: String)
+}
+
+class QRScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     
-    
-    weak var delegate: QrScannerDelegate?
+    weak var delegate: QRScannerDelegate?
     
     var captureSession: AVCaptureSession = .init()
     private var qrOutput: AVCaptureMetadataOutput = .init()
@@ -23,6 +26,28 @@ class QrScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
             }
             guard let code = readableObject.stringValue else { return }
             delegate?.getQrScannedDataDelegate(scannedData: code)
+        }
+    }
+    
+    func requestCameraAuthorizationIfNeeded(completion: @escaping (Permission) -> Void) {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            return completion(.approved)
+            
+        case .notDetermined:
+            Task {
+                if await AVCaptureDevice.requestAccess(for: .video) {
+                    return completion(.approved)
+                } else {
+                    return completion(.idle)
+                }
+            }
+            
+        case .denied, .restricted:
+            return completion(.denied)
+            
+        default:
+            return completion(.idle)
         }
     }
     

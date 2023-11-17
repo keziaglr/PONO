@@ -1,5 +1,5 @@
 //
-//  QrCameraView.swift
+//  QRCameraView.swift
 //  macro-challenge
 //
 //  Created by Ferrian Redhia Pratama on 26/10/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 
-struct QrCameraView: UIViewRepresentable {
+struct QRCameraView: UIViewRepresentable {
     var cameraSession: AVCaptureSession
     var frameSize: CGSize
     
