@@ -10,7 +10,7 @@ import AVKit
 
 struct CardActivityView: View {
     
-    @ObservedObject private var viewModel: RefactoringCardActivityViewModel
+    @ObservedObject private var viewModel: CardActivityViewModel
     
     private let onNext: () -> Void
     
@@ -22,19 +22,21 @@ struct CardActivityView: View {
     @State private var scale : [Bool] = [false, false]
     
     init(learningWord: Word, syllableOrder: SyllableOrder, onNext: @escaping () -> Void) {
-        self.viewModel = RefactoringCardActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
+        self.viewModel = CardActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
         self.onNext = onNext
     }
     
     var body: some View {
         ZStack {
             VStack {
-                InstructionView(height: screenHeight / 12,
-                                message: viewModel.currentInstruction?.text ?? "")
-                .padding()
-                .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                .onTapGesture {
-                    viewModel.playInstruction()
+                if let instructionText = viewModel.currentInstruction?.text {
+                    InstructionView(height: screenHeight / 12,
+                                    message: instructionText)
+                    .padding()
+                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
+                    .onTapGesture {
+                        viewModel.playInstruction()
+                    }
                 }
                 
                 Spacer()
@@ -43,7 +45,7 @@ struct CardActivityView: View {
             ZStack (alignment: .topLeading) {
                 QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 900, height:450))
                     .frame(width: 900, height: 450)
-                MergedSyllable(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
+                MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
                     .padding(.top, 20)
                     .onTapGesture {
                         onNext()

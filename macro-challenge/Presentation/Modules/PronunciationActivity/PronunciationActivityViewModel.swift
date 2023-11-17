@@ -15,7 +15,16 @@ class PronunciationActivityViewModel: ObservableObject {
         syllableOrder == .firstSyllable ? learningWord.syllables[safe: 0] : syllableOrder == .secondSyllable ? learningWord.syllables[safe: 1] : nil
     }
     
-    @Published var pronunciationStatus: RecordingStatus = .idle
+    @Published var pronunciationStatus: PronunciationStatus = .idle {
+        didSet {
+            if pronunciationStatus == .correct || pronunciationStatus == .wrong {
+                Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+                    self.isShowPlayRecording = true
+                }
+            }
+        }
+    }
+    @Published var isShowPlayRecording: Bool = false
     @Published var isAudioRecordingAndRecognizing: Bool = false
     @Published var errorMessage: String?
     @Published var currentInstruction: Instruction?
@@ -53,12 +62,16 @@ class PronunciationActivityViewModel: ObservableObject {
         soundClassifier = SoundClassifier(modelFileName: "sound_classification", delegate: self)
     }
     
-    func playInstruction() {
+    func playInstruction(isReplay: Bool = false) {
         guard !instructions.isEmpty else {
             return
         }
         guard let currentInstruction else {
             currentInstruction = instructions.first
+            return
+        }
+        guard !isReplay else {
+            playInstruction(currentInstruction)
             return
         }
         guard let currentIndex = instructions.firstIndex(where: { $0 == currentInstruction }) else {
@@ -68,11 +81,15 @@ class PronunciationActivityViewModel: ObservableObject {
         guard let nextInstruction = instructions[safe: nextInstructionIndex] else {
             return
         }
-        let instructionVoices = nextInstruction.voices
+        playInstruction(nextInstruction)
+    }
+    
+    private func playInstruction(_ instruction: Instruction) {
+        let instructionVoices = instruction.voices
         audioManager.playQueue(instructionVoices, changeHandler: instructionVoiceChangeHandler)
     }
     
-    private func instructionVoiceChangeHandler(_ newIndex: Int) {
+    private func instructionVoiceChangeHandler(_ queueCount: Int, _ newIndex: Int) {
         currentInstructionVoiceIndex = newIndex
     }
     
@@ -85,9 +102,7 @@ class PronunciationActivityViewModel: ObservableObject {
             
             self.recordingManager.startRecord(for: 4.0) { audioRecord in
                 self.voiceRecord = audioRecord
-                self.recordingManager.stopRecord()
-                self.isAudioRecordingAndRecognizing = false
-                
+                self.stopVoiceRecognitionAndRecording()
                 if self.pronunciationStatus != .correct {
                     self.pronunciationStatus = .wrong
                 }
@@ -126,6 +141,12 @@ class PronunciationActivityViewModel: ObservableObject {
         voiceRecognitionManager?.checkPermissionsAndStartTappingMicrophone()
     }
     
+    private func stopVoiceRecognitionAndRecording() {
+        self.recordingManager.stopRecord()
+        voiceRecognitionManager?.stopRecognize()
+        self.isAudioRecordingAndRecognizing = false
+    }
+    
     private func runModel(inputBuffer: [Int16]) {
         soundClassifier?.start(inputBuffer: inputBuffer)
     }
@@ -137,8 +158,8 @@ class PronunciationActivityViewModel: ObservableObject {
         return nil
     }
     
-    private func isVoiceCorrect(_ probabilityModels: [ProbabilityModel]) -> Bool {
-        (probabilityModels.first(where: { $0.id == syllable?.id })?.probability ?? 0.0) >= 0.5
+    private func isAnyVoiceCorrect(_ probabilityModels: [ProbabilityModel]) -> Bool {
+        (probabilityModels.first(where: { $0.labelName.lowercased() == syllable?.content.lowercased() })?.probability ?? 0.0) >= 0.5
     }
 }
 
@@ -167,8 +188,9 @@ extension PronunciationActivityViewModel: SoundClassifierDelegate {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             if self.isAudioRecordingAndRecognizing,
-               self.isVoiceCorrect(probabilityModels) {
+               self.isAnyVoiceCorrect(probabilityModels) {
                 self.pronunciationStatus = .correct
+                self.stopVoiceRecognitionAndRecording()
             }
         }
     }

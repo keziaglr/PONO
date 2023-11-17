@@ -53,7 +53,9 @@ struct PlayPronunciationRecordView: View {
                 PlayRecord(action: {
                     onPlayRecord()
                     drawingHeight.toggle()
-                }, drawingHeight: $drawingHeight, isDone: $isDone)
+                },
+                           drawingHeight: $drawingHeight,
+                           isDone: $isDone)
                 
             }
         }
@@ -62,7 +64,7 @@ struct PlayPronunciationRecordView: View {
 
 struct PlayPronunciationRecordView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayPronunciationRecordView(labelText: "ma", 
+        PlayPronunciationRecordView(labelText: "ma",
                                     isDisabled: false,
                                     onPlaySampleSound: { },
                                     onPlayRecord: { },

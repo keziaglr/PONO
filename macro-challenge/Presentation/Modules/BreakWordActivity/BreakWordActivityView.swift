@@ -33,13 +33,15 @@ struct BreakWordActivityView: View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
-                    InstructionView(height: screenHeight / 12,
-                                    message: viewModel.currentInstruction?.text ?? "")
+                    if let instructionText = viewModel.currentInstruction?.text {
+                        InstructionView(height: screenHeight / 12,
+                                        message: instructionText)
                         .padding()
                         .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                         .onTapGesture {
-                            viewModel.playInstruction()
+                            viewModel.playInstruction(isReplay: true)
                         }
+                    }
                     
                     Spacer()
                 }
@@ -60,7 +62,7 @@ struct BreakWordActivityView: View {
                 
                 ZStack {
                     HStack(spacing: -10) {
-                        SyllableLabel(left: true,
+                        SyllableLabelView(left: true,
                                       scale: $scale[0],
                                       syllable: viewModel.learningWord.syllable(at: 0),
                                       height: height,
@@ -74,7 +76,7 @@ struct BreakWordActivityView: View {
                             }
                         }
                         
-                        SyllableLabel(left: false,
+                        SyllableLabelView(left: false,
                                       scale: $scale[1],
                                       syllable: viewModel.learningWord.syllable(at: 1),
                                       height: height,

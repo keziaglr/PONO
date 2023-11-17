@@ -54,7 +54,7 @@ struct PlayRecord: View {
                         .font(Font.system(size: 50, weight: .bold))
                         .padding()
                     
-                    RecordProgressBar(progress: progress)
+                    RecordProgressBarView(progress: progress)
                         .frame(height: 5)
                         .padding(15)
                 }

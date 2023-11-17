@@ -33,13 +33,15 @@ struct CombineSyllableActivityView: View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
-                    InstructionView(height: screenHeight / 12,
-                                    message: viewModel.currentInstruction?.text ?? "")
-                        .padding()
-                        .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                        .onTapGesture {
-                            viewModel.playInstruction()
-                        }
+                    if let instructionText = viewModel.currentInstruction?.text {
+                        InstructionView(height: screenHeight / 12,
+                                        message: instructionText)
+                            .padding()
+                            .opacity(viewModel.currentInstruction == nil ? 0 : 1)
+                            .onTapGesture {
+                                viewModel.playInstruction(isReplay: true)
+                            }
+                    }
                     
                     Spacer()
                 }
@@ -76,7 +78,7 @@ struct CombineSyllableActivityView: View {
                         }
                     
                     HStack(spacing: height) {
-                        SyllableLabel(left: true,
+                        SyllableLabelView(left: true,
                                       scale: .constant(false),
                                       syllable: viewModel.learningWord.syllable(at: 0),
                                       height: height,
@@ -96,7 +98,7 @@ struct CombineSyllableActivityView: View {
                                 }
                         )
                         
-                        SyllableLabel(left: false,
+                        SyllableLabelView(left: false,
                                       scale: .constant(false),
                                       syllable: viewModel.learningWord.syllable(at: 1),
                                       height: height,
@@ -110,7 +112,7 @@ struct CombineSyllableActivityView: View {
                                     state = value.translation
                                 }
                                 .onEnded { value in
-                                    if show{
+                                    if show {
                                         dragOffset[1] += value.translation.width
                                     }
                                 }

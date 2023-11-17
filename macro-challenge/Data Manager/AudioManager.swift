@@ -10,11 +10,14 @@ import AVFoundation
 class AudioManager: NSObject {
     var queuePlayer: AVQueuePlayer?
     var playerItems: [AVPlayerItem] = []
+    var queueCount: Int {
+        playerItems.count
+    }
     var currentAudioIndex = 0
     
-    var queueDidChange: ((_ index: Int) -> Void)?
+    var queueDidChange: ((_ queueCount: Int, _ index: Int) -> Void)?
     
-    func playQueue(_ audios: [String], changeHandler: ((_ index: Int) -> Void)? = nil) {
+    func playQueue(_ audios: [String], changeHandler: ((_ queueCount: Int, _ index: Int) -> Void)? = nil) {
         queueDidChange = changeHandler
         setupAudioFiles(audios)
         queuePlayer?.play()
@@ -30,7 +33,6 @@ class AudioManager: NSObject {
                 playerItems.append(playerItem)
             }
         }
-        
         queuePlayer = AVQueuePlayer(items: playerItems)
         
         queuePlayer?.self.addObserver(self, forKeyPath: "currentItem", options: [.new, .initial], context: nil)
@@ -44,7 +46,7 @@ class AudioManager: NSObject {
         if keyPath == "currentItem", let player = queuePlayer {
             if let currentItem = player.currentItem, let index = playerItems.firstIndex(of: currentItem) {
                 currentAudioIndex = index
-                queueDidChange?(index)
+                queueDidChange?(queueCount, index)
             }
         }
     }
