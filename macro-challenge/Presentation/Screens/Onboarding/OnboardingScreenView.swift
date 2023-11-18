@@ -10,33 +10,31 @@ import SwiftUI
 struct OnboardingScreenView: View {
     @Environment(\.switchableNavigate) var switchableNavigate
     @State private var hasNavigated = false
-    @State private var bubu : String = "Pono0"
+    @State private var bubu : String = "bubu0"
+    @State private var index = 0
     
     var body: some View {
         ZStack {
             VStack{
-                Image(bubu)
+                Image("bubu\(index)")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 400, alignment: .center)
                     .onAppear{
-//                        var index = 0
-//
-//                        _ = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { (Timer) in
-//
-//                            self.bubu = "bubu\(index)"
-//
-//                            if index <= 58 {
-//                                index += 1
-//                                if index == 40 {
-//                                    ContentManager.shared.playAudio("Blink")
-//                                }
-//                            }else if !hasNavigated && index == 59 {
-//                                self.hasNavigated = true
-//                                switchableNavigate(.home)
-//                            }
-//
-//                        }
+                        _ = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { (Timer) in
+                            if index <= 58 {
+                                index += 1
+                            }else if !hasNavigated && index == 59 {
+                                self.hasNavigated = true
+                                switchableNavigate(.home)
+                            }
+
+                        }
+                    }
+                    .onChange(of: index) { newValue in
+                        if index == 40 {
+                            ContentManager.shared.playAudio("Blink")
+                        }
                     }
                 Image("Pono Text")
                     .resizable()
