@@ -45,7 +45,7 @@ struct CombineSyllableActivityView: View {
                     .padding()
                     .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onTapGesture {
-                        viewModel.playInstruction(isReplay: true)
+                        viewModel.playInstruction(after: isSyllableCombined)
                     }
                     
                     Spacer()
@@ -127,9 +127,9 @@ struct CombineSyllableActivityView: View {
                     
                     
                 }.onAppear{
-                    viewModel.playInstruction()
+                    viewModel.playInstruction(after: isSyllableCombined)
                 }.onChange(of: isSyllableCombined) { newValue in
-                    viewModel.playInstruction()
+                    viewModel.playInstruction(after: isSyllableCombined)
                 }
             }
         }

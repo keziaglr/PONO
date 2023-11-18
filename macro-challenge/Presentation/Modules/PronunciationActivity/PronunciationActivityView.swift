@@ -44,10 +44,10 @@ struct PronunciationActivityView: View {
         .padding()
         .onAppear{
             viewModel.startVoiceRecognitionAndRecording()
-            viewModel.playInstruction()
+            viewModel.playInstruction(after: viewModel.isShowPlayRecording)
         }
         .onChange(of: viewModel.isShowPlayRecording) { _ in
-            viewModel.playInstruction()
+            viewModel.playInstruction(after: viewModel.isShowPlayRecording)
         }
     }
 }

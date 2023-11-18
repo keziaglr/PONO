@@ -45,7 +45,7 @@ struct BreakWordActivityView: View {
                     .padding()
                     .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onTapGesture {
-                        viewModel.playInstruction(isReplay: true)
+                        viewModel.playInstruction(after: isWordBroke)
                     }
                     
                     Spacer()
@@ -138,9 +138,9 @@ struct BreakWordActivityView: View {
                         })
                 )
                 .onAppear{
-                    viewModel.playInstruction()
+                    viewModel.playInstruction(after: isWordBroke)
                 }.onChange(of: isWordBroke) { newValue in
-                    viewModel.playInstruction()
+                    viewModel.playInstruction(after: isWordBroke)
                 }
                 .onChange(of: viewModel.currentInstructionVoiceIndex) { newValue in
                     scale[0] = false
