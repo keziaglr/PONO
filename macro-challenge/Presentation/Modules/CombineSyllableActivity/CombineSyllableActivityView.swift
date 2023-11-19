@@ -36,7 +36,7 @@ struct CombineSyllableActivityView: View {
                 VStack {
                     InstructionView(height: screenHeight / 12,
                                     message: $instructionText)
-                    .onAppear{
+                    .onAppear {
                         instructionText = viewModel.currentInstruction?.text ?? ""
                     }
                     .onChange(of: viewModel.currentInstruction, perform: { _ in
@@ -45,7 +45,7 @@ struct CombineSyllableActivityView: View {
                     .padding()
                     .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onTapGesture {
-                        viewModel.playInstruction(after: isSyllableCombined)
+                        viewModel.playInstruction(isReplay: true)
                     }
                     
                     Spacer()
@@ -127,9 +127,9 @@ struct CombineSyllableActivityView: View {
                     
                     
                 }.onAppear{
-                    viewModel.playInstruction(after: isSyllableCombined)
+                    viewModel.playInstruction()
                 }.onChange(of: isSyllableCombined) { newValue in
-                    viewModel.playInstruction(after: isSyllableCombined)
+                    viewModel.playInstruction()
                 }
             }
         }

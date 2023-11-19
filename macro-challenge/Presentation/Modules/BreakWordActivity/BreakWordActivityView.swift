@@ -36,7 +36,7 @@ struct BreakWordActivityView: View {
                 VStack {
                     InstructionView(height: screenHeight / 12,
                                     message: $instructionText)
-                    .onAppear{
+                    .onAppear {
                         instructionText = viewModel.currentInstruction?.text ?? ""
                     }
                     .onChange(of: viewModel.currentInstruction, perform: { _ in
@@ -45,7 +45,7 @@ struct BreakWordActivityView: View {
                     .padding()
                     .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onTapGesture {
-                        viewModel.playInstruction(after: isWordBroke)
+                        viewModel.playInstruction(isReplay: true)
                     }
                     
                     Spacer()
@@ -138,9 +138,9 @@ struct BreakWordActivityView: View {
                         })
                 )
                 .onAppear{
-                    viewModel.playInstruction(after: isWordBroke)
+                    viewModel.playInstruction()
                 }.onChange(of: isWordBroke) { newValue in
-                    viewModel.playInstruction(after: isWordBroke)
+                    viewModel.playInstruction()
                 }
                 .onChange(of: viewModel.currentInstructionVoiceIndex) { newValue in
                     scale[0] = false

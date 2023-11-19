@@ -42,12 +42,12 @@ struct PronunciationActivityView: View {
             }
         }
         .padding()
-        .onAppear{
+        .onAppear {
             viewModel.startVoiceRecognitionAndRecording()
-            viewModel.playInstruction(after: viewModel.isShowPlayRecording)
+            viewModel.playInstruction()
         }
         .onChange(of: viewModel.isShowPlayRecording) { _ in
-            viewModel.playInstruction(after: viewModel.isShowPlayRecording)
+            viewModel.playInstruction()
         }
     }
 }

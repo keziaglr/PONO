@@ -9,42 +9,23 @@ import SwiftUI
 
 struct OnboardingScreenView: View {
     @Environment(\.switchableNavigate) var switchableNavigate
-    @State private var hasNavigated = false
-    @State private var bubu : String = "bubu0"
-    @State private var index = 0
+    @State private var isFinish = false
     
     var body: some View {
         ZStack {
             VStack{
-                Image("bubu\(index)")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 400, alignment: .center)
-                    .onAppear{
-                        _ = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { (Timer) in
-                            if index <= 58 {
-                                index += 1
-                            }else if !hasNavigated && index == 59 {
-                                self.hasNavigated = true
-                                switchableNavigate(.home)
-                            }
-
-                        }
-                    }
-                    .onChange(of: index) { newValue in
-                        if index == 40 {
-                            ContentManager.shared.playAudio("Blink")
-                        }
-                    }
+                BubuAnimation(isFinish: $isFinish)
                 Image("Pono Text")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 400, alignment: .center)
-                    .onTapGesture {
-                        switchableNavigate(.home)
-                    }
             }
         }
+        .onChange(of: isFinish, perform: { newValue in
+            if isFinish == true {
+                switchableNavigate(.home)
+            }
+        })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.Blue3.ignoresSafeArea())
     }

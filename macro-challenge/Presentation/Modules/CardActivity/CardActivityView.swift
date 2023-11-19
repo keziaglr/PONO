@@ -32,7 +32,7 @@ struct CardActivityView: View {
             VStack {
                 InstructionView(height: screenHeight / 12,
                                 message: $instructionText)
-                .onAppear{
+                .onAppear {
                     instructionText = viewModel.currentInstruction?.text ?? ""
                 }
                 .onChange(of: viewModel.currentInstruction, perform: { _ in
@@ -41,7 +41,7 @@ struct CardActivityView: View {
                 .padding()
                 .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                 .onTapGesture {
-                    viewModel.playInstruction()
+                    viewModel.playInstruction(isReplay: true)
                 }
                 
                 Spacer()

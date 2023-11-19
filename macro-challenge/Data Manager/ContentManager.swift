@@ -100,8 +100,8 @@ class ContentManager {
         playAudio(syllable.content)
     }
     
-    func playAudio(_ assetName: String) {
-        guard let path = Bundle.main.path(forResource: assetName, ofType: "mp3") else {return}
+    func playAudio(_ assetName: String, type: String = "mp3") {
+        guard let path = Bundle.main.path(forResource: assetName, ofType: type) else {return}
         let url = URL(fileURLWithPath: path)
         
         do {

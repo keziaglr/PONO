@@ -12,7 +12,7 @@ import SwiftUI
 
 
 /// A helper for transcribing speech to text using SFSpeechRecognizer and AVAudioEngine.
-class SpeechRecognizer: ObservableObject {
+class SpeechRecognitionManager {
     enum RecognizerError: Error {
         case nilRecognizer
         case notAuthorizedToRecognize
@@ -66,6 +66,7 @@ class SpeechRecognizer: ObservableObject {
     }
     
     func resetTranscript() {
+        transcript = ""
         reset()
     }
     
