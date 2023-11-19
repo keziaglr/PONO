@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PonoButtonStyle: ButtonStyle {
-    let variant: Variant
+    @State private var variant: Variant
     @State private var pressed = false
     
     init(variant: Variant, action: @escaping () -> Void = {}) {

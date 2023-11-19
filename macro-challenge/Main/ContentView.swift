@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var activeRoute: Route = .home
+    @State private var activeRoute: Route = .onboarding
     
     @Environment(\.switchableNavigate) var switchableNavigate
     
@@ -20,9 +20,14 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             switch activeRoute {
+            case .onboarding:
+                OnboardingScreenView()
             case .home:
                 HomeScreenView()
             case .learningActivity:
+                LearningFlowScreenView()
+            case .report:
+                //TODO: change to report view
                 LearningFlowScreenView()
             }
         }

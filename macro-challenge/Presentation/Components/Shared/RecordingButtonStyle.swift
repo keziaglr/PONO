@@ -21,9 +21,9 @@ enum PronunciationStatus {
         case .recording:
             return Color.Blue1
         case .correct:
-            return .green
+            return Color.Green1
         case .wrong:
-            return Color.Red1
+            return Color.Red2
         }
     }
 

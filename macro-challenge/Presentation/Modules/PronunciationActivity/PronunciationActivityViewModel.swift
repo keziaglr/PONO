@@ -50,6 +50,7 @@ class PronunciationActivityViewModel: ObservableObject {
     private var soundClassifier: SoundClassifier?
     private var voiceRecognitionManager: VoiceRecognitionManager?
     private var bufferSize: Int = 0
+    private var speechRecognizer = SpeechRecognitionManager()
     
     private var voiceRecord: AudioRecord?
     
@@ -67,20 +68,27 @@ class PronunciationActivityViewModel: ObservableObject {
             return
         }
         guard let currentInstruction else {
-            currentInstruction = instructions.first
+            if let currentInstruction = instructions.first{
+                playInstruction(currentInstruction)
+                return
+            }
             return
         }
         guard !isReplay else {
             playInstruction(currentInstruction)
             return
         }
-        guard let currentIndex = instructions.firstIndex(where: { $0 == currentInstruction }) else {
+        guard let currentIndex = instructions.firstIndex(where: { $0 == self.currentInstruction }) else {
             return
         }
         let nextInstructionIndex = currentIndex + 1
         guard let nextInstruction = instructions[safe: nextInstructionIndex] else {
+            self.currentInstruction = nil
+            playInstruction()
+            
             return
         }
+        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     
@@ -97,21 +105,41 @@ class PronunciationActivityViewModel: ObservableObject {
         guard pronunciationStatus == .idle else { return }
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] _ in
             guard let self else { return }
+            self.speechRecognizer.resetTranscript()
+            self.speechRecognizer.startTranscribing()
             self.isAudioRecordingAndRecognizing = true
             self.pronunciationStatus = .recording
             
             self.recordingManager.startRecord(for: 4.0) { audioRecord in
                 self.voiceRecord = audioRecord
                 self.stopVoiceRecognitionAndRecording()
+                self.stopSpeech()
                 if self.pronunciationStatus != .correct {
                     self.pronunciationStatus = .wrong
                 }
             }
-            self.startAudioRecognition()
+            if syllableOrder != nil{
+                self.startAudioRecognition()
+            }
         }
     }
     
+    func stopSpeech() {
+        self.speechRecognizer.stopTranscribing()
+        let text = String(self.speechRecognizer.transcript).lowercased()
+        print(text)
+        if !text.isEmpty{
+            if (text.contains(learningWord.content) || learningWord.content.contains(text)) && syllableOrder == nil{
+                self.pronunciationStatus = .correct
+            }else if (text.contains(syllable?.content ?? "") || ((syllable?.content.contains(text)) != nil)){
+                self.pronunciationStatus = .correct
+            }
+        }
+        
+    }
+    
     func retryVoiceRecognitionAndRecording() {
+        isShowPlayRecording = false
         pronunciationStatus = .idle
         startVoiceRecognitionAndRecording()
     }

@@ -21,6 +21,7 @@ struct BreakWordActivityView: View {
     @State private var isOffsetUp = true
     @State private var firstTap = false
     @State private var scale : [Bool] = [false, false]
+    @State private var instructionText : String = ""
     private let screenWidth = CGFloat(UIScreen.main.bounds.width)
     private let screenHeight = CGFloat(UIScreen.main.bounds.height)
     
@@ -33,14 +34,18 @@ struct BreakWordActivityView: View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
-                    if let instructionText = viewModel.currentInstruction?.text {
-                        InstructionView(height: screenHeight / 12,
-                                        message: instructionText)
-                        .padding()
-                        .opacity(viewModel.currentInstruction == nil ? 0 : 1)
-                        .onTapGesture {
-                            viewModel.playInstruction(isReplay: true)
-                        }
+                    InstructionView(height: screenHeight / 12,
+                                    message: $instructionText)
+                    .onAppear {
+                        instructionText = viewModel.currentInstruction?.text ?? ""
+                    }
+                    .onChange(of: viewModel.currentInstruction, perform: { _ in
+                        instructionText = viewModel.currentInstruction?.text ?? ""
+                    })
+                    .padding()
+                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
+                    .onTapGesture {
+                        viewModel.playInstruction(isReplay: true)
                     }
                     
                     Spacer()
@@ -142,9 +147,9 @@ struct BreakWordActivityView: View {
                     scale[1] = false
                     
                     if isWordBroke {
-                        if newValue == 4 {
+                        if newValue == 4 || newValue == 1 {
                             scale[0] = true
-                        } else if newValue == 6 {
+                        } else if newValue == 6 || newValue == 2{
                             scale[1] = true
                         }
                     } else {
@@ -168,6 +173,6 @@ extension BreakWordActivityView {
     
 }
 
-#Preview {
-    BreakWordActivityView(learningWord: PreviewDataResources.word, onNext: { })
-}
+//#Preview {
+//    BreakWordActivityView(learningWord: PreviewDataResources.word, onNext: { })
+//}

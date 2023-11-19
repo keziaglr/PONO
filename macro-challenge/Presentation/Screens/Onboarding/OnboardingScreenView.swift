@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct OnboardingScreenView: View {
+    @Environment(\.switchableNavigate) var switchableNavigate
+    @State private var isFinish = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack{
+                BubuAnimation(isFinish: $isFinish)
+                Image("Pono Text")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 400, alignment: .center)
+            }
+        }
+        .onChange(of: isFinish, perform: { newValue in
+            if isFinish == true {
+                switchableNavigate(.home)
+            }
+        })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.Blue3.ignoresSafeArea())
     }
 }
+
 

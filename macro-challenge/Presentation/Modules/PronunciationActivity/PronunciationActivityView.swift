@@ -42,16 +42,21 @@ struct PronunciationActivityView: View {
             }
         }
         .padding()
-        .onAppear{
+        .onAppear {
             viewModel.startVoiceRecognitionAndRecording()
+            viewModel.playInstruction()
+        }
+        .onChange(of: viewModel.isShowPlayRecording) { _ in
             viewModel.playInstruction()
         }
     }
 }
 
-#Preview {
-    PronunciationActivityView(learningWord: PreviewDataResources.word, 
-                              syllableOrder: .firstSyllable,
-                              onNext: { })
+struct OnboardingScreenView_Previews: PreviewProvider {
+    static var previews: some View {
+        PronunciationActivityView(learningWord: PreviewDataResources.word,
+                                  syllableOrder: .firstSyllable,
+                                  onNext: { })
+    }
 }
 
