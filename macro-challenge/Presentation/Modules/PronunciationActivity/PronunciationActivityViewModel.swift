@@ -68,9 +68,10 @@ class PronunciationActivityViewModel: ObservableObject {
             return
         }
         guard let currentInstruction else {
-            currentInstruction = instructions.first
-            playInstruction(currentInstruction!)
-            return
+            if let currentInstruction = instructions.first{
+                playInstruction(currentInstruction)
+                return
+            }
         }
         guard !isReplay else {
             playInstruction(currentInstruction)
