@@ -72,6 +72,7 @@ class PronunciationActivityViewModel: ObservableObject {
                 playInstruction(currentInstruction)
                 return
             }
+            return
         }
         guard !isReplay else {
             playInstruction(currentInstruction)

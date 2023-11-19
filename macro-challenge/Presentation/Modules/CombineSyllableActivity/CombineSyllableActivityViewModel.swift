@@ -38,6 +38,7 @@ class CombineSyllableActivityViewModel: ObservableObject {
                 playInstruction(currentInstruction)
                 return
             }
+            return
         }
         guard !isReplay else {
             playInstruction(currentInstruction)
