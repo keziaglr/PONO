@@ -77,7 +77,7 @@ class ActivityRepositoryImpl: ActivityRepository {
                     if pronunciationCorrect {
                         activityData.activityToWord?.countPronunciationCorrect += 1
                     } else {
-                        activityData.activityToWord?.countPronunciationWrong -= 1
+                        activityData.activityToWord?.countPronunciationWrong += 1
                     }
                 }
                 self.manager.save()
