@@ -48,6 +48,17 @@
 		389F02E02B049A7500422671 /* VoiceRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F02DF2B049A7500422671 /* VoiceRecognitionManager.swift */; };
 		7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7632AEEED7100BF7F93 /* String+Extension.swift */; };
 		7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B7652AEF33BE00BF7F93 /* CustomShape.swift */; };
+		743C087F2B055BC3008CAB95 /* ActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C087E2B055BC3008CAB95 /* ActivityRepository.swift */; };
+		743C08812B055BD2008CAB95 /* ActivityRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C08802B055BD2008CAB95 /* ActivityRepositoryImpl.swift */; };
+		743C08832B055C81008CAB95 /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C08822B055C81008CAB95 /* WordRepository.swift */; };
+		743C08852B055C8B008CAB95 /* WordRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C08842B055C8B008CAB95 /* WordRepositoryImpl.swift */; };
+		743C08872B055CA0008CAB95 /* SyllableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C08862B055CA0008CAB95 /* SyllableRepository.swift */; };
+		743C08892B055CB3008CAB95 /* SyllableRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C08882B055CB3008CAB95 /* SyllableRepositoryImpl.swift */; };
+		743C088B2B057B46008CAB95 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743C088A2B057B46008CAB95 /* CoreDataViewModel.swift */; };
+		744373932B046B09005D62DD /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 744373912B046B09005D62DD /* CoreDataModel.xcdatamodeld */; };
+		744373962B046B8A005D62DD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744373952B046B8A005D62DD /* CoreDataManager.swift */; };
+		744373982B046C2F005D62DD /* CoreDataConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744373972B046C2F005D62DD /* CoreDataConst.swift */; };
+		7443739A2B046D5E005D62DD /* CoreDataViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744373992B046D5E005D62DD /* CoreDataViewModelImpl.swift */; };
 		74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */; };
 		74695A7E2AF7EA5C00FFBB6F /* MergedSyllableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */; };
 		74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 74FB088A2AE9A1A3003CBE43 /* p.m4a */; };
@@ -183,6 +194,17 @@
 		389F02DF2B049A7500422671 /* VoiceRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionManager.swift; sourceTree = "<group>"; };
 		7429B7632AEEED7100BF7F93 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7429B7652AEF33BE00BF7F93 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		743C087E2B055BC3008CAB95 /* ActivityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRepository.swift; sourceTree = "<group>"; };
+		743C08802B055BD2008CAB95 /* ActivityRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRepositoryImpl.swift; sourceTree = "<group>"; };
+		743C08822B055C81008CAB95 /* WordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
+		743C08842B055C8B008CAB95 /* WordRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordRepositoryImpl.swift; sourceTree = "<group>"; };
+		743C08862B055CA0008CAB95 /* SyllableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableRepository.swift; sourceTree = "<group>"; };
+		743C08882B055CB3008CAB95 /* SyllableRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllableRepositoryImpl.swift; sourceTree = "<group>"; };
+		743C088A2B057B46008CAB95 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		744373922B046B09005D62DD /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		744373952B046B8A005D62DD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		744373972B046C2F005D62DD /* CoreDataConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConst.swift; sourceTree = "<group>"; };
+		744373992B046D5E005D62DD /* CoreDataViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModelImpl.swift; sourceTree = "<group>"; };
 		74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSyllableView.swift; sourceTree = "<group>"; };
 		74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedSyllableView.swift; sourceTree = "<group>"; };
 		74FB088A2AE9A1A3003CBE43 /* p.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = p.m4a; sourceTree = "<group>"; };
@@ -399,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE992302B0726520073B3BC /* Model */,
+				744373942B046B28005D62DD /* Core Data */,
 				AC1FC1D02AE64C0B0078015B /* Data Resources */,
 				2F99061E2AEE687A005AB1CC /* AudioManager.swift */,
 				AC1FC1D72AE667C20078015B /* ContentManager.swift */,
@@ -485,6 +508,31 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		743C087D2B055A98008CAB95 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				743C087E2B055BC3008CAB95 /* ActivityRepository.swift */,
+				743C08802B055BD2008CAB95 /* ActivityRepositoryImpl.swift */,
+				743C08822B055C81008CAB95 /* WordRepository.swift */,
+				743C08842B055C8B008CAB95 /* WordRepositoryImpl.swift */,
+				743C08862B055CA0008CAB95 /* SyllableRepository.swift */,
+				743C08882B055CB3008CAB95 /* SyllableRepositoryImpl.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		744373942B046B28005D62DD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				743C087D2B055A98008CAB95 /* Data */,
+				744373912B046B09005D62DD /* CoreDataModel.xcdatamodeld */,
+				744373952B046B8A005D62DD /* CoreDataManager.swift */,
+				744373992B046D5E005D62DD /* CoreDataViewModelImpl.swift */,
+				743C088A2B057B46008CAB95 /* CoreDataViewModel.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		74FB08872AE9A13D003CBE43 /* M4A */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +568,7 @@
 				74FB08E62AE9E26B003CBE43 /* ImageConst.swift */,
 				74FB08EA2AE9EC33003CBE43 /* FontConst.swift */,
 				AC0BAECE2AF8EA6E009256A2 /* Level.swift */,
+				744373972B046C2F005D62DD /* CoreDataConst.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -929,6 +978,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7443739A2B046D5E005D62DD /* CoreDataViewModelImpl.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
 				74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */,
 				381C33DE2B03E84D00BAFE69 /* VoiceResources.swift in Sources */,
@@ -941,6 +991,7 @@
 				ACA0FB7A2B07A48B0011624C /* SpeechRecognitionManager.swift in Sources */,
 				381C33E82B041A1700BAFE69 /* CombineSyllableActivityView.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
+				743C087F2B055BC3008CAB95 /* ActivityRepository.swift in Sources */,
 				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
@@ -951,14 +1002,18 @@
 				ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */,
 				381C34012B045FA200BAFE69 /* PreviewDataResources.swift in Sources */,
 				381C33FD2B041AED00BAFE69 /* LearningFlowScreenView.swift in Sources */,
+				743C08852B055C8B008CAB95 /* WordRepositoryImpl.swift in Sources */,
 				ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
 				F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */,
+				743C08872B055CA0008CAB95 /* SyllableRepository.swift in Sources */,
 				AC0BAECF2AF8EA6E009256A2 /* Level.swift in Sources */,
 				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
 				381C33FF2B041AF400BAFE69 /* LearningFlowScreenViewModel.swift in Sources */,
 				381C33EE2B041A4200BAFE69 /* CardActivityViewModel.swift in Sources */,
+				743C088B2B057B46008CAB95 /* CoreDataViewModel.swift in Sources */,
 				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,
+				743C08812B055BD2008CAB95 /* ActivityRepositoryImpl.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
 				74FB08EB2AE9EC33003CBE43 /* FontConst.swift in Sources */,
@@ -972,10 +1027,13 @@
 				74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */,
 				389F02DE2B0494AB00422671 /* PlayPronunciationRecordView.swift in Sources */,
 				74FB08D82AE9AA50003CBE43 /* QRCameraView.swift in Sources */,
+				743C08832B055C81008CAB95 /* WordRepository.swift in Sources */,
 				74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
+				743C08892B055CB3008CAB95 /* SyllableRepositoryImpl.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				381C33EA2B041A2400BAFE69 /* CombineSyllableActivityViewModel.swift in Sources */,
+				744373962B046B8A005D62DD /* CoreDataManager.swift in Sources */,
 				74FB08DF2AE9D2DA003CBE43 /* CardVowelStyleEnum.swift in Sources */,
 				ACA0FB832B098D510011624C /* BubuAnimation.swift in Sources */,
 				AC1FC1DC2AE668570078015B /* Syllable.swift in Sources */,
@@ -983,6 +1041,8 @@
 				AC1B58702AEEB63300661474 /* LearningActivity.swift in Sources */,
 				381C33EC2B041A3700BAFE69 /* CardActivityView.swift in Sources */,
 				389F02E02B049A7500422671 /* VoiceRecognitionManager.swift in Sources */,
+				744373932B046B09005D62DD /* CoreDataModel.xcdatamodeld in Sources */,
+				AC1B58702AEEB63300661474 /* LearningActivity.swift in Sources */,
 				7429B7662AEF33BE00BF7F93 /* CustomShape.swift in Sources */,
 				74FB08E92AE9E94E003CBE43 /* BackCardView.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabelView.swift in Sources */,
@@ -996,6 +1056,7 @@
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
 				74695A7E2AF7EA5C00FFBB6F /* MergedSyllableView.swift in Sources */,
+				744373982B046C2F005D62DD /* CoreDataConst.swift in Sources */,
 				7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1129,9 +1190,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1164,7 +1226,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = CL2T9LDG63;
+				DEVELOPMENT_TEAM = A94C53K2J9;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1212,6 +1274,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		744373912B046B09005D62DD /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				744373922B046B09005D62DD /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 744373922B046B09005D62DD /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC50DC202ACE5CDF00B9FE1B /* Project object */;
 }

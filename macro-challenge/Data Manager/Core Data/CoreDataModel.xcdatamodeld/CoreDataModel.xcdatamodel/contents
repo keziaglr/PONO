@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActivityEntity" representedClassName=".ActivityEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="activityToWord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="wordToActivity" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="SyllableEntity" representedClassName="SyllableEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="countCardRecognizeCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countCardRecognizeIncorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationWrong" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="syllableToWord" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="wordToSyllable" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="countPronunciationCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationWrong" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="wordToActivity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivityEntity" inverseName="activityToWord" inverseEntity="ActivityEntity"/>
+        <relationship name="wordToSyllable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SyllableEntity" inverseName="syllableToWord" inverseEntity="SyllableEntity"/>
+    </entity>
+</model>
