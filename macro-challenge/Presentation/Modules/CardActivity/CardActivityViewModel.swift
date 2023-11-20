@@ -17,11 +17,12 @@ class CardActivityViewModel: ObservableObject {
         syllableOrder == .firstSyllable ? learningWord.syllables[safe: 0] : syllableOrder == .secondSyllable ? learningWord.syllables[safe: 1] : nil
     }
     
-    @Published var isCorrect: Bool?
+    @Published var isCorrect: Bool? 
     @Published var cameraPermission: Permission = .idle
     @Published var errorMessage: String?
     @Published var currentInstruction: Instruction?
     @Published var currentInstructionVoiceIndex: Int = 0
+    @Published var scannedCard: Syllable?
     
     private let syllables: [Syllable]
     private var instructions: [Instruction] {
@@ -106,7 +107,9 @@ class CardActivityViewModel: ObservableObject {
     }
     
     func isScannedCardCorrect(_ scannedCardSyllable: Syllable) -> Bool {
-        return syllable?.id == scannedCardSyllable.id
+        let isSame = syllable?.id == scannedCardSyllable.id
+        // set to core data
+        return isSame
     }
 }
 
@@ -114,6 +117,7 @@ extension CardActivityViewModel: QRScannerDelegate {
     
     func getQrScannedDataDelegate(scannedData: String) {
         if let foundSyllable = syllables.first(where: { $0.id == UUID(uuidString: scannedData) }) {
+            self.scannedCard = foundSyllable
             isCorrect = isScannedCardCorrect(foundSyllable)
             stopScanning()
             playInstruction()

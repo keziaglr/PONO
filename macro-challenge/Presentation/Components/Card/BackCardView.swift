@@ -9,13 +9,16 @@ import SwiftUI
 
 struct BackCardView: View {
     var cardVowelStyle: CardVowelStyleEnum
+    @Binding var degree : Double
 
     private var ponoColor = ""
     
     init(
-        cardVowelStyle: CardVowelStyleEnum
+        cardVowelStyle: CardVowelStyleEnum,
+        degree: Binding<Double>
     ) {
         self.cardVowelStyle = cardVowelStyle
+        self._degree = degree
         setupValue()
     }
     
@@ -46,7 +49,7 @@ struct BackCardView: View {
             .frame(width: 48, height: 125)
             .padding(.bottom, 26)
             
-        }
+        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
     
     mutating func setupValue() {
@@ -67,6 +70,6 @@ struct BackCardView: View {
 
 struct BackCardView_Previews: PreviewProvider {
     static var previews: some View {
-        BackCardView(cardVowelStyle: CardVowelStyleEnum.O_VOWEL)
+        BackCardView(cardVowelStyle: CardVowelStyleEnum.O_VOWEL, degree: .constant(0))
     }
 }

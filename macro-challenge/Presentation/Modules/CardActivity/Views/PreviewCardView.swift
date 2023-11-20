@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct PreviewCardView: View {
+    @ObservedObject var viewModel: CardActivityViewModel
+    var scannedCard: Syllable
     let onNext: () -> Void
     let onRetry: () -> Void
     @State private var isFlipped = true
+    @State private var backDegree = 0.0
+    @State private var frontDegree = -90.0
+    private let durationAndDelay : CGFloat = 0.2
     var isCardChecked = true
     var syllable: Syllable
-    var cardVowelStyle: CardVowelStyleEnum = .A_VOWEL
     
     var body: some View {
         ZStack {
@@ -21,7 +25,11 @@ struct PreviewCardView: View {
                 Spacer()
                 HStack {
                     Button {
-                        onNext()
+                        if !isFlipped {
+                            onNext()
+                        } else {
+                            flipCard()
+                        }
                     } label: {
                         Image(systemName: "arrow.right")
                     }
@@ -39,31 +47,35 @@ struct PreviewCardView: View {
             }
             HStack {
                 ZStack {
-                    if isFlipped {
-                        BackCardView(cardVowelStyle: syllable.letters[1].getCardVowelStyle())
-                    } else {
-                        FrontCardView(syllable: syllable.letters[1] ?? "A", cardVowelStyle: syllable.letters[1].getCardVowelStyle() ?? CardVowelStyleEnum.A_VOWEL, showFrameBordered: false)
-                    }
+                    BackCardView(cardVowelStyle: scannedCard.letters.last!.getCardVowelStyle(), degree: $backDegree)
+                    FrontCardView(syllable: scannedCard.content , cardVowelStyle: scannedCard.letters.last!.getCardVowelStyle() , showFrameBordered: false, degree: $frontDegree)
                 }
-//                .onReceive(isFlipped) { newValue in
-//                    withAnimation {
-//                        isFlipped.toggle()
-//                    }
-                }.padding(.leading, 20)
                 Spacer().frame(width: 100)
-                
-//                FrontCardView(syllable: syllable, cardVowelStyle: cardVowelStyle)
-            }.onAppear {
-                if isCardChecked {
-                    isFlipped = false
-                } else {
-                    isFlipped = true
+                FrontCardView(syllable: syllable.content, cardVowelStyle: syllable.letters.last!.getCardVowelStyle(), degree: .constant(0))
+            }.padding(.leading, 20)
+        }
+    }
+    
+    func flipCard() {
+            isFlipped.toggle()
+            if !isFlipped {
+                withAnimation(.linear(duration: durationAndDelay)) {
+                    backDegree = 90
+                }
+                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                    frontDegree = 0
+                }
+            } else {
+                withAnimation(.linear(duration: durationAndDelay)) {
+                    frontDegree = -90
+                }
+                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                    backDegree = 0
                 }
             }
         }
-    }
-//}
+}
 
 //#Preview {
-//    PreviewCardView(onNext: {}, onRetry: {}, syllable: Syllable(id: "", content: ""))
+//    PreviewCardView(viewModel: RefactoringCardActivityViewModel(learningWord: Word(content: "Makan", level: 1, syllables: []), syllableOrder: .firstSyllable), scannedCard: Syllable(id: UUID(), content: "AA") , onNext: {}, onRetry: {}, syllable: Syllable(id: UUID(), content: "Mu"))
 //}
