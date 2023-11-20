@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FrontCardView: View {
-    var syllable: String
+    var syllable: Syllable
     var cardVowelStyle: CardVowelStyleEnum
     var showFrameBordered = true
     
@@ -18,7 +18,7 @@ struct FrontCardView: View {
     @Binding var degree : Double
     
     init(
-        syllable: String,
+        syllable: Syllable,
         cardVowelStyle: CardVowelStyleEnum,
         showFrameBordered: Bool = true,
         degree: Binding<Double>
@@ -55,7 +55,7 @@ struct FrontCardView: View {
                         style: StrokeStyle(lineWidth: 3, dash: [20]))
                     .frame(width: 185, height: 270)
             }
-            Text(syllable)
+            Text(syllable.content)
                 .font(
                     .custom(FontConst.QUICKSAND_BOLD, size: 75)
                 ).foregroundColor(Color.white)
@@ -88,8 +88,8 @@ struct FrontCardView: View {
     }
 }
 
-struct FrontCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        FrontCardView(syllable: "mu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL, degree: .constant(0))
-    }
-}
+//struct FrontCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FrontCardView(syllable: "bu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL, degree: <#Binding<Double>#>)
+//    }
+//}

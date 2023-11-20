@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PreviewCardView: View {
     @ObservedObject var viewModel: CardActivityViewModel
-    var scannedCard: Syllable
+    var scannedCard: Syllable = Syllable(id: UUID(), content: "ba")
     let onNext: () -> Void
     let onRetry: () -> Void
     @State private var isFlipped = true
@@ -18,6 +18,15 @@ struct PreviewCardView: View {
     private let durationAndDelay : CGFloat = 0.2
     var isCardChecked = true
     var syllable: Syllable
+    
+    init(viewModel: CardActivityViewModel, onNext: @escaping () -> Void, onRetry: @escaping () -> Void, isFlipped: Bool = true, backDegree: Double = 0.0, frontDegree: Double = 90.0, isCardChecked: Bool = true, syllable: Syllable) {
+        self.viewModel = viewModel
+        self.scannedCard = viewModel.scannedCard ?? Syllable(id: UUID(), content: "ba")
+        self.onNext = onNext
+        self.onRetry = onRetry
+        self.isCardChecked = isCardChecked
+        self.syllable = syllable
+    }
     
     var body: some View {
         ZStack {
@@ -35,45 +44,50 @@ struct PreviewCardView: View {
                     }
                     .buttonStyle(PonoButtonStyle(variant: .primary))
                     
-                    Button{
-                        onRetry()
-                    }label: {
-                        Image(systemName: "arrow.counterclockwise")
+                    if viewModel.isCorrect == false{
+                        Button{
+                            onRetry()
+                        }label: {
+                            Image(systemName: "arrow.counterclockwise")
+                        }
+                        .buttonStyle(PonoButtonStyle(variant: .tertiary))
                     }
-                    .buttonStyle(PonoButtonStyle(variant: .tertiary))
                     
                 }
                 .padding(20)
             }
             HStack {
                 ZStack {
-                    BackCardView(cardVowelStyle: scannedCard.letters.last!.getCardVowelStyle(), degree: $backDegree)
-                    FrontCardView(syllable: scannedCard.content , cardVowelStyle: scannedCard.letters.last!.getCardVowelStyle() , showFrameBordered: false, degree: $frontDegree)
+                    BackCardView(degree: $backDegree)
+                    FrontCardView(syllable: scannedCard , cardVowelStyle: scannedCard.letters.last!.getCardVowelStyle() , showFrameBordered: false, degree: $frontDegree)
                 }
                 Spacer().frame(width: 100)
-                FrontCardView(syllable: syllable.content, cardVowelStyle: syllable.letters.last!.getCardVowelStyle(), degree: .constant(0))
+                FrontCardView(syllable: syllable, cardVowelStyle: syllable.letters.last!.getCardVowelStyle(), degree: .constant(0))
             }.padding(.leading, 20)
         }
     }
     
     func flipCard() {
-            isFlipped.toggle()
-            if !isFlipped {
-                withAnimation(.linear(duration: durationAndDelay)) {
-                    backDegree = 90
-                }
-                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                    frontDegree = 0
-                }
-            } else {
-                withAnimation(.linear(duration: durationAndDelay)) {
-                    frontDegree = -90
-                }
-                withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
-                    backDegree = 0
-                }
+        isFlipped.toggle()
+        if !isFlipped {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                backDegree = 90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                frontDegree = 0
+            }
+        } else {
+            withAnimation(.linear(duration: durationAndDelay)) {
+                frontDegree = -90
+            }
+            withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                backDegree = 0
             }
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            viewModel.playInstruction()
+        }
+    }
 }
 
 //#Preview {

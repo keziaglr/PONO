@@ -21,6 +21,7 @@ struct CardActivityView: View {
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     @State private var scale : [Bool] = [false, false]
     @State private var instructionText = ""
+    @State private var isCorrect: Bool?
     
     init(learningWord: Word, syllableOrder: SyllableOrder, onNext: @escaping () -> Void) {
         self.viewModel = CardActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
@@ -48,20 +49,40 @@ struct CardActivityView: View {
             }
             
             ZStack (alignment: .topLeading) {
-                QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 900, height:450))
-                    .frame(width: 900, height: 450)
-                MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
-                    .padding(.top, 20)
-                    .onTapGesture {
-                        onNext()
+                if isCorrect == nil {
+                    ZStack (alignment: .topLeading) {
+                        QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 900, height:450))
+                            .frame(width: 900, height: 450)
+                        MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
+                            .padding(.top, 20)
+                            .onTapGesture {
+                                viewModel.scannedCard = Syllable(id: UUID(), content: "ba")
+                                viewModel.isCorrect = true
+                                viewModel.scannedCard = Syllable(id: UUID(), content: "ba")
+                            }
                     }
-            }
+                } else {
+                    PreviewCardView(viewModel: viewModel, onNext: {
+                        onNext()
+                    }, onRetry: {
+                        viewModel.isCorrect = nil
+                        viewModel.startScanning()
+                    }, syllable: viewModel.syllableOrder == .firstSyllable ? viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma") : viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma"))
+                }
+            }.onReceive(viewModel.$isCorrect, perform: { isCorrect in
+                self.isCorrect = isCorrect
+            })
+            
+        }.onAppear {
+            viewModel.playInstruction()
+        }.onChange(of: viewModel.isCorrect) { newValue in
+            viewModel.playInstruction()
         }
         
     }
-
 }
 
 //#Preview {
 //    CardActivityView(learningWord: PreviewDataResources.word, syllableOrder: .firstSyllable, onNext: { })
 //}
+

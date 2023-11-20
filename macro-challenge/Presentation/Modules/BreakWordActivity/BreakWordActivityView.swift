@@ -54,7 +54,7 @@ struct BreakWordActivityView: View {
                 VStack{
                     Spacer()
                     
-                    if isWordBroke {
+                    if viewModel.currentInstructionVoiceIndex == 6 {
                         Button {
                             onNext()
                         } label: {
