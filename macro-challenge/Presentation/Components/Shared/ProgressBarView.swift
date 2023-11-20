@@ -13,7 +13,7 @@ struct ProgressBarView: View {
     
     @State var height : CGFloat
     
-    var progress : CGFloat
+    @Binding var progress : CGFloat
     
     var body: some View {
         ZStack (alignment: .leading) {
@@ -38,8 +38,8 @@ struct ProgressBarView: View {
     }
 }
 
-struct ProgressBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgressBarView(width: 600, height: 25, progress: 1.5)
-    }
-}
+//struct ProgressBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProgressBarView(width: 600, height: 25, progress: 1.5)
+//    }
+//}
