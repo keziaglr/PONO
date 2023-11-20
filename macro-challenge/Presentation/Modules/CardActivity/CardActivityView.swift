@@ -53,6 +53,7 @@ struct CardActivityView: View {
                     ZStack (alignment: .topLeading) {
                         QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 900, height:450))
                             .frame(width: 900, height: 450)
+                            .cornerRadius(20)
                         MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
                             .padding(.top, 20)
                             .onTapGesture {
