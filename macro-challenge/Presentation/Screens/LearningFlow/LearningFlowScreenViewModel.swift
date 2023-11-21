@@ -68,7 +68,7 @@ class LearningFlowScreenViewModel: ObservableObject {
     
     private func updateProgress(_ activityIndex: Int) {
         guard activityIndex < activityOrder.count else { return }
-        progress = CGFloat(CGFloat(activityIndex) / CGFloat(activityOrder.count - 2))
+        progress = CGFloat(CGFloat(activityIndex) / CGFloat(activityOrder.count - 1))
     }
     
     private func increaseLevel() {
