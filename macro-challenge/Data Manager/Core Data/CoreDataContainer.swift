@@ -1,5 +1,5 @@
 //
-//  CoreDataService.swift
+//  CoreDataContainer.swift
 //  macro-challenge
 //
 //  Created by Ferrian Redhia Pratama on 15/11/23.
@@ -9,9 +9,9 @@ import CoreData
 
 fileprivate let containerName = "pono.coredata-container"
 
-struct CoreDataService {
+struct CoreDataContainer {
     
-    static let shared = CoreDataService()
+    static let shared = CoreDataContainer()
     
     private let container: NSPersistentContainer
     

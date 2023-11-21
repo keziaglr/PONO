@@ -10,7 +10,7 @@ import Foundation
 class ReportManager {
     
     func getPractices(completion: @escaping ([Practice]) -> Void) {
-        CoreDataService.shared.read(Practice.self) { result in
+        CoreDataContainer.shared.read(Practice.self) { result in
             switch result {
             case .success(let practices):
                 completion(practices ?? [])
@@ -21,7 +21,7 @@ class ReportManager {
     }
     
     func getPracticedWords(completion: @escaping ([PracticedWord]) -> Void) {
-        CoreDataService.shared.read(PracticedWord.self) { result in
+        CoreDataContainer.shared.read(PracticedWord.self) { result in
             switch result {
             case .success(let practicedWords):
                 completion(practicedWords ?? [])
@@ -32,7 +32,7 @@ class ReportManager {
     }
     
     func getPracticedSyllables(completion: @escaping ([PracticedSyllable]) -> Void) {
-        CoreDataService.shared.read(PracticedSyllable.self) { result in
+        CoreDataContainer.shared.read(PracticedSyllable.self) { result in
             switch result {
             case .success(let practicedSyllables):
                 completion(practicedSyllables ?? [])
@@ -49,7 +49,7 @@ class ReportManager {
         word.updatedAt = timeStamp
         syllables.forEach { $0.updatedAt = timeStamp }
         do {
-            try CoreDataService.shared.save()
+            try CoreDataContainer.shared.save()
         } catch {
             print(error.localizedDescription)
         }
@@ -61,7 +61,7 @@ class ReportManager {
             foundPracticedSyllable.increaseCardRecognition(isCorrect: isCardRecognitionCorrect)
             return foundPracticedSyllable
         } else {
-            guard let practicedSyllable = CoreDataService.shared.create(PracticedSyllable.self) else {
+            guard let practicedSyllable = CoreDataContainer.shared.create(PracticedSyllable.self) else {
                 return nil
             }
             practicedSyllable.id = syllable.id
@@ -77,7 +77,7 @@ class ReportManager {
             foundPracticedWord.increasePronunciation(isCorrect: isPronunciationCorrect)
             return foundPracticedWord
         } else {
-            guard let practicedWord = CoreDataService.shared.create(PracticedWord.self) else {
+            guard let practicedWord = CoreDataContainer.shared.create(PracticedWord.self) else {
                 return nil
             }
             practicedWord.id = word.content
@@ -88,7 +88,7 @@ class ReportManager {
     }
     
     private func createPractice(_ practicedWord: PracticedWord) -> Practice? {
-        guard let practice = CoreDataService.shared.create(Practice.self) else {
+        guard let practice = CoreDataContainer.shared.create(Practice.self) else {
             return nil
         }
         practice.id = UUID()
@@ -100,7 +100,7 @@ class ReportManager {
     private func findPracticedSyllable(_ syllable: Syllable) async -> PracticedSyllable? {
         await withCheckedContinuation { continuation in
             let predicate = NSPredicate(format: "id == %@", syllable.id as NSUUID)
-            CoreDataService.shared.read(PracticedSyllable.self, predicate: predicate) { result in
+            CoreDataContainer.shared.read(PracticedSyllable.self, predicate: predicate) { result in
                 switch result {
                 case .success(let data):
                     continuation.resume(returning: data?.first)
@@ -114,7 +114,7 @@ class ReportManager {
     private func findPracticedWord(_ word: Word) async -> PracticedWord? {
         await withCheckedContinuation { continuation in
             let predicate = NSPredicate(format: "id == %@", word.content as NSString)
-            CoreDataService.shared.read(PracticedWord.self, predicate: predicate) { result in
+            CoreDataContainer.shared.read(PracticedWord.self, predicate: predicate) { result in
                 switch result {
                 case .success(let data):
                     continuation.resume(returning: data?.first)
