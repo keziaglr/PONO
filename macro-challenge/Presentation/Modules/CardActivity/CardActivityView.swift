@@ -79,7 +79,7 @@ struct CardActivityView: View {
         .onChange(of: viewModel.isCorrect) { newValue in
             if let newValue {
                 guard let syllable = viewModel.syllable else { return }
-                onActivitySuccess(syllable, newValue)
+                onActivityDone(syllable, newValue)
             }
         }
         
