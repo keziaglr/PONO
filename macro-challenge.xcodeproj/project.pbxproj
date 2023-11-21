@@ -131,9 +131,11 @@
 		ACA0FB7C2B07A4AD0011624C /* SpeechText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB7B2B07A4AD0011624C /* SpeechText.swift */; };
 		ACA0FB7F2B07CA8F0011624C /* Blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */; };
 		ACA0FB832B098D510011624C /* BubuAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB822B098D510011624C /* BubuAnimation.swift */; };
+		ACA0FB852B0C58F00011624C /* Congratulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB842B0C58F00011624C /* Congratulation.swift */; };
+		ACA0FB892B0C685F0011624C /* EndStageActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB882B0C685F0011624C /* EndStageActivityView.swift */; };
+		ACA0FB8B2B0C6EBD0011624C /* EndStageActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB8A2B0C6EBD0011624C /* EndStageActivityViewModel.swift */; };
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
-		ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1D2AEF583400E616D7 /* NextButton.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
 		F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */; };
 		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
@@ -269,9 +271,11 @@
 		ACA0FB7B2B07A4AD0011624C /* SpeechText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechText.swift; sourceTree = "<group>"; };
 		ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Blink.mp3; sourceTree = "<group>"; };
 		ACA0FB822B098D510011624C /* BubuAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubuAnimation.swift; sourceTree = "<group>"; };
+		ACA0FB842B0C58F00011624C /* Congratulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congratulation.swift; sourceTree = "<group>"; };
+		ACA0FB882B0C685F0011624C /* EndStageActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStageActivityView.swift; sourceTree = "<group>"; };
+		ACA0FB8A2B0C6EBD0011624C /* EndStageActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStageActivityViewModel.swift; sourceTree = "<group>"; };
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
-		ACECDC1D2AEF583400E616D7 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
 		F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBarView.swift; sourceTree = "<group>"; };
 		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 		3868C1732AE77ACB00E832B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ACA0FB872B0C68480011624C /* EndStageActivity */,
 				381C33E62B0419F400BAFE69 /* CombineSyllableActivity */,
 				381C33E52B0419D600BAFE69 /* CardActivity */,
 				381C33E42B0419CA00BAFE69 /* BreakWordActivity */,
@@ -697,7 +702,6 @@
 		AC1FC1DE2AE66D250078015B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ACECDC1D2AEF583400E616D7 /* NextButton.swift */,
 				ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */,
 				ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */,
 				AC1FC1DF2AE66D9C0078015B /* SyllableLabelView.swift */,
@@ -712,6 +716,7 @@
 				74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */,
 				74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */,
 				ACA0FB822B098D510011624C /* BubuAnimation.swift */,
+				ACA0FB842B0C58F00011624C /* Congratulation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -762,6 +767,15 @@
 				ACA0FB7E2B07CA8F0011624C /* Blink.mp3 */,
 			);
 			path = MP3;
+			sourceTree = "<group>";
+		};
+		ACA0FB872B0C68480011624C /* EndStageActivity */ = {
+			isa = PBXGroup;
+			children = (
+				ACA0FB882B0C685F0011624C /* EndStageActivityView.swift */,
+				ACA0FB8A2B0C6EBD0011624C /* EndStageActivityViewModel.swift */,
+			);
+			path = EndStageActivity;
 			sourceTree = "<group>";
 		};
 		C27D934F4411AB3F99580584 /* Pods */ = {
@@ -941,15 +955,17 @@
 				ACA0FB7A2B07A48B0011624C /* SpeechRecognitionManager.swift in Sources */,
 				381C33E82B041A1700BAFE69 /* CombineSyllableActivityView.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
-				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
+				ACA0FB8B2B0C6EBD0011624C /* EndStageActivityViewModel.swift in Sources */,
 				AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				381C33DC2B03D97000BAFE69 /* AppNavigation.swift in Sources */,
 				2F75E5692B01D8B4003982C5 /* Probability.swift in Sources */,
 				ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */,
 				381C34012B045FA200BAFE69 /* PreviewDataResources.swift in Sources */,
+				ACA0FB852B0C58F00011624C /* Congratulation.swift in Sources */,
+				ACA0FB892B0C685F0011624C /* EndStageActivityView.swift in Sources */,
 				381C33FD2B041AED00BAFE69 /* LearningFlowScreenView.swift in Sources */,
 				ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,

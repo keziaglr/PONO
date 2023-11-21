@@ -26,6 +26,7 @@ class LearningFlowScreenViewModel: ObservableObject {
             .pronunciation(learningWord, .secondSyllable),
             .combineSyllable(learningWord),
             .pronunciation(learningWord, nil),
+            .endStage(learningWord)
         ]
     }
     
@@ -54,6 +55,7 @@ class LearningFlowScreenViewModel: ObservableObject {
         
         guard let nextActivity = activityOrder[safe: nextActivityIndex] else {
             // Restart the activity with higher level
+            progress = 0
             increaseLevel()
             generateWordByLevel()
             self.activeLearningActivity = activityOrder.first
@@ -66,7 +68,7 @@ class LearningFlowScreenViewModel: ObservableObject {
     
     private func updateProgress(_ activityIndex: Int) {
         guard activityIndex < activityOrder.count else { return }
-        progress = CGFloat(CGFloat(activityIndex) / CGFloat(activityOrder.count))
+        progress = CGFloat(CGFloat(activityIndex) / CGFloat(activityOrder.count - 2))
     }
     
     private func increaseLevel() {

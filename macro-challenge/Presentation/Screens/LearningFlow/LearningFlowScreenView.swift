@@ -44,6 +44,9 @@ struct LearningFlowScreenView: View {
                     case .combineSyllable(let word):
                         CombineSyllableActivityView(learningWord: word, 
                                                     onNext: viewModel.navigateToNextActivity)
+                        
+                    case .endStage(let word):
+                        EndStageActivityView(learningWord: word, onNext: viewModel.navigateToNextActivity, backHome: {switchableNavigate(.home)} )
                     }
                 }
                 
