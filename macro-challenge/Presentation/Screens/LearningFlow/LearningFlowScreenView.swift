@@ -36,11 +36,22 @@ struct LearningFlowScreenView: View {
                     case .card(let word, let syllableOrder):
                         CardActivityView(learningWord: word,
                                          syllableOrder: syllableOrder,
+                                         onActivityDone: { syllable, isCorrect in
+                            viewModel.logSyllableCardPractice(syllable, isCorrect: isCorrect)
+                        },
                                          onNext: viewModel.navigateToNextActivity)
                         
                     case .pronunciation(let word, let syllableOrder):
                         PronunciationActivityView(learningWord: word,
-                                                  syllableOrder: syllableOrder, onNext: viewModel.navigateToNextActivity)
+                                                  syllableOrder: syllableOrder,
+                                                  onActivityDone: { syllable, isCorrect in
+                            if let syllable {
+                                viewModel.logSyllablePronunciationPractice(syllable, isCorrect: isCorrect)
+                            } else {
+                                viewModel.logWordPronunciationPractice(word, isCorrect: isCorrect)
+                            }
+                        },
+                                                  onNext: viewModel.navigateToNextActivity)
                         
                     case .combineSyllable(let word):
                         CombineSyllableActivityView(learningWord: word, 
