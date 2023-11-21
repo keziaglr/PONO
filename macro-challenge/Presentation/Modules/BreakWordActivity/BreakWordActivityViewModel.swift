@@ -52,16 +52,18 @@ class BreakWordActivityViewModel: ObservableObject {
             
             return
         }
-        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     
     private func playInstruction(_ instruction: Instruction) {
+        self.currentInstruction = instruction
         let instructionVoices = instruction.voices
         audioManager.playQueue(instructionVoices, changeHandler: instructionVoiceChangeHandler)
     }
     
     private func instructionVoiceChangeHandler(_ queueCount: Int, _ newIndex: Int) {
-        currentInstructionVoiceIndex = newIndex
+        DispatchQueue.main.async {
+            self.currentInstructionVoiceIndex = newIndex
+        }
     }
 }

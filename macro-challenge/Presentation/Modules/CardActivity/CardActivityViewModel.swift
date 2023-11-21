@@ -17,18 +17,20 @@ class CardActivityViewModel: ObservableObject {
         syllableOrder == .firstSyllable ? learningWord.syllables[safe: 0] : syllableOrder == .secondSyllable ? learningWord.syllables[safe: 1] : nil
     }
     
-    @Published var isCorrect: Bool?
+    @Published var isCorrect: Bool? 
     @Published var cameraPermission: Permission = .idle
     @Published var errorMessage: String?
     @Published var currentInstruction: Instruction?
     @Published var currentInstructionVoiceIndex: Int = 0
+    @Published var scannedCard: Syllable?
     
     private let syllables: [Syllable]
     private var instructions: [Instruction] {
         guard let syllable = syllable else { return [] }
         return [
             VoiceResources.cardActivityOpeningInstruction(syllable),
-            VoiceResources.cardActivityClosingInstruction(syllable)
+            VoiceResources.cardActivityClosingInstruction(syllable),
+            VoiceResources.cardActivityResultInstruction(isCorrect: isCorrect ?? true)
         ]
     }
     
@@ -45,7 +47,6 @@ class CardActivityViewModel: ObservableObject {
         self.qrScannerManager = QRScannerManager()
         self.qrScannerManager.delegate = self
         qrScannerManager.requestCameraAuthorizationIfNeeded { [weak self] permission in
-            self?.playInstruction()
             if permission == .approved {
                 self?.startScanning()
             }
@@ -77,17 +78,19 @@ class CardActivityViewModel: ObservableObject {
             
             return
         }
-        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     
     private func playInstruction(_ instruction: Instruction) {
+        self.currentInstruction = instruction
         let instructionVoices = instruction.voices
         audioManager.playQueue(instructionVoices, changeHandler: instructionVoiceChangeHandler)
     }
     
     private func instructionVoiceChangeHandler(_ queueCount: Int, _ newIndex: Int) {
-        currentInstructionVoiceIndex = newIndex
+        DispatchQueue.main.async {
+            self.currentInstructionVoiceIndex = newIndex
+        }
     }
     
     func startScanning() {
@@ -106,7 +109,9 @@ class CardActivityViewModel: ObservableObject {
     }
     
     func isScannedCardCorrect(_ scannedCardSyllable: Syllable) -> Bool {
-        return syllable?.id == scannedCardSyllable.id
+        let isSame = syllable?.id == scannedCardSyllable.id
+        // set to core data
+        return isSame
     }
 }
 
@@ -115,6 +120,7 @@ extension CardActivityViewModel: QRScannerDelegate {
     func getQrScannedDataDelegate(scannedData: String) {
         if let foundSyllable = syllables.first(where: { $0.id == UUID(uuidString: scannedData) }) {
             isCorrect = isScannedCardCorrect(foundSyllable)
+            self.scannedCard = foundSyllable
             stopScanning()
             playInstruction()
         }

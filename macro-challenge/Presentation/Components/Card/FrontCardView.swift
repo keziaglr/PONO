@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct FrontCardView: View {
-    var syllable: String
+    var syllable: Syllable
     var cardVowelStyle: CardVowelStyleEnum
     var showFrameBordered = true
     
     private var backgroundColor = Color.white
     private var cover_top_img = ""
     private var cover_bottom_img = ""
+    @Binding var degree : Double
     
     init(
-        syllable: String,
+        syllable: Syllable,
         cardVowelStyle: CardVowelStyleEnum,
-        showFrameBordered: Bool = true
+        showFrameBordered: Bool = true,
+        degree: Binding<Double>
     ) {
         self.syllable = syllable
         self.cardVowelStyle = cardVowelStyle
         self.showFrameBordered = showFrameBordered
+        self._degree = degree
         setupValue()
     }
     
@@ -52,11 +55,11 @@ struct FrontCardView: View {
                         style: StrokeStyle(lineWidth: 3, dash: [20]))
                     .frame(width: 185, height: 270)
             }
-            Text(syllable)
+            Text(syllable.content)
                 .font(
                     .custom(FontConst.QUICKSAND_BOLD, size: 75)
                 ).foregroundColor(Color.white)
-        }
+        }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
     
     mutating func setupValue() {
@@ -85,8 +88,8 @@ struct FrontCardView: View {
     }
 }
 
-struct FrontCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        FrontCardView(syllable: "mu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL)
-    }
-}
+//struct FrontCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FrontCardView(syllable: "bu", cardVowelStyle: CardVowelStyleEnum.A_VOWEL, degree: <#Binding<Double>#>)
+//    }
+//}
