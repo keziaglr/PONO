@@ -19,8 +19,8 @@ class LearningFlowScreenViewModel: ObservableObject {
     private var activityOrder: [LearningActivity] {
         guard let learningWord else { return [] }
         return [
-//            .breakWord(learningWord),
-//            .card(learningWord, .firstSyllable),
+            .breakWord(learningWord),
+            .card(learningWord, .firstSyllable),
             .pronunciation(learningWord, .firstSyllable),
             .card(learningWord, .secondSyllable),
             .pronunciation(learningWord, .secondSyllable),
