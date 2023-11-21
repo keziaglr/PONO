@@ -59,7 +59,7 @@ class PronunciationActivityViewModel: ObservableObject {
         self.learningWord = learningWord
         self.syllableOrder = syllableOrder
         
-        audioManager = AudioManager()
+        audioManager = AudioManager.shared
         recordingManager = RecordingManager.shared
         soundClassifier = SoundClassifier(modelFileName: "sound_classification", delegate: self)
     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EndStageActivityView: View {
     @ObservedObject private var viewModel: EndStageActivityViewModel
+    @State private var buttonTapped = false
     let onNext: () -> Void
     let backHome: () -> Void
     
@@ -26,11 +27,13 @@ struct EndStageActivityView: View {
             Spacer()
             HStack {
                 Button {
+                    buttonTapped.toggle()
                     onNext()
                 } label: {
                     Image(systemName: "arrow.right")
                 }
                 .buttonStyle(PonoButtonStyle(variant: .primary))
+                .disabled(buttonTapped)
                 
                 Button {
                     backHome()

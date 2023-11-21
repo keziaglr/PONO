@@ -61,7 +61,7 @@ struct CardActivityView: View {
                     PreviewCardView(viewModel: viewModel, onNext: {
                         onNext()
                     }, onRetry: {
-                        viewModel.isCorrect = nil
+                        isCorrect = nil
                         viewModel.startScanning()
                     }, syllable: viewModel.syllableOrder == .firstSyllable ? viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma") : viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma"))
                 }
@@ -71,7 +71,7 @@ struct CardActivityView: View {
             
         }.onAppear {
             viewModel.playInstruction()
-        }.onChange(of: viewModel.isCorrect) { newValue in
+        }.onChange(of: isCorrect) { newValue in
             viewModel.playInstruction()
         }
         
