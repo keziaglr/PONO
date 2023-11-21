@@ -122,6 +122,17 @@
 		ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */; };
 		ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */; };
+		F94464252B05B4D9002BEF52 /* LearnedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464242B05B4D9002BEF52 /* LearnedWords.swift */; };
+		F94464272B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */; };
+		F94464292B05C8B2002BEF52 /* LearnedSyllables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */; };
+		F944642C2B05C995002BEF52 /* ReportScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944642B2B05C995002BEF52 /* ReportScreenView.swift */; };
+		F944642E2B05CF85002BEF52 /* ReportNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944642D2B05CF85002BEF52 /* ReportNavigation.swift */; };
+		F94464302B0659BE002BEF52 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944642F2B0659BE002BEF52 /* ReportViewModel.swift */; };
+		F94464322B074AE5002BEF52 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464312B074AE5002BEF52 /* ChartView.swift */; };
+		F99E30612B0BD97B00F221A1 /* DetailReportCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E30602B0BD97B00F221A1 /* DetailReportCardView.swift */; };
+		F9A7A2832B0A4C360053F0A7 /* NoSessionStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2822B0A4C360053F0A7 /* NoSessionStartedView.swift */; };
+		F9A7A2872B0B1C7F0053F0A7 /* ReportLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */; };
+		F9A7A2892B0B39F20053F0A7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2882B0B39F20053F0A7 /* RatingView.swift */; };
 		F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */; };
 		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
 /* End PBXBuildFile section */
@@ -243,6 +254,17 @@
 		ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActivity.swift; sourceTree = "<group>"; };
 		ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordActivity.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudio.swift; sourceTree = "<group>"; };
+		F94464242B05B4D9002BEF52 /* LearnedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedWords.swift; sourceTree = "<group>"; };
+		F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardWordSyllableLabel.swift; sourceTree = "<group>"; };
+		F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedSyllables.swift; sourceTree = "<group>"; };
+		F944642B2B05C995002BEF52 /* ReportScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportScreenView.swift; sourceTree = "<group>"; };
+		F944642D2B05CF85002BEF52 /* ReportNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportNavigation.swift; sourceTree = "<group>"; };
+		F944642F2B0659BE002BEF52 /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
+		F94464312B074AE5002BEF52 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F99E30602B0BD97B00F221A1 /* DetailReportCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReportCardView.swift; sourceTree = "<group>"; };
+		F9A7A2822B0A4C360053F0A7 /* NoSessionStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSessionStartedView.swift; sourceTree = "<group>"; };
+		F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLabelStyle.swift; sourceTree = "<group>"; };
+		F9A7A2882B0B39F20053F0A7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBar.swift; sourceTree = "<group>"; };
 		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +367,7 @@
 		3868C1752AE77ADC00E832B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F944642A2B05C984002BEF52 /* Report */,
 				3868C1782AE77AFC00E832B0 /* Onboarding */,
 				3868C1792AE77B0400E832B0 /* Home */,
 				3868C17A2AE77B0800E832B0 /* Flow */,
@@ -612,6 +635,15 @@
 				F9C16B842AF7C2190099DE09 /* RecordProgressBar.swift */,
 				74695A7B2AF7E78F00FFBB6F /* BaseSyllableView.swift */,
 				74695A7D2AF7EA5C00FFBB6F /* MergedSyllable.swift */,
+				F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */,
+				F944642D2B05CF85002BEF52 /* ReportNavigation.swift */,
+				F94464242B05B4D9002BEF52 /* LearnedWords.swift */,
+				F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */,
+				F9A7A2822B0A4C360053F0A7 /* NoSessionStartedView.swift */,
+				F9A7A2882B0B39F20053F0A7 /* RatingView.swift */,
+				F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */,
+				F99E30602B0BD97B00F221A1 /* DetailReportCardView.swift */,
+				F94464312B074AE5002BEF52 /* ChartView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -668,6 +700,15 @@
 				ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */,
 			);
 			path = "Record Activity";
+			sourceTree = "<group>";
+		};
+		F944642A2B05C984002BEF52 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				F944642B2B05C995002BEF52 /* ReportScreenView.swift */,
+				F944642F2B0659BE002BEF52 /* ReportViewModel.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -801,6 +842,7 @@
 				ACE704F62AF9FB07009385BB /* WordList.swift in Sources */,
 				ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */,
 				AC427D762AEB70D00012E00C /* ProgressBarView.swift in Sources */,
+				F94464252B05B4D9002BEF52 /* LearnedWords.swift in Sources */,
 				74695A7C2AF7E78F00FFBB6F /* BaseSyllableView.swift in Sources */,
 				ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */,
 				2FF694A72AE8C65D0085393F /* Date+Extension.swift in Sources */,
@@ -808,14 +850,19 @@
 				AC427D782AEBC4AE0012E00C /* InstructionView.swift in Sources */,
 				AC1FC1E62AE67A810078015B /* Word.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
+				F9A7A2892B0B39F20053F0A7 /* RatingView.swift in Sources */,
 				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
 				AC0BAEA12AF53F40009256A2 /* BreakWordViewModel.swift in Sources */,
+				F944642C2B05C995002BEF52 /* ReportScreenView.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
 				3868C15F2AE61ED100E832B0 /* ColorString.swift in Sources */,
+				F99E30612B0BD97B00F221A1 /* DetailReportCardView.swift in Sources */,
 				AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
 				ACECDC262AEF7CBE00E616D7 /* RecordingAudio.swift in Sources */,
 				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
+				F94464272B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift in Sources */,
+				F9A7A2872B0B1C7F0053F0A7 /* ReportLabelStyle.swift in Sources */,
 				ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */,
 				74FB08D62AE9A9C6003CBE43 /* PermissionEnum.swift in Sources */,
 				F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */,
@@ -830,6 +877,8 @@
 				74FB08DA2AE9AB04003CBE43 /* ScannerView.swift in Sources */,
 				AC427D7C2AEBCF4E0012E00C /* PonoButtonStyle.swift in Sources */,
 				3868C17C2AE77B2000E832B0 /* HomeScreenView.swift in Sources */,
+				F944642E2B05CF85002BEF52 /* ReportNavigation.swift in Sources */,
+				F9A7A2832B0A4C360053F0A7 /* NoSessionStartedView.swift in Sources */,
 				74FB08DC2AE9AB8F003CBE43 /* ScannerViewModel.swift in Sources */,
 				3868C1682AE6256900E832B0 /* View+Typography.swift in Sources */,
 				74FB08E72AE9E26B003CBE43 /* ImageConst.swift in Sources */,
@@ -846,13 +895,16 @@
 				AC1FC1E42AE675590078015B /* BreakWordActivity.swift in Sources */,
 				AC1FC1E02AE66D9C0078015B /* SyllableLabel.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
+				F94464322B074AE5002BEF52 /* ChartView.swift in Sources */,
 				74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */,
 				ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */,
 				74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */,
+				F94464302B0659BE002BEF52 /* ReportViewModel.swift in Sources */,
 				F9C16B852AF7C2190099DE09 /* RecordProgressBar.swift in Sources */,
 				74FB08E32AE9D67B003CBE43 /* Color+Extension.swift in Sources */,
 				3868C1662AE622B800E832B0 /* Typography.swift in Sources */,
 				3868C1642AE621C900E832B0 /* CGFloat+Spacings.swift in Sources */,
+				F94464292B05C8B2002BEF52 /* LearnedSyllables.swift in Sources */,
 				74695A7E2AF7EA5C00FFBB6F /* MergedSyllable.swift in Sources */,
 				7429B7642AEEED7100BF7F93 /* String+Extension.swift in Sources */,
 			);
@@ -995,7 +1047,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1027,7 +1079,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
