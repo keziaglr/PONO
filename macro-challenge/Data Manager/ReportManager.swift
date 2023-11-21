@@ -9,35 +9,41 @@ import Foundation
 
 class ReportManager {
     
-    func getPractices(completion: @escaping ([Practice]) -> Void) {
-        CoreDataContainer.shared.read(Practice.self) { result in
-            switch result {
-            case .success(let practices):
-                completion(practices ?? [])
-            case .failure(_):
-                completion([])
+    func getPractices() async -> [Practice] {
+        await withCheckedContinuation { continuation in
+            CoreDataContainer.shared.read(Practice.self) { result in
+                switch result {
+                case .success(let practices):
+                    continuation.resume(returning: practices ?? [])
+                case .failure(_):
+                    continuation.resume(returning: [])
+                }
             }
         }
     }
     
-    func getPracticedWords(completion: @escaping ([PracticedWord]) -> Void) {
-        CoreDataContainer.shared.read(PracticedWord.self) { result in
-            switch result {
-            case .success(let practicedWords):
-                completion(practicedWords ?? [])
-            case .failure(_):
-                completion([])
+    func getPracticedWords() async -> [PracticedWord] {
+        await withCheckedContinuation { continuation in
+            CoreDataContainer.shared.read(PracticedWord.self) { result in
+                switch result {
+                case .success(let practicedWords):
+                    continuation.resume(returning: practicedWords ?? [])
+                case .failure(_):
+                    continuation.resume(returning: [])
+                }
             }
         }
     }
     
-    func getPracticedSyllables(completion: @escaping ([PracticedSyllable]) -> Void) {
-        CoreDataContainer.shared.read(PracticedSyllable.self) { result in
-            switch result {
-            case .success(let practicedSyllables):
-                completion(practicedSyllables ?? [])
-            case .failure(_):
-                completion([])
+    func getPracticedSyllables() async -> [PracticedSyllable] {
+        await withCheckedContinuation { continuation in
+            CoreDataContainer.shared.read(PracticedSyllable.self) { result in
+                switch result {
+                case .success(let practicedSyllables):
+                    continuation.resume(returning: practicedSyllables ?? [])
+                case .failure(_):
+                    continuation.resume(returning: [])
+                }
             }
         }
     }
@@ -57,16 +63,16 @@ class ReportManager {
     
     func logPracticedSyllable(_ syllable: Syllable, isPronunciationCorrect: Bool, isCardRecognitionCorrect: Bool) async -> PracticedSyllable? {
         if let foundPracticedSyllable = await findPracticedSyllable(syllable) {
-            foundPracticedSyllable.increasePronunciation(isCorrect: isPronunciationCorrect)
-            foundPracticedSyllable.increaseCardRecognition(isCorrect: isCardRecognitionCorrect)
+            foundPracticedSyllable.increasePronunciationCount(isCorrect: isPronunciationCorrect)
+            foundPracticedSyllable.increaseCardRecognitionCount(isCorrect: isCardRecognitionCorrect)
             return foundPracticedSyllable
         } else {
             guard let practicedSyllable = CoreDataContainer.shared.create(PracticedSyllable.self) else {
                 return nil
             }
             practicedSyllable.id = syllable.id
-            practicedSyllable.increasePronunciation(isCorrect: isPronunciationCorrect)
-            practicedSyllable.increaseCardRecognition(isCorrect: isCardRecognitionCorrect)
+            practicedSyllable.increasePronunciationCount(isCorrect: isPronunciationCorrect)
+            practicedSyllable.increaseCardRecognitionCount(isCorrect: isCardRecognitionCorrect)
             practicedSyllable.createdAt = Date()
             return practicedSyllable
         }
@@ -74,14 +80,14 @@ class ReportManager {
     
     func logPracticedWord(_ word: Word, isPronunciationCorrect: Bool) async -> PracticedWord? {
         if let foundPracticedWord = await findPracticedWord(word) {
-            foundPracticedWord.increasePronunciation(isCorrect: isPronunciationCorrect)
+            foundPracticedWord.increasePronunciationCount(isCorrect: isPronunciationCorrect)
             return foundPracticedWord
         } else {
             guard let practicedWord = CoreDataContainer.shared.create(PracticedWord.self) else {
                 return nil
             }
             practicedWord.id = word.content
-            practicedWord.increasePronunciation(isCorrect: isPronunciationCorrect)
+            practicedWord.increasePronunciationCount(isCorrect: isPronunciationCorrect)
             practicedWord.createdAt = Date()
             return practicedWord
         }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension PracticedSyllable {
-    func increasePronunciation(isCorrect: Bool) {
+    func increasePronunciationCount(isCorrect: Bool) {
         if isCorrect {
             countPronunciationCorrect = countPronunciationCorrect + 1
         } else {
@@ -16,7 +16,7 @@ extension PracticedSyllable {
         }
     }
     
-    func increaseCardRecognition(isCorrect: Bool) {
+    func increaseCardRecognitionCount(isCorrect: Bool) {
         if isCorrect {
             countCardRecognizeCorrect = countCardRecognizeCorrect + 1
         } else {

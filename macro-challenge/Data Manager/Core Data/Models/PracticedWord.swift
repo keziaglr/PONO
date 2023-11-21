@@ -8,7 +8,7 @@
 import Foundation
 
 extension PracticedWord {
-    func increasePronunciation(isCorrect: Bool) {
+    func increasePronunciationCount(isCorrect: Bool) {
         if isCorrect {
             countPronunciationCorrect = countPronunciationCorrect + 1
         } else {
