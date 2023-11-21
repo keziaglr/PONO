@@ -132,14 +132,20 @@ class PronunciationActivityViewModel: ObservableObject {
         print(text)
         if !text.isEmpty{
             if (text.contains(learningWord.content) || learningWord.content.contains(text)) && syllableOrder == nil{
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
-                ContentManager.shared.playAudio("correct-answer", type: "wav")
             }else if (text.contains(syllable?.content ?? "") || ((syllable?.content.contains(text)) != nil)){
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
-                ContentManager.shared.playAudio("correct-answer", type: "wav")
             }
         }
         
+    }
+    
+    func playSoundCorrect() {
+        if pronunciationStatus != .correct{
+            ContentManager.shared.playAudio("correct-answer", type: "wav")
+        }
     }
     
     func retryVoiceRecognitionAndRecording() {
@@ -221,8 +227,8 @@ extension PronunciationActivityViewModel: SoundClassifierDelegate {
             guard let self else { return }
             if self.isAudioRecordingAndRecognizing,
                self.isAnyVoiceCorrect(probabilityModels) {
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
-                ContentManager.shared.playAudio("correct-answer", type: "wav")
                 self.stopVoiceRecognitionAndRecording()
             }
         }

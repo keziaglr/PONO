@@ -74,11 +74,19 @@ struct CombineSyllableActivityView: View {
                         .opacity(show ? 0 : 1)
                         .animation(.easeInOut, value: show)
                         .onChange(of: [translation, translation2]) { newValue in
-                            if dragOffset[1] < -height/2 && dragOffset[0] > height/2{
+                            if dragOffset[1] < -height/2 && dragOffset[0] > height/2 {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     show = false
                                     isSyllableCombined = true
                                 }
+                            }
+                            
+                            if dragOffset[1] < -height/2 {
+                                ContentManager.shared.playAudio("blend-word-2", type: "wav")
+                            }
+                            
+                            if dragOffset[0] > height/2 {
+                                ContentManager.shared.playAudio("blend-word", type: "wav")
                             }
                         }
                     
@@ -98,8 +106,8 @@ struct CombineSyllableActivityView: View {
                                 }
                                 .onEnded { value in
                                     if show {
-                                        ContentManager.shared.playAudio("blend-word", type: "wav")
                                         dragOffset[0] += value.translation.width
+                                        ContentManager.shared.playAudio("break-word", type: "wav")
                                     }
                                 }
                         )
@@ -119,8 +127,8 @@ struct CombineSyllableActivityView: View {
                                 }
                                 .onEnded { value in
                                     if show {
-                                        ContentManager.shared.playAudio("blend-word", type: "wav")
                                         dragOffset[1] += value.translation.width
+                                        ContentManager.shared.playAudio("break-word", type: "wav")
                                     }
                                 }
                         )
