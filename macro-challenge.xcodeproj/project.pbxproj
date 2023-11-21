@@ -135,6 +135,12 @@
 		ACA0FB8B2B0C6EBD0011624C /* EndStageActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0FB8A2B0C6EBD0011624C /* EndStageActivityViewModel.swift */; };
 		ACA0FB8F2B0C8D510011624C /* pe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB8E2B0C8D510011624C /* pe.m4a */; };
 		ACA0FB952B0C8DF90011624C /* ba.m4a in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB942B0C8DF90011624C /* ba.m4a */; };
+		ACA0FB982B0C96D50011624C /* button-click.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB972B0C96D50011624C /* button-click.wav */; };
+		ACA0FB9E2B0C99990011624C /* blend-word.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB992B0C99990011624C /* blend-word.wav */; };
+		ACA0FB9F2B0C99990011624C /* congrats.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB9A2B0C99990011624C /* congrats.wav */; };
+		ACA0FBA02B0C99990011624C /* correct-answer.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB9B2B0C99990011624C /* correct-answer.wav */; };
+		ACA0FBA12B0C99990011624C /* flip-card.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB9C2B0C99990011624C /* flip-card.wav */; };
+		ACA0FBA22B0C99990011624C /* break-word.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FB9D2B0C99990011624C /* break-word.wav */; };
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
@@ -276,6 +282,12 @@
 		ACA0FB8A2B0C6EBD0011624C /* EndStageActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndStageActivityViewModel.swift; sourceTree = "<group>"; };
 		ACA0FB8E2B0C8D510011624C /* pe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pe.m4a; sourceTree = "<group>"; };
 		ACA0FB942B0C8DF90011624C /* ba.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = ba.m4a; sourceTree = "<group>"; };
+		ACA0FB972B0C96D50011624C /* button-click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button-click.wav"; sourceTree = "<group>"; };
+		ACA0FB992B0C99990011624C /* blend-word.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "blend-word.wav"; sourceTree = "<group>"; };
+		ACA0FB9A2B0C99990011624C /* congrats.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = congrats.wav; sourceTree = "<group>"; };
+		ACA0FB9B2B0C99990011624C /* correct-answer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "correct-answer.wav"; sourceTree = "<group>"; };
+		ACA0FB9C2B0C99990011624C /* flip-card.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "flip-card.wav"; sourceTree = "<group>"; };
+		ACA0FB9D2B0C99990011624C /* break-word.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "break-word.wav"; sourceTree = "<group>"; };
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
@@ -648,6 +660,7 @@
 		AC1FC1D02AE64C0B0078015B /* Data Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACA0FB962B0C96CC0011624C /* WAV */,
 				ACA0FB7D2B07CA7F0011624C /* MP3 */,
 				2FE992352B0742C70073B3BC /* JSON */,
 				74FB08872AE9A13D003CBE43 /* M4A */,
@@ -781,6 +794,19 @@
 			path = EndStageActivity;
 			sourceTree = "<group>";
 		};
+		ACA0FB962B0C96CC0011624C /* WAV */ = {
+			isa = PBXGroup;
+			children = (
+				ACA0FB992B0C99990011624C /* blend-word.wav */,
+				ACA0FB9D2B0C99990011624C /* break-word.wav */,
+				ACA0FB9A2B0C99990011624C /* congrats.wav */,
+				ACA0FB9B2B0C99990011624C /* correct-answer.wav */,
+				ACA0FB9C2B0C99990011624C /* flip-card.wav */,
+				ACA0FB972B0C96D50011624C /* button-click.wav */,
+			);
+			path = WAV;
+			sourceTree = "<group>";
+		};
 		C27D934F4411AB3F99580584 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,8 +902,11 @@
 				74FB08992AE9A1A3003CBE43 /* u.m4a in Resources */,
 				AC0BAE942AF53F16009256A2 /* mi.m4a in Resources */,
 				AC1FC1D22AE64C300078015B /* syllables.json in Resources */,
+				ACA0FBA12B0C99990011624C /* flip-card.wav in Resources */,
+				ACA0FB982B0C96D50011624C /* button-click.wav in Resources */,
 				AC0BAE7E2AF53EDE009256A2 /* before_card(2).m4a in Resources */,
 				AC0BAE9D2AF53F16009256A2 /* po.m4a in Resources */,
+				ACA0FB9E2B0C99990011624C /* blend-word.wav in Resources */,
 				AC0BAECA2AF5409C009256A2 /* da.m4a in Resources */,
 				AC0BAE7F2AF53EDE009256A2 /* after_card(2-correct).m4a in Resources */,
 				3868C15A2AE61C8E00E832B0 /* Quicksand-Medium.ttf in Resources */,
@@ -891,11 +920,13 @@
 				ACA0FB8F2B0C8D510011624C /* pe.m4a in Resources */,
 				AC0BAE732AF53EB3009256A2 /* after_break-word(2).m4a in Resources */,
 				74FB08952AE9A1A3003CBE43 /* p.m4a in Resources */,
+				ACA0FBA22B0C99990011624C /* break-word.wav in Resources */,
 				AC0BAE962AF53F16009256A2 /* mo.m4a in Resources */,
 				AC0BAE9E2AF53F16009256A2 /* mu.m4a in Resources */,
 				74FB089F2AE9A1A3003CBE43 /* o.m4a in Resources */,
 				AC0BAEC92AF5409C009256A2 /* du.m4a in Resources */,
 				AC50DC302ACE5CE100B9FE1B /* Assets.xcassets in Resources */,
+				ACA0FB9F2B0C99990011624C /* congrats.wav in Resources */,
 				74FB08982AE9A1A3003CBE43 /* d.m4a in Resources */,
 				AC0BAE742AF53EB3009256A2 /* after_break-word(1).m4a in Resources */,
 				AC0BAECC2AF5409C009256A2 /* di.m4a in Resources */,
@@ -910,6 +941,7 @@
 				74FB089A2AE9A1A3003CBE43 /* b.m4a in Resources */,
 				AC0BAE972AF53F16009256A2 /* pa.m4a in Resources */,
 				AC0BAE9B2AF53F16009256A2 /* na.m4a in Resources */,
+				ACA0FBA02B0C99990011624C /* correct-answer.wav in Resources */,
 				AC0BAE662AF53E31009256A2 /* before_pronunciation.m4a in Resources */,
 				AC0BAEC42AF5409C009256A2 /* do.m4a in Resources */,
 			);

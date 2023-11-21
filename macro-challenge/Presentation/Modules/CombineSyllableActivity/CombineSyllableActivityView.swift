@@ -98,6 +98,7 @@ struct CombineSyllableActivityView: View {
                                 }
                                 .onEnded { value in
                                     if show {
+                                        ContentManager.shared.playAudio("blend-word", type: "wav")
                                         dragOffset[0] += value.translation.width
                                     }
                                 }
@@ -118,6 +119,7 @@ struct CombineSyllableActivityView: View {
                                 }
                                 .onEnded { value in
                                     if show {
+                                        ContentManager.shared.playAudio("blend-word", type: "wav")
                                         dragOffset[1] += value.translation.width
                                     }
                                 }

@@ -74,6 +74,7 @@ struct PreviewCardView: View {
                 backDegree = 90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                ContentManager.shared.playAudio("flip-card", type: "wav")
                 frontDegree = 0
             }
         } else {
@@ -81,6 +82,7 @@ struct PreviewCardView: View {
                 frontDegree = -90
             }
             withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)){
+                ContentManager.shared.playAudio("flip-card", type: "wav")
                 backDegree = 0
             }
         }

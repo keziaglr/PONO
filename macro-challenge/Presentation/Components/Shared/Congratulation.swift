@@ -49,6 +49,9 @@ struct Congratulation: View {
         .frame(width: 800, height: 350)
         .cornerRadius(40)
         .background(Color.white)
+        .onAppear{
+            ContentManager.shared.playAudio("congrats", type: "wav")
+        }
     }
 }
 

@@ -134,6 +134,7 @@ struct BreakWordActivityView: View {
                 ).simultaneousGesture(
                     DragGesture(minimumDistance: height/2)
                         .onChanged({ (value) in
+                            ContentManager.shared.playAudio("break-word", type: "wav")
                             isWordBroke = true
                         })
                 )

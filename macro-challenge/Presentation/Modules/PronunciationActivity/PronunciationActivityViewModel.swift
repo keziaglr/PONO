@@ -133,8 +133,10 @@ class PronunciationActivityViewModel: ObservableObject {
         if !text.isEmpty{
             if (text.contains(learningWord.content) || learningWord.content.contains(text)) && syllableOrder == nil{
                 self.pronunciationStatus = .correct
+                ContentManager.shared.playAudio("correct-answer", type: "wav")
             }else if (text.contains(syllable?.content ?? "") || ((syllable?.content.contains(text)) != nil)){
                 self.pronunciationStatus = .correct
+                ContentManager.shared.playAudio("correct-answer", type: "wav")
             }
         }
         
@@ -220,6 +222,7 @@ extension PronunciationActivityViewModel: SoundClassifierDelegate {
             if self.isAudioRecordingAndRecognizing,
                self.isAnyVoiceCorrect(probabilityModels) {
                 self.pronunciationStatus = .correct
+                ContentManager.shared.playAudio("correct-answer", type: "wav")
                 self.stopVoiceRecognitionAndRecording()
             }
         }
