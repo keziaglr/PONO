@@ -127,7 +127,7 @@ class LearningFlowScreenViewModel: ObservableObject {
         }
     }
     
-    private func recordActivity() {
+    func recordActivity() {
         guard let practicedWordRecord, let practicedSyllableRecords else { return }
         Task {
             guard let practicedWord = await reportManager.logPracticedWord(practicedWordRecord.word, isPronunciationCorrect: practicedWordRecord.isPronunciationCorrect ?? false) else { return }
@@ -141,6 +141,9 @@ class LearningFlowScreenViewModel: ObservableObject {
             }
             
             reportManager.recordPractice(word: practicedWord, syllables: practicedSyllables)
+            
+            self.practicedWordRecord = nil
+            self.practicedSyllableRecords = nil
         }
     }
     

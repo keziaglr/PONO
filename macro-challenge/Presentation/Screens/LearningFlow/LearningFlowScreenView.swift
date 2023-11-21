@@ -64,6 +64,14 @@ struct LearningFlowScreenView: View {
             }
         }
         .background(Color.Blue3)
+        .onChange(of: viewModel.activeLearningActivity) { newValue in
+            switch newValue {
+            case .endStage(_):
+                viewModel.recordActivity()
+            default:
+                break
+            }
+        }
     }
     
     func LearningProgressView(onClose: @escaping () -> Void) -> some View {
