@@ -24,8 +24,7 @@ struct LearningFlowScreenView: View {
                 .scaledToFit()
             
             VStack {
-                LearningProgressView(progress: viewModel.progress,
-                                     onClose: { switchableNavigate(.home) })
+                LearningProgressView(onClose: { switchableNavigate(.home) })
                 if let activeLearningActivity = viewModel.activeLearningActivity {
                     switch activeLearningActivity {
                         
@@ -56,6 +55,9 @@ struct LearningFlowScreenView: View {
                     case .combineSyllable(let word):
                         CombineSyllableActivityView(learningWord: word, 
                                                     onNext: viewModel.navigateToNextActivity)
+                        
+                    case .endStage(let word):
+                        EndStageActivityView(learningWord: word, onNext: viewModel.navigateToNextActivity, backHome: {switchableNavigate(.home)} )
                     }
                 }
                 
@@ -64,7 +66,7 @@ struct LearningFlowScreenView: View {
         .background(Color.Blue3)
     }
     
-    func LearningProgressView(progress: CGFloat, onClose: @escaping () -> Void) -> some View {
+    func LearningProgressView(onClose: @escaping () -> Void) -> some View {
         
         let screenWidth = CGFloat(UIScreen.main.bounds.width)
         let screenHeight = CGFloat(UIScreen.main.bounds.height)
@@ -80,7 +82,7 @@ struct LearningFlowScreenView: View {
                         onClose()
                     }
                 
-                ProgressBarView(width: screenWidth / 1.1, height: screenHeight / 25, progress: progress)
+                ProgressBarView(width: screenWidth / 1.1, height: screenHeight / 25, progress: $viewModel.progress)
                     
             }
             .padding()

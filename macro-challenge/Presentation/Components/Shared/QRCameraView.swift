@@ -9,8 +9,8 @@ import SwiftUI
 import AVKit
 
 struct QRCameraView: UIViewRepresentable {
-    var cameraSession: AVCaptureSession
-    var frameSize: CGSize
+    @State var cameraSession: AVCaptureSession
+    @State var frameSize: CGSize
     
     func makeUIView(context: Context) -> UIView {
         let view = UIViewType(frame: CGRect(origin: .zero, size: frameSize))

@@ -25,10 +25,14 @@ struct PonoButtonStyle: ButtonStyle {
             .background() {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(variant.backgroundColor)
-                    .shadow(color: configuration.isPressed ? .clear : variant.shadow, radius: 0, x: 0, y: 8)
+                    .shadow(color: configuration.isPressed ? pressBtn() : variant.shadow, radius: 0, x: 0, y: 8)
             }
             .offset(y: configuration.isPressed ? 8 : 0)
-            
+    }
+    
+    func pressBtn() -> Color {
+        ContentManager.shared.playAudio("button-click", type: "wav")
+        return .clear
     }
     
     enum Variant {

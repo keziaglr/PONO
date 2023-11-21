@@ -48,12 +48,25 @@ struct HomeScreenView: View {
                     TabView{
                         ActivityCharacter(activity: 1)
                             .onTapGesture {
+                                ContentManager.shared.playAudio("session-available", type: "wav")
                                 switchableNavigate(.learningActivity)
                             }
                         ActivityCharacter(activity: 2)
+                            .onTapGesture {
+                                ContentManager.shared.playAudio("session-unavailable", type: "wav")
+                            }
                         ActivityCharacter(activity: 3)
+                            .onTapGesture {
+                                ContentManager.shared.playAudio("session-unavailable", type: "wav")
+                            }
                         ActivityCharacter(activity: 4)
+                            .onTapGesture {
+                                ContentManager.shared.playAudio("session-unavailable", type: "wav")
+                            }
                         ActivityCharacter(activity: 5)
+                            .onTapGesture {
+                                ContentManager.shared.playAudio("session-unavailable", type: "wav")
+                            }
                     }
                     .offset(y: screenHeight > 900 ? screenHeight/5.7 : screenHeight/5.2)
                     .tabViewStyle(.page)
