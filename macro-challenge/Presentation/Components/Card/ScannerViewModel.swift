@@ -8,15 +8,15 @@
 import Foundation
 import AVFoundation
 
-class ScannerViewModel: ObservableObject , QrScannerDelegate{
+class ScannerViewModel: ObservableObject , QRScannerDelegate{
     
     init() {
-        qrScannerManager = QrScannerManager()
+        qrScannerManager = QRScannerManager()
         qrScannerManager.delegate = self
     }
     
     @Published var scannedData = "AA"
-    var qrScannerManager: QrScannerManager
+    @Published var qrScannerManager: QRScannerManager
 
     func startScanning() {
         

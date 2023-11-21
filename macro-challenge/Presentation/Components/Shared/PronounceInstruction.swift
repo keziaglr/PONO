@@ -8,65 +8,40 @@
 import SwiftUI
 
 struct PronounceInstruction: View {
-    @ObservedObject var vm : FlowScreenViewModel
-    @State var isPressed = false
     
-    @Binding var isRecording : Bool
+    let labelText: String
+    let isDisabled: Bool
+    let onClick: () -> Void
     
+    @State private var isPressed = false
+    
+    init(_ labelText: String, isDisabled: Bool, onClick: @escaping () -> Void, isPressed: Bool = false) {
+        self.labelText = labelText
+        self.isDisabled = isDisabled
+        self.onClick = onClick
+        self.isPressed = isPressed
+    }
     
     var body: some View {
-        
         HStack {
             Button {
-                switch vm.type {
-                case .syllable1:
-                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!])
-                case .syllable2:
-                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 1))!])
-                case .word:
-                    vm.soundSyllable(sound: [(vm.word?.syllable(at: 0))!, (vm.word?.syllable(at: 1))!])
-                }
+                onClick()
             } label: {
-                if vm.type == .word {
-                    Text("\((vm.word?.syllable(at: 0))!)\((vm.word?.syllable(at: 1))!)")
+                    Text(labelText)
                         .foregroundColor(Color.Grey1)
                         .font(
                             .custom(FontConst.QUICKSAND_BOLD, size: 50)
-                        ).padding()
-                } else if vm.type == .syllable1{
-                    Text("\((vm.word?.syllable(at: 0))!)")
-                        .foregroundColor(Color.Grey1)
-                        .font(
-                            .custom(FontConst.QUICKSAND_BOLD, size: 50)
-                        ).padding()
-                } else if vm.type == .syllable2{
-                    Text("\((vm.word?.syllable(at: 1))!)")
-                        .foregroundColor(Color.Grey1)
-                        .font(
-                            .custom(FontConst.QUICKSAND_BOLD, size: 50)
-                        ).padding()
-                }
-            }.buttonStyle(PonoButtonStyle(variant: .secondary))
-                .disabled(isRecording)
-            
+                        )
+                        .padding()
+            }
+            .buttonStyle(PonoButtonStyle(variant: .secondary))
+            .disabled(isDisabled)
         }
-//        .onTapGesture {
-//            isPressed = true
-//
-//        }
-//        .padding(.horizontal, 20)
-//        .frame(width: 200, height: 200)
-//        .background(
-//            RoundedRectangle(cornerRadius: 16)
-//                .fill(Color.white)
-//                .shadow(color: isPressed ? .clear : Color.Grey2, radius: 0, x: 0, y: 8)
-//        )
-//        .offset(y: isPressed ? 0 : 8)
     }
 }
 
 struct PronounceInstruction_Previews: PreviewProvider {
     static var previews: some View {
-        PronounceInstruction(vm: FlowScreenViewModel(), isRecording: .constant(true))
+        PronounceInstruction("ba", isDisabled: false, onClick: { })
     }
 }

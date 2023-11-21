@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct Syllable: Decodable {
+struct Syllable: Decodable, Equatable {
     let id: UUID
     let content: String
-    let audioURL: URL?
     
     var letters: [String] {
         content.map { String($0) }

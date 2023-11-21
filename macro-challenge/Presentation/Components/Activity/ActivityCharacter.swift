@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ActivityCharacter: View {
+    
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
+    
     @State var activity : Int = 1
+    
     var body: some View {
         VStack (spacing: 50) {
             VStack(spacing: -10) {

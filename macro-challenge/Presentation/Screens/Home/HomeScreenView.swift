@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    
+    @Environment(\.switchableNavigate) var switchableNavigate
+    
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
-    @State var show = false
+    
     var body: some View {
         VStack {
-            if !show{
-                ZStack{
+            ZStack{
+                VStack {
+                    Image("Cloud")
+                        .resizable()
+                        .scaledToFit()
+                    Spacer()
+                }
                 VStack(spacing:0) {
+                    HStack{
+                        Spacer()
+                        Button {
+                            switchableNavigate(.report)
+                        } label: {
+                            Image("Bar")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45)
+                        }
+                        .buttonStyle(PonoButtonStyle(variant: .tertiary))
+                        .padding()
+                    }
                     Spacer()
                     Rectangle()
                         .fill(Color.Grey5)
@@ -24,16 +45,10 @@ struct HomeScreenView: View {
                         .frame(height: screenHeight/5)
                 }
                 VStack {
-                    Image("Cloud")
-                        .resizable()
-                    .scaledToFit()
-                    Spacer()
-                }
-                VStack {
                     TabView{
                         ActivityCharacter(activity: 1)
                             .onTapGesture {
-                                show.toggle()
+                                switchableNavigate(.learningActivity)
                             }
                         ActivityCharacter(activity: 2)
                         ActivityCharacter(activity: 3)
@@ -44,11 +59,8 @@ struct HomeScreenView: View {
                     .tabViewStyle(.page)
                 }
             }
+            .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
             .ignoresSafeArea()
-        .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
-            } else {
-                FlowScreenView(show: $show)
-            }
         }
     }
 }

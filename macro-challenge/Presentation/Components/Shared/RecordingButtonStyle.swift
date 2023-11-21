@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum RecordingStatus {
+enum PronunciationStatus {
     case idle
     case recording
     case correct
@@ -21,9 +21,9 @@ enum RecordingStatus {
         case .recording:
             return Color.Blue1
         case .correct:
-            return .green
+            return Color.Green1
         case .wrong:
-            return .red
+            return Color.Red2
         }
     }
 
