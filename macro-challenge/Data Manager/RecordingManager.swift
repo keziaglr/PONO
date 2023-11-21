@@ -79,7 +79,7 @@ class RecordingManager: NSObject {
         isRecording = false
     }
     
-    func playRecording(_ record: AudioRecord) {
+    func playRecording(_ record: AudioRecord, completion: ((_ duration: TimeInterval?) -> Void)? = nil) {
         let url = record.url
         
         let playSession = AVAudioSession.sharedInstance()
@@ -96,6 +96,7 @@ class RecordingManager: NSObject {
             audioPlayer?.prepareToPlay()
             audioPlayer?.volume = 10.0
             audioPlayer?.play()
+            completion?(audioPlayer?.duration)
         } catch {
             print("Playing Failed")
         }
