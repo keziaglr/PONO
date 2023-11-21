@@ -89,17 +89,19 @@ class PronunciationActivityViewModel: ObservableObject {
             
             return
         }
-        self.currentInstruction = nextInstruction
         playInstruction(nextInstruction)
     }
     
     private func playInstruction(_ instruction: Instruction) {
+        self.currentInstruction = instruction
         let instructionVoices = instruction.voices
         audioManager.playQueue(instructionVoices, changeHandler: instructionVoiceChangeHandler)
     }
     
     private func instructionVoiceChangeHandler(_ queueCount: Int, _ newIndex: Int) {
-        currentInstructionVoiceIndex = newIndex
+        DispatchQueue.main.async {
+            self.currentInstructionVoiceIndex = newIndex
+        }
     }
     
     func startVoiceRecognitionAndRecording() {
@@ -131,12 +133,20 @@ class PronunciationActivityViewModel: ObservableObject {
         print(text)
         if !text.isEmpty{
             if (text.contains(learningWord.content) || learningWord.content.contains(text)) && syllableOrder == nil{
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
             }else if (text.contains(syllable?.content ?? "") || ((syllable?.content.contains(text)) != nil)){
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
             }
         }
         
+    }
+    
+    func playSoundCorrect() {
+        if pronunciationStatus != .correct{
+            ContentManager.shared.playAudio("correct-answer", type: "wav")
+        }
     }
     
     func retryVoiceRecognitionAndRecording() {
@@ -220,6 +230,7 @@ extension PronunciationActivityViewModel: SoundClassifierDelegate {
             guard let self else { return }
             if self.isAudioRecordingAndRecognizing,
                self.isAnyVoiceCorrect(probabilityModels) {
+                playSoundCorrect()
                 self.pronunciationStatus = .correct
                 self.stopVoiceRecognitionAndRecording()
             }

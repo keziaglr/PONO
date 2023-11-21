@@ -54,7 +54,7 @@ struct BreakWordActivityView: View {
                 VStack{
                     Spacer()
                     
-                    if isWordBroke {
+                    if viewModel.currentInstructionVoiceIndex == 6 {
                         Button {
                             onNext()
                         } label: {
@@ -134,6 +134,7 @@ struct BreakWordActivityView: View {
                 ).simultaneousGesture(
                     DragGesture(minimumDistance: height/2)
                         .onChanged({ (value) in
+                            ContentManager.shared.playAudio("break-word", type: "wav")
                             isWordBroke = true
                         })
                 )

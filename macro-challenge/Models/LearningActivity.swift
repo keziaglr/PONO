@@ -12,6 +12,7 @@ enum LearningActivity: Equatable {
     case card(Word, SyllableOrder)
     case pronunciation(Word, SyllableOrder?)
     case combineSyllable(Word)
+    case endStage(Word)
 }
 
 enum SyllableOrder {
