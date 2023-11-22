@@ -29,7 +29,7 @@ class QRScannerManager: NSObject, AVCaptureMetadataOutputObjectsDelegate {
         }
     }
     
-    func requestCameraAuthorizationIfNeeded(completion: @escaping (Permission) -> Void) {
+    static func requestCameraAuthorizationIfNeeded(completion: @escaping (Permission) -> Void) {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             return completion(.approved)

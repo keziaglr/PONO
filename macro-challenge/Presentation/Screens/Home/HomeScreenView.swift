@@ -13,6 +13,8 @@ struct HomeScreenView: View {
     
     @State var screenHeight = CGFloat(UIScreen.main.bounds.height)
     
+    @ObservedObject var viewModel = HomeScreenViewModel()
+    
     var body: some View {
         VStack {
             ZStack{
@@ -74,6 +76,9 @@ struct HomeScreenView: View {
             }
             .background(LinearGradient(gradient: Gradient(colors: [Color.Blue3, Color.Blue6]), startPoint: .top, endPoint: .bottom))
             .ignoresSafeArea()
+            .onAppear {
+                viewModel.requestAllPermission()
+            }
         }
     }
 }
