@@ -23,7 +23,6 @@ struct BackCardView: View {
             Image("back-card")
                 .resizable()
                 .frame(width: 170, height: 255)
-                .padding(.bottom, 26)
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
 }

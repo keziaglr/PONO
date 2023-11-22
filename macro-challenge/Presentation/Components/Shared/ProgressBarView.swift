@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ProgressBarView: View {
     
-    @State var width : CGFloat
+    @State var width: CGFloat
     
-    @State var height : CGFloat
+    @State var height: CGFloat
+
     
     @Binding var progress : CGFloat
     

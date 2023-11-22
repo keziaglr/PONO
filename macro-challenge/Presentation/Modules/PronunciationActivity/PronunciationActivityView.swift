@@ -30,7 +30,8 @@ struct PronunciationActivityView: View {
                                             onPlaySampleSound: viewModel.playWordOrSyllableSound,
                                             onPlayRecord: viewModel.playVoiceRecord,
                                             onNext: onNext,
-                                            onRetry: viewModel.retryVoiceRecognitionAndRecording)
+                                            onRetry: viewModel.retryVoiceRecognitionAndRecording,
+                                            duration: $viewModel.duration)
             } else {
                 VStack {
                     Spacer()
