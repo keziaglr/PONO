@@ -31,6 +31,12 @@ public class VoiceRecognitionManager {
         self.bufferSize = sampleRate * 2
     }
     
+    static func requestPermissions(completion: ((Bool) -> Void)? = nil) {
+        AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            completion(granted)
+        }
+    }
+    
     public func checkPermissionsAndStartTappingMicrophone() {
         switch AVAudioSession.sharedInstance().recordPermission {
         case .granted:
@@ -38,19 +44,15 @@ public class VoiceRecognitionManager {
         case .denied:
             delegate?.voiceRecognitionManagerDidFailToAchievePermission(self)
         case .undetermined:
-            requestPermissions()
+            requestPermissions { granted in
+                if granted {
+                    self.startRecognize()
+                } else {
+                    self.checkPermissionsAndStartTappingMicrophone()
+                }
+            }
         @unknown default:
             fatalError()
-        }
-    }
-    
-    public func requestPermissions() {
-        AVAudioSession.sharedInstance().requestRecordPermission { granted in
-            if granted {
-                self.startRecognize()
-            } else {
-                self.checkPermissionsAndStartTappingMicrophone()
-            }
         }
     }
     

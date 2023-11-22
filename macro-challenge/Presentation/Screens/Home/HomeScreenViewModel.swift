@@ -8,4 +8,13 @@
 import Foundation
 
 
-class HomeScreenViewModel: ObservableObject {}
+class HomeScreenViewModel: ObservableObject {
+    func requestAllPermission() {
+        Task {
+            VoiceRecognitionManager.requestPermissions()
+            AVAudioSession.hasPermissionToRecord()
+            SFSpeechRecognizer.hasAuthorizationToRecognize()
+            QRScannerManager.requestCameraAuthorizationIfNeeded(completion: { permission in })
+        }
+    }
+}

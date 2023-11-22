@@ -16,6 +16,8 @@ class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
+    private init() {}
+    
     var record: AudioRecord? = nil
     
     private var audioRecorder: AVAudioRecorder?
@@ -105,16 +107,6 @@ class RecordingManager: NSObject {
     func stopPlaying() {
         audioPlayer?.stop()
     }
-    
-//    func deleteRecords() {
-//        for record in records {
-//            do {
-//                try FileManager.default.removeItem(at: record.url)
-//            } catch {
-//                print("Can't delete")
-//            }
-//        }
-//    }
     
     func deleteRecord() {
         do {
