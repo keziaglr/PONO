@@ -11,12 +11,14 @@ struct PronunciationActivityView: View {
     
     @ObservedObject private var viewModel: PronunciationActivityViewModel
     
+    private let onActivityDone: (Syllable?, Bool) -> Void
     private let onNext: () -> Void
     
     private let screenHeight = CGFloat(UIScreen.main.bounds.height)
     
-    init(learningWord: Word, syllableOrder: SyllableOrder?, onNext: @escaping () -> Void) {
+    init(learningWord: Word, syllableOrder: SyllableOrder?, onActivityDone: @escaping (Syllable?, Bool) -> Void, onNext: @escaping () -> Void) {
         self.viewModel = PronunciationActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
+        self.onActivityDone = onActivityDone
         self.onNext = onNext
     }
     
@@ -50,13 +52,20 @@ struct PronunciationActivityView: View {
         .onChange(of: viewModel.isShowPlayRecording) { _ in
             viewModel.playInstruction()
         }
+        .onChange(of: viewModel.pronunciationStatus) { newValue in
+            if newValue == .correct {
+                onActivityDone(viewModel.syllable, true)
+            } else if newValue == .wrong {
+                onActivityDone(viewModel.syllable, false)
+            }
+        }
     }
 }
 
 struct OnboardingScreenView_Previews: PreviewProvider {
     static var previews: some View {
         PronunciationActivityView(learningWord: PreviewDataResources.word,
-                                  syllableOrder: .firstSyllable,
+                                  syllableOrder: .firstSyllable, onActivityDone: { syllable, isCorrect in },
                                   onNext: { })
     }
 }

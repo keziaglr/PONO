@@ -7,7 +7,11 @@
 
 import Foundation
 
-class ReportManager {
+struct ReportManager {
+    
+    static let shared = ReportManager()
+    
+    private init() {}
     
     func getPractices() async -> [Practice] {
         await withCheckedContinuation { continuation in

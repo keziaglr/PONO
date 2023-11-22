@@ -12,6 +12,7 @@ struct CardActivityView: View {
     
     @ObservedObject private var viewModel: CardActivityViewModel
     
+    private let onActivityDone: (Syllable, Bool) -> Void
     private let onNext: () -> Void
     
     // UI-related properties
@@ -23,8 +24,9 @@ struct CardActivityView: View {
     @State private var instructionText = ""
     @State private var isCorrect: Bool?
     
-    init(learningWord: Word, syllableOrder: SyllableOrder, onNext: @escaping () -> Void) {
+    init(learningWord: Word, syllableOrder: SyllableOrder, onActivityDone: @escaping (Syllable, Bool) -> Void, onNext: @escaping () -> Void) {
         self.viewModel = CardActivityViewModel(learningWord: learningWord, syllableOrder: syllableOrder)
+        self.onActivityDone = onActivityDone
         self.onNext = onNext
     }
     
@@ -73,6 +75,12 @@ struct CardActivityView: View {
             viewModel.playInstruction()
         }.onChange(of: isCorrect) { newValue in
             viewModel.playInstruction()
+        }
+        .onChange(of: viewModel.isCorrect) { newValue in
+            if let newValue {
+                guard let syllable = viewModel.syllable else { return }
+                onActivityDone(syllable, newValue)
+            }
         }
         
     }
