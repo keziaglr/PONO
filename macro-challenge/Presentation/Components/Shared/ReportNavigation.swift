@@ -21,8 +21,7 @@ struct ReportNavigation: View {
                     .font(.custom("Quicksand-Bold", size: 12))
                     .textCase(.uppercase)
                     .foregroundStyle(Color.Black1)
-                    .padding()
-                    .frame(width: 140)
+                    .padding(.bottom)
                 HStack {
                     Image("\(iconName)")
                         .font(.system(size: 40))
@@ -32,7 +31,7 @@ struct ReportNavigation: View {
                         .foregroundStyle(Color.Black1)
                 }
             }
-            .frame(width: 180.67, height: 150)
+            .frame(width: 180, height: 150)
             .background(
                 RoundedRectangle(cornerRadius: 24.0)
                     .fill(isSelected ? .white : .white.opacity(0.5))
@@ -44,6 +43,6 @@ struct ReportNavigation: View {
     
 }
 
-#Preview {
-    ReportNavigation(title: "Suku Kata Dipelajari", iconName: "hourglass", total: 20, isSelected: true, action: {})
-}
+//#Preview {
+//    ReportNavigation(title: "Suku Kata Dipelajari", iconName: "hourglass", total: 20, isSelected: true, action: {})
+//}

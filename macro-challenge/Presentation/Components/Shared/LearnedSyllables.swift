@@ -15,10 +15,11 @@ struct LearnedSyllables: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                Text("Suku kata yang dipelajari")
+                Text("Suku kata yang sudah dipelajari")
                     .textCase(.uppercase)
                     .font(.custom("Quicksand-Bold", size: 14))
                     .padding(.horizontal)
+                    .padding(.top, 15)
                 Text("\(viewModel.syllables.count) dari 35 suku kata")
                     .font(.custom("Quicksand", size: 12))
                     .padding(.horizontal)

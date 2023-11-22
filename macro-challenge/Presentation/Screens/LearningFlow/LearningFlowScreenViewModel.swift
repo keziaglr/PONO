@@ -160,19 +160,8 @@ class LearningFlowScreenViewModel: ObservableObject {
             
             self.practicedWordRecord = nil
             self.practicedSyllableRecords = nil
-            
-            print(await reportManager.getPractices().count, "practiced")
-            print(await reportManager.getPracticedWords().count, "words")
-            print(await reportManager.getPracticedSyllables().count, "syllables")
         }
     }
-    
-    func seedData() {
-        practicedWordRecord = PracticedWordRecord(word: Word(content: "baba", level: 1, syllables: [Syllable(id: UUID(uuidString: "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0")!, content: "ba")]), isPronunciationCorrect: true)
-        practicedSyllableRecords = [PracticedSyllableRecord(syllable: Syllable(id: UUID(uuidString: "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0")!, content: "ba"), isPronunciationCorrect: true, isCardRecognitionCorrect: true), PracticedSyllableRecord(syllable: Syllable(id: UUID(uuidString: "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0")!, content: "ba"), isPronunciationCorrect: true, isCardRecognitionCorrect: true)]
-        recordActivity()
-    }
-    
 }
 
 struct PracticedSyllableRecord: Equatable {

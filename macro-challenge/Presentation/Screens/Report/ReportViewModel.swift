@@ -46,6 +46,77 @@ class ReportViewModel: ObservableObject {
             await getWords()
             await getSyllables()
         }
+        refreshData()
+    }
+    
+    private var counts : [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    @Published var data: [SessionData] = []
+    @Published var average : Int = 0
+    let manager = ReportManager.shared
+    
+    private func getAverage() {
+        average = Int(counts.reduce(0, +) / Double(counts.count))
+    }
+    
+    private func refreshData(){
+        data.removeAll()
+        for (index, count) in counts.enumerated() {
+            let dayOfWeek = getDayOfWeek(index + 1)
+            let sessionData = SessionData(type: dayOfWeek, count: count)
+            data.append(sessionData)
+        }
+        getAverage()
+    }
+    
+    private func getDayOfWeek(_ index: Int) -> String {
+        switch index {
+        case 1: return "Sen"
+        case 2: return "Sel"
+        case 3: return "Rab"
+        case 4: return "Kam"
+        case 5: return "Jum"
+        case 6: return "Sab"
+        case 7: return "Min"
+        default: return ""
+        }
+    }
+    
+    private func getWeek() -> [String] {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        let dayOfWeek = calendar.component(.weekday, from: today)
+        let dates = calendar.range(of: .weekday, in: .weekOfYear, for: today)!
+            .compactMap { calendar.date(byAdding: .day, value: $0 - (dayOfWeek - 1), to: today) }
+        
+        let formattedDates = dates.map { formatDate($0, format: "yyyy-MM-dd") }
+        
+        return formattedDates
+    }
+    
+    private func formatDate(_ date: Date, format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: date)
+    }
+    
+    func getPracticeData() async {
+        let practices = await manager.getPractices()
+        let dates = getWeek()
+        
+        for index in 0..<7 {
+            let practicesForDate = practices.filter { practice in
+                guard let createdDate = practice.createdAt else {
+                    return false
+                }
+                let formattedDate = formatDate(createdDate, format: "yyyy-MM-dd")
+                return formattedDate == dates[index]
+            }
+            
+            // Count the practices for the current date
+            let practiceCountForDate = practicesForDate.count
+            data[index].count = Double(practiceCountForDate)
+            
+        }
     }
     
     func getPractices() async {
@@ -167,42 +238,46 @@ class ReportViewModel: ObservableObject {
         return .empty
     }
     
-    func getTextColor() -> Color {
-        switch getCondition() {
-        case .fail:
-            return Color.Red2
-        case .success:
-            return Color.Green2
-        case .empty:
-            return Color.Grey4
+    func getDescCondition(isPronunciation: Bool = true) -> CardReportType {
+        if isWord {
+            return getCondition()
+        } else {
+            guard let syllable else { return .empty }
+            if syllable.totalPractices < 10 {
+                return .empty
+            }
+            return calculateSuccessPercentage(successCount: isPronunciation ? Int(syllable.countPronunciationCorrect) : Int(syllable.countCardRecognizeCorrect), totalAttempts: syllable.totalPractices) < 65 ? .fail : .success
         }
     }
     
-    func getTextColorWords() -> Color {
-        switch getCondition() {
+    func getTextColor(isPronunciation: Bool = true) -> Color {
+        switch getDescCondition(isPronunciation: isPronunciation) {
+        case .fail:
+            return Color.Red2
         case .success:
             return Color.Green1
-        case .fail:
-            return Color.Red2
         case .empty:
             return Color.Grey4
         }
     }
     
-    func getDescriptionSucceedAttempts() -> String {
+    func getDescriptionSucceedAttempts(isPronunciation: Bool = true) -> String {
         var count = 0
+        var correct = 0
         if isWord {
             guard let word else { return "" }
             count = word.totalPractices
+            correct = Int(word.countPronunciationCorrect)
         } else {
             guard let syllable else { return "" }
             count = syllable.totalPractices
+            correct = Int(isPronunciation ? syllable.countPronunciationCorrect : syllable.countCardRecognizeCorrect)
         }
         
         if count < 10 {
             return "Belum mencapai 10x"
         } else {
-            return "Berhasil \(count)x"
+            return "Berhasil \(correct)x"
         }
     }
     
@@ -216,8 +291,8 @@ class ReportViewModel: ObservableObject {
         }
     }
     
-    func getDescription() -> String {
-        switch getCondition() {
+    func getDescription(isPronunciation: Bool = true) -> String {
+        switch getDescCondition(isPronunciation: isPronunciation) {
         case .success:
             return "Kemajuan yang luar biasa!"
         case .fail:

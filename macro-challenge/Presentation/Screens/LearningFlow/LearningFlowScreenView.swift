@@ -22,9 +22,6 @@ struct LearningFlowScreenView: View {
             Image("Cloud")
                 .resizable()
                 .scaledToFit()
-                .onTapGesture {
-                    viewModel.seedData()
-                }
             VStack {
                 LearningProgressView(onClose: { switchableNavigate(.home) })
                 if let activeLearningActivity = viewModel.activeLearningActivity {

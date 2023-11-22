@@ -35,13 +35,13 @@ struct RatingView: View {
     
     func image(for number: Int) -> Image {
         if number > rating {
-            offImage ?? onImage
+            return offImage ?? onImage
         } else {
-            onImage
+            return onImage
         }
     }
 }
 
-#Preview {
-    RatingView(rating: 3)
-}
+//#Preview {
+//    RatingView(rating: 3)
+//}

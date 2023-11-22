@@ -26,12 +26,12 @@ struct DetailReportCardView: View {
                             .font(.custom("Quicksand-Bold", size: 13))
                         
                         VStack(alignment: .leading) {
-                            Text(viewModel.getDescriptionSucceedAttempts()) // total berhasil
+                            Text(viewModel.getDescriptionSucceedAttempts(isPronunciation: false))
                                 .font(.custom("Quicksand-Bold", size: 12))
-                            Text(viewModel.getDescription())
+                            Text(viewModel.getDescription(isPronunciation: false))
                                 .font(.custom("Quicksand-Medium", size: 11))
                         }
-                        .foregroundStyle(viewModel.getTextColorWords())
+                        .foregroundStyle(viewModel.getTextColor(isPronunciation: false))
                         .offset(y: 12)
                         
                         Spacer()
@@ -69,7 +69,7 @@ struct DetailReportCardView: View {
                         Text(viewModel.getDescription())
                             .font(.custom("Quicksand-Medium", size: 11))
                     }
-                    .foregroundStyle(viewModel.getTextColorWords())
+                    .foregroundStyle(viewModel.getTextColor())
                     .offset(y: 12)
                     
                     Spacer()

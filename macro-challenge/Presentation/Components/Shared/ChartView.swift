@@ -15,27 +15,25 @@ struct SessionData: Identifiable {
 }
 
 struct ChartView: View {
-    var data: [SessionData] = [
-        .init(type: "Sen", count: 5),
-        .init(type: "Sel", count: 4),
-        .init(type: "Rab", count: 4),
-        .init(type: "Kam", count: 5),
-        .init(type: "Jum", count: 4),
-        .init(type: "Sab", count: 5),
-        .init(type: "Min", count: 4)
-    ]
+    @ObservedObject private var viewModel : ReportViewModel
+    
+    init() {
+        viewModel = ReportViewModel()
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("TOTAL SESI")
+            Text("TOTAL LATIHAN")
                 .textCase(.uppercase)
                 .font(.custom("Quicksand-Bold", size: 14))
                 .padding(.top, 15)
                 .padding(.horizontal)
-            Text("Rata-rata: 11 sesi")
+            Text("Rata-rata: \(viewModel.average) latihan")
                 .font(.custom("Quicksand", size: 12))
                 .padding(.horizontal)
+            Spacer()
             Chart {
-                ForEach(data) { session in
+                ForEach(viewModel.data) { session in
                     BarMark(
                         x: .value("Day", session.type),
                         y: .value("Total", session.count)
@@ -46,13 +44,20 @@ struct ChartView: View {
             }
             .padding()
             .frame(width: 560, height: 305)
+            Spacer()
         }
         .padding()
+        .frame(maxWidth: 590, maxHeight: .infinity)
         .background(.white)
         .cornerRadius(30)
+        .onAppear {
+            Task {
+                await viewModel.getPracticeData()
+            }
+        }
     }
 }
 
-#Preview {
-    ChartView()
-}
+//#Preview {
+//    ChartView()
+//}

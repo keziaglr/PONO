@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NoSessionStartedView: View {
+    let startExercise: () -> Void
     var body: some View {
         ZStack {
             VStack {
@@ -16,7 +17,7 @@ struct NoSessionStartedView: View {
                         .resizable()
                         .frame(width: 134, height: 161)
                 }
-                .frame(width: 268, height: 153)
+                .frame(width: 268, height: 180)
                 .background(
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.White1)
@@ -25,42 +26,29 @@ struct NoSessionStartedView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.Grey3, lineWidth: 2)
                 )
-                // title
                 VStack {
                     Text("Mulai Sesi, Yuk!")
                         .font(.custom("Quicksand-bold", size: 32))
                         .padding()
                     
-                    Text("Sepertinya kamu belum melakukan sesi bersama PONO")
-                        .font(.custom("Quicksand-Medium", size: 16))
+                    Text("Sepertinya kamu belum melakukan latihan bersama PONO")
+                        .textStyle(style: .heading6)
                         .foregroundStyle(Color.Grey5)
-                        .frame(width: 332)
                         .multilineTextAlignment(.center)
                 }
                 .padding()
                 
-                // Start session button
                 Button {
-                    // action mulai sesi
+                    startExercise()
                 } label: {
                     ZStack {
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 256, height: 57)
-                            .background(Color(red: 1, green: 0.79, blue: 0.23))
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .inset(by: 0.5)
-                                    .stroke(Color(red: 0.9, green: 0.68, blue: 0.09), lineWidth: 1)
-                            )
-                        // text
                         Text("Mulai Latihan")
                             .font(.custom("Quicksand-Bold", size: 28))
                             .foregroundStyle(Color.White2)
                     }
                 }
-//                .offset(y: 40)
+                .buttonStyle(PonoButtonStyle(variant: .primary))
+                .padding()
             }
         }
         .frame(width: 590, height: 549)
@@ -70,6 +58,6 @@ struct NoSessionStartedView: View {
         )    }
 }
 
-#Preview {
-    NoSessionStartedView()
-}
+//#Preview {
+//    NoSessionStartedView()
+//}

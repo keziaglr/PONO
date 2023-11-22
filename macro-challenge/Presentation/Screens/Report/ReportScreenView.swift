@@ -34,7 +34,6 @@ struct ReportScreenView: View {
             
                 VStack {
                     Text("Laporan Hasil Belajar")
-//                        .font(.custom("SF Pro Rounded", size: 40))
                         .font(.system(size: 40, design: .rounded))
                         .fontWeight(.black)
                         .foregroundStyle(Color.Yellow2)
@@ -45,7 +44,7 @@ struct ReportScreenView: View {
 
                     if viewModel.practices.isEmpty {
                         VStack {
-                            NoSessionStartedView()
+                            NoSessionStartedView(startExercise: {switchableNavigate(.learningActivity)})
                         }
                         .frame(maxHeight: .infinity)
                     } else {
