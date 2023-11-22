@@ -24,9 +24,9 @@ class LearningFlowScreenViewModel: ObservableObject {
         guard let learningWord else { return [] }
         return [
             .breakWord(learningWord),
-//            .card(learningWord, .firstSyllable),
+            .card(learningWord, .firstSyllable),
             .pronunciation(learningWord, .firstSyllable),
-//            .card(learningWord, .secondSyllable),
+            .card(learningWord, .secondSyllable),
             .pronunciation(learningWord, .secondSyllable),
             .combineSyllable(learningWord),
             .pronunciation(learningWord, nil),

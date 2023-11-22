@@ -72,12 +72,6 @@ struct LearningFlowScreenView: View {
                 break
             }
         }
-        .onAppear {
-            Task {
-                let syllables = await ReportManager.shared.getPracticedSyllables()
-                print(syllables.count)
-            }
-        }
     }
     
     func LearningProgressView(onClose: @escaping () -> Void) -> some View {
