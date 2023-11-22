@@ -26,8 +26,8 @@ struct RatingView: View {
             }
             
             ForEach(1..<maximumRating + 1, id: \.self) { number in
-                    image(for: number)
-                        .foregroundStyle(number > rating ? offColor : onColor)
+                image(for: number)
+                    .foregroundStyle(number > rating ? offColor : onColor)
             }
         }
         .padding(5)
@@ -42,6 +42,6 @@ struct RatingView: View {
     }
 }
 
-    #Preview {
-        RatingView(rating: 3)
-    }
+#Preview {
+    RatingView(rating: 3)
+}

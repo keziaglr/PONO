@@ -10,8 +10,11 @@ import SwiftUI
 struct LearnedSyllables: View {
 //    @State private var syllables =  ["ma", "mi", "mu", "me", "mo", "pa", "pi", "pu", "pe", "po", "la", "li"]
     
-    @State var syllables : [String]
-
+    @ObservedObject private var viewModel = ReportViewModel()
+    
+    @State var syllables : [PracticedSyllable]
+    var learnedSyllable : Int
+    
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
@@ -19,7 +22,7 @@ struct LearnedSyllables: View {
                     .textCase(.uppercase)
                     .font(.custom("Quicksand-Bold", size: 14))
                     .padding(.horizontal)
-                Text("29 dari 35 suku kata")
+                Text("\(learnedSyllable) dari 35 suku kata")
                     .font(.custom("Quicksand", size: 12))
                     .padding(.horizontal)
                 ScrollView {
@@ -28,7 +31,7 @@ struct LearnedSyllables: View {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 40) {
                             ForEach(syllables, id: \.self) { syllable in
                                 VStack {
-                                    FrontCardWordSyllableLabel(text: syllable, learnedType: "syllable", condition: "default", isWord: false, rating: 1)
+                                    FrontCardWordSyllableLabel(viewModel: ReportViewModel(syllable: syllable))
                                 }
                                 
                             }
@@ -48,6 +51,6 @@ struct LearnedSyllables: View {
 }
 
 
-#Preview {
-    LearnedSyllables(syllables: ["ma", "mi", "mu", "me", "mo", "pa", "pi", "pu", "pe", "po", "la", "li"])
-}
+//#Preview {
+//    LearnedSyllables(syllables: ["ma", "mi", "mu", "me", "mo", "pa", "pi", "pu", "pe", "po", "la", "li"], learnedSyllable: 30)
+//}

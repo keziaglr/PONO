@@ -10,8 +10,9 @@ import SwiftUI
 struct LearnedWords: View {
 //    @State private var words =  ["mami", "papi", "buku", "beta", "buta", "buka", "babi", "duda", "babu", "Kuku", "kaki"]
     
-    @State var words : [String]
+    @State var words : [PracticedWord]
     @State private var isFlipped: Bool = false
+    @State var learnedWord: Int
 
     var body: some View {
         ZStack {
@@ -28,12 +29,7 @@ struct LearnedWords: View {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 40) {
                             ForEach(words, id: \.self) { word in
                                 VStack{
-//                                    if isFlipped {
-//                                        BackCardWordSyllableLabel(isSyllable: false, isUnderAverage: false, cardPercentage: 60, speechPercentage: 50)
-//                                    } else {
-//                                        FrontCardWordSyllableLabel(text: word, learnedType: "word")
-//                                    }
-                                    FrontCardWordSyllableLabel(text: word, learnedType: "word", condition: "underAverage", isWord: true, rating: 3)
+                                    FrontCardWordSyllableLabel(viewModel: ReportViewModel(word: word))
                                     
                                 }
                                 .onTapGesture {
@@ -58,6 +54,6 @@ struct LearnedWords: View {
     }
 }
 
-#Preview {
-    LearnedWords(words: ["papi", "mami", "babi", "budi", "dada", "baba", "baku"])
-}
+//#Preview {
+//    LearnedWords(words: ["papi", "mami", "babi", "budi", "dada", "baba", "baku"], learnedWord: 30)
+//}

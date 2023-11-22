@@ -152,9 +152,8 @@
 		ACA0FBA82B0CA03A0011624C /* session-available.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACA0FBA52B0CA03A0011624C /* session-available.wav */; };
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
-		ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1D2AEF583400E616D7 /* NextButton.swift */; };
-		ACECDC222AEF61DC00E616D7 /* RecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */; };
-		ACECDC242AEF647800E616D7 /* PlayRecordActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */; };
+		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
+		F90521AD2B0DB94100134C60 /* ReportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90521AC2B0DB94100134C60 /* ReportUtils.swift */; };
 		F94464252B05B4D9002BEF52 /* LearnedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464242B05B4D9002BEF52 /* LearnedWords.swift */; };
 		F94464272B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */; };
 		F94464292B05C8B2002BEF52 /* LearnedSyllables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */; };
@@ -166,7 +165,6 @@
 		F9A7A2832B0A4C360053F0A7 /* NoSessionStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2822B0A4C360053F0A7 /* NoSessionStartedView.swift */; };
 		F9A7A2872B0B1C7F0053F0A7 /* ReportLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */; };
 		F9A7A2892B0B39F20053F0A7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2882B0B39F20053F0A7 /* RatingView.swift */; };
-		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
 		F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */; };
 		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
 		FD74F016CAD575B3D1418DA4 /* Pods_macro_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C71128A5A3BCCCEED84C487 /* Pods_macro_challenge.framework */; };
@@ -322,9 +320,8 @@
 		ACA0FBA52B0CA03A0011624C /* session-available.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "session-available.wav"; sourceTree = "<group>"; };
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
-		ACECDC1D2AEF583400E616D7 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
-		ACECDC212AEF61DC00E616D7 /* RecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordActivity.swift; sourceTree = "<group>"; };
-		ACECDC232AEF647800E616D7 /* PlayRecordActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordActivity.swift; sourceTree = "<group>"; };
+		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
+		F90521AC2B0DB94100134C60 /* ReportUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUtils.swift; sourceTree = "<group>"; };
 		F94464242B05B4D9002BEF52 /* LearnedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedWords.swift; sourceTree = "<group>"; };
 		F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardWordSyllableLabel.swift; sourceTree = "<group>"; };
 		F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedSyllables.swift; sourceTree = "<group>"; };
@@ -336,7 +333,6 @@
 		F9A7A2822B0A4C360053F0A7 /* NoSessionStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSessionStartedView.swift; sourceTree = "<group>"; };
 		F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLabelStyle.swift; sourceTree = "<group>"; };
 		F9A7A2882B0B39F20053F0A7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
-		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
 		F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBarView.swift; sourceTree = "<group>"; };
 		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -756,6 +752,7 @@
 				2FF694A62AE8C65D0085393F /* Date+Extension.swift */,
 				74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */,
 				7429B7632AEEED7100BF7F93 /* String+Extension.swift */,
+				F90521AC2B0DB94100134C60 /* ReportUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -822,6 +819,7 @@
 				AC50DC292ACE5CDF00B9FE1B /* Products */,
 				C27D934F4411AB3F99580584 /* Pods */,
 				84CFD71E8A02F319D504695A /* Frameworks */,
+				F99E30622B0CACAC00F221A1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -904,6 +902,13 @@
 				F944642F2B0659BE002BEF52 /* ReportViewModel.swift */,
 			);
 			path = Report;
+			sourceTree = "<group>";
+		};
+		F99E30622B0CACAC00F221A1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1086,8 +1091,6 @@
 				381C33E82B041A1700BAFE69 /* CombineSyllableActivityView.swift in Sources */,
 				2FF694A12AE8B4740085393F /* RecordingManager.swift in Sources */,
 				F9A7A2892B0B39F20053F0A7 /* RatingView.swift in Sources */,
-				ACECDC202AEF583400E616D7 /* NextButton.swift in Sources */,
-				AC0BAEA12AF53F40009256A2 /* BreakWordViewModel.swift in Sources */,
 				F944642C2B05C995002BEF52 /* ReportScreenView.swift in Sources */,
 				F99E30612B0BD97B00F221A1 /* DetailReportCardView.swift in Sources */,
 				3868C16C2AE6C5F900E832B0 /* Collection+Extension.swift in Sources */,
@@ -1096,7 +1099,6 @@
 				ACA0FB8B2B0C6EBD0011624C /* EndStageActivityViewModel.swift in Sources */,
 				AC099C6F2AFB381D00BE2597 /* ActivityCharacter.swift in Sources */,
 				3868C1772AE77AF700E832B0 /* OnboardingScreenView.swift in Sources */,
-				AC427D742AEB70060012E00C /* BlendWordActivity.swift in Sources */,
 				F94464272B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift in Sources */,
 				F9A7A2872B0B1C7F0053F0A7 /* ReportLabelStyle.swift in Sources */,
 				381C33DC2B03D97000BAFE69 /* AppNavigation.swift in Sources */,
@@ -1132,6 +1134,7 @@
 				74FB08D82AE9AA50003CBE43 /* QRCameraView.swift in Sources */,
 				74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
+				F90521AD2B0DB94100134C60 /* ReportUtils.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				381C33EA2B041A2400BAFE69 /* CombineSyllableActivityViewModel.swift in Sources */,
 				744373962B046B8A005D62DD /* CoreDataContainer.swift in Sources */,
@@ -1151,8 +1154,6 @@
 				AC1FC1E02AE66D9C0078015B /* SyllableLabelView.swift in Sources */,
 				3868C1612AE61FEF00E832B0 /* Color+Colors.swift in Sources */,
 				F94464322B074AE5002BEF52 /* ChartView.swift in Sources */,
-				74EBBBD12AEEEA5A00E8FED3 /* PreviewCardActivity.swift in Sources */,
-				74FB08ED2AEA2D43003CBE43 /* QrScannerDelegate.swift in Sources */,
 				F94464302B0659BE002BEF52 /* ReportViewModel.swift in Sources */,
 				ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */,
 				381C33F42B041A8200BAFE69 /* BreakWordActivityViewModel.swift in Sources */,
@@ -1208,7 +1209,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1297,7 +1298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = A94C53K2J9;
+				DEVELOPMENT_TEAM = S2JK9K6833;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				EXCLUDED_ARCHS = "";
@@ -1333,7 +1334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = A94C53K2J9;
+				DEVELOPMENT_TEAM = S2JK9K6833;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

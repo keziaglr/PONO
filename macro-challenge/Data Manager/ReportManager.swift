@@ -8,6 +8,7 @@
 import Foundation
 
 class ReportManager {
+    static let shared = ReportManager()
     
     func getPractices() async -> [Practice] {
         await withCheckedContinuation { continuation in
@@ -71,6 +72,7 @@ class ReportManager {
                 return nil
             }
             practicedSyllable.id = syllable.id
+            practicedSyllable.content = syllable.content
             practicedSyllable.increasePronunciationCount(isCorrect: isPronunciationCorrect)
             practicedSyllable.increaseCardRecognitionCount(isCorrect: isCardRecognitionCorrect)
             practicedSyllable.createdAt = Date()

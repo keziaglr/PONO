@@ -7,7 +7,7 @@
 
 import CoreData
 
-fileprivate let containerName = "pono.coredata-container"
+fileprivate let containerName = "CoreDataModel"
 
 struct CoreDataContainer {
     

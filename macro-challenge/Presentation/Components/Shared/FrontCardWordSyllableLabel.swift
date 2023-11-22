@@ -7,31 +7,33 @@
 
 import SwiftUI
 
+enum CardReportType {
+    case empty
+    case fail
+    case success
+}
+
 struct FrontCardWordSyllableLabel: View {
-    @State var text : String
-    @State var learnedType : String
-    //    @Binding var selectedWord: String?
-    @State var condition: String
-    var isWord : Bool
-    var rating : Int
-    
+    @ObservedObject var viewModel: ReportViewModel
     @State private var isExpanded = false
+    
     var body: some View {
         HStack {
-            Text(text)
+            Text(viewModel.getText())
                 .font(.custom("Quicksand-Bold", size: 20))
-                .foregroundStyle(condition == "default" ? Color.black : Color.white)
+                .foregroundStyle(viewModel.getCondition() == .empty ? Color.black : Color.white)
                 .padding(.horizontal)
             Spacer()
-            RatingView(rating: rating)
+            if !viewModel.isWord{
+                RatingView(rating: viewModel.newCalculateRating())
+            }
         }
         .padding(.horizontal, 1)
         .padding(.vertical, 14)
         .frame(width: 250, height: isExpanded ? 40 : 70, alignment: .center)
-        //        .background(getBackgroundColor())
         .background(
             UnevenRoundedRectangle(topLeadingRadius: 10, bottomLeadingRadius: isExpanded ? 0 : 10, bottomTrailingRadius: isExpanded ? 0 : 10, topTrailingRadius: 10)
-                .fill(getBackgroundColor())
+                .fill(viewModel.getBackgroundColor())
             
         )
         .onTapGesture {
@@ -42,27 +44,12 @@ struct FrontCardWordSyllableLabel: View {
         .zIndex(2.0)
         
         if isExpanded {
-            DetailReportCardView(condition: "underAverage", wordSpeechSucceed: 10, syllableSpeechSucceed: 15, syllableCardSucceed: 4, totalExercise: 25, isWord: isWord)
+            DetailReportCardView(viewModel: viewModel)
                 .offset(y: -20)
         }
     }
-    
-
-    
-    func getBackgroundColor() -> Color {
-        switch condition {
-        case "underAverage":
-            return Color.Red2
-        case "aboveAverage":
-            return Color.Green2
-        default:
-            return Color.White1
-        }
-    }
-    
-    
 }
-
-#Preview {
-    FrontCardWordSyllableLabel(text: "papi", learnedType: "syllable", condition: "default", isWord: true, rating: 1)
-}
+//
+//#Preview {
+//    FrontCardWordSyllableLabel(word: PracticedWord())
+//}
