@@ -38,9 +38,3 @@ struct ProgressBarView: View {
         }
     }
 }
-
-//struct ProgressBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProgressBarView(width: 600, height: 25, progress: 1.5)
-//    }
-//}
