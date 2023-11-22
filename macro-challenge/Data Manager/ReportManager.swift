@@ -75,6 +75,7 @@ struct ReportManager {
                 return nil
             }
             practicedSyllable.id = syllable.id
+            practicedSyllable.content = syllable.content
             practicedSyllable.increasePronunciationCount(isCorrect: isPronunciationCorrect)
             practicedSyllable.increaseCardRecognitionCount(isCorrect: isCardRecognitionCorrect)
             practicedSyllable.createdAt = Date()
