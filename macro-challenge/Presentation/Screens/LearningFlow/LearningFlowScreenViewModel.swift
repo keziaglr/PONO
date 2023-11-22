@@ -24,9 +24,9 @@ class LearningFlowScreenViewModel: ObservableObject {
         guard let learningWord else { return [] }
         return [
             .breakWord(learningWord),
-            .card(learningWord, .firstSyllable),
+//            .card(learningWord, .firstSyllable),
             .pronunciation(learningWord, .firstSyllable),
-            .card(learningWord, .secondSyllable),
+//            .card(learningWord, .secondSyllable),
             .pronunciation(learningWord, .secondSyllable),
             .combineSyllable(learningWord),
             .pronunciation(learningWord, nil),
@@ -93,37 +93,53 @@ class LearningFlowScreenViewModel: ObservableObject {
     }
     
     func logWordPronunciationPractice(_ word: Word, isCorrect: Bool) {
-        guard practicedWordRecord == nil else { return }
         let newRecord = PracticedWordRecord(word: word,
                                             isPronunciationCorrect: isCorrect)
         practicedWordRecord = newRecord
     }
     
     func logSyllablePronunciationPractice(_ syllable: Syllable, isCorrect: Bool) {
-        if let record = practicedSyllableRecords?.first(where: { $0.syllable == syllable }) {
+        if let practicedSyllableRecords {
+            if let record = practicedSyllableRecords.first(where: { $0.syllable == syllable }) {
+                let newRecord = PracticedSyllableRecord(syllable: syllable,
+                                                        isPronunciationCorrect: isCorrect,
+                                                        isCardRecognitionCorrect: record.isCardRecognitionCorrect)
+                self.practicedSyllableRecords?.removeAll(where: { $0 == record })
+                self.practicedSyllableRecords?.append(newRecord)
+            } else {
+                let newRecord = PracticedSyllableRecord(syllable: syllable,
+                                                        isPronunciationCorrect: isCorrect,
+                                                        isCardRecognitionCorrect: nil)
+                self.practicedSyllableRecords?.append(newRecord)
+            }
+        } else {
             let newRecord = PracticedSyllableRecord(syllable: syllable,
                                                     isPronunciationCorrect: isCorrect,
-                                                    isCardRecognitionCorrect: record.isCardRecognitionCorrect)
-            practicedSyllableRecords?.append(newRecord)
-        } else {
-            let newRecord = PracticedSyllableRecord(syllable: syllable, 
-                                                    isPronunciationCorrect: isCorrect,
                                                     isCardRecognitionCorrect: nil)
-            practicedSyllableRecords?.append(newRecord)
+            practicedSyllableRecords = [newRecord]
         }
+        
     }
     
     func logSyllableCardPractice(_ syllable: Syllable, isCorrect: Bool) {
-        if let record = practicedSyllableRecords?.first(where: { $0.syllable == syllable }) {
-            let newRecord = PracticedSyllableRecord(syllable: syllable,
-                                                    isPronunciationCorrect: record.isPronunciationCorrect,
-                                                    isCardRecognitionCorrect: isCorrect)
-            practicedSyllableRecords?.append(newRecord)
+        if let practicedSyllableRecords {
+            if let record = practicedSyllableRecords.first(where: { $0.syllable == syllable }) {
+                let newRecord = PracticedSyllableRecord(syllable: syllable,
+                                                        isPronunciationCorrect: record.isPronunciationCorrect,
+                                                        isCardRecognitionCorrect: isCorrect)
+                self.practicedSyllableRecords?.removeAll(where: { $0 == record })
+                self.practicedSyllableRecords?.append(newRecord)
+            } else {
+                let newRecord = PracticedSyllableRecord(syllable: syllable,
+                                                        isPronunciationCorrect: nil,
+                                                        isCardRecognitionCorrect: isCorrect)
+                self.practicedSyllableRecords?.append(newRecord)
+            }
         } else {
             let newRecord = PracticedSyllableRecord(syllable: syllable,
                                                     isPronunciationCorrect: nil,
                                                     isCardRecognitionCorrect: isCorrect)
-            practicedSyllableRecords?.append(newRecord)
+            practicedSyllableRecords = [newRecord]
         }
     }
     
@@ -149,13 +165,13 @@ class LearningFlowScreenViewModel: ObservableObject {
     
 }
 
-struct PracticedSyllableRecord {
+struct PracticedSyllableRecord: Equatable {
     let syllable: Syllable
     let isPronunciationCorrect: Bool?
     let isCardRecognitionCorrect: Bool?
 }
 
-struct PracticedWordRecord {
+struct PracticedWordRecord: Equatable {
     let word: Word
     let isPronunciationCorrect: Bool?
 }
