@@ -42,7 +42,7 @@ class CardActivityViewModel: ObservableObject {
         self.syllableOrder = syllableOrder
         self.syllables = ContentManager.shared.syllables
         
-        self.audioManager = AudioManager()
+        self.audioManager = AudioManager.shared
         
         self.qrScannerManager = QRScannerManager()
         self.qrScannerManager.delegate = self
@@ -122,7 +122,6 @@ extension CardActivityViewModel: QRScannerDelegate {
             isCorrect = isScannedCardCorrect(foundSyllable)
             self.scannedCard = foundSyllable
             stopScanning()
-            playInstruction()
         }
     }
     

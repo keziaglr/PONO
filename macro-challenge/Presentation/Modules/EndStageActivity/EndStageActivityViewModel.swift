@@ -24,7 +24,7 @@ class EndStageActivityViewModel: ObservableObject {
     
     init(learningWord: Word) {
         self.learningWord = learningWord
-        self.audioManager = AudioManager()
+        self.audioManager = AudioManager.shared
     }
     
     func playInstruction(isReplay: Bool = false) {

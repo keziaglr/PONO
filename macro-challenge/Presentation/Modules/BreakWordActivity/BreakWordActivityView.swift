@@ -24,6 +24,7 @@ struct BreakWordActivityView: View {
     @State private var instructionText : String = ""
     private let screenWidth = CGFloat(UIScreen.main.bounds.width)
     private let screenHeight = CGFloat(UIScreen.main.bounds.height)
+    @State private var buttonTapped = false
     
     init(learningWord: Word, onNext: @escaping () -> Void) {
         self.viewModel = BreakWordActivityViewModel(learningWord: learningWord)
@@ -56,12 +57,14 @@ struct BreakWordActivityView: View {
                     
                     if viewModel.currentInstructionVoiceIndex == 6 {
                         Button {
+                            buttonTapped.toggle()
                             onNext()
                         } label: {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                         .padding(20)
+                        .disabled(buttonTapped)
                     }
                 }
                 
