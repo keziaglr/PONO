@@ -13,39 +13,21 @@ struct PlayRecord: View {
     @State var action : () -> Void
     @Binding var drawingHeight: Bool
     @State var isRunning = false
-    @State var repeatRecord = false
-    @Binding var isDone : Bool
+    @Binding var isDone: Bool
     
     // Progress bar
-    @State var progress : CGFloat = 0.0
+    @State var progress: CGFloat = 0.0
+    @Binding var duration: TimeInterval?
     let timer = Timer.publish(every: 0.1, on:.main, in: .common).autoconnect()
-    @State private var tapCount = 0
-    @State private var isProgressCompleted = false
-    
-    
-    // Animation
-    var animation: Animation {
-        return .linear(duration: 0.5).repeatForever()
-    }
     
     var body: some View {
         
         VStack{
             
             Button(action: {
-                
-                if tapCount == 0 {
-                    // Start animation -> first tap
-                    isRunning = true
-                } else {
-                    // Reset progress
-                    progress = 0
-                    isRunning = true
-                }
-                tapCount += 1
+                progress = 0
+                isRunning = true
                 action()
-                self.progress = 0.0
-                repeatRecord = true
             }, label: {
                 // MARK: Progress Bar
                 VStack {
@@ -60,15 +42,14 @@ struct PlayRecord: View {
                 }
             })
             .onReceive(timer) { _ in
-                if isRunning && progress < 1.0 {
-                    progress += 0.025
-                    if progress >= 1.0 {
+                if let duration, isRunning && progress < duration {
+                    progress += 0.1 / duration
+                    if isRunning && progress > 1.0 {
                         isDone = true
+                        isRunning = false
                     }
                 }
             }
-            
-            
         }
         .buttonStyle(PonoButtonStyle(variant: .secondary))
         
@@ -85,6 +66,6 @@ struct PlayRecord: View {
 
 struct PlayRecord_Previews: PreviewProvider {
     static var previews: some View {
-        PlayRecord(action: {}, drawingHeight: .constant(false), isDone: .constant(false))
+        PlayRecord(action: {}, drawingHeight: .constant(false), isDone: .constant(false), duration: .constant(0.0))
     }
 }

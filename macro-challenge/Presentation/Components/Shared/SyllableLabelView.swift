@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SyllableLabelView: View {
-    @State var left : Bool
+    @State var left: Bool
     @Binding var scale: Bool
-    @State var syllable : String
+    @State var syllable: String
     @State var height: CGFloat
     @State var width: CGFloat
     @Binding var show: Bool

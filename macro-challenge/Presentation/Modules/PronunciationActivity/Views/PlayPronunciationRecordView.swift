@@ -15,10 +15,12 @@ struct PlayPronunciationRecordView: View {
     let onPlayRecord: () -> Void
     let onNext: () -> Void
     let onRetry: () -> Void
+    @Binding var duration: TimeInterval?
     
     @State private var drawingHeight = true
     @State private var isRecording = false
     @State private var isDone = false
+    @State private var buttonTapped = false
     
     var body: some View {
         ZStack {
@@ -29,11 +31,13 @@ struct PlayPronunciationRecordView: View {
                 if isDone {
                     HStack {
                         Button {
+                            buttonTapped.toggle()
                             onNext()
                         } label: {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
+                        .disabled(buttonTapped)
                         
                         Button {
                             onRetry()
@@ -55,7 +59,8 @@ struct PlayPronunciationRecordView: View {
                     drawingHeight.toggle()
                 },
                            drawingHeight: $drawingHeight,
-                           isDone: $isDone)
+                           isDone: $isDone,
+                           duration: $duration)
                 
             }
         }
@@ -69,6 +74,7 @@ struct PlayPronunciationRecordView_Previews: PreviewProvider {
                                     onPlaySampleSound: { },
                                     onPlayRecord: { },
                                     onNext: { },
-                                    onRetry: { })
+                                    onRetry: { },
+                                    duration: .constant(0.0))
     }
 }

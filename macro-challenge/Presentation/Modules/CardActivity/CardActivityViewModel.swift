@@ -13,7 +13,7 @@ class CardActivityViewModel: ObservableObject {
     let learningWord: Word
     let syllableOrder: SyllableOrder
     
-    private var syllable: Syllable? {
+    var syllable: Syllable? {
         syllableOrder == .firstSyllable ? learningWord.syllables[safe: 0] : syllableOrder == .secondSyllable ? learningWord.syllables[safe: 1] : nil
     }
     
@@ -42,7 +42,7 @@ class CardActivityViewModel: ObservableObject {
         self.syllableOrder = syllableOrder
         self.syllables = ContentManager.shared.syllables
         
-        self.audioManager = AudioManager()
+        self.audioManager = AudioManager.shared
         
         self.qrScannerManager = QRScannerManager()
         self.qrScannerManager.delegate = self
@@ -122,7 +122,6 @@ extension CardActivityViewModel: QRScannerDelegate {
             isCorrect = isScannedCardCorrect(foundSyllable)
             self.scannedCard = foundSyllable
             stopScanning()
-            playInstruction()
         }
     }
     

@@ -29,6 +29,7 @@ class PronunciationActivityViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var currentInstruction: Instruction?
     @Published var currentInstructionVoiceIndex: Int = 0
+    @Published var duration: TimeInterval?
     
     private var instructions: [Instruction] {
         if syllableOrder != nil {
@@ -58,7 +59,7 @@ class PronunciationActivityViewModel: ObservableObject {
         self.learningWord = learningWord
         self.syllableOrder = syllableOrder
         
-        audioManager = AudioManager()
+        audioManager = AudioManager.shared
         recordingManager = RecordingManager.shared
         soundClassifier = SoundClassifier(modelFileName: "sound_classification", delegate: self)
     }
@@ -165,7 +166,9 @@ class PronunciationActivityViewModel: ObservableObject {
     
     func playVoiceRecord() {
         guard let voiceRecord else { return }
-        recordingManager.playRecording(voiceRecord)
+        recordingManager.playRecording(voiceRecord) { duration in
+            self.duration = duration
+        }
     }
     
     private func startAudioRecognition() {
@@ -197,7 +200,7 @@ class PronunciationActivityViewModel: ObservableObject {
     }
     
     private func isAnyVoiceCorrect(_ probabilityModels: [ProbabilityModel]) -> Bool {
-        (probabilityModels.first(where: { $0.labelName.lowercased() == syllable?.content.lowercased() })?.probability ?? 0.0) >= 0.5
+        (probabilityModels.first(where: { $0.labelName.lowercased() == syllable?.content.lowercased() })?.probability ?? 0.0) >= 0.7
     }
 }
 
