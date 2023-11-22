@@ -20,6 +20,7 @@ struct PlayPronunciationRecordView: View {
     @State private var drawingHeight = true
     @State private var isRecording = false
     @State private var isDone = false
+    @State private var buttonTapped = false
     
     var body: some View {
         ZStack {
@@ -30,11 +31,13 @@ struct PlayPronunciationRecordView: View {
                 if isDone {
                     HStack {
                         Button {
+                            buttonTapped.toggle()
                             onNext()
                         } label: {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
+                        .disabled(buttonTapped)
                         
                         Button {
                             onRetry()

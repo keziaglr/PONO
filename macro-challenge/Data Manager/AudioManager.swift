@@ -8,6 +8,7 @@
 import AVFoundation
 
 class AudioManager: NSObject {
+    static let shared = AudioManager()
     var queuePlayer: AVQueuePlayer?
     var playerItems: [AVPlayerItem] = []
     var queueCount: Int {

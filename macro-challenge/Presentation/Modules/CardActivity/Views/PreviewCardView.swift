@@ -12,6 +12,7 @@ struct PreviewCardView: View {
     var scannedCard: Syllable = Syllable(id: UUID(), content: "ba")
     let onNext: () -> Void
     let onRetry: () -> Void
+    @State private var buttonTapped = false
     @State private var isFlipped = true
     @State private var backDegree = 0.0
     @State private var frontDegree = -90.0
@@ -35,6 +36,7 @@ struct PreviewCardView: View {
                 HStack {
                     Button {
                         if !isFlipped {
+                            buttonTapped.toggle()
                             onNext()
                         } else {
                             flipCard()
@@ -43,6 +45,7 @@ struct PreviewCardView: View {
                         Image(systemName: "arrow.right")
                     }
                     .buttonStyle(PonoButtonStyle(variant: .primary))
+                    .disabled(buttonTapped)
                     
                     if viewModel.isCorrect == false{
                         Button{
