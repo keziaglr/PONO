@@ -41,8 +41,8 @@ struct FrontCardWordSyllableLabel: View {
         .padding(.vertical, 14)
         .frame(width: 250, height: isExpanded ? 40 : 70, alignment: .center)
         .background(
-            UnevenRoundedRectangle(topLeadingRadius: 10, bottomLeadingRadius: isExpanded ? 0 : 10, bottomTrailingRadius: isExpanded ? 0 : 10, topTrailingRadius: 10)
-                .fill(viewModel.getBackgroundColor())
+//            UnevenRoundedRectangle(topLeadingRadius: 10, bottomLeadingRadius: isExpanded ? 0 : 10, bottomTrailingRadius: isExpanded ? 0 : 10, topTrailingRadius: 10)
+//                .fill(viewModel.getBackgroundColor())
             
         )
         .onTapGesture {

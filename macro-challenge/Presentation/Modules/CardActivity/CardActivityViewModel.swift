@@ -117,7 +117,7 @@ class CardActivityViewModel: ObservableObject {
 
 extension CardActivityViewModel: QRScannerDelegate {
     
-    func getQrScannedDataDelegate(scannedData: String = "dc6e850b-485a-4e23-a1c3-12a0a1dab4c0") {
+    func getQrScannedDataDelegate(scannedData: String) {
         if let foundSyllable = syllables.first(where: { $0.id == UUID(uuidString: scannedData) }) {
             isCorrect = isScannedCardCorrect(foundSyllable)
             self.scannedCard = foundSyllable

@@ -45,6 +45,7 @@ class ReportViewModel: ObservableObject {
             await getPractices()
             await getWords()
             await getSyllables()
+            await getPracticeData()
         }
         refreshData()
     }

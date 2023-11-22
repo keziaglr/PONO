@@ -50,11 +50,6 @@ struct ChartView: View {
         .frame(maxWidth: 590, maxHeight: .infinity)
         .background(.white)
         .cornerRadius(30)
-        .onAppear {
-            Task {
-                await viewModel.getPracticeData()
-            }
-        }
     }
 }
 

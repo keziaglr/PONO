@@ -58,9 +58,6 @@ struct CardActivityView: View {
                             .cornerRadius(20)
                         MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
                             .padding(.top, 20)
-                            .onTapGesture {
-                                viewModel.getQrScannedDataDelegate()
-                            }
                     }
                 } else {
                     PreviewCardView(viewModel: viewModel, onNext: {
