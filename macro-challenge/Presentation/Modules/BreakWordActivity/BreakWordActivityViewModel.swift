@@ -21,7 +21,7 @@ class BreakWordActivityViewModel: ObservableObject {
     @Published var currentInstruction: Instruction?
     @Published var currentInstructionVoiceIndex: Int = 0
     
-    let audioManager = AudioManager()
+    let audioManager = AudioManager.shared
     
     init(learningWord: Word) {
         self.learningWord = learningWord

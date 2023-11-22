@@ -24,6 +24,7 @@ struct CombineSyllableActivityView: View {
     @GestureState private var translation: CGSize = .zero
     @GestureState private var translation2: CGSize = .zero
     @State private var instructionText = ""
+    @State private var buttonTapped = false
     
     init(learningWord: Word, onNext: @escaping () -> Void) {
         self.viewModel = CombineSyllableActivityViewModel(learningWord: learningWord)
@@ -56,12 +57,14 @@ struct CombineSyllableActivityView: View {
                     
                     if isSyllableCombined {
                         Button {
+                            buttonTapped.toggle()
                             onNext()
                         } label: {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
                         .padding(20)
+                        .disabled(buttonTapped)
                     }
                     
                 }
