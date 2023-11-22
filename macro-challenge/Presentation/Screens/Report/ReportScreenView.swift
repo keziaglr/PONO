@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ReportScreenView: View {
     @ObservedObject private var viewModel = ReportViewModel()
+    @Environment(\.switchableNavigate) var switchableNavigate
     
     @State private var total = 20
 
@@ -17,28 +18,48 @@ struct ReportScreenView: View {
             Image("Cloud")
                 .resizable()
                 .scaledToFit()
+            VStack {
+                HStack {
+                    Button {
+                        switchableNavigate(.home)
+                    } label: {
+                        Image(systemName: "house.fill")
+                    }.buttonStyle(PonoButtonStyle(variant: .tertiary))
+                    Spacer()
+                }
+                Spacer()
+            }
+            .padding()
+            
             
                 VStack {
-                    Text("Laporan Mingguan")
-                        .font(.custom("Quicksand-Bold", size: 40))
-                        .foregroundStyle(Color.White1)
+                    Text("Laporan Hasil Belajar")
+//                        .font(.custom("SF Pro Rounded", size: 40))
+                        .font(.system(size: 40, design: .rounded))
+                        .fontWeight(.black)
+                        .foregroundStyle(Color.Yellow2)
+                        .tracking(5.0)
+                        .glowBorder(color: Color.White2, lineWidth: 16)
+                        .padding(.top, 20)
+                        .padding()
+
                     if viewModel.practices.isEmpty {
                         VStack {
                             NoSessionStartedView()
                         }
                         .frame(maxHeight: .infinity)
                     } else {
+                        
                     HStack(spacing: 24) {
-                        ForEach(viewModel.buttonData, id: \.title) { buttonData in
-                            let total = /*viewModel.fetchTotal(for: buttonData.component)*/
-                            total
-                            ReportNavigation(title: buttonData.title, iconName: buttonData.iconName, total: total, isSelected: viewModel.selectedComponent == buttonData.component, action: {
-                                viewModel.changeSelectedComponent(to: buttonData.component)
+                        ReportNavigation(title: viewModel.buttonData[0].title, iconName: viewModel.buttonData[0].iconName, total: viewModel.fetchPracticesTotal(), isSelected: viewModel.selectedComponent == viewModel.buttonData[0].component, action: {
+                                viewModel.changeSelectedComponent(to: viewModel.buttonData[0].component)
                             })
-                        }
-                        
-                        
-                        
+                            ReportNavigation(title: viewModel.buttonData[1].title, iconName: viewModel.buttonData[1].iconName, total: viewModel.fetchSyllablesTotal(), isSelected: viewModel.selectedComponent == viewModel.buttonData[1].component, action: {
+                                viewModel.changeSelectedComponent(to: viewModel.buttonData[1].component)
+                            })
+                            ReportNavigation(title: viewModel.buttonData[2].title, iconName: viewModel.buttonData[2].iconName, total: viewModel.fetchWordsTotal(), isSelected: viewModel.selectedComponent == viewModel.buttonData[2].component, action: {
+                                viewModel.changeSelectedComponent(to: viewModel.buttonData[2].component)
+                            })
                     }
                     .padding(.bottom, 20)
 
@@ -50,11 +71,11 @@ struct ReportScreenView: View {
                             .tag(SelectedComponent.session)
                         
                         // Word data
-                        LearnedWords(words: ["papi", "mami", "babi", "budi", "dada", "baba", "baku"], learnedWord: 30)
+                        LearnedWords()
                             .tag(SelectedComponent.word)
                         
                         // Syllable Data
-                        LearnedSyllables(syllables: ["ma", "mi", "mu", "me", "mo", "pa", "pi", "pu", "pe", "po", "la", "li"], learnedSyllable: 30)
+                        LearnedSyllables()
                             .tag(SelectedComponent.syllable)
                         
                     }
@@ -67,6 +88,6 @@ struct ReportScreenView: View {
     }
 }
 
-#Preview {
-    ReportScreenView()
-}
+//#Preview {
+//    ReportScreenView()
+//}

@@ -28,7 +28,7 @@ struct ContentView: View {
                 LearningFlowScreenView()
             case .report:
                 //TODO: change to report view
-                LearningFlowScreenView()
+                ReportScreenView()
             }
         }
         .environment(\.switchableNavigate) { route in

@@ -55,7 +55,7 @@ struct NoSessionStartedView: View {
                                     .stroke(Color(red: 0.9, green: 0.68, blue: 0.09), lineWidth: 1)
                             )
                         // text
-                        Text("Mulai sesi")
+                        Text("Mulai Latihan")
                             .font(.custom("Quicksand-Bold", size: 28))
                             .foregroundStyle(Color.White2)
                     }

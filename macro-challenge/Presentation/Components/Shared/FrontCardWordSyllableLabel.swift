@@ -14,8 +14,17 @@ enum CardReportType {
 }
 
 struct FrontCardWordSyllableLabel: View {
+    @State var syllable : PracticedSyllable?
+    @State var word : PracticedWord?
     @ObservedObject var viewModel: ReportViewModel
     @State private var isExpanded = false
+    
+    init(syllable: PracticedSyllable? = nil, word: PracticedWord? = nil, viewModel: ReportViewModel? = nil, isExpanded: Bool = false) {
+        self.syllable = syllable
+        self.word = word
+        self.viewModel = ReportViewModel(word: word, syllable: syllable)
+        self.isExpanded = isExpanded
+    }
     
     var body: some View {
         HStack {

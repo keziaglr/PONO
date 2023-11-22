@@ -10,8 +10,8 @@ import SwiftUI
 
 enum SelectedComponent {
     case session
-    case syllable
     case word
+    case syllable
 }
 
 struct ReportButtonData {
@@ -27,18 +27,24 @@ class ReportViewModel: ObservableObject {
     @Published var selectedComponent: SelectedComponent = .session
     let reportManager: ReportManager
     @Published var practices : [Practice] = []
+    @Published var words : [PracticedWord] = []
+    @Published var syllables : [PracticedSyllable] = []
     
     let buttonData : [ReportButtonData] = [
         ReportButtonData(component: .session, title: "total latihan", iconName: "Hourglass"),
-        ReportButtonData(component: .syllable, title: "suku kata dipelajari", iconName: "book"),
-        ReportButtonData(component: .word, title: "kata dipelajari", iconName: "puzzle")
+        ReportButtonData(component: .word, title: "kata dipelajari", iconName: "puzzle"),
+        ReportButtonData(component: .syllable, title: "suku kata dipelajari", iconName: "book")
     ]
     
     init(word: PracticedWord? = nil, syllable: PracticedSyllable? = nil) {
         isWord = syllable == nil
-        self.reportManager = ReportManager()
+        self.word = word
+        self.syllable = syllable
+        self.reportManager = ReportManager.shared
         Task{
             await getPractices()
+            await getWords()
+            await getSyllables()
         }
     }
     
@@ -46,14 +52,36 @@ class ReportViewModel: ObservableObject {
         practices = await reportManager.getPractices()
     }
     
-    func fetchTotal(for component: SelectedComponent) async -> Int {
-        switch component {
+    func getWords() async {
+        words = await reportManager.getPracticedWords()
+        
+    }
+    
+    func getSyllables() async {
+        syllables = await reportManager.getPracticedSyllables()
+    }
+    
+    func fetchPracticesTotal() -> Int {
+        return practices.count // Static value for session total
+    }
+    
+    func fetchSyllablesTotal() -> Int {
+        return syllables.count // Static value for session total
+    }
+    
+    func fetchWordsTotal() -> Int {
+        return words.count // Static value for session total
+    }
+    
+    
+    func fetchTotal(for component: SelectedComponent) -> Int {
+        switch self.selectedComponent {
         case .session:
-            return await reportManager.getPractices().count // Static value for session total
+            return practices.count // Static value for session total
         case .syllable:
-            return await reportManager.getPracticedSyllables().count // Static value for syllable total
+            return syllables.count // Static value for syllable total
         case .word:
-            return await reportManager.getPracticedWords().count // Static value for word total
+            return words.count  // Static value for word total
         }
     }
     
@@ -91,10 +119,11 @@ class ReportViewModel: ObservableObject {
     }
     
     func getText() -> String{
-        guard let word, let syllable else { return "" }
         if isWord {
+            guard let word else { return "" }
             return word.id ?? ""
-        }else{
+        } else {
+            guard let syllable else { return "" }
             return syllable.content ?? ""
         }
     }
@@ -107,12 +136,12 @@ class ReportViewModel: ObservableObject {
             
             if word.totalPractices < 10 {
                 return .empty
-            }else if calculateSuccessPercentage(successCount: Int(word.countPronunciationCorrect), totalAttempts: word.totalPractices) >= 65 {
+            } else if calculateSuccessPercentage(successCount: Int(word.countPronunciationCorrect), totalAttempts: word.totalPractices) >= 65 {
                 return .success
-            }else {
+            } else {
                 return .fail
             }
-        }else{
+        } else {
             guard let syllable else {
                 return .empty
             }
@@ -161,8 +190,15 @@ class ReportViewModel: ObservableObject {
     }
     
     func getDescriptionSucceedAttempts() -> String {
-        guard let word, let syllable else { return "" }
-        let count : Int = isWord ? word.totalPractices : syllable.totalPractices
+        var count = 0
+        if isWord {
+            guard let word else { return "" }
+            count = word.totalPractices
+        } else {
+            guard let syllable else { return "" }
+            count = syllable.totalPractices
+        }
+        
         if count < 10 {
             return "Belum mencapai 10x"
         } else {
@@ -171,8 +207,13 @@ class ReportViewModel: ObservableObject {
     }
     
     func getTotalAttempts() -> Int{
-        guard let word, let syllable else { return -1 }
-        return isWord ? word.totalPractices : syllable.totalPractices
+        if isWord {
+            guard let word else { return -1 }
+            return word.totalPractices
+        } else {
+            guard let syllable else { return -1 }
+            return syllable.totalPractices
+        }
     }
     
     func getDescription() -> String {

@@ -153,7 +153,6 @@
 		ACECDC1E2AEF583400E616D7 /* PronounceInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */; };
 		ACECDC1F2AEF583400E616D7 /* PlayRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */; };
 		ACECDC262AEF7CBE00E616D7 /* RecordingAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */; };
-		F90521AD2B0DB94100134C60 /* ReportUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90521AC2B0DB94100134C60 /* ReportUtils.swift */; };
 		F94464252B05B4D9002BEF52 /* LearnedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464242B05B4D9002BEF52 /* LearnedWords.swift */; };
 		F94464272B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */; };
 		F94464292B05C8B2002BEF52 /* LearnedSyllables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */; };
@@ -166,6 +165,7 @@
 		F9A7A2872B0B1C7F0053F0A7 /* ReportLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */; };
 		F9A7A2892B0B39F20053F0A7 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A7A2882B0B39F20053F0A7 /* RatingView.swift */; };
 		F9C16B852AF7C2190099DE09 /* RecordProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */; };
+		F9D8957B2B0E2CF1000B45A9 /* GlowBorderReportTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8957A2B0E2CF1000B45A9 /* GlowBorderReportTitle.swift */; };
 		F9E66B772AF939E000381AFF /* RecordingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */; };
 		FD74F016CAD575B3D1418DA4 /* Pods_macro_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C71128A5A3BCCCEED84C487 /* Pods_macro_challenge.framework */; };
 /* End PBXBuildFile section */
@@ -321,7 +321,6 @@
 		ACECDC1B2AEF583400E616D7 /* PronounceInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounceInstruction.swift; sourceTree = "<group>"; };
 		ACECDC1C2AEF583400E616D7 /* PlayRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRecord.swift; sourceTree = "<group>"; };
 		ACECDC252AEF7CBE00E616D7 /* RecordingAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioView.swift; sourceTree = "<group>"; };
-		F90521AC2B0DB94100134C60 /* ReportUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUtils.swift; sourceTree = "<group>"; };
 		F94464242B05B4D9002BEF52 /* LearnedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedWords.swift; sourceTree = "<group>"; };
 		F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCardWordSyllableLabel.swift; sourceTree = "<group>"; };
 		F94464282B05C8B2002BEF52 /* LearnedSyllables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedSyllables.swift; sourceTree = "<group>"; };
@@ -334,6 +333,7 @@
 		F9A7A2862B0B1C7F0053F0A7 /* ReportLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLabelStyle.swift; sourceTree = "<group>"; };
 		F9A7A2882B0B39F20053F0A7 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		F9C16B842AF7C2190099DE09 /* RecordProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProgressBarView.swift; sourceTree = "<group>"; };
+		F9D8957A2B0E2CF1000B45A9 /* GlowBorderReportTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowBorderReportTitle.swift; sourceTree = "<group>"; };
 		F9E66B762AF939E000381AFF /* RecordingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -752,7 +752,6 @@
 				2FF694A62AE8C65D0085393F /* Date+Extension.swift */,
 				74FB08E22AE9D67B003CBE43 /* Color+Extension.swift */,
 				7429B7632AEEED7100BF7F93 /* String+Extension.swift */,
-				F90521AC2B0DB94100134C60 /* ReportUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -804,6 +803,7 @@
 				F9A7A2882B0B39F20053F0A7 /* RatingView.swift */,
 				F94464262B05BC17002BEF52 /* FrontCardWordSyllableLabel.swift */,
 				F99E30602B0BD97B00F221A1 /* DetailReportCardView.swift */,
+				F9D8957A2B0E2CF1000B45A9 /* GlowBorderReportTitle.swift */,
 				F94464312B074AE5002BEF52 /* ChartView.swift */,
 				74695A7D2AF7EA5C00FFBB6F /* MergedSyllableView.swift */,
 				ACA0FB822B098D510011624C /* BubuAnimation.swift */,
@@ -1115,6 +1115,7 @@
 				2F99061D2AEE5EDD005AB1CC /* AudioRecord.swift in Sources */,
 				381C33FF2B041AF400BAFE69 /* LearningFlowScreenViewModel.swift in Sources */,
 				381C33EE2B041A4200BAFE69 /* CardActivityViewModel.swift in Sources */,
+				F9D8957B2B0E2CF1000B45A9 /* GlowBorderReportTitle.swift in Sources */,
 				2F99061F2AEE687A005AB1CC /* AudioManager.swift in Sources */,
 				3868C1722AE777D900E832B0 /* StringResources.swift in Sources */,
 				AC1FC1D82AE667C20078015B /* ContentManager.swift in Sources */,
@@ -1134,7 +1135,6 @@
 				74FB08D82AE9AA50003CBE43 /* QRCameraView.swift in Sources */,
 				74FB08E12AE9D351003CBE43 /* FrontCardView.swift in Sources */,
 				AC50DC2E2ACE5CDF00B9FE1B /* ContentView.swift in Sources */,
-				F90521AD2B0DB94100134C60 /* ReportUtils.swift in Sources */,
 				AC50DC2C2ACE5CDF00B9FE1B /* macro_challengeApp.swift in Sources */,
 				381C33EA2B041A2400BAFE69 /* CombineSyllableActivityViewModel.swift in Sources */,
 				744373962B046B8A005D62DD /* CoreDataContainer.swift in Sources */,
@@ -1271,6 +1271,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1298,10 +1299,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = T84FHM7BL8;
+				DEVELOPMENT_TEAM = S2JK9K6833;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PONO;
@@ -1337,10 +1338,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macro-challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = T84FHM7BL8;
+				DEVELOPMENT_TEAM = S2JK9K6833;
 				ENABLE_ON_DEMAND_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macro-challenge/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PONO;

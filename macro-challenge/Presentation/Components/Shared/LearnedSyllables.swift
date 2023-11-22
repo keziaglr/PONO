@@ -12,9 +12,6 @@ struct LearnedSyllables: View {
     
     @ObservedObject private var viewModel = ReportViewModel()
     
-    @State var syllables : [PracticedSyllable]
-    var learnedSyllable : Int
-    
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
@@ -22,16 +19,16 @@ struct LearnedSyllables: View {
                     .textCase(.uppercase)
                     .font(.custom("Quicksand-Bold", size: 14))
                     .padding(.horizontal)
-                Text("\(learnedSyllable) dari 35 suku kata")
+                Text("\(viewModel.syllables.count) dari 35 suku kata")
                     .font(.custom("Quicksand", size: 12))
                     .padding(.horizontal)
                 ScrollView {
                     
                     Section {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 40) {
-                            ForEach(syllables, id: \.self) { syllable in
+                            ForEach(viewModel.syllables, id: \.self) { syllable in
                                 VStack {
-                                    FrontCardWordSyllableLabel(viewModel: ReportViewModel(syllable: syllable))
+                                    FrontCardWordSyllableLabel(syllable: syllable)
                                 }
                                 
                             }

@@ -76,6 +76,7 @@ struct DetailReportCardView: View {
                 }
                 
             }
+            .padding(.top, viewModel.isWord ? 20 : 0)
             .padding(10)
             
             // MARK: Total Latihan
@@ -102,5 +103,5 @@ struct DetailReportCardView: View {
 }
 
 //#Preview {
-//    DetailReportCardView(condition: "underAverage", wordSpeechSucceed: 5, syllableSpeechSucceed: 10, syllableCardSucceed: 8, totalAttempts: 10, isWord: false)
+//    DetailReportCardView(viewModel: ReportViewModel)
 //}

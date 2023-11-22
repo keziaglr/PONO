@@ -20,15 +20,16 @@ struct ReportNavigation: View {
                 Text(title)
                     .font(.custom("Quicksand-Bold", size: 12))
                     .textCase(.uppercase)
-                    .foregroundColor(Color(red: 0.52, green: 0.52, blue: 0.52))
+                    .foregroundStyle(Color.Black1)
                     .padding()
+                    .frame(width: 140)
                 HStack {
                     Image("\(iconName)")
                         .font(.system(size: 40))
                         .symbolRenderingMode(.multicolor)
                     Text("\(total)")
-                        .font(.custom("Quicksand-Medium", size: 40))
-                        .foregroundStyle(.black)
+                        .font(.system(size: 40, weight: .medium, design: .rounded))
+                        .foregroundStyle(Color.Black1)
                 }
             }
             .frame(width: 180.67, height: 150)
@@ -44,5 +45,5 @@ struct ReportNavigation: View {
 }
 
 #Preview {
-    ReportNavigation(title: "Total Sesi", iconName: "hourglass", total: 20, isSelected: true, action: {})
+    ReportNavigation(title: "Suku Kata Dipelajari", iconName: "hourglass", total: 20, isSelected: true, action: {})
 }

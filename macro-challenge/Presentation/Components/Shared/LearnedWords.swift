@@ -10,9 +10,9 @@ import SwiftUI
 struct LearnedWords: View {
 //    @State private var words =  ["mami", "papi", "buku", "beta", "buta", "buka", "babi", "duda", "babu", "Kuku", "kaki"]
     
-    @State var words : [PracticedWord]
+    @State var words : [PracticedWord] = []
     @State private var isFlipped: Bool = false
-    @State var learnedWord: Int
+    @ObservedObject var viewModel = ReportViewModel()
 
     var body: some View {
         ZStack {
@@ -21,15 +21,15 @@ struct LearnedWords: View {
                     .textCase(.uppercase)
                     .font(.custom("Quicksand-Bold", size: 14))
                     .padding(.horizontal)
-                Text("34 dari 111 kata")
+                Text("\(viewModel.words.count) dari 111 kata")
                     .font(.custom("Quicksand", size: 12))
                     .padding(.horizontal)
                 ScrollView {
                     Section {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 40) {
-                            ForEach(words, id: \.self) { word in
+                            ForEach(viewModel.words, id: \.self) { word in
                                 VStack{
-                                    FrontCardWordSyllableLabel(viewModel: ReportViewModel(word: word))
+                                    FrontCardWordSyllableLabel(word: word)
                                     
                                 }
                                 .onTapGesture {
