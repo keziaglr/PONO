@@ -46,7 +46,7 @@ class CardActivityViewModel: ObservableObject {
         
         self.qrScannerManager = QRScannerManager()
         self.qrScannerManager.delegate = self
-        qrScannerManager.requestCameraAuthorizationIfNeeded { [weak self] permission in
+        QRScannerManager.requestCameraAuthorizationIfNeeded { [weak self] permission in
             if permission == .approved {
                 self?.startScanning()
             }

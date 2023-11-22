@@ -16,7 +16,7 @@ class RecordingManager: NSObject {
     
     static let shared = RecordingManager()
     
-    private init() {}
+    private override init() {}
     
     var record: AudioRecord? = nil
     

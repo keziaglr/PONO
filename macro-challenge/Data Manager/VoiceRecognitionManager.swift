@@ -33,7 +33,7 @@ public class VoiceRecognitionManager {
     
     static func requestPermissions(completion: ((Bool) -> Void)? = nil) {
         AVAudioSession.sharedInstance().requestRecordPermission { granted in
-            completion(granted)
+            completion?(granted)
         }
     }
     
@@ -44,7 +44,7 @@ public class VoiceRecognitionManager {
         case .denied:
             delegate?.voiceRecognitionManagerDidFailToAchievePermission(self)
         case .undetermined:
-            requestPermissions { granted in
+            VoiceRecognitionManager.requestPermissions { granted in
                 if granted {
                     self.startRecognize()
                 } else {

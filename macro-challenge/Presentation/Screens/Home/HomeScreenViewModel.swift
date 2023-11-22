@@ -5,15 +5,15 @@
 //  Created by Kezia Gloria on 09/11/23.
 //
 
-import Foundation
-
+import AVFoundation
+import Speech
 
 class HomeScreenViewModel: ObservableObject {
     func requestAllPermission() {
         Task {
             VoiceRecognitionManager.requestPermissions()
-            AVAudioSession.hasPermissionToRecord()
-            SFSpeechRecognizer.hasAuthorizationToRecognize()
+            await AVAudioSession.sharedInstance().hasPermissionToRecord()
+            await SFSpeechRecognizer.hasAuthorizationToRecognize()
             QRScannerManager.requestCameraAuthorizationIfNeeded(completion: { permission in })
         }
     }
