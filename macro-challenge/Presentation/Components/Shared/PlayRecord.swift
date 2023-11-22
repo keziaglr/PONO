@@ -44,7 +44,6 @@ struct PlayRecord: View {
             .onReceive(timer) { _ in
                 if let duration, isRunning && progress < duration {
                     progress += 0.1 / duration
-                    print(progress)
                     if isRunning && progress > 1.0 {
                         isDone = true
                         isRunning = false
