@@ -162,7 +162,6 @@ class LearningFlowScreenViewModel: ObservableObject {
             self.practicedSyllableRecords = nil
         }
     }
-    
 }
 
 struct PracticedSyllableRecord: Equatable {

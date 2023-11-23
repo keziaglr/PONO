@@ -22,7 +22,6 @@ struct LearningFlowScreenView: View {
             Image("Cloud")
                 .resizable()
                 .scaledToFit()
-            
             VStack {
                 LearningProgressView(onClose: { switchableNavigate(.home) })
                 if let activeLearningActivity = viewModel.activeLearningActivity {
