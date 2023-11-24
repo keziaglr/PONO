@@ -32,19 +32,18 @@ struct BreakWordActivityView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
             ZStack {
                 VStack {
                     InstructionView(height: screenHeight / 12,
                                     message: $instructionText)
+                    .padding(.top, 100)
+                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onAppear {
                         instructionText = viewModel.currentInstruction?.text ?? ""
                     }
                     .onChange(of: viewModel.currentInstruction, perform: { _ in
                         instructionText = viewModel.currentInstruction?.text ?? ""
                     })
-                    .padding()
-                    .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                     .onTapGesture {
                         viewModel.playInstruction(isReplay: true)
                     }
@@ -63,7 +62,8 @@ struct BreakWordActivityView: View {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
-                        .padding(20)
+                        .padding(.horizontal, 24)
+                        .padding(.bottom, 24)
                         .disabled(buttonTapped)
                     }
                 }
@@ -97,13 +97,16 @@ struct BreakWordActivityView: View {
                                 dragOffset[1] = dragOffset[1] + 100.0
                             }
                         }
-                    }.position(CGPoint(x: screenWidth / 2, y: screenHeight / 2))
+                    }
+                    .position(x: screenWidth / 2, y: screenHeight / 2)
                     
                     if !isWordBroke {
                         ZStack {
                             Path { path in
                                 insertDottedPath(start: CGPoint(x: screenWidth/2, y: screenHeight/2-height/4.5), end : CGPoint(x: screenWidth/2, y: screenHeight/2+height/4), path: &path)
-                            }.stroke(Color.Blue1, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round, dash: [10]))
+                            }
+                            .stroke(Color.Blue1, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round, dash: [10]))
+                            
                             if !firstTap {
                                 ZStack {
                                     Image(systemName: "hand.point.up.left.fill")
@@ -118,23 +121,26 @@ struct BreakWordActivityView: View {
                                                 .frame(width: 40)
                                                 .foregroundColor(Color.Grey2)
                                         )
-                                }.position(CGPoint(x: screenWidth/2+width/30, y: screenHeight/2-height/5))
-                                    .offset(y: isOffsetUp ? 0 : 120)
-                                    .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.3), value: isOffsetUp)
-                                    .onAppear{
-                                        isOffsetUp.toggle()
-                                    }
+                                }
+                                .position(CGPoint(x: screenWidth / 2 + width / 30, y: screenHeight / 2 - height / 5))
+                                .offset(y: isOffsetUp ? 0 : 120)
+                                .animation(Animation.easeInOut(duration: 0.5).repeatForever(autoreverses: true).speed(0.3), value: isOffsetUp)
+                                .onAppear{
+                                    isOffsetUp.toggle()
+                                }
                             }
                             
                         }
                         
                     }
-                }.simultaneousGesture(
+                }
+                .simultaneousGesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged { _ in
                             firstTap = true
                         }
-                ).simultaneousGesture(
+                )
+                .simultaneousGesture(
                     DragGesture(minimumDistance: height/2)
                         .onChanged({ (value) in
                             ContentManager.shared.playAudio("break-word", type: "wav")
@@ -165,7 +171,6 @@ struct BreakWordActivityView: View {
                     }
                 }
             }
-        }
     }
 }
 

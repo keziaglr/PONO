@@ -35,14 +35,14 @@ struct CardActivityView: View {
             VStack {
                 InstructionView(height: screenHeight / 12,
                                 message: $instructionText)
+                .padding(.top, 100)
+                .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                 .onAppear {
                     instructionText = viewModel.currentInstruction?.text ?? ""
                 }
                 .onChange(of: viewModel.currentInstruction, perform: { _ in
                     instructionText = viewModel.currentInstruction?.text ?? ""
                 })
-                .padding()
-                .opacity(viewModel.currentInstruction == nil ? 0 : 1)
                 .onTapGesture {
                     viewModel.playInstruction(isReplay: true)
                 }
@@ -54,7 +54,7 @@ struct CardActivityView: View {
                 if isCorrect == nil {
                     ZStack (alignment: .topLeading) {
                         QRCameraView(cameraSession: viewModel.qrScannerManager.captureSession, frameSize: CGSize(width: 900, height:450))
-                            .frame(width: 900, height: 450)
+                            .frame(width: 900, height: 380)
                             .cornerRadius(20)
                         MergedSyllableView(word: viewModel.learningWord, syllableType: viewModel.syllableOrder)
                             .padding(.top, 20)
@@ -67,7 +67,8 @@ struct CardActivityView: View {
                         viewModel.startScanning()
                     }, syllable: viewModel.syllableOrder == .firstSyllable ? viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma") : viewModel.learningWord.syllables.last ?? Syllable(id: UUID(), content: "ma"))
                 }
-            }.onReceive(viewModel.$isCorrect, perform: { isCorrect in
+            }
+            .onReceive(viewModel.$isCorrect, perform: { isCorrect in
                 self.isCorrect = isCorrect
             })
             

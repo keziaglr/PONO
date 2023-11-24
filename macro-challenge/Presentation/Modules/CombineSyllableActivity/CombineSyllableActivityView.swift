@@ -37,6 +37,7 @@ struct CombineSyllableActivityView: View {
                 VStack {
                     InstructionView(height: screenHeight / 12,
                                     message: $instructionText)
+                    .padding(.top, 100)
                     .onAppear {
                         instructionText = viewModel.currentInstruction?.text ?? ""
                     }
@@ -63,7 +64,8 @@ struct CombineSyllableActivityView: View {
                             Image(systemName: "arrow.right")
                         }
                         .buttonStyle(PonoButtonStyle(variant: .primary))
-                        .padding(20)
+                        .padding(.horizontal, 24)
+                        .padding(.bottom, 24)
                         .disabled(buttonTapped)
                     }
                     

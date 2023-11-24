@@ -13,10 +13,6 @@ struct ContentView: View {
     
     @Environment(\.switchableNavigate) var switchableNavigate
     
-    init() {
-        print("called")
-    }
-    
     var body: some View {
         ZStack {
             switch activeRoute {
@@ -34,7 +30,7 @@ struct ContentView: View {
         .environment(\.switchableNavigate) { route in
             activeRoute = route
         }
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
     }
 }
 

@@ -11,6 +11,9 @@ struct BubuAnimation: View {
     @Binding var isFinish : Bool
     @State private var bubu : String = "bubu0"
     @State private var index = 0
+    
+    let contentManager = ContentManager.shared
+    
     var body: some View {
         Image("bubu\(index)")
             .resizable()
@@ -28,7 +31,7 @@ struct BubuAnimation: View {
             }
             .onChange(of: index) { newValue in
                 if index == 40 {
-                    ContentManager.shared.playAudio("Blink")
+                    contentManager.playAudio("Blink")
                 }
             }
     }

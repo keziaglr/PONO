@@ -20,30 +20,33 @@ struct EndStageActivityView: View {
     }
     
     var body: some View {
-        VStack {
-            Spacer()
+        ZStack {
             Congratulation(word: viewModel.learningWord)
                 .cornerRadius(40)
-            Spacer()
-            HStack {
-                Button {
-                    buttonTapped.toggle()
-                    onNext()
-                } label: {
-                    Image(systemName: "arrow.right")
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Button {
+                        buttonTapped.toggle()
+                        onNext()
+                    } label: {
+                        Image(systemName: "arrow.right")
+                    }
+                    .buttonStyle(PonoButtonStyle(variant: .primary))
+                    .disabled(buttonTapped)
+                    
+                    Button {
+                        backHome()
+                    } label: {
+                        Image(systemName: "house.fill")
+                    }
+                    .buttonStyle(PonoButtonStyle(variant: .tertiary))
+                    
                 }
-                .buttonStyle(PonoButtonStyle(variant: .primary))
-                .disabled(buttonTapped)
-                
-                Button {
-                    backHome()
-                } label: {
-                    Image(systemName: "house.fill")
-                }
-                .buttonStyle(PonoButtonStyle(variant: .tertiary))
-                
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
             }
-            .padding(20)
         }.onAppear {
             viewModel.playInstruction()
         }

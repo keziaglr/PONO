@@ -12,11 +12,11 @@ struct PlayRecord: View {
     // Play Record
     @State var action : () -> Void
     @Binding var drawingHeight: Bool
-    @State var isRunning = false
     @Binding var isDone: Bool
     
     // Progress bar
     @State var progress: CGFloat = 0.0
+    @State var currentTime: TimeInterval?
     @Binding var duration: TimeInterval?
     let timer = Timer.publish(every: 0.1, on:.main, in: .common).autoconnect()
     
@@ -26,7 +26,7 @@ struct PlayRecord: View {
             
             Button(action: {
                 progress = 0
-                isRunning = true
+                currentTime = 0.0
                 action()
             }, label: {
                 // MARK: Progress Bar
@@ -42,11 +42,13 @@ struct PlayRecord: View {
                 }
             })
             .onReceive(timer) { _ in
-                if let duration, isRunning && progress < duration {
-                    progress += 0.1 / duration
-                    if isRunning && progress > 1.0 {
+                if let duration, let currentTime, progress <= 1 {
+                    self.currentTime = currentTime + 0.1
+                    progress = currentTime / duration
+                    
+                    if currentTime > 0, progress > 1.0 {
                         isDone = true
-                        isRunning = false
+                        self.currentTime = nil
                     }
                 }
             }

@@ -47,7 +47,8 @@ struct PlayPronunciationRecordView: View {
                         .buttonStyle(PonoButtonStyle(variant: .tertiary))
                         
                     }
-                    .padding(20)
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 24)
                 }
             }
             

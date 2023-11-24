@@ -47,7 +47,7 @@ struct PreviewCardView: View {
                     .buttonStyle(PonoButtonStyle(variant: .primary))
                     .disabled(buttonTapped)
                     
-                    if viewModel.isCorrect == false{
+                    if viewModel.isCorrect == false && isFlipped == false {
                         Button{
                             onRetry()
                         }label: {
@@ -57,7 +57,8 @@ struct PreviewCardView: View {
                     }
                     
                 }
-                .padding(20)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
             }
             HStack {
                 ZStack {
@@ -66,7 +67,8 @@ struct PreviewCardView: View {
                 }
                 Spacer().frame(width: 100)
                 FrontCardView(syllable: syllable, cardVowelStyle: syllable.letters.last!.getCardVowelStyle(), degree: .constant(0))
-            }.padding(.leading, 20)
+            }
+            .padding(.leading, 20)
         }
     }
     

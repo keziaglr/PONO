@@ -30,9 +30,9 @@ struct MergedSyllableView: View {
     }
 }
 
-struct MergedSyllable_Previews: PreviewProvider {
-    static var previews: some View {
-        MergedSyllableView(word: PreviewDataResources.word,
-                       syllableType: .firstSyllable)
-    }
-}
+//struct MergedSyllable_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MergedSyllableView(word: PreviewDataResources.word,
+//                       syllableType: .firstSyllable)
+//    }
+//}

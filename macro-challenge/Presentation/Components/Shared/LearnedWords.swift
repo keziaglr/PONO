@@ -29,7 +29,7 @@ struct LearnedWords: View {
                     Section {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 20), GridItem(.flexible(), spacing: 20)], spacing: 40) {
                             ForEach(viewModel.words, id: \.self) { word in
-                                VStack{
+                                VStack {
                                     FrontCardWordSyllableLabel(word: word)
                                     
                                 }

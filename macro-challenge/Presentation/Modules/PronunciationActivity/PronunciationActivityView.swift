@@ -62,11 +62,11 @@ struct PronunciationActivityView: View {
     }
 }
 
-struct OnboardingScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        PronunciationActivityView(learningWord: PreviewDataResources.word,
-                                  syllableOrder: .firstSyllable, onActivityDone: { syllable, isCorrect in },
-                                  onNext: { })
-    }
-}
+//struct OnboardingScreenView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PronunciationActivityView(learningWord: PreviewDataResources.word,
+//                                  syllableOrder: .firstSyllable, onActivityDone: { syllable, isCorrect in },
+//                                  onNext: { })
+//    }
+//}
 

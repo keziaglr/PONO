@@ -115,22 +115,35 @@ class ReportViewModel: ObservableObject {
             
             // Count the practices for the current date
             let practiceCountForDate = practicesForDate.count
-            data[index].count = Double(practiceCountForDate)
-            
+            DispatchQueue.main.async { [weak self] in
+                self?.data[index].count = Double(practiceCountForDate)
+            }
         }
     }
     
     func getPractices() async {
-        practices = await reportManager.getPractices()
+        DispatchQueue.main.async { [weak self] in
+            Task {
+                self?.practices = await self?.reportManager.getPractices() ?? []
+            }
+        }
     }
     
     func getWords() async {
-        words = await reportManager.getPracticedWords()
+        DispatchQueue.main.async { [weak self] in
+            Task {
+                self?.words = await self?.reportManager.getPracticedWords() ?? []
+            }
+        }
         
     }
     
     func getSyllables() async {
-        syllables = await reportManager.getPracticedSyllables()
+        DispatchQueue.main.async { [weak self] in
+            Task {
+                self?.syllables = await self?.reportManager.getPracticedSyllables() ?? []
+            }
+        }
     }
     
     func fetchPracticesTotal() -> Int {

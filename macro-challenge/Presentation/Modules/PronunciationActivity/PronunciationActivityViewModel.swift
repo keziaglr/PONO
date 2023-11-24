@@ -200,7 +200,7 @@ class PronunciationActivityViewModel: ObservableObject {
     }
     
     private func isAnyVoiceCorrect(_ probabilityModels: [ProbabilityModel]) -> Bool {
-        (probabilityModels.first(where: { $0.labelName.lowercased() == syllable?.content.lowercased() })?.probability ?? 0.0) >= 0.7
+        (probabilityModels.first(where: { $0.labelName.lowercased() == syllable?.content.lowercased() && $0.labelName.lowercased() != "background noise" })?.probability ?? 0.0) > 0.7
     }
 }
 

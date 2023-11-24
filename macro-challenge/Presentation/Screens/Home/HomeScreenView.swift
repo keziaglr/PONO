@@ -25,19 +25,19 @@ struct HomeScreenView: View {
                     Spacer()
                 }
                 VStack(spacing:0) {
-//                    HStack{
-//                        Spacer()
-//                        Button {
-//                            switchableNavigate(.report)
-//                        } label: {
-//                            Image("Bar")
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: 45)
-//                        }
-//                        .buttonStyle(PonoButtonStyle(variant: .tertiary))
-//                        .padding()
-//                    }
+                    HStack{
+                        Spacer()
+                        Button {
+                            switchableNavigate(.report)
+                        } label: {
+                            Image("Bar")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45)
+                        }
+                        .buttonStyle(PonoButtonStyle(variant: .tertiary))
+                        .padding()
+                    }
                     Spacer()
                     Rectangle()
                         .fill(Color.Grey5)
