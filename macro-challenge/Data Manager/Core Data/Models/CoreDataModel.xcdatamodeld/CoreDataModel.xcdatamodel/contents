@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Practice" representedClassName=".Practice" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="practicedSyllables" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticedSyllable" inverseName="practices" inverseEntity="PracticedSyllable"/>
+        <relationship name="practicedWord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PracticedWord" inverseName="practices" inverseEntity="PracticedWord"/>
+    </entity>
+    <entity name="PracticedSyllable" representedClassName="PracticedSyllable" syncable="YES" codeGenerationType="class">
+        <attribute name="content" attributeType="String"/>
+        <attribute name="countCardRecognizeCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countCardRecognizeWrong" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationWrong" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="practices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Practice" inverseName="practicedSyllables" inverseEntity="Practice"/>
+    </entity>
+    <entity name="PracticedWord" representedClassName="PracticedWord" syncable="YES" codeGenerationType="class">
+        <attribute name="countPronunciationCorrect" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countPronunciationWrong" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="practices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Practice" inverseName="practicedWord" inverseEntity="Practice"/>
+    </entity>
+</model>
